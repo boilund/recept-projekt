@@ -1,0 +1,19 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 350px;
+  background-color: #181818;
+}
+
+@media screen and (max-width: 992px) {
+
+    body {
+      margin-bottom:910px;
+    }
+
+    footer {
+      height: 880px;
+    }
+
+}
