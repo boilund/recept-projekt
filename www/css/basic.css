@@ -12,6 +12,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  color: #333;
   /* slightly more than the footer height for more space before footer*/
   margin-bottom: 370px;
 }
@@ -26,4 +27,9 @@ h3 {
 
 .main {
   display: block;
+}
+
+a:link, a:hover, a:visited, a:active {
+  color:  #333;
+  text-decoration: none;
 }
