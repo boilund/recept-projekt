@@ -4,9 +4,16 @@
   padding: 0;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  /* slightly more than the footer height for more space before footer*/
+  margin-bottom: 370px;
 }
 
 h1, h2, h3 {
