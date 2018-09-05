@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Willys recept</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700"
+    rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- my CSS -->
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/new-recept.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <header class="container-fluid header">
+    <section class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <a class="navbar-brand" href="/"><img src="/imgs/willys_logo.svg" alt="logo" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Erbjudanden<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hitta butik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="recept.html">Recept</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kundservice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Willys Plus</a>
+              </li>
+            </ul>
+            <button class="btn my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col search-row">
+        <img src="/imgs/menu.png" alt="menu icon" class="serach-icons">
+        <form class="form-inline my-2 my-lg-0 search-form">
+          <input class="form-control mr-sm-2 search-input" type="search" placeholder="        Sök i e-handeln"
+            aria-label="Search">
+        </form>
+        <img src="/imgs/time.png" alt="time icon" class="serach-icons">
+        <img src="/imgs/cart.png" alt="cart icon" class="serach-icons">
+      </div>
+    </section>
+  </header>
+  <main class="container new-recept-contents">
+    <section>
+      <div class="ax-product-grid-header">
+        <h2>Skapa Nytt Recept</h2>
+      </div>
+      <div class="layout-wrap layout-row row">
+        <div class="ax-product-grid-tile col">
+          <form>
+            <div class="row form-wrap">
+
+              <div class=" col-md-6 col-sm-12 mob">
+                <label>
+                  Recptnamn<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" />
+              </div>
+
+              <div class="col-md-2 col-sm-12 select-wrap">
+                <select class="custom-select ">
+                  <option value="2">2 port.</option>
+                  <option value="4">4 port.</option>
+                  <option value="6">6 port.</option>
+                  <option value="8">8 port.</option>
+                  <option value="10">10 port.</option>
+                </select>
+              </div>
+
+              <div class="col-md-3 col-sm-12  category-select select-wrap">
+                <select class="custom-select">
+                  <option value="category">Välj Kategori</option>
+                  <option value="flaskkött">flaskkött</option>
+                  <option value="färs">Färs</option>
+                  <option value="korv">Korv</option>
+                  <option value="fågel">Kyckling & Fågel</option>
+                  <option value="nötkött">Nötkött</option>
+                  <option value="pasta">Pasta</option>
+                  <option value="veganer">Veganer </option>
+                  <option value="lakto-vegetarianer">Lakto-vegetarianer </option>
+                  <option value="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="row form-wrap" id="file-upload-form" class="uploader">
+              <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+              <div for="file-upload" id="file-drag">
+                <img id="file-image" src="#" alt="Preview" class="hidden">
+                <div id="uploader-start">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  <div>Välj en fil eller dra här</div>
+                  <div id="notimage" class="hidden">Endast bild</div>
+                  <span id="file-upload-btn" class="btn btn-primary">Välj en fil</span>
+                </div>
+              </div>
+
+            </div>
+            <div class="row form-wrap">
+              <div class="mob-wrap">
+                
+              </div>
+                <div class=" col-md-4 col-sm-12 mob">
+                  <label>
+                    Ingrediens<span class="req"></span>
+                  </label>
+                  <input type="text" required autocomplete="off" />
+                </div>
+  
+                <div class="col-md-2 col-sm-12 mob">
+                    <label>
+                        Kvantitet<span class="req"></span>
+                      </label>
+                      <input type="text" required autocomplete="off" />
+                </div>
+  
+                <div class="col-md-2 col-sm-12 select-wrap bottom-select">
+                    <select class="custom-select">
+                        <option value="no-unit">Välj Enhet</option>
+                        <option value="st">st</option>
+                        <option value="g">g</option>
+                        <option value="hg">hg</option>
+                        <option value="dl">dl</option>
+                        <option value="msk">msk</option>
+                        <option value="tsk">tsk </option>
+                        <option value="bitar">bitar </option>
+                        
+                      </select>
+                </div>
+                <div class="col-md-3 ">
+                  <div class="row ingredient-button-group mob">
+                      <!-- <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div> -->
+                      <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="row form-wrap bottom-select">
+                <button id="add-ingredient"> Mer ingrediens</button>
+              </div>
+
+            <div class="row form-wrap">
+                <div class="form-group col-12">
+                    <h4 for="receptTextarea" class="steps">Gör så här</h4>
+                    <textarea class="form-control" id="receptTextarea" rows="5"></textarea>
+                  </div>
+            </div>
+            <div class="row form-wrap">
+              <div class=" recept-button-group">
+                <button type="cancel" class="button button-block recept-btn" id="recept-cancel" />Avboka</button>
+                <button type="submit" class="button button-block recept-btn" id="recept-submit" />Submit</button>
+            </div>
+            
+
+          </form>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container-fluid ">
+    <section class="row">
+      <div class="col-12 col-lg-8 d-flex justify-content-md-center">
+        <div class="row">
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">OM OSS</h6>
+            <p class="mb-1 text-secondary">Vår historia</p>
+            <p class="mb-1 text-secondary">Vår affärsidé</p>
+            <p class="mb-1 text-secondary">Bra mat för alla</p>
+            <p class="mb-1 text-secondary">Hållbarhet</p>
+            <p class="mb-1 text-secondary"> Nyheter & press</p>
+            <p class="mb-1 text-secondary"> Willys Plus</p>
+            <p class="mb-1 text-secondary">Dataskydd</p>
+          </div>
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">KUNDSERVICE</h6>
+            <p class="mb-1 text-secondary">Kontakta oss</p>
+            <p class="mb-1 text-secondary">Vanliga frågor och svar</p>
+            <p class="mb-1 text-secondary">Här kan du e-handla</p>
+            <p class="mb-1 text-secondary">Våra garantier</p>
+            <p class="mb-1 text-secondary">Villkor e-handel</p>
+            <p class="mb-1 text-secondary">Villkor Willys Plus</p>
+            <p class="mb-1 text-secondary">E-handel företag</p>
+          </div>
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">JOBBA HOS OSS</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 py-3">
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-tag text-danger mr-3"></i>ERBJUDANDEN
+              </p>
+            </div>
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-map-marker-alt text-danger mr-3"></i>HITTA BUTIK
+              </p>
+            </div>
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-plus text-danger mr-3"></i>BLI WILLYS PLUS-KUND
+              </p>
+            </div>
+          </div>
+          <div class="col-12">
+            <p class="text-white font-weight-bold my-3">
+              <i class="fab fa-facebook text-primary mr-3"></i>FÖLJ OSS PÅ FACEBOOK
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+  </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/new-recept-css.js"></script>
+
+</html>
