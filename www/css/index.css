@@ -66,7 +66,6 @@ a:hover {
 /* ----------------------
        Footer style
 -------------------------*/
-.footer {
-  height: 200px; /* temporary */
+footer {
   background-color: #181818;
 }
