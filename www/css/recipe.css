@@ -1,0 +1,87 @@
+@import url("/css/basic.css");
+@import url("/css/header.css");
+@import url("/css/footer.css");
+
+
+main {
+  overflow-x: hidden;
+  background-color: #fff;
+  padding: 25px;
+}
+
+p, li {
+  color: #5e5e5e;
+}
+
+.recipe-title {
+  color: #fff;
+  font-size: 50pt;
+}
+
+.heading-content {
+  min-height: 310px;
+  background-color: #e60019;
+}
+
+.heading-text {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  text-align: center;
+}
+
+.cooking-time{
+  font-size: 15pt;
+  color: #fff;
+}
+
+.cooking-time:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f017";
+  padding-right: 8px;
+  color: #fff;
+  font-size: 15pt;
+}
+
+.fa-star{
+  color: #ffe600;
+}
+
+.rating-number {
+  color: #fff;
+}
+
+.portions-text {
+  color: #fff;
+  font-size: 12pt;
+}
+.reciep-picture {
+  background: url("/imgs/apple-pie.jpg");
+  background-size: cover;
+  min-height: 400px;
+}
+
+.circle {
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  line-height: 23px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #e60019;
+  border: 2px solid #e2e0e2;
+  margin: 3px 5px;
+}
+
+.portions-btn {
+  background-color: #e60019;
+  color: #fff;
+}
+
+.buy-btn {
+  background-color: #e60019;
+  color: #fff;
+}
