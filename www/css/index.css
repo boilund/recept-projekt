@@ -28,3 +28,27 @@ body.index-page {
 .card-img-top {
   border-radius: 0%;
 }
+
+.new-recept-btn {
+  height: 77px;
+}
+
+.my-recept-btn {
+  height: 55px;
+}
+
+.side-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-btn {
+  background-color: #e60019;
+  font-size: 13px;
+}
+
+.more-btn:hover {
+  opacity: 0.8;
+}
+

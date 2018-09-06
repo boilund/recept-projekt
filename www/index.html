@@ -63,148 +63,88 @@
       </div>
     </section>
   </header>
+
   <div class="container-fluid">
     <section class="row picture"></section>
   </div>
-  <main class="container main">
+
+  <main class="container main py-3">
     <section class="row">
-      <div class="col-md-4 col-lg-3 side-menu">
+      <aside class="col-md-3 col-lg-2 side-menu">
 
-          <div class="card my-2 border-0">
-            <div class="card-header bg-white px-2 py-1">
-              <a href="#" class="text-dark font-weight-bold">Nyheter</a>
+        <div>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="search-recept" placeholder="Sök recept">
             </div>
-          </div>
+          </form>
+        </div>
 
-          <div class="card border-0">
-            <div class="card-header text-dark font-weight-bold bg-white px-2 py-1">
-              Läromedel
+        <div class="card my-2 border new-recept-btn">
+          <div class="card-header bg-white px-2 py-3">
+            <a href="/nytt-recept.html" class="text-dark">Skapa ett nytt recept</a>
+          </div>
+        </div>
+
+        <div class="card my-2 border my-recept-btn">
+          <div class="card-header text-dark bg-white px-2 py-3">
+            Mina recept
+          </div>
+        </div>
+
+        <div class="list-group">
+          <div id="accordion" role="tablist">
+            <div class="card-header bg-white border px-2 py-3 side-card" role="tab" id="headingOne">
+              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">Ingrediens</a>
+              <i class="fas fa-angle-right px-2"></i>
             </div>
-          </div>
-
-          <div class="list-group">
-            <div id="accordion" role="tablist">
-              <div class="card-header bg-white border-0 px-2 py-1" role="tab" id="headingOne">
-                <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <i class="fa fa-caret-right" aria-hidden="true"></i> Musik
-                </a>
-              </div>
-              <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="list-group border">
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Kring Musiken</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Sångböcker</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Sång och lek</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">CD</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Kör / Musikal</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Musikteori</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Folkmusik</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Suzuki</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Musiktillbehör</a>
-
-                  <div id="accordion2" role="tablist">
-                    <div class="card-header bg-white border-0 px-2 py-1" role="tab" id="headingThree">
-                      <a class="collapsed text-dark list-group-item border-0 font-weight-bold p-0" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa fa-caret-right" aria-hidden="true"></i> Spelböcker
-                      </a>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion2">
-                      <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Blockflöjt</a>
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Gitarr</a>
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Klaviatur</a>
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Slagverk</a>
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Stråk</a>
-                        <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Träblås</a>
-                      </div>
+            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="list-group border">
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Fläskkött</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Färs</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Korv</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Kyckling & Fågel</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nötkött</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Pasta</a>
+                <div id="accordionVege" role="tablist">
+                  <div class="card-header bg-white border-0 p-0 side-card" role="tab" id="headingVege">
+                    <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2" data-toggle="collapse"
+                      href="#collapseVege">Vegetarisk</a>
+                    <i class="fas fa-angle-right px-2"></i>
+                  </div>
+                  <div id="collapseVege" class="collapse" role="tabpanel" aria-labelledby="headingVege" data-parent="#accordionVege">
+                    <div class="list-group border">
+                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Veganer</a>
+                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Lakto-vegetarianer</a>
+                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">lakto-ovo-vegetarianer</a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div class="card-header border-0 bg-white px-2 py-1" role="tab" id="headingTwo">
-                <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <i class="fa fa-caret-right" aria-hidden="true"></i> Instrument, rytminstrument
-                </a>
+            <div class="card-header bg-white border px-2 py-3 side-card" role="tab" id="headingTwo">
+              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">Speciallkost</a>
+              <i class="fas fa-angle-right px-2"></i>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="list-group border">
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Glutenfritt</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Laktosfritt</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nöttfritt</a>
+                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Äggfritt</a>
               </div>
-              <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="list-group border">
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Block, claves, kastanjetter</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Blockflöjter, kazoo</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Bjällror</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Bongos, congas, djembes</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Boomwhackers</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Gitarrer</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Klockspel, tonboxar, xylofoner</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">klubbor</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Maraccas, shakers</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Ramtrummor, tamburiner</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Rytmsatser</a>
-                  <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Övriga instrument</a>
-                </div>
-              </div>
-            </div>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Svenska / Svenska som andraspråk</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Engelska</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">NO / SO</a>
-            <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Särskola</a>
-          </div>
-
-          <div class="card mt-2 mb-2 border-0">
-            <div class="card-header text-dark font-weight-bold bg-white px-2 py-1">
-              Facklitteratur
-            </div>
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Cafe-serien</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Mat &amp; Dryck</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Motion / Hälsa</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Medicin</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Hobbies</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Sport</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Reportage</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Lite av varje</a>
-            </div>
-          </div>
-
-          <div class="card mb-2 border-0">
-            <div class="card-header text-dark font-weight-bold bg-white px-2 py-1">
-              Skönlitteratur
-            </div>
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Romaner</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Deckare / Spänning</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Humor</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Kåserier</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Biografier</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Pocket</a>
-            </div>
-          </div>
-
-          <div class="card mb-2 border-0">
-            <div class="card-header text-dark font-weight-bold bg-white px-2 py-1">
-              Barn o ungdom
-            </div>
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">0 - 5 år</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">5 - 9 år</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">9 - 12 år</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Ungdom</a>
-              <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-1">Lättläst</a>
             </div>
           </div>
         </div>
+      </aside>
+
       <div class="col-md-9 col-lg-10 main-contents">
         <div class="row">
-          <div class="col-12 text-center pb-2"><h2>Populära recept</h2></div>
-          <div class="col-sm-6 col-md-4 col-lg-3 p-0">
-            <a href="/recept.html">
-              <div class="card">
-                <img class="card-img-top" src="/imgs/sandwich.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Sandwich</h5>
-                  <p class="card-text">300kcal</p>
-                </div>
-              </div>
-            </a>
+          <div class="col-12 text-center pb-2">
+            <h2>Populära recept</h2>
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3 p-0">
             <a href="/recept.html">
@@ -283,6 +223,20 @@
               </div>
             </a>
           </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 p-0">
+            <a href="/recept.html">
+              <div class="card">
+                <img class="card-img-top" src="/imgs/sandwich.jpeg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Sandwich</h5>
+                  <p class="card-text">300kcal</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-5">
+          <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
         </div>
       </div>
     </section>
@@ -339,16 +293,13 @@
           </div>
           <div class="col-12">
             <p class="text-white font-weight-bold my-3">
-                <i class="fab fa-facebook text-primary mr-3"></i>FÖLJ OSS PÅ FACEBOOK
+              <i class="fab fa-facebook text-primary mr-3"></i>FÖLJ OSS PÅ FACEBOOK
             </p>
           </div>
         </div>
       </div>
-
-
     </section>
-
-
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
