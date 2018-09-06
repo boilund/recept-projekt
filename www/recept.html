@@ -1,12 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Recept - Äppelpaj | Willys</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- my CSS -->
+  <link rel="stylesheet" href="/css/recipe.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
 </head>
+
 <body>
-  recept sidan
+  <header class="container-fluid header">
+    <section class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+          <a class="navbar-brand" href="/"><img src="/imgs/willys_logo.svg" alt="logo" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Erbjudanden</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hitta butik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Recept</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kundservice</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Willys Plus</a>
+              </li>
+            </ul>
+            <button class="btn my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col search-row">
+        <img src="/imgs/menu.png" alt="menu icon" class="serach-icons">
+        <form class="form-inline my-2 my-lg-0 search-form">
+          <input class="form-control mr-sm-2 search-input" type="search" placeholder="        Sök i e-handeln" aria-label="Search">
+        </form>
+        <img src="/imgs/time.png" alt="time icon" class="serach-icons">
+        <img src="/imgs/cart.png" alt="cart icon" class="serach-icons">
+      </div>
+    </section>
+  </header>
+  <div class="container-fluid">
+    <section class="row">
+      <div class="col heading-content">
+        <div class="heading-text">
+          <h1 class="recipe-title font-weight-bold">Äppelpaj</h1>
+          <p class="cooking-time d-inline-block mr-3">20 min</p>
+          <div class="rating d-inline-block">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <span class="rating-number ml-2 ">4/5</span>
+          </div>
+          <p class="portions-text font-weight-bold">
+            <i class="fas fa-utensils"></i>
+            4 portioner
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <main class="container">
+    <section class="row">
+      <div class="col">
+        <div class="reciep-picture rounded"></div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-md-8">
+        <h2 class="font-weight-bold mt-3 d-inline-block">Ingredienser</h2>
+        <div class="btn-group ml-2 mb-2">
+          <button class="btn btn-sm dropdown-toggle portions-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            4 portioner
+          </button>
+          <div class="dropdown-menu">
+            ...
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item border-0 pl-0 pb-0">1 rulle färsk smördeg</li>
+          <li class="list-group-item border-0 pl-0 pb-0">1 dl socker</li>
+          <li class="list-group-item border-0 pl-0 pb-0">3 tsk mortlade fänkålfrön</li>
+          <li class="list-group-item border-0 pl-0 pb-0">1 uppvispat ägg</li>
+          <li class="list-group-item border-0 pl-0 pb-0">4 fasta syrlig äpplen</li>
+          <li class="list-group-item border-0 pl-0 pb-0">50 g rumstempererat smör</li>
+        </ul>
+        <h2 class="font-weight-bold mt-3">Gör så här:</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">1</span>
+            Värm ugnen till 220°C.°
+          </li>
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">2</span>
+             Blanda socker och mortlade fänkål. Vänd ner hälften av sockret i smöret och blanda väl.
+          </li>
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">3</span>
+             Klyfta äpplena.
+          </li>
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">4</span>
+             Rulla ut smördegen på ett bakplåtspapper, vik in kanten ca 1 cm, nagga degen med en gaffel. Pensla kanerna med uppvispat
+            ägg och strö över resterande socker på kanten.
+          </li>
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">5</span>
+             Lägg ut äppelklyftorna och klicka ut smöret jämt över äpplena.
+          </li>
+          <li class="list-group-item border-0 pl-0 pb-0">
+            <span class="circle">6</span>
+             Lyft över pizzan till dem varma plåten och grädda ca 15 min tills gyllene.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3 class="font-weight-bold mt-3">Näringsvärden (per portion)</h3>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <th scope="row">energi</th>
+              <td class="text-right">1153 kJ / 276 kCal</td>
+            </tr>
+            <tr>
+              <th scope="row">fett</th>
+              <td class="text-right">11 g</td>
+            </tr>
+            <tr>
+              <th scope="row">kolhydrat</th>
+              <td class="text-right">43 g</td>
+            </tr>
+            <tr>
+              <th scope="row">salt</th>
+              <td class="text-right">0.15 g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <button type="button" class="btn btn-lg btn-block my-4 buy-btn font-weight-bold text-uppercase">
+      Köp ingredienserna
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <section class="row">
+      <div class="col-md-3 p-0">
+        <a href="/recept.html">
+          <div class="card h-100 recept-card border-left-0 border-top-0 rounded-0">
+            <img class="save-to-list" src="/imgs/list.png">
+            <img class="card-img-top" src="/imgs/butter.png" alt="smör">
+            <div class="card-body">
+              <p class="card-title mb-0">Matlagning Bakning Margarin 80%</p>
+              <p class="card-text">MILDA 500G</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <p class="price-info mb-0">Jmf-pris 25,80 kr/kg</p>
+              <div class="quantity">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <button class="rounded-0 minus input-group-text">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="1 st">
+                  <div class="input-group-prepend">
+                    <button class="input-group-text">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 p-0">
+        <a href="/recept.html">
+          <div class="card h-100 recept-card border-left-0 border-top-0 rounded-0">
+            <img class="save-to-list" src="/imgs/list.png">
+            <img class="card-img-top" src="/imgs/eggs.png" alt="ägg">
+            <div class="card-body">
+              <p class="card-title mb-0">Ägg Frigående Inomhus Frukost L</p>
+              <p class="card-text">GARANT 10P</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <p class="price-info mb-0">Jmf-pris 2,49 kr/st</p>
+              <div class="quantity">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <button class="rounded-0 minus input-group-text">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="1 st">
+                  <div class="input-group-prepend">
+                    <button class="input-group-text">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 p-0">
+        <a href="/recept.html">
+          <div class="card h-100 recept-card border-left-0 border-top-0 rounded-0">
+            <img class="save-to-list" src="/imgs/list.png">
+            <img class="card-img-top" src="/imgs/green-apple.png" alt="grönt äpple">
+            <div class="card-body">
+              <p class="card-title mb-0">Äpple Granny Smith Klass 1</p>
+              <p class="card-text">CA: 155G</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <p class="price-info mb-0">Jmf-pris 34,90 kr/kg</p>
+              <div class="quantity">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <button class="rounded-0 minus input-group-text">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="1 st">
+                  <div class="input-group-prepend">
+                    <button class="input-group-text">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 p-0">
+        <a href="/recept.html">
+          <div class="card h-100 recept-card border-left-0 border-top-0 border-right-0 rounded-0">
+            <img class="save-to-list" src="/imgs/list.png">
+            <img class="card-img-top" src="/imgs/sugar.png" alt="strösocker">
+            <div class="card-body">
+              <p class="card-title mb-0">Strösocker</p>
+              <p class="card-text">DANSUKKER 2KG</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <p class="price-info mb-0">Jmf-pris 8,95 kr/kg</p>
+              <div class="quantity">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <button class="rounded-0 minus input-group-text">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="1 st">
+                  <div class="input-group-prepend">
+                    <button class="input-group-text">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 p-0">
+        <a href="/recept.html">
+          <div class="card h-100 recept-card border-left-0 border-top-0 border-right-0 rounded-0">
+            <img class="save-to-list" src="/imgs/list.png">
+            <img class="card-img-top" src="/imgs/butter-dough.png" alt="smördeg">
+            <div class="card-body">
+              <p class="card-title mb-0">Smördeg</p>
+              <p class="card-text">ELDORADO 250G</p>
+            </div>
+            <div class="card-footer border-top-0">
+              <p class="price-info mb-0">Jmf-pris 54,00 kr/kg</p>
+              <div class="quantity">
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <button class="rounded-0 minus input-group-text">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input type="text" class="form-control text-center" placeholder="1 st">
+                  <div class="input-group-prepend">
+                    <button class="input-group-text">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <button type="button" class="btn buy-btn float-right my-4">Lägg i varukorgen</button>
+    <button type="button" class="btn btn-lg btn-block my-4 comments-btn font-weight-bold text-uppercase">
+      Kommentarer
+      <i class="fas fa-caret-down"></i>
+    </button>
+    <section class="row">
+      <div class="col">
+        <h3 class="d-inline-block">2 kommentarer</h3>
+        <div class="rate d-inline-block float-right rating">
+          <p class="d-inline-block mr-2">Sätt ett betyg</p>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p class="mt-5"><a class="sign-in" href="#">Logga in</a> för att skriva en kommentar</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item border-top-0">
+            <span class="font-weight-bold d-inline-block">Karl Andersson</span>
+            <span class="d-inline-block float-right">29 aug 2018</span>
+            <span class="d-block">Jätte gott!</span>
+          </li>
+          <li class="list-group-item border-bottom">
+            <span class="font-weight-bold d-inline-block">Milan</span>
+            <span class="d-inline-block float-right">05 juli 2018</span>
+            <span class="d-block">Gott och lätt att göra.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container-fluid ">
+    <section class="row">
+      <div class="col-12 col-lg-8 d-flex justify-content-md-center">
+        <div class="row">
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">OM OSS</h6>
+            <p class="mb-1 text-secondary">Vår historia</p>
+            <p class="mb-1 text-secondary">Vår affärsidé</p>
+            <p class="mb-1 text-secondary">Bra mat för alla</p>
+            <p class="mb-1 text-secondary">Hållbarhet</p>
+            <p class="mb-1 text-secondary"> Nyheter & press</p>
+            <p class="mb-1 text-secondary"> Willys Plus</p>
+            <p class="mb-1 text-secondary">Dataskydd</p>
+          </div>
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">KUNDSERVICE</h6>
+            <p class="mb-1 text-secondary">Kontakta oss</p>
+            <p class="mb-1 text-secondary">Vanliga frågor och svar</p>
+            <p class="mb-1 text-secondary">Här kan du e-handla</p>
+            <p class="mb-1 text-secondary">Våra garantier</p>
+            <p class="mb-1 text-secondary">Villkor e-handel</p>
+            <p class="mb-1 text-secondary">Villkor Willys Plus</p>
+            <p class="mb-1 text-secondary">E-handel företag</p>
+          </div>
+          <div class="col-12 col-lg-4 py-3 px-5">
+            <h6 class="text-white font-weight-bold my-3">JOBBA HOS OSS</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 py-3">
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-tag text-danger mr-3"></i>ERBJUDANDEN
+              </p>
+            </div>
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-map-marker-alt text-danger mr-3"></i>HITTA BUTIK
+              </p>
+            </div>
+            <div class="d-flex justify-content-start">
+              <p class="text-white font-weight-bold my-3">
+                <i class="fas fa-plus text-danger mr-3"></i>BLI WILLYS PLUS-KUND
+              </p>
+            </div>
+          </div>
+          <div class="col-12">
+            <p class="text-white font-weight-bold my-3">
+              <i class="fab fa-facebook text-primary mr-3"></i>FÖLJ OSS PÅ FACEBOOK
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
 </body>
+
 </html>
