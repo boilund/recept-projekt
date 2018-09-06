@@ -15,7 +15,7 @@ body.index-page {
   background-size: cover;
 }
 
-.card {
+.recept-card {
   width: 100%;
   height: 250px;
   border-radius: 0%;
@@ -43,6 +43,12 @@ body.index-page {
   align-items: center;
 }
 
+#search-recept {
+  border: 1px solid #e60019;
+  border-radius: 0%;
+  font-size: 13px;
+}
+
 .more-btn {
   background-color: #e60019;
   font-size: 13px;
@@ -50,5 +56,14 @@ body.index-page {
 
 .more-btn:hover {
   opacity: 0.8;
+}
+
+@media only screen and (max-width: 767px) {
+  .new-recept-btn {
+    height: 55px;
+  }
+  .recept-card {
+    height: 290px;
+  }
 }
 
