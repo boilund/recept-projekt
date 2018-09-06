@@ -3,15 +3,10 @@
 @import url("/css/footer.css");
 
 /* ----------------------
-       Main style
+  index.html Main style
 -------------------------*/
-.main {
-  margin: 20px 0;
-  background-color: rgb(211, 208, 208); /* temporary */
-}
-
-.side-menu {
-  border: 1px solid #fff; /* temporary */
+body.index-page {
+  background-color: #f1f1f1;
 }
 
 .picture {
@@ -19,3 +14,41 @@
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
   background-size: cover;
 }
+
+.card {
+  width: 100%;
+  height: 250px;
+  border-radius: 0%;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px rgba(20, 20, 20, 0.3);
+}
+
+.card-img-top {
+  border-radius: 0%;
+}
+
+.new-recept-btn {
+  height: 77px;
+}
+
+.my-recept-btn {
+  height: 55px;
+}
+
+.side-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.more-btn {
+  background-color: #e60019;
+  font-size: 13px;
+}
+
+.more-btn:hover {
+  opacity: 0.8;
+}
+
