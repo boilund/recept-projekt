@@ -9,11 +9,13 @@ footer {
 @media screen and (max-width: 992px) {
 
     body {
-      margin-bottom:910px;
+      /* margin-bottom:910px; */
+      margin-bottom: 550px;
     }
 
     footer {
-      height: 880px;
+      /* height: 880px; */
+      height: 450px;;
     }
 
 }
