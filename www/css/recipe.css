@@ -118,3 +118,20 @@ p, li {
 .card-footer {
   background-color: #fff;
 }
+
+.rating > i {
+  color: #e2e0e2;
+}
+
+.rating > i:hover {
+  color: #ffe600;
+}
+
+.rating > p {
+  color: #000;
+}
+
+a.sign-in {
+  color: #0089cf;
+  font-weight: bold;
+}
