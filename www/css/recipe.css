@@ -119,15 +119,15 @@ p, li {
   background-color: #fff;
 }
 
-.rating > i {
+.rate> i {
   color: #e2e0e2;
 }
 
-.rating > i:hover {
+.rate > i:hover {
   color: #ffe600;
 }
 
-.rating > p {
+.rate > p {
   color: #000;
 }
 
@@ -135,3 +135,16 @@ a.sign-in {
   color: #0089cf;
   font-weight: bold;
 }
+
+.minus {
+  background-color: #fff;
+} 
+
+.fa-minus {
+  color: #d1d1d1;
+}
+
+.fa-plus {
+  color: #e60019;
+}
+
