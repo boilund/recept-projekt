@@ -270,4 +270,8 @@ input[type="file"] {
     #ingredient-delet{
         display:none;
     }
+
+    #ingredient-add{
+        display:none;
+    }
 }
