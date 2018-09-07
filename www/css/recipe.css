@@ -53,7 +53,13 @@ p, li {
   min-height: 400px;
 }
 
-.circle {
+.cooking-instructions > li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+.cooking-instructions > li:before {
+  content: counter(item);
   width: 25px;
   min-width: 25px;
   height: 25px;
@@ -66,14 +72,9 @@ p, li {
   color: #e60019;
   border: 2px solid #e2e0e2;
   margin: 3px 5px;
-}
+ }
 
 .portions-btn {
-  background-color: #e60019;
-  color: #fff;
-}
-
-.buy-btn {
   background-color: #e60019;
   color: #fff;
 }
@@ -81,12 +82,6 @@ p, li {
 .comments-btn {
   background-color: #000;
   color: #fff;
-}
-
-.save-to-list {
-  width: 28px;
-  height: 28px;
-  margin: 10px;
 }
 
 p.heart-favorite {

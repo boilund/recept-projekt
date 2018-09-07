@@ -77,7 +77,9 @@
   <main class="container">
     <section class="row">
       <div class="col">
-        <div class="reciep-picture rounded"></div>
+        <div class="reciep-picture rounded">
+          <span class="sr-only"> Bild på maträtten</span>
+        </div>
       </div>
     </section>
     <section class="row">
@@ -108,33 +110,27 @@
           <li class="list-group-item border-0 pl-0 pb-0">50 g rumstempererat smör</li>
         </ul>
         <h2 class="font-weight-bold mt-3">Gör så här:</h2>
-        <ul class="list-group list-group-flush">
+        <ol class="list-group list-group-flush cooking-instructions">
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">1</span>
             Värm ugnen till 220°C.°
           </li>
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">2</span>
              Blanda socker och mortlade fänkål. Vänd ner hälften av sockret i smöret och blanda väl.
           </li>
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">3</span>
              Klyfta äpplena.
           </li>
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">4</span>
              Rulla ut smördegen på ett bakplåtspapper, vik in kanten ca 1 cm, nagga degen med en gaffel. Pensla kanerna med uppvispat
             ägg och strö över resterande socker på kanten.
           </li>
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">5</span>
              Lägg ut äppelklyftorna och klicka ut smöret jämt över äpplena.
           </li>
           <li class="list-group-item border-0 pl-0 pb-0">
-            <span class="circle">6</span>
              Lyft över pizzan till dem varma plåten och grädda ca 15 min tills gyllene.
           </li>
-        </ul>
+        </ol>
       </div>
       <div class="col-md-4">
         <h3 class="font-weight-bold mt-3">Näringsvärden (per portion)</h3>
@@ -170,14 +166,14 @@
         <p class="mt-5"><a class="sign-in" href="#">Logga in</a> för att skriva en kommentar</p>
         <ul class="list-group list-group-flush">
           <li class="list-group-item border-top-0">
-            <span class="font-weight-bold d-inline-block">Karl Andersson</span>
-            <span class="d-inline-block float-right">29 aug 2018</span>
-            <span class="d-block">Jätte gott!</span>
+            <p class="font-weight-bold d-inline-block user-comment">Karl Andersson</p>
+            <p class="d-inline-block float-right date-comment">29 aug 2018</p>
+            <p class="d-block text-comment">Jätte gott!</p>
           </li>
           <li class="list-group-item border-bottom">
-            <span class="font-weight-bold d-inline-block">Milan</span>
-            <span class="d-inline-block float-right">05 juli 2018</span>
-            <span class="d-block">Gott och lätt att göra.</span>
+            <p class="font-weight-bold d-inline-block user-comment">Milan</p>
+            <p class="d-inline-block float-right date-comment">05 juli 2018</p>
+            <p class="d-block text-comment">Gott och lätt att göra.</p>
           </li>
         </ul>
       </div>
