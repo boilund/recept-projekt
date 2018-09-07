@@ -19,6 +19,7 @@ p, li {
 }
 
 .heading-content {
+  margin-top: 68px;
   min-height: 310px;
   background-color: #e60019;
 }
@@ -43,15 +44,7 @@ p, li {
   font-size: 15pt;
 }
 
-.fa-star{
-  color: #ffe600;
-}
-
-.rating-number {
-  color: #fff;
-}
-
-.portions-text {
+.author {
   color: #fff;
   font-size: 12pt;
 }
@@ -61,7 +54,13 @@ p, li {
   min-height: 400px;
 }
 
-.circle {
+.cooking-instructions > li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+.cooking-instructions > li:before {
+  content: counter(item);
   width: 25px;
   min-width: 25px;
   height: 25px;
@@ -74,14 +73,9 @@ p, li {
   color: #e60019;
   border: 2px solid #e2e0e2;
   margin: 3px 5px;
-}
+ }
 
 .portions-btn {
-  background-color: #e60019;
-  color: #fff;
-}
-
-.buy-btn {
   background-color: #e60019;
   color: #fff;
 }
@@ -91,44 +85,16 @@ p, li {
   color: #fff;
 }
 
-.save-to-list {
-  width: 28px;
-  height: 28px;
-  margin: 10px;
+p.heart-favorite {
+  color: #fff;
 }
 
-.card-title {
-  color: #000;
-}
-
-.card-text {
-  font-size: 8pt;
-}
-
-.price-info {
-  font-size: 8pt;
-}
-
-.card-img-top {
-  width: 100%;
-  height: 50%;
-  padding: 25px;
-}
-
-.card-footer {
-  background-color: #fff;
-}
-
-.rate> i {
-  color: #e2e0e2;
-}
-
-.rate > i:hover {
-  color: #ffe600;
-}
-
-.rate > p {
-  color: #000;
+.heart-favorite:before {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f004";
+  padding-right: 5px;
+  color: #fff;
+  font-size: 15pt;
 }
 
 a.sign-in {
@@ -136,15 +102,10 @@ a.sign-in {
   font-weight: bold;
 }
 
-.minus {
-  background-color: #fff;
-} 
-
-.fa-minus {
-  color: #d1d1d1;
+.icons > i {
+  font-size: 20pt;
 }
 
-.fa-plus {
+.icons > .fa-heart {
   color: #e60019;
 }
-
