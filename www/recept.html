@@ -19,46 +19,20 @@
 </head>
 
 <body>
-  <header class="container-fluid header">
+  <header class="container-fluid header fixed-top">
     <section class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <a class="navbar-brand" href="/"><img src="/imgs/willys_logo.svg" alt="logo" class="logo"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+      <div class="col menu-row bg-white">
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+          <a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Erbjudanden</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hitta butik</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Recept</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kundservice</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Willys Plus</a>
-              </li>
-            </ul>
-            <button class="btn my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+          <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navbarSupportedContent">
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
           </div>
         </nav>
-      </div>
-    </section>
-    <section class="row">
-      <div class="col search-row">
-        <img src="/imgs/menu.png" alt="menu icon" class="serach-icons">
-        <form class="form-inline my-2 my-lg-0 search-form">
-          <input class="form-control mr-sm-2 search-input" type="search" placeholder="        Sök i e-handeln" aria-label="Search">
-        </form>
-        <img src="/imgs/time.png" alt="time icon" class="serach-icons">
-        <img src="/imgs/cart.png" alt="cart icon" class="serach-icons">
       </div>
     </section>
   </header>
