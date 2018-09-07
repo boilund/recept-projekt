@@ -55,12 +55,12 @@ p, li {
 }
 
 .cooking-instructions > li {
-  counter-increment: item;
+  counter-increment: step-counter;
   margin-bottom: 5px;
 }
 
 .cooking-instructions > li:before {
-  content: counter(item);
+  content: counter(step-counter);
   width: 25px;
   min-width: 25px;
   height: 25px;
