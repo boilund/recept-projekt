@@ -12,6 +12,12 @@
   width: 100px;
 }
 
+@media only screen and (max-width: 767px) {
+  .logo {
+    width: 60px;
+  }
+}
+
 a.nav-link:hover {
   color: #e60019 !important;
 }
@@ -25,9 +31,37 @@ a.nav-link:hover {
   background-color: #f1f1f1;
 }
 
+.index-picture {
+  min-height: 500px;
+  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .index-picture {
+    min-height: 300px;
+  }
+}
+
+.color-nav {
+  min-height: 68px;
+  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left top;
+  background-size: cover;
+}
+
 .search-form::before {
   content: url("/imgs/search.svg");
   position: absolute;
   transform: scale(0.03);
   width: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    width: 60px;
+  }
+
+  .index-picture {
+    min-height: 300px;
+  }
 }
