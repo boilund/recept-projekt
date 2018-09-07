@@ -3,14 +3,14 @@
 @import url("/css/footer.css");
 
 
-body {
-  background-color: #f1f1f1;
-}
-
 main {
   overflow-x: hidden;
   background-color: #fff;
   padding: 25px;
+}
+
+p, li {
+  color: #5e5e5e;
 }
 
 .recipe-title {
@@ -48,7 +48,6 @@ main {
   color: #fff;
   font-size: 12pt;
 }
-
 .reciep-picture {
   background: url("/imgs/apple-pie.jpg");
   background-size: cover;
