@@ -19,6 +19,7 @@ p, li {
 }
 
 .heading-content {
+  margin-top: 68px;
   min-height: 310px;
   background-color: #e60019;
 }
