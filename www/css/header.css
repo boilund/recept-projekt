@@ -1,5 +1,6 @@
 .header {
   border-bottom: 1px solid  #f1f1f1;
+  position: relative;
 }
 
 .navbar {
@@ -49,11 +50,23 @@ a.nav-link:hover {
   background-size: cover;
 }
 
-.search-form::before {
-  content: url("/imgs/search.svg");
+form {
+  position: relative;
+}
+
+.search-icon {
   position: absolute;
-  transform: scale(0.03);
-  width: 30px;
+  top: 8px;
+  left: 5px;
+}
+
+.search-row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  width: 60%;
 }
 
 @media only screen and (max-width: 767px) {

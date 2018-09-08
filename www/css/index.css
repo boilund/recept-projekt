@@ -35,10 +35,6 @@ body.index-page {
   height: 55px;
 }
 
-.side-menu {
-  margin-top: 95px;
-}
-
 .side-card {
   display: flex;
   justify-content: space-between;
