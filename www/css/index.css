@@ -14,6 +14,11 @@ body.index-page {
   height: 250px;
   border-radius: 0%;
 }
+@media only screen and (max-width: 767px) {
+  .recept-card {
+    height: 290px;
+  }
+}
 
 .card:hover {
   opacity: 0.8;
@@ -29,6 +34,11 @@ body.index-page {
 
 .new-recept-btn {
   height: 77px;
+}
+@media only screen and (max-width: 767px) {
+  .new-recept-btn {
+    height: 55px;
+  }
 }
 
 .my-recept-btn {
@@ -58,19 +68,4 @@ body.index-page {
 
 .fa-star{
   color: #ffe600;
-}
-
-@media only screen and (max-width: 767px) {
-
-  .side-menu {
-    margin-top: 0;
-  }
-
-  .new-recept-btn {
-    height: 55px;
-  }
-
-  .recept-card {
-    height: 290px;
-  }
 }
