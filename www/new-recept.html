@@ -75,14 +75,14 @@
           <form>
             <div class="row form-wrap">
 
-              <div class=" col-md-6 col-sm-12 mob">
-                <label>
+              <div class=" col-md-8 col-sm-12 mob">
+                <label class="label">
                   Recptnamn<span class="req">*</span>
                 </label>
                 <input type="text" required autocomplete="off" />
               </div>
 
-              <div class="col-md-2 col-sm-12 select-wrap">
+              <div class="col-md-3 col-sm-12 select-wrap">
                 <select class="custom-select ">
                   <option value="2">2 port.</option>
                   <option value="4">4 port.</option>
@@ -92,8 +92,78 @@
                 </select>
               </div>
 
-              <div class="col-md-3 col-sm-12  category-select select-wrap">
-                <select class="custom-select">
+              
+
+            </div>
+            <div class="row form-wrap uploader" id="file-upload-form">
+              <div class="large">
+                <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+                <div for="file-upload" id="file-drag">
+                  <img id="file-image" src="#" alt="Preview" class="hidden">
+                  <div id="uploader-start">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <div>Välj en fil eller dra här</div>
+                    <div id="notimage" class="hidden">Endast bild</div>
+                    <span class="btn btn-primary file-upload-btn">Välj en fil</span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="mobil-pad">
+                <div class="upload-file-btn btn btn-primary mob">Välj en fil</div>
+              </div>
+            </div>
+            <div class="row form-wrap checkbox-wrap">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+               
+                <!-- <select class="custom-select mb-40">
                   <option value="category">Välj Kategori</option>
                   <option value="flaskkött">flaskkött</option>
                   <option value="färs">Färs</option>
@@ -104,36 +174,28 @@
                   <option value="veganer">Veganer </option>
                   <option value="lakto-vegetarianer">Lakto-vegetarianer </option>
                   <option value="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</option>
-                </select>
-              </div>
-
+                </select> -->
+              
             </div>
-            <div class="row form-wrap uploader" id="file-upload-form">
-              <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-              <div for="file-upload" id="file-drag">
-                <img id="file-image" src="#" alt="Preview" class="hidden">
-                <div id="uploader-start">
-                  <i class="fa fa-download" aria-hidden="true"></i>
-                  <div>Välj en fil eller dra här</div>
-                  <div id="notimage" class="hidden">Endast bild</div>
-                  <span id="file-upload-btn" class="btn btn-primary">Välj en fil</span>
-                </div>
-              </div>
 
-            </div>
+            
+
+           
+
+
             <div class="row form-wrap">
-              <div class="mob-wrap">
+              <!-- <div class="mob-wrap">
 
-              </div>
+              </div> -->
               <div class=" col-md-4 col-sm-12 mob">
-                <label>
+                <label class="label">
                   Ingrediens<span class="req"></span>
                 </label>
                 <input type="text" required autocomplete="off" />
               </div>
 
               <div class="col-md-2 col-sm-12 mob">
-                <label>
+                <label class="label">
                   Kvantitet<span class="req"></span>
                 </label>
                 <input type="text" required autocomplete="off" />
@@ -154,8 +216,9 @@
               </div>
               <div class="col-md-3 ">
                 <div class="row ingredient-button-group mob">
+                    <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
                   <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div>
-                  <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
+                  
                 </div>
               </div>
 
@@ -246,6 +309,7 @@
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/api.js"></script>
 <script src="js/new-recept-css.js"></script>
 
 </html>
