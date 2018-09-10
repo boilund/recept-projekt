@@ -15,25 +15,10 @@ body {
   font-size: 15px;
   color: #333;
   /* slightly more than the footer height for more space before footer*/
-  margin-bottom: 650px;
 }
 
-@media (min-width: 576px) {
-  body {
-    height: 1600px;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    height: 1150px;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    height: 820px;
-  }
+main {
+  margin-bottom: 50px;
 }
 
 h1, h2, h3 {
@@ -121,23 +106,10 @@ form {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
   width: 100%;
-  height: 600px;
+  height: auto;
   background-color: #181818;
-}
-
-@media (min-width: 576px) {
-  footer {
-    height: 300px;
-  }
-}
-
-@media (min-width: 992px) {
-  footer {
-    height: 230px;
-  }
 }
 
 footer ul {
@@ -168,21 +140,34 @@ footer ul {
   max-height: 100%;
 }
 
-.new-recept-btn {
+.fa-heart {
+  color: #e60019;
+}
+
+aside .new-recept-btn {
   height: 55px;
 }
 
 @media (min-width: 768px) {
-  .new-recept-btn {
+  aside .new-recept-btn {
     height: 77px;
   }
 }
 
-.my-recept-btn {
+aside .my-recept-btn {
   height: 55px;
 }
 
-.side-card {
+aside .card:hover {
+  background-color: #e60019;
+}
+
+aside .card:hover a {
+  color: #fff;
+  font-weight: 600;
+}
+
+aside .side-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,10 +192,6 @@ footer ul {
 
 .more-btn:hover {
   opacity: 0.8;
-}
-
-.fa-star {
-  color: #ffe600;
 }
 
 main {

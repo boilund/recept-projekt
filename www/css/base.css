@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -14,29 +16,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: #333;
+}
+
+main {
   /* slightly more than the footer height for more space before footer*/
-  margin-bottom: 650px;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 576px) {
-  body {
-    height: 1600px;
-  }
-}
-
-@media (min-width: 768px) {
-  body {
-    height: 1150px;
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    height: 820px;
-  }
-}
-
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Zilla Slab', serif;
 }
 
@@ -44,7 +33,10 @@ h3 {
   font-size: 20px;
 }
 
-a:link, a:hover, a:visited, a:active {
+a:link,
+a:hover,
+a:visited,
+a:active {
   color: #333;
   text-decoration: none;
 }
