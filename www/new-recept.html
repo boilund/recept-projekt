@@ -5,16 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Willys recept</title>
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700"
-    rel="stylesheet">
+  <title>Skapa recept | Smaklig måltid</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <!-- my CSS -->
-  <link rel="stylesheet" href="/css/index.css">
-  <link rel="stylesheet" href="/css/new-recept.css">
+  <link rel="stylesheet" href="/css/style.scss">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
@@ -23,45 +19,18 @@
 <body>
   <header class="container-fluid header">
     <section class="row">
-      <div class="col">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <a class="navbar-brand" href="/"><img src="/imgs/willys_logo.svg" alt="logo" class="logo"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <div class="col menu-row color-nav bg-transparent">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand text-white font-weight-bold" href="/"><img src="/imgs/logo-white.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Erbjudanden<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hitta butik</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="recept.html">Recept</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kundservice</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Willys Plus</a>
-              </li>
-            </ul>
-            <button class="btn my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+          <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
           </div>
         </nav>
-      </div>
-    </section>
-    <section class="row">
-      <div class="col search-row">
-        <img src="/imgs/menu.png" alt="menu icon" class="serach-icons">
-        <form class="form-inline my-2 my-lg-0 search-form">
-          <input class="form-control mr-sm-2 search-input" type="search" placeholder="        Sök i e-handeln"
-            aria-label="Search">
-        </form>
-        <img src="/imgs/time.png" alt="time icon" class="serach-icons">
-        <img src="/imgs/cart.png" alt="cart icon" class="serach-icons">
       </div>
     </section>
   </header>
@@ -308,6 +277,9 @@
   </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/api.js"></script>
 <script src="js/new-recept-css.js"></script>
