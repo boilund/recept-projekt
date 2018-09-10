@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Willys recept</title>
+  <title>Smaklig måltid</title>
+  <link rel="icon" type="image/png" href="/imgs/logo.png">
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700"
     rel="stylesheet">
@@ -13,85 +14,57 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <!-- my CSS -->
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/style.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
 </head>
 
-<body class="index-page">
-  <header class="container-fluid header">
+<body>
+  <header class="container-fluid header index-picture">
     <section class="row">
-      <div class="col menu-row bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <a class="navbar-brand" href="/"><img src="/imgs/willys_logo.svg" alt="logo" class="logo"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <div class="col menu-row bg-transparent">
+        <nav class="navbar navbar-expand-md navbar-light">
+          <a class="navbar-brand text-white font-weight-bold" href="/"><img src="/imgs/logo-white.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Erbjudanden</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hitta butik</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Recept</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kundservice</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Willys Plus</a>
-              </li>
-            </ul>
-            <button class="btn my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+          <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
           </div>
         </nav>
       </div>
     </section>
-    <section class="row">
-      <div class="col search-row">
-        <img src="/imgs/menu.png" alt="menu icon" class="serach-icons">
-        <form class="form-inline my-2 my-lg-0 search-form">
-          <input class="form-control mr-sm-2 search-input" type="search" placeholder="        Sök i e-handeln">
+    <section class="row search-row sticky-top">
+      <div class="col">
+        <form>
+          <span class="search-icon ml-3"><i class="fas fa-search"></i></span>
+          <input type="text" class="form-control search-input pl-5" id="search-recept" placeholder="Sök recept...">
         </form>
-        <img src="/imgs/time.png" alt="time icon" class="serach-icons">
-        <img src="/imgs/cart.png" alt="cart icon" class="serach-icons">
       </div>
     </section>
   </header>
 
-  <div class="container-fluid">
-    <section class="row picture"></section>
-  </div>
-
   <main class="container main py-3">
     <section class="row">
-      <aside class="col-md-3 col-lg-2 side-menu">
-
-        <div>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-control search-input" id="search-recept" placeholder="Sök recept">
-            </div>
-          </form>
-        </div>
-
-        <div class="card my-2 border new-recept-btn">
+      <div class="col-12 text-center p-4">
+        <h2>Populära recept</h2>
+      </div>
+    </section>
+    <section class="row">
+      <aside class="col-md-3 col-lg-2 side-menu pb-3">
+        <div class="card border new-recept-btn">
           <div class="card-header bg-white px-2 py-3">
             <a href="/new-recept.html" class="text-dark">Skapa ett nytt recept</a>
           </div>
         </div>
-
         <div class="card my-2 border my-recept-btn">
           <div class="card-header text-dark bg-white px-2 py-3">
-            Mina recept
+            <a href="/my-recept.html">Mina recept</a>
           </div>
         </div>
-
         <div class="list-group">
           <div id="accordion" role="tablist">
             <div class="card-header bg-white border px-2 py-3 side-card" role="tab" id="headingOne">
@@ -142,9 +115,6 @@
 
       <div class="col-md-9 col-lg-10 main-contents">
         <div class="row">
-          <div class="col-12 text-center p-4">
-            <h2>Populära recept</h2>
-          </div>
           <div class="col-6 col-md-4 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
@@ -169,12 +139,12 @@
                 <div class="card-body">
                   <p class="card-title">Basilikapesto med pasta</p>
                   <div class="rating d-inline-block">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
                 </div>
               </div>
             </a>
@@ -186,12 +156,12 @@
                 <div class="card-body">
                   <p class="card-title">Äppelpie</p>
                   <div class="rating d-inline-block">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
                 </div>
               </div>
             </a>
@@ -203,12 +173,12 @@
                 <div class="card-body">
                   <p class="card-title">Avokado smörgås</p>
                   <div class="rating d-inline-block">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
                 </div>
               </div>
             </a>
@@ -220,12 +190,12 @@
                 <div class="card-body">
                   <p class="card-title">Vegitarisk Risnudlar</p>
                   <div class="rating d-inline-block">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
                 </div>
               </div>
             </a>
@@ -237,12 +207,12 @@
                 <div class="card-body">
                   <p class="card-title">Tomatsallad</p>
                   <div class="rating d-inline-block">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
                 </div>
               </div>
             </a>
@@ -282,9 +252,11 @@
             </a>
           </div>
         </div>
-        <div class="col-12 text-center mt-5">
-          <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
-        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col-12 text-center pt-4">
+        <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
       </div>
     </section>
   </main>
