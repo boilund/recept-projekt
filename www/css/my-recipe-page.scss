@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.my-recipe-page {
+
+	overflow-x: inherit;
+
+	.fa-utensils {
+		color: #ccc;
+	}
+
+	.author {
+		font-size: 13px;
+	}
+
+	.recept-card {
+
+		@include small {
+			height: 320px;
+		}
+
+		@include large {
+			height: 320px;
+		}
+	}
+
+	.card-footer {
+		background-color: #fff;
+		border-top: none;
+		// position: absolute;
+		bottom: 0px;
+	}
+
+
+
+
+}
