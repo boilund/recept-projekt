@@ -1,10 +1,8 @@
-@import "variables";
-@import "mixins";
-
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +15,7 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: map-get($colors, font-black);
+  color: #333;
 }
 
 main {
@@ -39,6 +37,7 @@ a:link,
 a:hover,
 a:visited,
 a:active {
-  color: map-get($colors, font-black);
+  color: #333;
   text-decoration: none;
 }
+/*# sourceMappingURL=base.css.map */

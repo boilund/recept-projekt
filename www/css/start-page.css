@@ -1,0 +1,78 @@
+.recept-card {
+  width: 100%;
+  height: 290px;
+  border-radius: 0%;
+}
+
+@media (min-width: 768px) {
+  .recept-card {
+    height: 250px;
+  }
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card-img-top {
+  border-radius: 0%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fa-heart {
+  color: #e60019;
+}
+
+aside .new-recept-btn {
+  height: 55px;
+}
+
+@media (min-width: 768px) {
+  aside .new-recept-btn {
+    height: 77px;
+  }
+}
+
+aside .my-recept-btn {
+  height: 55px;
+}
+
+aside .card:hover {
+  background-color: #e60019;
+}
+
+aside .card:hover a {
+  color: #fff;
+  font-weight: 600;
+}
+
+aside .side-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-recept {
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.more-btn {
+  background-color: #e60019;
+  font-size: 13px;
+}
+
+.more-btn:hover {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=start-page.css.map */
