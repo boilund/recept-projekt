@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700');
+@import "variables";
+@import "mixins";
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,9 +15,14 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: #333;
+  color: map-get($colors, font-black);
   /* slightly more than the footer height for more space before footer*/
-  margin-bottom: 370px;
+  margin-bottom: 550px;
+
+  @include large {
+     /* margin-bottom:910px; */
+     margin-bottom: 370px;
+ }
 }
 
 h1, h2, h3 {
@@ -27,11 +33,7 @@ h3 {
   font-size: 20px;
 }
 
-.main {
-  display: block;
-}
-
 a:link, a:hover, a:visited, a:active {
-  color:  #333;
+  color: map-get($colors, font-black);
   text-decoration: none;
 }

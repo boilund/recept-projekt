@@ -2,35 +2,20 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 350px;
   background-color: #181818;
 }
 
-@media screen and (max-width: 1200px) {
-
-  body {
-    margin-bottom: 350px;
-  }
-
-  footer {
-    height: 300px;
-  }
-
-}
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
 
     body {
-      margin-bottom: 650px;
+      /* margin-bottom:910px; */
+      margin-bottom: 550px;
     }
 
     footer {
-      height: 600px;
+      /* height: 880px; */
+      height: 450px;;
     }
 
 }
-
-footer ul {
-  list-style: none;
-}
-
