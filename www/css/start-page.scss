@@ -1,22 +1,13 @@
-@import url("/css/basic.css");
-@import url("/css/header.css");
-@import url("/css/footer.css");
-
-/* ----------------------
-  index.html Main style
--------------------------*/
-body.index-page {
-  background-color: #f1f1f1;
-}
+@import "variables";
+@import "mixins";
 
 .recept-card {
   width: 100%;
-  height: 250px;
+  height: 290px;
   border-radius: 0%;
-}
-@media only screen and (max-width: 767px) {
-  .recept-card {
-    height: 290px;
+
+  @include medium {
+    height: 250px;
   }
 }
 
@@ -33,11 +24,10 @@ body.index-page {
 }
 
 .new-recept-btn {
-  height: 77px;
-}
-@media only screen and (max-width: 767px) {
-  .new-recept-btn {
-    height: 55px;
+  height: 55px;
+
+  @include medium {
+    height: 77px;
   }
 }
 
@@ -52,13 +42,13 @@ body.index-page {
 }
 
 .search-recept {
-  border: 1px solid #333;
+  border: 1px solid map-get($colors, font-black);
   border-radius: 3px;
   font-size: 13px;
 }
 
 .more-btn {
-  background-color: #e60019;
+  background-color: map-get($colors, accent);
   font-size: 13px;
 }
 

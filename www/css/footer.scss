@@ -1,0 +1,21 @@
+@import "mixins";
+
+body {
+  @include large {
+     /* margin-bottom:910px; */
+     margin-bottom: 550px;
+ }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 450px;
+  background-color: #181818;
+
+  @include large {
+     /* height: 880px; */
+     height: 350px;
+  }
+}
