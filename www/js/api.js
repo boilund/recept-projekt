@@ -1,11 +1,21 @@
-$.getJSON( "/json/food.json", function( item) {
-    console.log(data.length);
+var searchText;
+var jsonList;
+
+$.getJSON( "/json/food.json", (data)=> {
+ jsonList=data;
+   
+    
+    console.log(jsonList[0]);
+    searchText="ägg";
+    search(jsonList, searchText);
+
   });
 
-  function search(jsonList, searchText) {
-    return jsonList.filter(function(x) {
-        for (var i in x) {
-            if (x[i].toLowerCase().indexOf(searchText.toLowerCase()) > -1) return x;
-        }
-    })
-}
+  function search(jsonList, searchText){
+      let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
+      let result=jsonList.filter(x => x.Namn.match(regEx) !== null);
+  console.log(result);
+    }
+
+
+
