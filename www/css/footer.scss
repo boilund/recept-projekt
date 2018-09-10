@@ -1,12 +1,5 @@
 @import "mixins";
 
-body {
-  @include large {
-     /* margin-bottom:910px; */
-     margin-bottom: 550px;
- }
-}
-
 footer {
   position: absolute;
   bottom: 0;

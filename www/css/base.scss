@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -16,7 +17,12 @@ body {
   font-size: 15px;
   color: map-get($colors, font-black);
   /* slightly more than the footer height for more space before footer*/
-  margin-bottom: 370px;
+  margin-bottom: 550px;
+
+  @include large {
+     /* margin-bottom:910px; */
+     margin-bottom: 370px;
+ }
 }
 
 h1, h2, h3 {
