@@ -38,14 +38,20 @@
       </div>
     </section>
   </header>
+
+  <section class="container-fluid index-picture">
+    <div class="row search-row">
       <div class="col">
-        <form>
-          <span class="search-icon ml-3"><i class="fas fa-search"></i></span>
-          <input type="text" class="form-control search-input pl-5" id="search-recept" placeholder="Sök recept...">
+        <form class="input-group search-input">
+          <i class="fas fa-search"></i>
+          <input type="text" class="form-control search-input pl-5 m-0" aria-describedby="search-recept" placeholder="Sök recept...">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary bg-white" type="button" id="search-recept">Sök</button>
+          </div>
         </form>
       </div>
+    </div>
     </section>
-  </header>
 
   <main class="container main py-3">
     <div class="row">
