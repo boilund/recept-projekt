@@ -1,4 +1,9 @@
-* {
+@import "variables";
+@import "mixins";
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,12 +17,17 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  color: #333;
-  /* slightly more than the footer height for more space before footer*/
-  margin-bottom: 370px;
+  color: map-get($colors, font-black);
 }
 
-h1, h2, h3 {
+main {
+  /* slightly more than the footer height for more space before footer*/
+  margin-bottom: 50px;
+}
+
+h1,
+h2,
+h3 {
   font-family: 'Zilla Slab', serif;
 }
 
@@ -25,11 +35,10 @@ h3 {
   font-size: 20px;
 }
 
-.main {
-  display: block;
-}
-
-a:link, a:hover, a:visited, a:active {
-  color:  #333;
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: map-get($colors, font-black);
   text-decoration: none;
 }

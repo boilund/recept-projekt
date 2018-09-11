@@ -1,5 +1,8 @@
+@import "variables";
+@import "mixins";
+
 .header {
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid map-get($colors, light-gray);
   position: relative;
 }
 
@@ -11,16 +14,14 @@
 
 .logo {
   width: 60px;
-}
 
-@media (min-width: 768px) {
-  .logo {
+  @include medium {
     width: 100px;
   }
 }
 
 a.nav-link:hover {
-  color: #e60019 !important;
+  color: map-get($colors, accent) !important;
 }
 
 .login-btn {
@@ -29,17 +30,15 @@ a.nav-link:hover {
 }
 
 .login-btn:hover {
-  background-color: #f1f1f1;
+  background-color: map-get($colors, light-gray);
 }
 
 .index-picture {
   min-height: 300px;
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
   background-size: cover;
-}
 
-@media (min-width: 768px) {
-  .index-picture {
+  @include medium {
     min-height: 500px;
   }
 }
@@ -68,4 +67,3 @@ form {
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 60%;
 }
-/*# sourceMappingURL=header.css.map */

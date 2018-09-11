@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+footer {
+  // position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #181818;
+
+  ul {
+    list-style: none;
+  }
+
+  
+}
