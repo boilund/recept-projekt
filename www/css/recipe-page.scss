@@ -54,29 +54,39 @@
   }
 }
 
+.select-portions, .select-portions:focus  {
+  background-color: map-get($colors, accent );
+  color: #fff;
+}
+
 .cooking-instructions {
   width: 75%;
   font-size: 13pt;
+  margin-left: 30px;
+  margin-bottom: 10px;
   @include extra-small {
     width: 100%;
   }
 
   li {
-    counter-increment: item;
+    counter-increment: cookingStep;
+    margin-bottom: 5px;
+    line-height: 140%;
     &:before {
-      content: counter(item);
-      width: 30px;
-      min-width: 30px;
+      content: counter(cookingStep);
+      width: 30px; 
       height: 30px;
-      line-height: 28px;
+      float: left;
+      position: absolute;
+      left: -35px;
+      top: 9px;
       font-size: 14px;
-      font-weight: 700;
-      border-radius: 50%;
-      display: inline-block;
+      font-weight: bold;
       text-align: center;
-      color: map-get($colors , accent );
+      color: map-get($colors , accent);
+      line-height: 28px;
       border: 2px solid #e2e0e2;
-      margin: 3px 5px;
+      border-radius: 999px;
     }
   }
 }

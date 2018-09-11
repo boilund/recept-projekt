@@ -69,14 +69,17 @@
     <section class="row">
       <div class="col-md-8">
         <h2 class="font-weight-bold mt-3 d-inline-block">Ingredienser</h2>
-        <div class="btn-group ml-2 mb-2">
-          <button class="btn btn-sm dropdown-toggle portions-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            4 portioner
-          </button>
-          <div class="dropdown-menu">
-            ...
+        <form class="ml-2 mb-0 d-inline-block">
+          <div class="form-group mb-0">
+            <label class="sr-only" for="exampleFormControlSelect1">Välj portion</label>
+            <select class="form-control select-portions" id="exampleFormControlSelect1">
+              <option>2 portioner</option>
+              <option>4 portioner</option>
+              <option>6 portioner</option>
+              <option>8 portioner</option>
+            </select>
           </div>
-        </div>
+        </form>
         <ul class="list-group list-group-flush cooking-ingredients">
           <li class="list-group-item border-0 pl-0 pb-0">1 rulle färsk smördeg</li>
           <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 dl socker</li>
