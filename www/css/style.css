@@ -689,4 +689,34 @@ input[type="text"] {
     display: none;
   }
 }
+
+.my-recipe-page {
+  overflow-x: inherit;
+}
+
+.my-recipe-page .fa-utensils {
+  color: #ccc;
+}
+
+.my-recipe-page .author {
+  font-size: 13px;
+}
+
+@media (min-width: 576px) {
+  .my-recipe-page .recept-card {
+    height: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  .my-recipe-page .recept-card {
+    height: 320px;
+  }
+}
+
+.my-recipe-page .card-footer {
+  background-color: #fff;
+  border-top: none;
+  bottom: 0px;
+}
 /*# sourceMappingURL=style.css.map */

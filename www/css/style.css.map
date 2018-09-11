@@ -17,7 +17,9 @@
         "_mixins.scss",
         "recipe-page.scss",
         "new-recipe-page.scss",
-        "my-recipe-page.scss"
+        "my-recipe-page.scss",
+        "_variables.scss",
+        "_mixins.scss"
     ],
     "names": [],
     "file": "style.css"
