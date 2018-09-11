@@ -16,6 +16,7 @@
         "_variables.scss",
         "_mixins.scss",
         "recipe-page.scss",
+        "_variables.scss",
         "new-recipe-page.scss",
         "my-recipe-page.scss",
         "_variables.scss",

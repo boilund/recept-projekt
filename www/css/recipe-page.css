@@ -4,17 +4,12 @@ main {
   padding: 25px;
 }
 
-p, li {
-  color: #5e5e5e;
-}
-
 .recipe-title {
   color: #fff;
   font-size: 50pt;
 }
 
 .heading-content {
-  margin-top: 68px;
   min-height: 310px;
   background-color: #e60019;
 }
@@ -51,12 +46,12 @@ p, li {
   min-height: 400px;
 }
 
-.cooking-instructions > li {
+.cooking-instructions li {
   counter-increment: item;
   margin-bottom: 5px;
 }
 
-.cooking-instructions > li:before {
+.cooking-instructions li:before {
   content: counter(item);
   width: 25px;
   min-width: 25px;
@@ -99,11 +94,11 @@ a.sign-in {
   font-weight: bold;
 }
 
-.icons > i {
+.icons i {
   font-size: 20pt;
 }
 
-.icons > .fa-heart {
+.icons .fa-heart {
   color: #e60019;
 }
 /*# sourceMappingURL=recipe-page.css.map */
