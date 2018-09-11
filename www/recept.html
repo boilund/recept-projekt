@@ -50,7 +50,7 @@
       </div>
     </section>
   </div>
-  <main class="container">
+  <main class="container recept-main-content">
     <section class="row">
       <div class="col">
         <div class="reciep-picture rounded">
@@ -77,13 +77,13 @@
             ...
           </div>
         </div>
-        <ul class="list-group list-group-flush">
+        <ul class="list-group list-group-flush cooking-ingredients">
           <li class="list-group-item border-0 pl-0 pb-0">1 rulle färsk smördeg</li>
-          <li class="list-group-item border-0 pl-0 pb-0">1 dl socker</li>
-          <li class="list-group-item border-0 pl-0 pb-0">3 tsk mortlade fänkålfrön</li>
-          <li class="list-group-item border-0 pl-0 pb-0">1 uppvispat ägg</li>
-          <li class="list-group-item border-0 pl-0 pb-0">4 fasta syrlig äpplen</li>
-          <li class="list-group-item border-0 pl-0 pb-0">50 g rumstempererat smör</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 dl socker</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">3 tsk mortlade fänkålfrön</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 uppvispat ägg</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">4 fasta syrlig äpplen</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">50 g rumstempererat smör</li>
         </ul>
         <h2 class="font-weight-bold mt-3">Gör så här:</h2>
         <ol class="list-group list-group-flush cooking-instructions">
@@ -139,7 +139,13 @@
     <section class="row">
       <div class="col">
         <h3 class="d-inline-block">2 kommentarer</h3>
-        <p class="mt-5"><a class="sign-in" href="#">Logga in</a> för att skriva en kommentar</p>
+        <form class="my-3">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Vad tyckte du om receptet?</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn send-comment">Kommentera</button>
+        </form>
         <ul class="list-group list-group-flush">
           <li class="list-group-item border-top-0">
             <p class="font-weight-bold d-inline-block user-comment">Karl Andersson</p>
