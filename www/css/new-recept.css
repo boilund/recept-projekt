@@ -27,14 +27,14 @@
     margin-top: 40px;
 }
 
-.new-recept-contents label,
+.new-recept-contents .label,
 .custom-select {
     color: rgba(128, 128, 128, .5);
     transition: all 0.25s ease;
     line-height: 1;
 }
 
-.new-recept-contents label {
+.new-recept-contents .label {
     position: absolute;
     transform: translateY(6px);
     left: 20px;
@@ -49,29 +49,29 @@
     margin-top: 0px;
 }
 
-.new-recept-contents label .req {
+.new-recept-contents .label .req {
     margin: 2px;
 }
 
-.new-recept-contents label.active {
+.new-recept-contents .label.active {
     transform: translateY(50px);
     left: 2px;
     font-size: 12px;
 }
 
-.new-recept-contents label .active .req {
+.new-recept-contents .label .active .req {
     opacity: 0;
 }
 
-.new-recept-contents label.highlight {
+.new-recept-contents .label.highlight {
     color: rgba(128, 128, 128, .8);
     left: 20px;
 }
 
-.new-recept-contents input,
+.new-recept-contents .search-input,
 textarea {
     display: block;
-    width: 100%;
+    width: 100%; 
     height: 100%;
     padding: 9px 10px;
     background: none;
@@ -143,7 +143,7 @@ input[type="file"] {
     display: none;
 }
 
-#file-upload-btn {
+.file-upload-btn {
     display: inline-block;
     margin: .5rem .5rem 1rem .5rem;
     clear: both;
@@ -168,6 +168,28 @@ input[type="file"] {
 
 #notimage.hidden {
     display: none;
+}
+
+/*
+
+        checkboxes
+*/
+
+.form-check-label{
+    display:inline block;
+    padding-top:10px;
+}
+
+.form-check-input{
+    display: block;
+    height: 100%;
+    padding: 9px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid lightgray;
+    color: black;
+    border-radius: 4px;
+    transition: border-color .25s ease, box-shadow .25s ease;
 }
 
 /* 
@@ -202,15 +224,19 @@ input[type="file"] {
     padding: 10px;
 }
 
-#recept-submit {
+#recept-submit, #add-ingredient, .upload-file-btn {
     background-color: black;
     color: white;
 }
 
-#add-ingredient {
+.upload-file-btn{
+    margin-left:15px;
+}
+
+/* #add-ingredient {
     background-color: black;
     color: white;
-}
+} */
 
 .ingredient-btn {
     padding: 0px;
@@ -240,6 +266,21 @@ input[type="file"] {
     .new-recept-contents .form-wrap {
         margin-bottom: 25px;
     }
+
+    .large{
+        display: block;
+        width:100%;
+    }
+
+    .mobil-pad{
+        display:none;
+    }
+
+    .form-check-label{
+        padding-top:10px;
+    }
+    
+    
     
 }
 
@@ -261,6 +302,30 @@ input[type="file"] {
     
     .bottom-select{
         margin-bottom: 60px;
+    }
+
+    .large{
+        display: none;
+    }
+
+    .mobil-pad{
+        display:block;
+    }
+
+     .checkbox-wrap{
+       padding-bottom:20px;
+    }
+
+    .form-check{
+        height:40px;
+        width:100%;
+    } */
+
+    .form-check-input{
+        display:block;
+    }
+    .form-check-label{
+        padding-top:10px;
     }
    
 
