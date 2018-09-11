@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -14,14 +16,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   color: #333;
-  /* slightly more than the footer height for more space before footer*/
 }
 
 main {
+  /* slightly more than the footer height for more space before footer*/
   margin-bottom: 50px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Zilla Slab', serif;
 }
 
@@ -29,7 +33,10 @@ h3 {
   font-size: 20px;
 }
 
-a:link, a:hover, a:visited, a:active {
+a:link,
+a:hover,
+a:visited,
+a:active {
   color: #333;
   text-decoration: none;
 }
@@ -340,7 +347,7 @@ a.sign-in {
   margin-top: 40px;
 }
 
-.new-recept-contents label,
+.new-recept-contents .label,
 .custom-select {
   color: rgba(128, 128, 128, 0.5);
   -webkit-transition: all 0.25s ease;
@@ -348,7 +355,7 @@ a.sign-in {
   line-height: 1;
 }
 
-.new-recept-contents label {
+.new-recept-contents .label {
   position: absolute;
   -webkit-transform: translateY(6px);
           transform: translateY(6px);
@@ -365,27 +372,27 @@ a.sign-in {
   margin-top: 0px;
 }
 
-.new-recept-contents label .req {
+.new-recept-contents .label .req {
   margin: 2px;
 }
 
-.new-recept-contents label.active {
+.new-recept-contents .label.active {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   left: 2px;
   font-size: 12px;
 }
 
-.new-recept-contents label .active .req {
+.new-recept-contents .label .active .req {
   opacity: 0;
 }
 
-.new-recept-contents label.highlight {
+.new-recept-contents .label.highlight {
   color: rgba(128, 128, 128, 0.8);
   left: 20px;
 }
 
-.new-recept-contents input,
+.new-recept-contents .search-input,
 textarea {
   display: block;
   width: 100%;
@@ -456,6 +463,15 @@ input[type="file"] {
   display: none;
 }
 
+input[type="text"] {
+  height: 38px;
+  margin-right: 20px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgray;
+}
+
 #file-image {
   display: inline;
   margin: 0 auto .5rem auto;
@@ -484,6 +500,17 @@ input[type="file"] {
   border-radius: 0px;
 }
 
+#mob-upload-btn {
+  padding: 10px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: black;
+  border-radius: 0px;
+}
+
 #notimage {
   display: block;
   float: left;
@@ -495,9 +522,43 @@ input[type="file"] {
   display: none;
 }
 
-/*
-     recept ingredient and steps
+#large {
+  display: block;
+  width: 100%;
+}
 
+/*
+
+      checkboxes
+*/
+.form-check {
+  height: 40px;
+  width: 100%;
+}
+
+.form-check-label {
+  display: inline block;
+  padding-top: 10px;
+}
+
+.form-check-input {
+  display: block;
+  height: 100%;
+  padding: 9px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid lightgray;
+  color: black;
+  border-radius: 4px;
+  -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
+}
+
+/* 
+     recept ingredient and steps
+     
 */
 #receptTextarea {
   width: 100%;
@@ -509,6 +570,10 @@ input[type="file"] {
   right: 20px;
   position: absolute;
   margin-top: 0px;
+}
+
+.bottom {
+  margin-bottom: 40px;
 }
 
 .ingredient-button-group {
@@ -527,14 +592,24 @@ input[type="file"] {
   padding: 10px;
 }
 
-#recept-submit {
+#recept-submit,
+#add-ingredient,
+.upload-file-btn {
   background-color: black;
   color: white;
 }
 
+.upload-file-btn {
+  margin-left: 15px;
+}
+
 #add-ingredient {
-  background-color: black;
-  color: white;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.steps {
+  margin-top: 40px;
 }
 
 .ingredient-btn {
@@ -563,11 +638,17 @@ input[type="file"] {
     right: -26px;
   }
   .new-recept-contents .form-wrap {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+  }
+  #mobil-pad {
+    display: none !important;
+  }
+  .form-check-label {
+    padding-top: 10px;
   }
 }
 
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .new-recept-contents .ax-product-grid-tile {
     margin: 0px;
     padding-bottom: 50px;
@@ -579,8 +660,24 @@ input[type="file"] {
     margin-bottom: 65px;
     margin-right: 30px;
   }
-  .bottom-select {
-    margin-bottom: 60px;
+  #large {
+    display: none;
+  }
+  #mobil-pad {
+    display: block;
+  }
+  .checkbox-wrap {
+    padding-bottom: 20px;
+  }
+  .form-check {
+    height: 40px;
+    width: 100%;
+  }
+  .form-check-input {
+    display: block;
+  }
+  .form-check-label {
+    padding-top: 10px;
   }
 }
 
