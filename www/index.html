@@ -21,52 +21,46 @@
 </head>
 
 <body>
-  <header class="container-fluid header index-picture">
+  <header class="container-fluid header">
     <section class="row">
-      <div class="col menu-row bg-transparent">
-        <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand text-white font-weight-bold" href="/"><img src="/imgs/logo-white.svg" alt="logo" class="logo px-2">Smaklig
-            måltid</a>
-          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <div class="col menu-row bg-white">
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+          <a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit"><a href="/my-recept.html">Mina sidor</a></button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga ut</button>
           </div>
         </nav>
       </div>
     </section>
-    <section class="row search-row sticky-top">
-      <div class="col">
-        <form>
-          <span class="search-icon ml-3"><i class="fas fa-search"></i></span>
-          <input type="text" class="form-control search-input pl-5" id="search-recept" placeholder="Sök recept...">
-        </form>
-      </div>
-    </section>
   </header>
 
-  <main class="container main py-3">
-    <section class="row">
-      <div class="col-12 text-center p-4">
-        <h2>Populära recept</h2>
+  <section class="container-fluid index-picture">
+    <div class="row search-row">
+      <div class="col">
+        <form class="input-group search-input">
+          <i class="fas fa-search"></i>
+          <input type="text" class="form-control search-input pl-5 m-0" aria-describedby="search-recept" placeholder="Sök recept...">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary bg-white" type="button" id="search-recept">Sök</button>
+          </div>
+        </form>
       </div>
+    </div>
     </section>
-    <section class="row">
+
+  <main class="container main py-3">
+    <div class="row">
+
       <aside class="col-md-3 col-lg-2 pb-3">
         <div class="card border new-recept-btn">
           <a href="/new-recept.html">
             <div class="p-3">
               Skapa ett nytt recept
-            </div>
-          </a>
-        </div>
-        <div class="card my-2 border my-recept-btn">
-          <a href="/my-recept.html">
-            <div class="p-3">
-              Mina recept
             </div>
           </a>
         </div>
@@ -118,8 +112,11 @@
         </div>
       </aside>
 
-      <div class="col-md-9 col-lg-10 main-contents">
+      <section class="col-md-9 col-lg-10 main-contents">
         <div class="row">
+          <div class="col-12 text-center p-4">
+            <h2>Populära recept</h2>
+          </div>
           <div class="col-6 col-md-4 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
@@ -208,12 +205,13 @@
               </div>
             </a>
           </div>
-        </div>
         <div class="col-12 text-center pt-4">
           <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
         </div>
       </div>
     </section>
+
+    </div>
   </main>
 
   <footer class="container-fluid">
