@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <!-- my CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="/css/new-recipe-page.css"> -->
+  <!-- <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
@@ -48,14 +51,14 @@
           <form>
             <div class="row form-wrap">
 
-              <div class=" col-md-6 col-sm-12 mob">
-                <label>
+              <div class=" col-md-8 col-sm-12 mob">
+                <label class="label">
                   Recptnamn<span class="req">*</span>
                 </label>
                 <input type="text" required autocomplete="off" />
               </div>
 
-              <div class="col-md-2 col-sm-12 select-wrap">
+              <div class="col-md-3 col-sm-12 select-wrap">
                 <select class="custom-select ">
                   <option value="2">2 port.</option>
                   <option value="4">4 port.</option>
@@ -65,8 +68,78 @@
                 </select>
               </div>
 
-              <div class="col-md-3 col-sm-12  category-select select-wrap">
-                <select class="custom-select">
+              
+
+            </div>
+            <div class="row form-wrap uploader" id="file-upload-form">
+              <div id="large">
+                <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
+                <div for="file-upload" id="file-drag">
+                  <img id="file-image" src="#" alt="Preview" class="hidden">
+                  <div id="uploader-start">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <div>Välj en fil eller dra här</div>
+                    <div id="notimage" class="hidden">Endast bild</div>
+                    <span class="btn btn-primary" id="file-upload-btn">Välj en fil</span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="mobil-pad" id="mobil-pad">
+                <div class="upload-file-btn btn mob mobil-pad" id="mob-upload-btn">Välj en fil</div>
+              </div>
+            </div>
+            <div class="row form-wrap checkbox-wrap">
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="btn-group-vertical">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                          <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                          </label>
+                        </div>
+                    </div>
+              </div>
+               
+                <!-- <select class="custom-select mb-40">
                   <option value="category">Välj Kategori</option>
                   <option value="flaskkött">flaskkött</option>
                   <option value="färs">Färs</option>
@@ -77,42 +150,34 @@
                   <option value="veganer">Veganer </option>
                   <option value="lakto-vegetarianer">Lakto-vegetarianer </option>
                   <option value="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</option>
-                </select>
-              </div>
-
+                </select> -->
+              
             </div>
-            <div class="row form-wrap uploader" id="file-upload-form">
-              <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-              <div for="file-upload" id="file-drag">
-                <img id="file-image" src="#" alt="Preview" class="hidden">
-                <div id="uploader-start">
-                  <i class="fa fa-download" aria-hidden="true"></i>
-                  <div>Välj en fil eller dra här</div>
-                  <div id="notimage" class="hidden">Endast bild</div>
-                  <span id="file-upload-btn" class="btn btn-primary">Välj en fil</span>
-                </div>
-              </div>
 
-            </div>
+            
+
+           
+
+
             <div class="row form-wrap">
-              <div class="mob-wrap">
+              <!-- <div class="mob-wrap">
 
-              </div>
-              <div class=" col-md-4 col-sm-12 mob">
-                <label>
+              </div> -->
+              <div class=" col-md-5 col-sm-12 mob">
+                <label class="label">
                   Ingrediens<span class="req"></span>
                 </label>
                 <input type="text" required autocomplete="off" />
               </div>
 
-              <div class="col-md-2 col-sm-12 mob">
-                <label>
-                  Kvantitet<span class="req"></span>
+              <div class="col-md-3 col-sm-12 mob">
+                <label class="label">
+                  Kvantitet<span class="req"> (g)</span>
                 </label>
                 <input type="text" required autocomplete="off" />
               </div>
 
-              <div class="col-md-2 col-sm-12 select-wrap bottom-select">
+              <!-- <div class="col-md-2 col-sm-12 select-wrap bottom-select">
                 <select class="custom-select">
                   <option value="no-unit">Välj Enhet</option>
                   <option value="st">st</option>
@@ -124,26 +189,27 @@
                   <option value="bitar">bitar </option>
 
                 </select>
-              </div>
+              </div> -->
               <div class="col-md-3 ">
                 <div class="row ingredient-button-group mob">
+                    <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
                   <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div>
-                  <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
+                  
                 </div>
               </div>
 
             </div>
-            <div class="row form-wrap bottom-select">
+            <div class="row form-wrap">
               <button id="add-ingredient"> Mer ingrediens</button>
             </div>
 
-            <div class="row form-wrap">
+            <div class="row form-wrap ">
               <div class="form-group col-12">
                 <h4 for="receptTextarea" class="steps">Gör så här</h4>
                 <textarea class="form-control" id="receptTextarea" rows="5"></textarea>
               </div>
             </div>
-            <div class="row form-wrap">
+            <div class="row form-wrap bottom">
               <div class=" recept-button-group">
                 <button type="cancel" class="button button-block recept-btn" id="recept-cancel">Avboka</button>
                 <button type="submit" class="button button-block recept-btn" id="recept-submit">Submit</button>
@@ -225,6 +291,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/api.js"></script>
 <script src="js/new-recept-css.js"></script>
 
 </html>
