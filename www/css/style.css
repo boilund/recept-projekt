@@ -145,7 +145,8 @@ aside .card:hover {
 aside .side-card {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background-color: #0000002b; }
 
 .recept-main-content {
   overflow-x: hidden;
