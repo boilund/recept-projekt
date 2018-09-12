@@ -8,16 +8,13 @@
   <title>Skapa recept | Smaklig måltid</title>
   <link rel="icon" type="image/png" href="/imgs/logo.png">
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CZilla+Slab:400,500,600,700"
     rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <!-- my CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="/css/new-recipe-page.css"> -->
-  <!-- <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css"> -->
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
@@ -34,8 +31,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
-            <a href="my-recept.html" class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Mina Sidor</a>
-            <a href="#" class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga Ut</a>
+            <a href="my-recept.html" class="btn mx-1 my-2 my-sm-0 login-btn" >Mina Sidor</a>
+            <a href="#" class="btn mx-1 my-2 my-sm-0 login-btn">Logga Ut</a>
           </div>
         </nav>
       </div>
@@ -74,7 +71,7 @@
             <div class="row form-wrap uploader" id="file-upload-form">
               <div id="large">
                 <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-                <div for="file-upload" id="file-drag">
+                <div id="file-drag">
                   <img id="file-image" src="#" alt="Preview" class="hidden">
                   <div id="uploader-start">
                     <i class="fa fa-download" aria-hidden="true"></i>
@@ -89,44 +86,44 @@
                 <div class="upload-file-btn btn mob mobil-pad" id="mob-upload-btn">Välj en fil</div>
               </div>
             </div>
-            <h4 for="receptTextarea" class="steps">Välj Kategori</h4>
+            <h4 class="steps">Välj Kategori</h4>
             <div class="row form-wrap checkbox-wrap">
                 
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="btn-group-vertical">
                       <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="fläskkött" id="defaultCheck1">
-                          <label class="form-check-label" for="Fläskkött">
+                          <input class="form-check-input" type="checkbox" value="fläskkött" >
+                          <label class="form-check-label">
                             Fläskkött
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="färs" id="defaultCheck2" >
-                          <label class="form-check-label" for="Färs">
+                          <input class="form-check-input" type="checkbox" value="färs"  >
+                          <label class="form-check-label">
                             Färs
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="korv" id="defaultCheck2" >
-                          <label class="form-check-label" for="Korv">
+                          <input class="form-check-input" type="checkbox" value="korv"  >
+                          <label class="form-check-label">
                             Korv
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value=" Kyckling & Fågel" id="defaultCheck2" >
-                          <label class="form-check-label" for=" Kyckling & Fågel">
+                          <input class="form-check-input" type="checkbox" value=" Kyckling & Fågel"  >
+                          <label class="form-check-label">
                             Kyckling & Fågel
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Nötkött" id="defaultCheck2" >
-                          <label class="form-check-label" for="Nötkött">
+                          <input class="form-check-input" type="checkbox" value="Nötkött"  >
+                          <label class="form-check-label" >
                             Nötkött
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Pasta" id="defaultCheck2" >
-                          <label class="form-check-label" for="Pasta">
+                          <input class="form-check-input" type="checkbox" value="Pasta"  >
+                          <label class="form-check-label">
                             Pasta
                           </label>
                         </div>
@@ -137,20 +134,20 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="btn-group-vertical">
                       <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Veganer" id="defaultCheck1">
-                          <label class="form-check-label" for="Veganer">
+                          <input class="form-check-input" type="checkbox" value="Veganer" >
+                          <label class="form-check-label">
                             Veganer
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Lakto-vegetarianer" id="defaultCheck2" >
-                          <label class="form-check-label" for="Lakto-vegetarianer">
+                          <input class="form-check-input" type="checkbox" value="Lakto-vegetarianer">
+                          <label class="form-check-label" >
                             Lakto-vegetarianer
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Lakto-ovo-vegetarianer" id="defaultCheck2" >
-                          <label class="form-check-label" for="Lakto-ovo-vegetarianer">
+                          <input class="form-check-input" type="checkbox" value="Lakto-ovo-vegetarianer" >
+                          <label class="form-check-label" >
                             Lakto-ovo-vegetarianer
                           </label>
                         </div>
@@ -159,44 +156,31 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="btn-group-vertical">
                       <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Glutenfritt" id="defaultCheck1">
-                          <label class="form-check-label" for="Glutenfritt">
+                          <input class="form-check-input" type="checkbox" value="Glutenfritt" >
+                          <label class="form-check-label">
                             Glutenfritt
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Laktosfritt" id="defaultCheck2" >
-                          <label class="form-check-label" for="Laktosfritt">
+                          <input class="form-check-input" type="checkbox" value="Laktosfritt" >
+                          <label class="form-check-label">
                             Laktosfritt
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Nöttfritt" id="defaultCheck2" >
-                          <label class="form-check-label" for="Nöttfritt">
+                          <input class="form-check-input" type="checkbox" value="Nöttfritt" >
+                          <label class="form-check-label" >
                             Nöttfritt
                           </label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="Äggfritt" id="defaultCheck2" >
-                          <label class="form-check-label" for="Äggfritt">
+                          <input class="form-check-input" type="checkbox" value="Äggfritt">
+                          <label class="form-check-label">
                             Äggfritt
                           </label>
                         </div>
                     </div>
               </div>
-
-                <!-- <select class="custom-select mb-40">
-                  <option value="category">Välj Kategori</option>
-                  <option value="flaskkött">flaskkött</option>
-                  <option value="färs">Färs</option>
-                  <option value="korv">Korv</option>
-                  <option value="fågel">Kyckling & Fågel</option>
-                  <option value="nötkött">Nötkött</option>
-                  <option value="pasta">Pasta</option>
-                  <option value="veganer">Veganer </option>
-                  <option value="lakto-vegetarianer">Lakto-vegetarianer </option>
-                  <option value="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</option>
-                </select> -->
 
             </div>
 
@@ -251,13 +235,13 @@
 
             <div class="row form-wrap ">
               <div class="form-group col-12">
-                <h4 for="receptTextarea" class="steps">Gör så här</h4>
+                <h4 class="steps">Gör så här</h4>
                 <textarea class="form-control" id="receptTextarea" rows="5"></textarea>
               </div>
             </div>
             <div class="row form-wrap bottom">
               <div class=" recept-button-group">
-                <button type="cancel" class="button button-block recept-btn" id="recept-cancel">Avboka</button>
+                <button class="button button-block recept-btn" id="recept-cancel">Avboka</button>
                 <button type="submit" class="button button-block recept-btn" id="recept-submit">Submit</button>
               </div>
             </div>
@@ -315,12 +299,12 @@
     </section>
   </footer>
 
-</body>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/api.js"></script>
 <script src="js/new-recept-css.js"></script>
-
+</body>
 </html>
