@@ -25,14 +25,14 @@
     <section class="row">
       <div class="col menu-row bg-white">
         <nav class="navbar navbar-expand-md navbar-light bg-white">
-          <a class="navbar-brand" href="/"><img src="/imgs/logo-black.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
+          <a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="logo" class="logo px-2">Smaklig måltid</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit"><a href="/my-recept.html">Mina sidor</a></button>
+            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga ut</button>
           </div>
         </nav>
       </div>
@@ -50,7 +50,7 @@
       </div>
     </section>
   </div>
-  <main class="container">
+  <main class="container recept-main-content">
     <section class="row">
       <div class="col">
         <div class="reciep-picture rounded">
@@ -69,21 +69,24 @@
     <section class="row">
       <div class="col-md-8">
         <h2 class="font-weight-bold mt-3 d-inline-block">Ingredienser</h2>
-        <div class="btn-group ml-2 mb-2">
-          <button class="btn btn-sm dropdown-toggle portions-btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            4 portioner
-          </button>
-          <div class="dropdown-menu">
-            ...
+        <form class="ml-2 mb-0 d-inline-block">
+          <div class="form-group mb-0">
+            <label class="sr-only" for="exampleFormControlSelect1">Välj portion</label>
+            <select class="form-control select-portions" id="exampleFormControlSelect1">
+              <option>2 portioner</option>
+              <option>4 portioner</option>
+              <option>6 portioner</option>
+              <option>8 portioner</option>
+            </select>
           </div>
-        </div>
-        <ul class="list-group list-group-flush">
+        </form>
+        <ul class="list-group list-group-flush cooking-ingredients">
           <li class="list-group-item border-0 pl-0 pb-0">1 rulle färsk smördeg</li>
-          <li class="list-group-item border-0 pl-0 pb-0">1 dl socker</li>
-          <li class="list-group-item border-0 pl-0 pb-0">3 tsk mortlade fänkålfrön</li>
-          <li class="list-group-item border-0 pl-0 pb-0">1 uppvispat ägg</li>
-          <li class="list-group-item border-0 pl-0 pb-0">4 fasta syrlig äpplen</li>
-          <li class="list-group-item border-0 pl-0 pb-0">50 g rumstempererat smör</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 dl socker</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">3 tsk mortlade fänkålfrön</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 uppvispat ägg</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">4 fasta syrlig äpplen</li>
+          <li class="list-group-item border-0 pl-0 pb-0 pt-2">50 g rumstempererat smör</li>
         </ul>
         <h2 class="font-weight-bold mt-3">Gör så här:</h2>
         <ol class="list-group list-group-flush cooking-instructions">
@@ -139,7 +142,13 @@
     <section class="row">
       <div class="col">
         <h3 class="d-inline-block">2 kommentarer</h3>
-        <p class="mt-5"><a class="sign-in" href="#">Logga in</a> för att skriva en kommentar</p>
+        <form class="my-3">
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Vad tyckte du om receptet?</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn send-comment">Kommentera</button>
+        </form>
         <ul class="list-group list-group-flush">
           <li class="list-group-item border-top-0">
             <p class="font-weight-bold d-inline-block user-comment">Karl Andersson</p>
@@ -174,7 +183,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
           <div class="row d-flex justify-content-center">
             <div class="col-7 col-sm-8 col-md-7">
@@ -188,8 +197,8 @@
             </div>
           </div>
         </div>
-  
-  
+
+
         <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
           <div class="row d-flex justify-content-center">
             <div class="col-7 col-sm-8 col-md-7">
@@ -201,7 +210,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
           <div class="row d-flex justify-content-center">
             <div class="col-7 col-sm-8 col-md-7">

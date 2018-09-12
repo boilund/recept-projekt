@@ -1,6 +1,7 @@
 @import "variables";
+@import "mixins";
 
-main {
+.recept-main-content {
   overflow-x: hidden;
   background-color: #fff;
   padding: 25px;
@@ -46,35 +47,62 @@ main {
   min-height: 400px;
 }
 
-.cooking-instructions {
+
+.cooking-ingredients {
   li {
-    counter-increment: item;
+    font-size: 12.5pt;
+  }
+}
+
+.select-portions, .select-portions:focus  {
+  background-color: map-get($colors, accent );
+  color: #fff;
+}
+
+.cooking-instructions {
+  width: 75%;
+  font-size: 13pt;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  @include extra-small {
+    width: 100%;
+  }
+
+  li {
+    counter-increment: cookingStep;
     margin-bottom: 5px;
+    line-height: 140%;
     &:before {
-      content: counter(item);
-      width: 25px;
-      min-width: 25px;
-      height: 25px;
-      line-height: 23px;
-      font-size: 13px;
-      font-weight: 700;
-      border-radius: 50%;
-      display: inline-block;
+      content: counter(cookingStep);
+      width: 30px; 
+      height: 30px;
+      float: left;
+      position: absolute;
+      left: -35px;
+      top: 9px;
+      font-size: 14px;
+      font-weight: bold;
       text-align: center;
-      color: #e60019;
+      color: map-get($colors , accent);
+      line-height: 28px;
       border: 2px solid #e2e0e2;
-      margin: 3px 5px;
+      border-radius: 999px;
     }
   }
 }
 
 .portions-btn {
-  background-color: #e60019;
+  background-color: map-get($colors , accent );
   color: #fff;
 }
 
 .comments-btn {
   background-color: #000;
+  color: #fff;
+}
+
+.send-comment {
+  background-color: map-get($colors , font-black );
   color: #fff;
 }
 
@@ -90,11 +118,6 @@ p.heart-favorite {
     color: #fff;
     font-size: 15pt;
   }
-}
-
-a.sign-in {
-  color: #0089cf;
-  font-weight: bold;
 }
 
 .icons {
