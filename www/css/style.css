@@ -340,9 +340,8 @@ p.heart-favorite {
   background-color: white;
 }
 
-.recept-name {
-  width: 100%;
-}
+.names {
+  width: 100%; }
 
 .new-recept-contents .ax-product-grid-header {
   padding: 0px;
@@ -606,7 +605,7 @@ input[type="text"] {
 }
 
 .ingredient-button-group {
-  right: 20px;
+  right: 40px;
   position: absolute;
   margin-top: -8px;
 }
@@ -720,8 +719,31 @@ input[type="text"] {
 }
 
 .my-recipe-page {
-  overflow-x: inherit;
-}
+  overflow-x: inherit; }
+  .my-recipe-page .fa-utensils {
+    color: #ccc; }
+  .my-recipe-page .author {
+    font-size: 13px; }
+  .my-recipe-page .recept-card {
+    height: 100%; }
+    @media (min-width: 576px) {
+      .my-recipe-page .recept-card {
+        height: 320px; } }
+    @media (min-width: 992px) {
+      .my-recipe-page .recept-card {
+        height: 320px; } }
+  .my-recipe-page .card-footer {
+    background-color: #fff;
+    border-top: none;
+    bottom: 0px; }
+  .my-recipe-page .fa-heart {
+    color: #e60019; }
+  .my-recipe-page .more-btn {
+    background-color: #e60019;
+    font-size: 13px;
+    display: none; }
+    .my-recipe-page .more-btn:hover {
+      opacity: 0.8; }
 
 .my-recipe-page .fa-utensils {
   color: #ccc;
