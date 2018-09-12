@@ -87,7 +87,12 @@ footer {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
-  width: 75%; }
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.56); }
+  .search-row .search-col {
+    padding: 30px; }
+  .search-row h2 {
+    color: #fff; }
   @media (min-width: 768px) {
     .search-row {
       width: 60%; } }
