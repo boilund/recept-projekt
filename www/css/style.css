@@ -548,12 +548,14 @@ input[type="text"] {
     color: #ccc; }
   .my-recipe-page .author {
     font-size: 13px; }
-  @media (min-width: 576px) {
-    .my-recipe-page .recept-card {
-      height: 320px; } }
-  @media (min-width: 992px) {
-    .my-recipe-page .recept-card {
-      height: 320px; } }
+  .my-recipe-page .recept-card {
+    height: 100%; }
+    @media (min-width: 576px) {
+      .my-recipe-page .recept-card {
+        height: 320px; } }
+    @media (min-width: 992px) {
+      .my-recipe-page .recept-card {
+        height: 320px; } }
   .my-recipe-page .card-footer {
     background-color: #fff;
     border-top: none;
