@@ -19,6 +19,12 @@
   }
 }
 
+h1.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
 a.nav-link:hover {
   color: map-get($colors, accent) !important;
 }
