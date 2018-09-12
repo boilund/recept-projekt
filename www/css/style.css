@@ -71,6 +71,8 @@ footer {
     list-style: none; }
     footer ul li {
       line-height: 140%; }
+  footer .footer-heading {
+    font-size: 17px; }
 
 .index-picture {
   position: relative;
