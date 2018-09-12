@@ -19,6 +19,13 @@
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 75%;
+  background-color:rgba(0, 0, 0, 0.56);
+  .search-col {
+    padding: 30px;
+  }
+  h2 {
+    color: #fff;
+  }
 
   @include medium {
     width: 60%;
