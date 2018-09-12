@@ -490,7 +490,8 @@ input[type="text"] {
   margin-bottom: 20px; }
 
 .steps {
-  margin-top: 40px; }
+  margin-top: 40px;
+  font-size: 1.75rem; }
 
 .ingredient-btn {
   padding: 0px;
