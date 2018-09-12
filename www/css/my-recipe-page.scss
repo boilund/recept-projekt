@@ -14,6 +14,7 @@
 	}
 
 	.recept-card {
+    height: 100%;
 
 		@include small {
 			height: 320px;
