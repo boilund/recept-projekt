@@ -17,5 +17,10 @@ $.getJSON( "/json/food.json", (data)=> {
   console.log(result);
     }
 
+  // var input=$('#ingredient').val;
+  // console.log(input.value);
+  var ingredient= $('#ingredient');
+  ingredient.keyup(()=>console.log(ingredient[0].value)
+ )
 
 
