@@ -31,7 +31,8 @@
 		bottom: 0px;
 	}
 
-
-
+  .fa-heart {
+    color: map-get($colors, accent);
+  }
 
 }

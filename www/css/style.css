@@ -248,6 +248,9 @@ p.heart-favorite {
   padding-top: 60px;
   background-color: white; }
 
+.recept-name {
+  width: 100%; }
+
 .new-recept-contents .ax-product-grid-header {
   padding: 0px; }
 
