@@ -25,8 +25,9 @@
     <section class="row">
       <div class="col menu-row bg-white">
         <nav class="navbar navbar-expand-md navbar-light bg-white">
-          <h1 class="logo-title mt-2"><a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="Smaklig måltid logo"
-                class="logo px-2">Smaklig måltid</a></h1>
+          <a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="Smaklig måltid logo"
+            class="logo"></a>
+          <h1 class="logo-title mt-2"><a class="navbar-brand d-none d-md-block" href="/">Smaklig måltid</a></h1>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,13 +59,16 @@
               </div>
 
               <div class="col-md-3 col-sm-12 select-wrap">
-                <select class="custom-select ">
-                  <option value="2">2 port.</option>
-                  <option value="4">4 port.</option>
-                  <option value="6">6 port.</option>
-                  <option value="8">8 port.</option>
-                  <option value="10">10 port.</option>
-                </select>
+                <div class="form-group">
+                  <label class="sr-only" for="portions">Välj portion</label>
+                  <select class="custom-select" id="portions">
+                    <option value="2">2 port.</option>
+                    <option value="4">4 port.</option>
+                    <option value="6">6 port.</option>
+                    <option value="8">8 port.</option>
+                    <option value="10">10 port.</option>
+                  </select>
+                </div>
               </div>
 
 

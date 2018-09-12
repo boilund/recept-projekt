@@ -52,8 +52,10 @@ a:active {
 }
 
 .logo {
-  width: 60px;
-}
+  width: 55px; }
+  @media (min-width: 768px) {
+    .logo {
+      width: 60px; } }
 
 @media (min-width: 768px) {
   .logo {
