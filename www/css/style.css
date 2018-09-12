@@ -448,7 +448,7 @@ input[type="text"] {
   margin-bottom: 40px; }
 
 .ingredient-button-group {
-  right: 20px;
+  right: 40px;
   position: absolute;
   margin-top: -8px; }
 
@@ -562,5 +562,11 @@ input[type="text"] {
     bottom: 0px; }
   .my-recipe-page .fa-heart {
     color: #e60019; }
+  .my-recipe-page .more-btn {
+    background-color: #e60019;
+    font-size: 13px;
+    display: none; }
+    .my-recipe-page .more-btn:hover {
+      opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */

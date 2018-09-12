@@ -34,6 +34,16 @@
 
   .fa-heart {
     color: map-get($colors, accent);
+	}
+	
+	.more-btn {
+    background-color: map-get($colors, accent);
+		font-size: 13px;
+		display:none;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
 }
