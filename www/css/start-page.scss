@@ -87,15 +87,9 @@
 
 aside {
   .new-recept-btn {
-    height: 55px;
-
-    @include medium {
-      height: 77px;
-    }
-  }
-
-  .my-recept-btn {
-    height: 55px;
+    background-color: map-get($colors, accent);
+    font-size: 15px;
+    font-weight: 500;
   }
 
   .card:hover {
