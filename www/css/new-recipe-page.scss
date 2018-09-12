@@ -3,8 +3,8 @@
   background-color: white;
 }
 
-.names{
-  width:100%;
+.names {
+  width: 100%;
 }
 
 .new-recept-contents .ax-product-grid-header {
@@ -137,17 +137,17 @@ input[type="file"] {
   display: none;
 }
 
-input[type="text"]{
-  height:38px;
-  margin-right:20px;
+input[type="text"] {
+  height: 38px;
+  margin-right: 20px;
   border-radius: 4px;
-  border-width:1px;
-  border-style:solid;
-  border-color:lightgray;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightgray;
 }
 
-.v-none{
-  display:none;
+.v-none {
+  display: none;
 }
 
 #file-image {
@@ -160,7 +160,7 @@ input[type="text"]{
   display: none;
 }
 
-#file-upload-btn{
+#file-upload-btn {
   display: inline-block;
   margin: .5rem .5rem 1rem .5rem;
   clear: both;
@@ -207,10 +207,10 @@ input[type="text"]{
 
       checkboxes
 */
-.form-check{
-  height:40px;
-  width:100%;
-} 
+.form-check {
+  height: 40px;
+  width: 100%;
+}
 
 .form-check-label {
   display: inline block;
@@ -245,8 +245,8 @@ input[type="text"]{
   margin-top: 0px;
 }
 
-.bottom{
-  margin-bottom:40px;
+.bottom {
+  margin-bottom: 40px;
 }
 
 .ingredient-button-group {
@@ -276,12 +276,14 @@ input[type="text"]{
   margin-left: 15px;
 }
 
- #add-ingredient {
-  margin-top:15px;
-  margin-bottom:20px;
-} 
-.steps{
-  margin-top:40px;
+#add-ingredient {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.steps {
+  margin-top: 40px;
+  font-size: 1.75rem;
 }
 
 // .bottom-select {
@@ -356,7 +358,7 @@ input[type="text"]{
   }
 
 
-  
+
 
   #large {
     display: none;
@@ -375,7 +377,7 @@ input[type="text"]{
     width: 100%;
   }
 
-   .form-check-input {
+  .form-check-input {
     display: block;
   }
 
