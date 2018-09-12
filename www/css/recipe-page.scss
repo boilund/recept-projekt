@@ -25,14 +25,14 @@
 }
 
 .cooking-time {
-  font-size: 15pt;
+  font-size: 19px;
   color: #fff;
   &:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f017";
     padding-right: 8px;
     color: #fff;
-    font-size: 15pt;
+    font-size: 19px;
   }
 }
 
@@ -108,6 +108,7 @@
 
 p.heart-favorite {
   color: #fff;
+  font-size: 19px;
 }
 
 .heart-favorite {

@@ -47,6 +47,11 @@ a:active {
     .logo {
       width: 75px; } }
 
+h1.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400; }
+
 a.nav-link:hover {
   color: #e60019 !important; }
 
@@ -64,6 +69,8 @@ footer {
   background-color: #181818; }
   footer ul {
     list-style: none; }
+    footer ul li {
+      line-height: 140%; }
 
 .index-picture {
   position: relative;
@@ -160,14 +167,14 @@ aside .side-card {
   text-align: center; }
 
 .cooking-time {
-  font-size: 15pt;
+  font-size: 19px;
   color: #fff; }
   .cooking-time:before {
     font-family: 'Font Awesome 5 Free';
     content: "\f017";
     padding-right: 8px;
     color: #fff;
-    font-size: 15pt; }
+    font-size: 19px; }
 
 .author {
   color: #fff;
@@ -226,7 +233,8 @@ aside .side-card {
   color: #fff; }
 
 p.heart-favorite {
-  color: #fff; }
+  color: #fff;
+  font-size: 19px; }
 
 .heart-favorite:before {
   font-family: 'Font Awesome 5 Free';
@@ -451,7 +459,7 @@ input[type="text"] {
   margin-bottom: 40px; }
 
 .ingredient-button-group {
-  right: 20px;
+  right: 40px;
   position: absolute;
   margin-top: -8px; }
 
@@ -565,5 +573,11 @@ input[type="text"] {
     bottom: 0px; }
   .my-recipe-page .fa-heart {
     color: #e60019; }
+  .my-recipe-page .more-btn {
+    background-color: #e60019;
+    font-size: 13px;
+    display: none; }
+    .my-recipe-page .more-btn:hover {
+      opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */
