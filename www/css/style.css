@@ -138,12 +138,9 @@ footer {
     opacity: 0.8; }
 
 aside .new-recept-btn {
-  height: 55px; }
-  @media (min-width: 768px) {
-    aside .new-recept-btn {
-      height: 77px; } }
-aside .my-recept-btn {
-  height: 55px; }
+  background-color: #e60019;
+  font-size: 15px;
+  font-weight: 500; }
 aside .card:hover {
   background-color: #e60019; }
   aside .card:hover a {
@@ -152,7 +149,8 @@ aside .card:hover {
 aside .side-card {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background-color: #0000002b; }
 
 .recept-main-content {
   overflow-x: hidden;

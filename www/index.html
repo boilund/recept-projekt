@@ -25,7 +25,8 @@
     <section class="row">
       <div class="col menu-row bg-white">
         <nav class="navbar navbar-expand-md navbar-light bg-white">
-          <h1 class="logo-title mt-2"><a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="Smaklig måltid logo" class="logo px-2">Smaklig måltid</a></h1>
+          <h1 class="logo-title mt-2"><a class="navbar-brand" href="/"><img src="/imgs/logo.svg" alt="Smaklig måltid logo"
+                class="logo px-2">Smaklig måltid</a></h1>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -58,70 +59,88 @@
   <main class="container start-main-content py-3">
     <div class="row">
 
-      <aside class="col-md-3 col-lg-2 pb-3">
-        <div class="card border new-recept-btn">
-          <a href="/new-recept.html">
-            <div class="p-3">
-              Skapa ett nytt recept
-            </div>
-          </a>
-        </div>
-        <div class="list-group">
-          <div id="accordion" role="tablist">
-            <div class="card-header bg-white border p-3 side-card" role="tab" id="headingOne">
-              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">Ingrediens</a>
-              <i class="fas fa-angle-right text-right d-inline-block px-2"></i>
-            </div>
-            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="list-group border">
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Fläskkött</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Färs</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Korv</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Kyckling & Fågel</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nötkött</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Pasta</a>
-                <div id="accordionVege" role="tablist">
-                  <div class="card-header bg-white border-0 p-0 side-card" role="tab" id="headingVege">
-                    <a class="list-group-item list-group-item-action border-0 px-3 py-2" data-toggle="collapse" href="#collapseVege">Vegetarisk</a>
-                    <i class="fas fa-angle-right px-2"></i>
-                  </div>
-                  <div id="collapseVege" class="collapse" role="tabpanel" aria-labelledby="headingVege" data-parent="#accordionVege">
-                    <div class="list-group border-0">
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Veganer</a>
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Lakto-vegetarianer</a>
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">lakto-ovo-vegetarianer</a>
-                    </div>
-                  </div>
-                </div>
+      <aside class="col-md-4 col-lg-3 pb-3">
+        <a href="/new-recept.html" class="btn btn-danger btn-lg btn-block text-white new-recept-btn mt-5 mb-1">Skapa ett
+          nytt recept</a>
+        <div id="accordion" role="tablist">
+          <div class="card-header border p-3 side-card" role="tab" id="headingOne">
+            <a class="collapsed text-dark border-0 p-0" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">Ingrediens</a>
+            <i class="fas fa-angle-down text-right d-inline-block px-2"></i>
+          </div>
+          <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body border border-top-0 border-bottom-0 px-2 py-1">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Flaskkott">
+                <label class="form-check-label mt-1" for="gridCheck1">Fläskkött</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Fars">
+                <label class="form-check-label mt-1" for="gridCheck1">Färs</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Korv">
+                <label class="form-check-label mt-1" for="gridCheck1">Korv</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Kyckling">
+                <label class="form-check-label mt-1" for="gridCheck1">Kyckling & Fågel</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Notkott">
+                <label class="form-check-label mt-1" for="gridCheck1">Nötkött</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Pasta">
+                <label class="form-check-label " for="gridCheck1">Pasta</label>
               </div>
             </div>
+          </div>
 
-            <div class="card-header bg-white border p-3 side-card" role="tab" id="headingTwo">
-              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseTwo"
-                aria-expanded="false" aria-controls="collapseTwo">Speciallkost</a>
-              <i class="fas fa-angle-right px-2"></i>
-            </div>
-            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="list-group border">
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Glutenfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Laktosfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nöttfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Äggfritt</a>
+          <div class="card-header border p-3 side-card" role="tab" id="headingTwo">
+            <a class="collapsed text-dark border-0 p-0" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
+              aria-controls="collapseTwo">Speciallkost</a>
+            <i class="fas fa-angle-right text-right d-inline-block px-2"></i>
+          </div>
+          <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body border border-top-0 px-2 py-1">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Glutenfritt">
+                <label class="form-check-label mt-1" for="gridCheck1">Glutenfritt</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Laktosfritt">
+                <label class="form-check-label mt-1" for="gridCheck1">Laktosfritt</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Aggfritt">
+                <label class="form-check-label mt-1" for="gridCheck1">Äggfritt</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Veganer">
+                <label class="form-check-label mt-1" for="gridCheck1">Veganer</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="Lakto-vegetarianer">
+                <label class="form-check-label mt-1" for="gridCheck1">Lakto-vegetarianer</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="lakto-ovo-vegetarianer">
+                <label class="form-check-label " for="gridCheck1">lakto-ovo-vegetarianer</label>
               </div>
             </div>
           </div>
         </div>
       </aside>
 
-      <section class="col-md-9 col-lg-10 main-contents">
+      <section class="col-md-8 col-lg-9 main-contents">
         <div class="row">
 
           <div class="col-12 text-center p-4">
             <h2>Populära recept</h2>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/pizza.jpeg" alt="Mozzarella pizza">
@@ -137,7 +156,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/pasta.jpeg" alt="Basilikapesto med pasta">
@@ -153,7 +172,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="/recept.html">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/apple-pie.jpg" alt="Äppelpaj">
@@ -169,7 +188,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/sandwich.jpeg" alt="Avokado smörgås">
@@ -185,7 +204,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/rice-noodle.jpeg" alt="Vegitarisk Risnudlar">
@@ -201,7 +220,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/salad.jpeg" alt="Tomatsallad">
@@ -217,7 +236,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/sushi.jpeg" alt="Sushirulle">
@@ -233,7 +252,7 @@
             </a>
           </div>
 
-          <div class="col-6 col-md-4 col-lg-3 p-0">
+          <div class="col-6 col-md-6 col-lg-3 p-0">
             <a href="#">
               <div class="card recept-card">
                 <img class="card-img-top" src="/imgs/soup.jpeg" alt="Morotssoppa">

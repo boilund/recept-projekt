@@ -94,15 +94,9 @@
 
 aside {
   .new-recept-btn {
-    height: 55px;
-
-    @include medium {
-      height: 77px;
-    }
-  }
-
-  .my-recept-btn {
-    height: 55px;
+    background-color: map-get($colors, accent);
+    font-size: 15px;
+    font-weight: 500;
   }
 
   .card:hover {
@@ -117,6 +111,7 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #0000002b;
   }
 }
 
