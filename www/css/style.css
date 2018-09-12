@@ -34,8 +34,7 @@ a:active {
   text-decoration: none; }
 
 .header {
-  border-bottom: 1px solid #f1f1f1;
-  position: relative; }
+  border-bottom: 1px solid #f1f1f1; }
 
 .navbar {
   height: 68px;
@@ -46,7 +45,7 @@ a:active {
   width: 60px; }
   @media (min-width: 768px) {
     .logo {
-      width: 100px; } }
+      width: 75px; } }
 
 a.nav-link:hover {
   color: #e60019 !important; }
@@ -58,35 +57,6 @@ a.nav-link:hover {
 .login-btn:hover {
   background-color: #f1f1f1; }
 
-.index-picture {
-  min-height: 300px;
-  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
-  background-size: cover; }
-  @media (min-width: 768px) {
-    .index-picture {
-      min-height: 500px; } }
-
-.color-nav {
-  min-height: 68px;
-  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left top;
-  background-size: cover; }
-
-form {
-  position: relative; }
-
-.search-icon {
-  position: absolute;
-  top: 8px;
-  left: 5px; }
-
-.search-row {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  width: 60%; }
-
 footer {
   bottom: 0;
   width: 100%;
@@ -95,26 +65,63 @@ footer {
   footer ul {
     list-style: none; }
 
-.recept-card {
+.index-picture {
+  position: relative;
+  min-height: 300px;
+  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
+  background-size: cover; }
+  @media (min-width: 768px) {
+    .index-picture {
+      min-height: 500px; } }
+
+.search-row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  width: 75%; }
+  @media (min-width: 768px) {
+    .search-row {
+      width: 60%; } }
+
+.search-input {
+  position: relative; }
+
+.fa-search {
+  z-index: 1;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  color: #333; }
+
+.start-main-content .recept-card {
   width: 100%;
-  height: 290px;
+  height: 320px;
   border-radius: 0%; }
   @media (min-width: 768px) {
-    .recept-card {
-      height: 250px; } }
-
-.card:hover {
+    .start-main-content .recept-card {
+      height: 300px; } }
+.start-main-content .author {
+  font-size: 13px; }
+.start-main-content .card:hover {
   opacity: 0.8; }
-
-.card-img-top {
+.start-main-content .card-img-top {
   border-radius: 0%;
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%; }
-
-.fa-heart {
+.start-main-content .card-footer {
+  background-color: #fff;
+  border-top: none; }
+.start-main-content .fa-heart {
   color: #e60019; }
+.start-main-content .more-btn {
+  background-color: #e60019;
+  font-size: 13px; }
+  .start-main-content .more-btn:hover {
+    opacity: 0.8; }
 
 aside .new-recept-btn {
   height: 55px; }
@@ -132,17 +139,6 @@ aside .side-card {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-
-.search-recept {
-  border: 1px solid #333;
-  border-radius: 3px;
-  font-size: 13px; }
-
-.more-btn {
-  background-color: #e60019;
-  font-size: 13px; }
-  .more-btn:hover {
-    opacity: 0.8; }
 
 .recept-main-content {
   overflow-x: hidden;
@@ -562,5 +558,7 @@ input[type="text"] {
     background-color: #fff;
     border-top: none;
     bottom: 0px; }
+  .my-recipe-page .fa-heart {
+    color: #e60019; }
 
 /*# sourceMappingURL=style.css.map */
