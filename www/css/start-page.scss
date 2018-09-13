@@ -20,16 +20,25 @@
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 75%;
   background-color:rgba(0, 0, 0, 0.56);
-  .search-col {
-    padding: 30px;
-  }
-  h2 {
-    color: #fff;
-  }
-
   @include medium {
     width: 60%;
   }
+
+  .search-col {
+    padding: 30px;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    @include medium {
+      font-size: 1.7rem;
+    }
+    @include large {
+      font-size: 2rem;
+    }
+  }
+
 }
 
 .search-input {
@@ -40,8 +49,11 @@
   z-index: 1;
   position: absolute;
   top: 12px;
-  left: 17px;
+  left: 7px;
   color: map-get($colors, font-black);
+  @include small {
+    left: 17px;
+  }
 }
 
 .start-main-content {
