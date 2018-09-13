@@ -21,7 +21,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: 'Zilla Slab', serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h3 {
   font-size: 20px; }
@@ -55,11 +55,12 @@ h1.logo-title {
 a.nav-link:hover {
   color: #e60019 !important; }
 
-.login-btn {
+.nav-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
   font-size: 13px; }
 
-.login-btn:hover {
+.nav-btn:hover {
   background-color: #f1f1f1; }
 
 footer {
@@ -91,13 +92,20 @@ footer {
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 75%;
   background-color: rgba(0, 0, 0, 0.56); }
-  .search-row .search-col {
-    padding: 30px; }
-  .search-row h2 {
-    color: #fff; }
   @media (min-width: 768px) {
     .search-row {
       width: 60%; } }
+  .search-row .search-col {
+    padding: 30px; }
+  .search-row h2 {
+    color: #fff;
+    font-size: 1.3rem; }
+    @media (min-width: 768px) {
+      .search-row h2 {
+        font-size: 1.7rem; } }
+    @media (min-width: 992px) {
+      .search-row h2 {
+        font-size: 2rem; } }
 
 .search-input {
   position: relative; }
@@ -106,8 +114,11 @@ footer {
   z-index: 1;
   position: absolute;
   top: 12px;
-  left: 17px;
+  left: 7px;
   color: #333; }
+  @media (min-width: 576px) {
+    .fa-search {
+      left: 17px; } }
 
 .start-main-content .recept-card {
   width: 100%;
@@ -128,7 +139,11 @@ footer {
   max-height: 100%; }
 .start-main-content .card-footer {
   background-color: #fff;
-  border-top: none; }
+  border-top: none;
+  font-size: 13px; }
+  @media (min-width: 768px) {
+    .start-main-content .card-footer {
+      font-size: 15px; } }
 .start-main-content .fa-heart {
   color: #e60019; }
 .start-main-content .more-btn {
@@ -150,7 +165,7 @@ aside .side-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0000002b; }
+  background-color: #d4d4d4; }
 
 .recept-main-content {
   overflow-x: hidden;
@@ -191,7 +206,8 @@ aside .side-card {
   min-height: 400px; }
 
 .cooking-ingredients li {
-  font-size: 12.5pt; }
+  font-size: 14.5pt;
+  font-family: 'Zilla Slab', serif; }
 
 .select-portions, .select-portions:focus {
   background-color: #e60019;
@@ -199,9 +215,10 @@ aside .side-card {
 
 .cooking-instructions {
   width: 75%;
-  font-size: 13pt;
+  font-size: 15pt;
   margin-left: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: 'Zilla Slab', serif; }
   @media (max-width: 575px) {
     .cooking-instructions {
       width: 100%; } }
@@ -217,11 +234,11 @@ aside .side-card {
       position: absolute;
       left: -35px;
       top: 9px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: #e60019;
-      line-height: 28px;
+      line-height: 26px;
       border: 2px solid #e2e0e2;
       border-radius: 999px; }
 
@@ -432,7 +449,7 @@ input[type="text"] {
   width: 100%; }
 
 .form-check-label {
-  display: inline block;
+  display: inline-block;
   padding-top: 10px; }
 
 .form-check-input {
@@ -446,9 +463,9 @@ input[type="text"] {
   border-radius: 4px;
   transition: border-color .25s ease, box-shadow .25s ease; }
 
-/* 
+/*
      recept ingredient and steps
-     
+
 */
 #receptTextarea {
   width: 100%;
@@ -576,7 +593,10 @@ input[type="text"] {
   .my-recipe-page .card-footer {
     background-color: #fff;
     border-top: none;
-    bottom: 0px; }
+    font-size: 11px; }
+    @media (min-width: 576px) {
+      .my-recipe-page .card-footer {
+        font-size: 15px; } }
   .my-recipe-page .fa-heart {
     color: #e60019; }
   .my-recipe-page .more-btn {

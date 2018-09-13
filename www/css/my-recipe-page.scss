@@ -28,14 +28,17 @@
 	.card-footer {
 		background-color: #fff;
 		border-top: none;
-		// position: absolute;
-		bottom: 0px;
+    font-size: 11px;
+
+    @include small {
+      font-size: 15px;
+    }
 	}
 
   .fa-heart {
     color: map-get($colors, accent);
 	}
-	
+
 	.more-btn {
     background-color: map-get($colors, accent);
 		font-size: 13px;

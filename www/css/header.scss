@@ -29,11 +29,12 @@ a.nav-link:hover {
   color: map-get($colors, accent) !important;
 }
 
-.login-btn {
+.nav-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
   font-size: 13px;
 }
 
-.login-btn:hover {
+.nav-btn:hover {
   background-color: map-get($colors, light-gray);
 }
