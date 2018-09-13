@@ -213,7 +213,6 @@ input[type="text"] {
 }
 
 .form-check-label {
-  // display: inline block;
   display: inline-block;
   padding-top: 10px;
 }
@@ -230,9 +229,9 @@ input[type="text"] {
   transition: border-color .25s ease, box-shadow .25s ease;
 }
 
-/* 
+/*
      recept ingredient and steps
-     
+
 */
 #receptTextarea {
   width: 100%;
