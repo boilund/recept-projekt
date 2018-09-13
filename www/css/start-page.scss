@@ -74,7 +74,12 @@
 
   .card-footer {
 		background-color: #fff;
-		border-top: none;
+    border-top: none;
+    font-size: 13px;
+
+    @include medium {
+      font-size: 15px;
+    }
 	}
 
   .fa-heart {
