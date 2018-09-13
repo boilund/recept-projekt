@@ -21,7 +21,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: 'Zilla Slab', serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h3 {
   font-size: 20px; }
@@ -55,11 +55,12 @@ h1.logo-title {
 a.nav-link:hover {
   color: #e60019 !important; }
 
-.login-btn {
+.nav-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
   font-size: 13px; }
 
-.login-btn:hover {
+.nav-btn:hover {
   background-color: #f1f1f1; }
 
 footer {
@@ -191,7 +192,8 @@ aside .side-card {
   min-height: 400px; }
 
 .cooking-ingredients li {
-  font-size: 12.5pt; }
+  font-size: 14.5pt;
+  font-family: 'Zilla Slab', serif; }
 
 .select-portions, .select-portions:focus {
   background-color: #e60019;
@@ -199,9 +201,10 @@ aside .side-card {
 
 .cooking-instructions {
   width: 75%;
-  font-size: 13pt;
+  font-size: 15pt;
   margin-left: 30px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: 'Zilla Slab', serif; }
   @media (max-width: 575px) {
     .cooking-instructions {
       width: 100%; } }
@@ -217,11 +220,11 @@ aside .side-card {
       position: absolute;
       left: -35px;
       top: 9px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: #e60019;
-      line-height: 28px;
+      line-height: 26px;
       border: 2px solid #e2e0e2;
       border-radius: 999px; }
 

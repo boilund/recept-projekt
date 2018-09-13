@@ -50,7 +50,8 @@
 
 .cooking-ingredients {
   li {
-    font-size: 12.5pt;
+    font-size: 14.5pt;
+    font-family: 'Zilla Slab', serif;
   }
 }
 
@@ -61,9 +62,10 @@
 
 .cooking-instructions {
   width: 75%;
-  font-size: 13pt;
+  font-size: 15pt;
   margin-left: 30px;
   margin-bottom: 10px;
+  font-family: 'Zilla Slab', serif;
   @include extra-small {
     width: 100%;
   }
@@ -80,11 +82,11 @@
       position: absolute;
       left: -35px;
       top: 9px;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: map-get($colors , accent);
-      line-height: 28px;
+      line-height: 26px;
       border: 2px solid #e2e0e2;
       border-radius: 999px;
     }
