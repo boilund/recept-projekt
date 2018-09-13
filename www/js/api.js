@@ -37,10 +37,8 @@ function changeInput(list) {
   document.getElementById("result").innerHTML = "";
   for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
    var listText=autoCompleteResult[i].Namn;
-   //console.log(listText)
-   //var onclickFn=setSearch(listText);
-   document.getElementById("result").innerHTML += "<a class='list-group-item list-group-item-action' href='#' onclick='setSearch("+ listText +")' >" + autoCompleteResult[i].Namn + "</a>";
-  
+   console.log(i,listText)
+   document.getElementById("result").innerHTML += "<a class='list-group-item list-group-item-action' href='#' onclick='' >  " + listText + "   </a>";
   }
   
 }
