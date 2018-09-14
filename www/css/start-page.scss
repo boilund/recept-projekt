@@ -41,21 +41,6 @@
 
 }
 
-.search-input {
-  position: relative;
-}
-
-.fa-search {
-  z-index: 1;
-  position: absolute;
-  top: 12px;
-  left: 7px;
-  color: map-get($colors, font-black);
-  @include small {
-    left: 17px;
-  }
-}
-
 .start-main-content {
 
   .recept-card {
