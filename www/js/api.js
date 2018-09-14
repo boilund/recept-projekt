@@ -19,10 +19,12 @@ $.getJSON("/json/food.json", (data) => {
 });
 
 function search(jsonList, searchText) {
+  if(searchText){
   let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
   //let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""), "i");
   let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
-  return result
+  return result;
+  }
 
 }
 
