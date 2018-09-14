@@ -222,6 +222,7 @@ aside .side-card {
   .cooking-instructions li {
     counter-increment: cookingStep;
     margin-bottom: 5px;
+    margin-left: 10px;
     line-height: 140%; }
     .cooking-instructions li:before {
       content: counter(cookingStep);
@@ -229,13 +230,13 @@ aside .side-card {
       height: 30px;
       float: left;
       position: absolute;
-      left: -35px;
-      top: 9px;
+      left: -42px;
+      top: 10px;
       font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: #e60019;
-      line-height: 26px;
+      line-height: 25px;
       border: 2px solid #e2e0e2;
       border-radius: 999px; }
 
