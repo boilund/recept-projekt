@@ -38,7 +38,7 @@ function changeInput(list) {
   for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
    var listText=autoCompleteResult[i].Namn;
    console.log(i,listText)
-   document.getElementById("result").innerHTML += "<a class='list-group-item list-group-item-action' href='#' onclick='' >  " + listText + "   </a>";
+   document.getElementById("result").innerHTML += '<a class="list-group-item list-group-item-action" href="#"" onclick="setSearch('+ listText +')" >  ' + listText + '   </a>';
   }
   
 }
