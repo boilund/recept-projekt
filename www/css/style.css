@@ -225,7 +225,7 @@ aside .side-card {
   margin-left: 30px;
   margin-bottom: 10px;
   font-family: 'Zilla Slab', serif; }
-  @media (max-width: 575px) {
+  @media (min-width: 576px) {
     .cooking-instructions {
       width: 100%; } }
   .cooking-instructions li {
