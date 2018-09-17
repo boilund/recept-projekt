@@ -53,8 +53,7 @@ class PopStateHandler {
     let urls = {
       '/': 'startPage',
       '/my_page': 'myPage',
-      '/recipe/': 'recipe',
-      '/create_recipe': 'create_recipe'
+      '/recipe/apple_pie': 'recipe',
     };
 
     // Call the right method
@@ -79,5 +78,15 @@ class PopStateHandler {
     $('section.container-fluid').removeClass('heading-content-start-page');
     $('main').empty();
     this.app.myPage.render('main');
+  }
+
+  recipe() {
+    $('.heading-content').empty();
+    $('.heading-content-start-page').empty();
+    $('section.container-fluid').addClass('heading-content');
+    $('section.container-fluid').removeClass('heading-content-start-page');
+    $('main').empty();
+    this.app.recipe.render('.heading-content');
+    this.app.recipe.render('main', 2);
   }
 }
