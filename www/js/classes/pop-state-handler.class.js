@@ -52,6 +52,9 @@ class PopStateHandler {
     // on which url
     let urls = {
       '/': 'startPage',
+      '/my_page': 'myPage',
+      '/recipe/': 'recipe',
+      '/create_recipe': 'create_recipe'
     };
 
     // Call the right method
@@ -66,6 +69,7 @@ class PopStateHandler {
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').addClass('heading-content-start-page');
     this.app.startPage.render('.heading-content-start-page');
+    this.app.startPage.render('main', '2');
   }
 
 }
