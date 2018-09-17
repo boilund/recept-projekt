@@ -1,6 +1,19 @@
 @import "variables";
 @import "mixins";
 
+@media print { 
+  .author,
+  .cooking-time,
+  .reciep-picture,
+  .comments-btn,
+  .comments,
+  .icons,
+  footer,{
+    display: none;
+  } 
+
+}
+
 .recept-main-content {
   overflow-x: hidden;
   background-color: #fff;
@@ -17,7 +30,7 @@
 
 .heading-content {
   min-height: 310px;
-  background-color: map-get($colors , accent );;
+  background-color: map-get($colors , accent );
 }
 
 .heading-text {
@@ -74,7 +87,7 @@
   margin-left: 30px;
   margin-bottom: 10px;
   font-family: 'Zilla Slab', serif;
-  @include extra-small {
+  @include small {
     width: 100%;
   }
 
@@ -137,7 +150,12 @@ p.heart-favorite {
     font-size: 20pt;
   }
 
+  .fa-print {
+    cursor: pointer;
+  }
+
   .fa-heart {
     color: map-get($colors , accent );
+    cursor: pointer;
   }
 }

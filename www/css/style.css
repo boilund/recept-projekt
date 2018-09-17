@@ -156,6 +156,15 @@ aside .side-card {
   align-items: center;
   background-color: #d4d4d4; }
 
+@media print {
+  .author,
+  .cooking-time,
+  .reciep-picture,
+  .comments-btn,
+  .comments,
+  .icons,
+  footer {
+    display: none; } }
 .recept-main-content {
   overflow-x: hidden;
   background-color: #fff;
@@ -216,7 +225,7 @@ aside .side-card {
   margin-left: 30px;
   margin-bottom: 10px;
   font-family: 'Zilla Slab', serif; }
-  @media (max-width: 575px) {
+  @media (min-width: 576px) {
     .cooking-instructions {
       width: 100%; } }
   .cooking-instructions li {
@@ -265,8 +274,11 @@ p.heart-favorite {
 
 .icons i {
   font-size: 20pt; }
+.icons .fa-print {
+  cursor: pointer; }
 .icons .fa-heart {
-  color: #e60019; }
+  color: #e60019;
+  cursor: pointer; }
 
 .new-recept-contents {
   padding-top: 60px;
