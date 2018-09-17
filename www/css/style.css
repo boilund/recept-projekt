@@ -21,7 +21,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: 'Zilla Slab', serif; }
+  font-family: 'Montserrat', sans-serif; }
 
 h3 {
   font-size: 20px; }
@@ -42,10 +42,10 @@ a:active {
   z-index: 1; }
 
 .logo {
-  width: 60px; }
+  width: 55px; }
   @media (min-width: 768px) {
     .logo {
-      width: 75px; } }
+      width: 60px; } }
 
 h1.logo-title {
   font-family: 'Montserrat', sans-serif;
@@ -55,11 +55,12 @@ h1.logo-title {
 a.nav-link:hover {
   color: #e60019 !important; }
 
-.login-btn {
+.nav-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
   font-size: 13px; }
 
-.login-btn:hover {
+.nav-btn:hover {
   background-color: #f1f1f1; }
 
 footer {
@@ -71,6 +72,8 @@ footer {
     list-style: none; }
     footer ul li {
       line-height: 140%; }
+  footer .h3 {
+    font-size: 17px; }
 
 .index-picture {
   position: relative;
@@ -87,20 +90,22 @@ footer {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
-  width: 75%; }
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.56); }
   @media (min-width: 768px) {
     .search-row {
       width: 60%; } }
-
-.search-input {
-  position: relative; }
-
-.fa-search {
-  z-index: 1;
-  position: absolute;
-  top: 12px;
-  left: 17px;
-  color: #333; }
+  .search-row .search-col {
+    padding: 30px; }
+  .search-row h2 {
+    color: #fff;
+    font-size: 1.3rem; }
+    @media (min-width: 768px) {
+      .search-row h2 {
+        font-size: 1.7rem; } }
+    @media (min-width: 992px) {
+      .search-row h2 {
+        font-size: 2rem; } }
 
 .start-main-content .recept-card {
   width: 100%;
@@ -108,7 +113,7 @@ footer {
   border-radius: 0%; }
   @media (min-width: 768px) {
     .start-main-content .recept-card {
-      height: 300px; } }
+      height: 310px; } }
 .start-main-content .author {
   font-size: 13px; }
 .start-main-content .card:hover {
@@ -119,9 +124,15 @@ footer {
   height: auto;
   max-width: 100%;
   max-height: 100%; }
+.start-main-content .card-body {
+  background-color: #fff; }
 .start-main-content .card-footer {
   background-color: #fff;
-  border-top: none; }
+  border-top: none;
+  font-size: 13px; }
+  @media (min-width: 768px) {
+    .start-main-content .card-footer {
+      font-size: 15px; } }
 .start-main-content .fa-heart {
   color: #e60019; }
 .start-main-content .more-btn {
@@ -131,12 +142,9 @@ footer {
     opacity: 0.8; }
 
 aside .new-recept-btn {
-  height: 55px; }
-  @media (min-width: 768px) {
-    aside .new-recept-btn {
-      height: 77px; } }
-aside .my-recept-btn {
-  height: 55px; }
+  background-color: #e60019;
+  font-size: 15px;
+  font-weight: 500; }
 aside .card:hover {
   background-color: #e60019; }
   aside .card:hover a {
@@ -145,8 +153,18 @@ aside .card:hover {
 aside .side-card {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background-color: #d4d4d4; }
 
+@media print {
+  .author,
+  .cooking-time,
+  .reciep-picture,
+  .comments-btn,
+  .comments,
+  .icons,
+  footer {
+    display: none; } }
 .recept-main-content {
   overflow-x: hidden;
   background-color: #fff;
@@ -155,6 +173,9 @@ aside .side-card {
 .recipe-title {
   color: #fff;
   font-size: 50pt; }
+  @media (max-width: 575px) {
+    .recipe-title {
+      font-size: 40pt; } }
 
 .heading-content {
   min-height: 310px;
@@ -181,12 +202,18 @@ aside .side-card {
   font-size: 12pt; }
 
 .reciep-picture {
-  background: url("/imgs/apple-pie.jpg");
-  background-size: cover;
-  min-height: 400px; }
+  /*  background: url("/imgs/apple-pie.jpg");
+   background-size: cover;
+   min-height: 400px; */
+  width: 100%;
+  height: 450px; }
+  @media (max-width: 575px) {
+    .reciep-picture {
+      height: 100%; } }
 
 .cooking-ingredients li {
-  font-size: 12.5pt; }
+  font-size: 14.5pt;
+  font-family: 'Zilla Slab', serif; }
 
 .select-portions, .select-portions:focus {
   background-color: #e60019;
@@ -194,15 +221,17 @@ aside .side-card {
 
 .cooking-instructions {
   width: 75%;
-  font-size: 13pt;
+  font-size: 15pt;
   margin-left: 30px;
-  margin-bottom: 10px; }
-  @media (max-width: 575px) {
+  margin-bottom: 10px;
+  font-family: 'Zilla Slab', serif; }
+  @media (min-width: 576px) {
     .cooking-instructions {
       width: 100%; } }
   .cooking-instructions li {
     counter-increment: cookingStep;
     margin-bottom: 5px;
+    margin-left: 10px;
     line-height: 140%; }
     .cooking-instructions li:before {
       content: counter(cookingStep);
@@ -210,13 +239,13 @@ aside .side-card {
       height: 30px;
       float: left;
       position: absolute;
-      left: -35px;
-      top: 9px;
-      font-size: 14px;
+      left: -42px;
+      top: 10px;
+      font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: #e60019;
-      line-height: 28px;
+      line-height: 25px;
       border: 2px solid #e2e0e2;
       border-radius: 999px; }
 
@@ -245,8 +274,11 @@ p.heart-favorite {
 
 .icons i {
   font-size: 20pt; }
+.icons .fa-print {
+  cursor: pointer; }
 .icons .fa-heart {
-  color: #e60019; }
+  color: #e60019;
+  cursor: pointer; }
 
 .new-recept-contents {
   padding-top: 60px;
@@ -429,7 +461,7 @@ input[type="text"] {
   width: 100%; }
 
 .form-check-label {
-  display: inline block;
+  display: inline-block;
   padding-top: 10px;
   margin-top: 3px; }
 
@@ -444,9 +476,9 @@ input[type="text"] {
   border-radius: 4px;
   transition: border-color .25s ease, box-shadow .25s ease; }
 
-/* 
+/*
      recept ingredient and steps
-     
+
 */
 #receptTextarea {
   width: 100%;
@@ -488,7 +520,8 @@ input[type="text"] {
   margin-bottom: 20px; }
 
 .steps {
-  margin-top: 40px; }
+  margin-top: 40px;
+  font-size: 1.75rem; }
 
 .ingredient-btn {
   padding: 0px;
@@ -573,7 +606,10 @@ input[type="text"] {
   .my-recipe-page .card-footer {
     background-color: #fff;
     border-top: none;
-    bottom: 0px; }
+    font-size: 11px; }
+    @media (min-width: 576px) {
+      .my-recipe-page .card-footer {
+        font-size: 15px; } }
   .my-recipe-page .fa-heart {
     color: #e60019; }
   .my-recipe-page .more-btn {

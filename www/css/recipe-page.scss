@@ -1,6 +1,19 @@
 @import "variables";
 @import "mixins";
 
+@media print { 
+  .author,
+  .cooking-time,
+  .reciep-picture,
+  .comments-btn,
+  .comments,
+  .icons,
+  footer,{
+    display: none;
+  } 
+
+}
+
 .recept-main-content {
   overflow-x: hidden;
   background-color: #fff;
@@ -10,11 +23,14 @@
 .recipe-title {
   color: #fff;
   font-size: 50pt;
+  @include extra-small{
+    font-size: 40pt;
+  }
 }
 
 .heading-content {
   min-height: 310px;
-  background-color: map-get($colors , accent );;
+  background-color: map-get($colors , accent );
 }
 
 .heading-text {
@@ -42,15 +58,21 @@
 }
 
 .reciep-picture {
-  background: url("/imgs/apple-pie.jpg");
+ /*  background: url("/imgs/apple-pie.jpg");
   background-size: cover;
-  min-height: 400px;
+  min-height: 400px; */
+  width: 100%;
+  height: 450px;
+  @include extra-small{
+    height: 100%;
+  }
 }
 
 
 .cooking-ingredients {
   li {
-    font-size: 12.5pt;
+    font-size: 14.5pt;
+    font-family: 'Zilla Slab', serif;
   }
 }
 
@@ -61,16 +83,18 @@
 
 .cooking-instructions {
   width: 75%;
-  font-size: 13pt;
+  font-size: 15pt;
   margin-left: 30px;
   margin-bottom: 10px;
-  @include extra-small {
+  font-family: 'Zilla Slab', serif;
+  @include small {
     width: 100%;
   }
 
   li {
     counter-increment: cookingStep;
     margin-bottom: 5px;
+    margin-left: 10px;
     line-height: 140%;
     &:before {
       content: counter(cookingStep);
@@ -78,13 +102,13 @@
       height: 30px;
       float: left;
       position: absolute;
-      left: -35px;
-      top: 9px;
-      font-size: 14px;
+      left: -42px;
+      top: 10px;
+      font-size: 15px;
       font-weight: bold;
       text-align: center;
       color: map-get($colors , accent);
-      line-height: 28px;
+      line-height: 25px;
       border: 2px solid #e2e0e2;
       border-radius: 999px;
     }
@@ -126,7 +150,12 @@ p.heart-favorite {
     font-size: 20pt;
   }
 
+  .fa-print {
+    cursor: pointer;
+  }
+
   .fa-heart {
     color: map-get($colors , accent );
+    cursor: pointer;
   }
 }
