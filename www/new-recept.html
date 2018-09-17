@@ -50,19 +50,32 @@
           <form title="recept-name" name="name-port">
             <div class="row form-wrap">
 
-              <div class=" col-md-8 col-sm-12 mob">
+              <div class=" col-md-6 col-sm-12 mob">
                 <label class="label" for="recept-name">
                   Recptnamn<span class="req">*</span>
                 </label>
                 <input type="text" class="names" id="recept-name" />
               </div>
 
+              <div class=" col-md-2 col-sm-12 mob">
+                <label class="label" for="time">
+                  Tiden tog (min)<span class="req">*</span>
+                </label>
+                <input type="text" class="names" name="time" id="time" />
+
+              </div>
+
               <div class="col-md-3 col-sm-12 select-wrap">
                 <select class="custom-select ">
+                  <option value="1">1 port.</option>
                   <option value="2">2 port.</option>
+                  <option value="3">3 port.</option>
                   <option value="4">4 port.</option>
+                  <option value="5">5 port.</option>
                   <option value="6">6 port.</option>
+                  <option value="7">7 port.</option>
                   <option value="8">8 port.</option>
+                  <option value="9">9 port.</option>
                   <option value="10">10 port.</option>
                 </select>
               </div>
@@ -200,11 +213,11 @@
               <!-- <div class="mob-wrap">
 
               </div> -->
-              <div class=" col-md-7 col-sm-12 mob">
+              <div class=" col-md-5 col-sm-12 mob">
                 <label class="label" for="ingredient">
                   Ingrediens<span class="req"></span>
                 </label>
-                <input type="text" class="names" id="ingredient" />
+                <input type="text" class="names" name="ingredient" id="ingredient" />
 
                 <div>
                   <div id="result" class="list-group"></div>
@@ -212,11 +225,27 @@
               </div>
 
               <div class="col-md-3 col-sm-12 mob">
-                <label class="label" for="unit">
-                  Kvantitet<span class="req"> (g)</span>
+                <label class="label" for="quantity">
+                  Kvantitet
+                  <!-- Kvantitet<span class="req"> (g)</span> -->
                 </label>
-                <input type="text" id="unit" />
+                <input type="text" id="quantity" />
               </div>
+
+
+
+              <div class="col-md-2 col-sm-12 select-wrap mob">
+                <select class="custom-select ">
+                  <option> Välj Enhet
+                  <option value="g">g</option>
+                  <option value="dl">dl</option>
+                  <option value="st">st</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="krm">krm</option>
+                </select>
+              </div>
+
 
               <div class="col-md-2 ">
                 <div class="row ingredient-button-group mob">
@@ -234,6 +263,10 @@
             <div class="row form-wrap ">
               <div class="form-group col-12">
                 <h4 class="steps">Gör så här</h4>
+                <div id="step">
+
+                  <!--  template render har when click enter  -->
+                </div>
                 <label for="receptTextarea" class="v-none">steps</label>
                 <textarea class="form-control" id="receptTextarea" rows="5"></textarea>
               </div>
