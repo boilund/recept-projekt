@@ -11,6 +11,10 @@ class App extends Base {
   }
 
   start() {
+    // Create a navbar
+    this.navbar = new Navbar();
+    $('header').empty();
+    this.navbar.render('header');
 
     // Create a footer
     this.footer = new Footer();
