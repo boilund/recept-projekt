@@ -54,6 +54,7 @@ class PopStateHandler {
       '/': 'startPage',
       '/my_page': 'myPage',
       '/recipe/apple_pie': 'recipe',
+      '/create_recipe': 'createRecipe',
     };
 
     // Call the right method
@@ -89,4 +90,14 @@ class PopStateHandler {
     this.app.recipe.render('.heading-content');
     this.app.recipe.render('main', 2);
   }
+
+  createRecipe() {
+    $('.heading-content').empty();
+    $('.heading-content-start-page').empty();
+    $('section.container-fluid').removeClass('heading-content');
+    $('section.container-fluid').removeClass('heading-content-start-page');
+    $('main').empty();
+    this.app.createRecipe.render('main');
+  }
+
 }
