@@ -33,7 +33,7 @@ a:active {
   color: #333;
   text-decoration: none; }
 
-.header {
+header {
   border-bottom: 1px solid #f1f1f1; }
 
 .navbar {
@@ -75,13 +75,13 @@ footer {
   footer .h3 {
     font-size: 17px; }
 
-.index-picture {
+.heading-content-start-page {
   position: relative;
   min-height: 300px;
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
   background-size: cover; }
   @media (min-width: 768px) {
-    .index-picture {
+    .heading-content-start-page {
       min-height: 500px; } }
 
 .search-row {
@@ -183,7 +183,7 @@ aside .side-card {
 
 .heading-text {
   position: relative;
-  top: 50%;
+  top: 90%;
   transform: perspective(1px) translateY(-50%);
   text-align: center; }
 

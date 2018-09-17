@@ -35,7 +35,7 @@
 
 .heading-text {
   position: relative;
-  top: 50%;
+  top: 90%;
   transform: perspective(1px) translateY(-50%);
   text-align: center;
 }
@@ -98,7 +98,7 @@
     line-height: 140%;
     &:before {
       content: counter(cookingStep);
-      width: 30px; 
+      width: 30px;
       height: 30px;
       float: left;
       position: absolute;
