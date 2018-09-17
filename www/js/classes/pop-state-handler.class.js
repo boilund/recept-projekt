@@ -51,7 +51,7 @@ class PopStateHandler {
     // A small "dictionary" of what method to call
     // on which url
     let urls = {
-      '/': 'startsidan',
+      '/': 'startPage',
     };
 
     // Call the right method
@@ -60,9 +60,12 @@ class PopStateHandler {
 
   }
 
-  startsidan() {
+  startPage() {
+    $('.heading-content').empty();
     $('main').empty();
-
+    $('section.container-fluid').removeClass('heading-content');
+    $('section.container-fluid').addClass('heading-content-start-page');
+    this.app.startPage.render('.heading-content-start-page');
   }
 
 }

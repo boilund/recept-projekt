@@ -22,7 +22,7 @@ class App extends Base {
     this.footer.render('footer');
 
     // Create pages
-    // TODO: create instance of pages
+    this.startPage = new StartPage(this);
 
     // Initiate handling of SPA push/pop-state
     this.popState = new PopStateHandler(this);
