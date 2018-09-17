@@ -72,4 +72,12 @@ class PopStateHandler {
     this.app.startPage.render('main', '2');
   }
 
+  myPage() {
+    $('.heading-content').empty();
+    $('.heading-content-start-page').empty();
+    $('section.container-fluid').removeClass('heading-content');
+    $('section.container-fluid').removeClass('heading-content-start-page');
+    $('main').empty();
+    this.app.myPage.render('main');
+  }
 }
