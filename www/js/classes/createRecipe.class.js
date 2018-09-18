@@ -68,20 +68,22 @@ class CreateRecipe extends Base {
 
   autoComplete(data) {
     let that = this;
-    $(".ingredient").on({
-      keyup: function (e) {
+    $(document).on("keyup", ".ingredient",function (e) {
+        console.log(e)
         var inputText = $(e.target).val();
+        console.log(inputText)
         if (inputText) {
           var list = that.search(data, inputText);
-          that.changeInput(e, list)
+          console.log(list)
+          that.changeInput(e, list);
         } else {
           $(e.target).next().empty();
           //autocomplete list get deleted by deleting input text
         }
 
-      }
+      })
 
-    })
+
   }
 
   search(jsonList, searchText) {
@@ -118,6 +120,7 @@ class CreateRecipe extends Base {
     target.empty();
     for (var i = 0, len = list.length; i < len; i++) {
       let listText = list[i].Namn;
+      
       let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
       $(target).append(node);
       node.on("click", () => this.setSearch(e, listText));
