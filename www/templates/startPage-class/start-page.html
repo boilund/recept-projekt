@@ -5,11 +5,12 @@ Object.assign(StartPage.prototype, { template2(){ return `
       <a href="/create_recipe" class="pop btn btn-danger btn-lg btn-block text-white new-recept-btn mt-md-5 mb-1">Skapa ett
         nytt recept</a>
       <div id="accordion" role="tablist">
-        <div class="card-header border p-3 side-card" role="tab" id="headingOne">
-          <a class="collapsed text-dark border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
-            aria-controls="collapseOne">Måltider</a>
-          <i class="fas fa-angle-down text-right d-inline-block px-2"></i>
-        </div>
+        <a class=" heading-toggle text-dark border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+          aria-controls="collapseOne">
+          <div class="card-header header-name border p-3 side-card" role="tab" id="headingOne">
+            Måltider
+          </div>
+        </a>
         <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body border border-top-0 border-bottom-0 px-2 py-1">
             <div class="form-check">
@@ -38,11 +39,12 @@ Object.assign(StartPage.prototype, { template2(){ return `
             </div>
           </div>
         </div>
-        <div class="card-header border p-3 side-card" role="tab" id="headingTwo">
-          <a class="collapsed text-dark border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
-            aria-controls="collapseTwo">Ingredienser</a>
-          <i class="fas fa-angle-right text-right d-inline-block px-2"></i>
-        </div>
+        <a class="collapsed text-dark heading-toggle border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <div class="card-header header-name border p-3 side-card" role="tab" id="headingTwo">
+            Ingredienser
+          </div>
+        </a>
         <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body border border-top-0 border-bottom-0 px-2 py-1">
             <div class="form-check">
@@ -72,11 +74,12 @@ Object.assign(StartPage.prototype, { template2(){ return `
           </div>
         </div>
 
-        <div class="card-header border p-3 side-card" role="tab" id="headingThree">
-          <a class="collapsed text-dark border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
-            aria-controls="collapseThree">Speciallkost</a>
-          <i class="fas fa-angle-right text-right d-inline-block px-2"></i>
-        </div>
+        <a class="collapsed text-dark heading-toggle  border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
+          aria-controls="collapseThree">
+          <div class="card-header header-name border p-3 side-card" role="tab" id="headingThree">
+            Speciallkost
+          </div>
+        </a>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body border border-top-0 px-2 py-1">
             <div class="form-check">
