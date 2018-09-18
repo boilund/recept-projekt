@@ -2,7 +2,10 @@ Object.assign(Step.prototype, {
     template(){
     
     return `
-        <li>${this.context} <i class="fas fa-times-circle"></i></li>
+    <div>
+            <li>${this.context} <i class="fas fa-times-circle delete-step"></i></li>
+    </div>
+        
     
     `}
     })

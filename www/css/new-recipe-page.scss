@@ -176,6 +176,7 @@ input[type="text"] {
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   background-color: black;
+  border-color:black;
   cursor: pointer;
   border-radius: 0px;
 }
@@ -238,6 +239,7 @@ input[type="text"] {
      recept ingredient and steps
 
 */
+
 #receptTextarea {
   width: 100%;
   border: 2px solid #eee;
@@ -248,6 +250,7 @@ input[type="text"] {
   right: 20px;
   position: absolute;
   margin-top: 0px;
+  border-color:black;
 }
 
 .add-ingredient {
@@ -338,6 +341,10 @@ input[type="text"] {
     margin-right: -10px;
     padding-bottom: 50px;
     margin-bottom: 0px;
+  }
+
+  .card{
+    border:none;
   }
 
   .new-recept-contents .category-select {

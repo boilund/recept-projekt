@@ -19,7 +19,20 @@ class CreateRecipe extends Base {
       this.render(".add-ingr", "Ingr");
     }
     if ($(event.target).hasClass("ingredient-btn")) {
-      $(event.target).parent("div").parent("div").parent("div").empty();
+      $(event.target).parent("div").parent("div").parent("div").parent("div").parent("div").empty();
+    }
+
+    if($(event.target).hasClass("delete-step")){
+      //delete from array
+      
+      
+      
+      
+      
+      
+      
+      // then rerender template
+      $(event.target).parent("li").empty();
     }
   }
 
@@ -113,8 +126,14 @@ class CreateRecipe extends Base {
 
   }
 
+   //       autocomplete
+
+   //       steps 
+
   eventHandlers() {
     let that = this;
+
+    // press enter render step
     $(document).on("keyup", "#receptTextarea", function (e) {
 
       if (e.keyCode === 13) {
@@ -124,11 +143,12 @@ class CreateRecipe extends Base {
         that.stepsList.push(step);
         $(".steps-here").empty();
         that.stepsList.render(".steps-here", "");
-
-
       }
     })
+
+
+
   }
 
-  //       autocomplete
+ 
 }
