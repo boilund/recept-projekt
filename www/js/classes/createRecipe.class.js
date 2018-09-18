@@ -1,18 +1,38 @@
 class CreateRecipe extends Base {
   constructor() {
     super();
-    this.load();
+    
   }
+
+  keyup(event){
+    this.labelCss(event);
+  }
+
+  keyupIngredients(event){
+    this.labelCss(event);
+  }
+
+  //method for control css when keyup
+  labelCss(event){
+    var label = event.target.labels[0];
+    if($(event.target).val()===''){
+      $(label).removeClass('active highlight');
+    }else{
+      $(label).addClass('active highlight');
+    }
+  }
+
+
 
   load() {
     return JSON._load('/food').then((data) => {
-      console.log(data[0])
-      let jsonList = data;
+      //console.log(data[0])
+      //let jsonList = data;
       let ingredient = $('#ingredient');
 
       ingredient.keyup(() => {
         var inputText = ingredient[0].value;
-        var list = this.search(jsonList, inputText);
+        var list = this.search(data, inputText);
         this.changeInput(list)
 
       });
@@ -39,20 +59,20 @@ class CreateRecipe extends Base {
 
   setSearch(val) {
     $('input[name=ingredient]').val(val);
-    document
-      .getElementById("result")
-      .innerHTML = "";
+    // document
+    //   .getElementById("result")
+    //   .innerHTML = "";
+    $("#result").empty();
   }
 
   changeInput(list) {
     if (list) {
       var autoCompleteResult = list;
-      console.log(autoCompleteResult)
-      document
-        .getElementById("result")
-        .innerHTML = "";
+      //console.log(autoCompleteResult)
+      $("#result").empty();
       for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
         var listText = autoCompleteResult[i].Namn;
+        console.log(listText)
         $("#result").append(`<a class='list-group-item list-group-item-action' onclick='setSearch("${listText}")' >  ${listText}   </a>`);
       }
     }

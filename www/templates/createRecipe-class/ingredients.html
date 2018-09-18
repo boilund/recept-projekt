@@ -1,0 +1,25 @@
+Object.assign(CreateRecipe.prototype, { templateIngredients(){ return `
+    <div class=" col-md-7 col-sm-12 mob">
+            <label class="label" for="ingredient">
+              Ingrediens<span class="req"></span>
+            </label>
+            <input type="text" class="names" id="ingredient" />
+          </div>
+
+          <div class="col-md-3 col-sm-12 mob">
+            <label class="label" for="unit">
+              Kvantitet<span class="req"> (g)</span>
+            </label>
+            <input type="text" class="text-input" id="unit" />
+          </div>
+
+          <div class="col-md-2 ">
+            <div class="row ingredient-button-group mob">
+              <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
+              <!-- <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div> -->
+
+            </div>
+          </div>
+    
+    `}
+        })

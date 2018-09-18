@@ -13,7 +13,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
               <label class="label" for="recept-name">
                 Recptnamn<span class="req">*</span>
               </label>
-              <input type="text" class="names" id="recept-name" />
+              <input type="text" class="names text-input" id="recept-name" />
             </div>
 
             <div class="col-md-3 col-sm-12 select-wrap">
@@ -199,31 +199,11 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
 
 
 
-          <div class="row form-wrap">
+          <div class="row form-wrap" id="add-ingredien">
             <!-- <div class="mob-wrap">
 
             </div> -->
-            <div class=" col-md-7 col-sm-12 mob">
-              <label class="label" for="ingredient">
-                Ingrediens<span class="req"></span>
-              </label>
-              <input type="text" class="names" id="ingredient" />
-            </div>
-
-            <div class="col-md-3 col-sm-12 mob">
-              <label class="label" for="unit">
-                Kvantitet<span class="req"> (g)</span>
-              </label>
-              <input type="text" id="unit" />
-            </div>
-
-            <div class="col-md-2 ">
-              <div class="row ingredient-button-group mob">
-                <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
-                <!-- <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div> -->
-
-              </div>
-            </div>
+            
 
           </div>
           <div class="row form-wrap">
@@ -234,7 +214,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
             <div class="form-group col-12">
               <h2 class="steps">Gör så här</h2>
               <label for="receptTextarea" class="v-none">steps</label>
-              <textarea class="form-control" id="receptTextarea" rows="5"></textarea>
+              <textarea class="form-control text-input" id="receptTextarea" rows="5"></textarea>
             </div>
           </div>
           <div class="row form-wrap bottom">
