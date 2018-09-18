@@ -107,6 +107,7 @@
 
   .fa-heart {
     color: map-get($colors, accent);
+    cursor: pointer;
   }
 
   .more-btn {
