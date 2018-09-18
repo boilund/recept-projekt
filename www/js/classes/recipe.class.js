@@ -1,5 +1,6 @@
 class Recipe extends Base {
-  constructor() {
+  constructor(app) {
     super();
+    this.app = app;
   }
 }

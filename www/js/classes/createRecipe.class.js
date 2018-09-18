@@ -2,12 +2,11 @@ class CreateRecipe extends Base {
   constructor() {
     super();
     this.changeInput();
-    this.load();
+    //this.load();
   }
 
   load() {
     return JSON._load('/food').then((data) => {
-      console.log(data[0])
       let jsonList = data;
       let ingredient = $('#ingredient');
 

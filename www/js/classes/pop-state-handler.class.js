@@ -53,7 +53,7 @@ class PopStateHandler {
     let urls = {
       '/': 'startPage',
       '/my_page': 'myPage',
-      '/recipe/apple_pie': 'recipe',
+      '/recipe/appelpaj': 'recipe',
       '/create_recipe': 'createRecipe',
     };
 
