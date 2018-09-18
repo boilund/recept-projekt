@@ -8,5 +8,15 @@
     "author": "Catarina Bennetoft",
     "url": "appelpaj",
     "⚙": "Recipe"
+  },
+  {
+    "favorite": true,
+    "title": "Äppelpaj",
+    "img": "apple-pie.jpg",
+    "time": "40min",
+    "likes": 99,
+    "author": "Catarina Bennetoft",
+    "url": "appelpaj",
+    "⚙": "Recipe"
   }
 ]
