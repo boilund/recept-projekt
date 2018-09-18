@@ -555,6 +555,9 @@ input[type="text"] {
     padding-bottom: 50px;
     margin-bottom: 0px; }
 
+  .close {
+    display: none; }
+
   .new-recept-contents .label {
     margin-left: 20px; }
 
