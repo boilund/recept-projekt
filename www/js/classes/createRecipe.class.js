@@ -5,27 +5,15 @@ class CreateRecipe extends Base {
     this.eventHandlers();
     this.stepsList=[];
 
-    //this.render1();
   }
 
-  // get stepsList() {
-  //   //console.log(`${this._stepsList}`)
-  //   return `${this._stepsList}`;
-  // }
-
-  // set stepsList(val) {
-  //   this._stepsList = val;
-  // }
-
   renderIngr() {
-    //$('.add-ingr').empty();
     this.render(".add-ingr", "Ingr");
   }
 
   //click add ingredients
 
   click(event) {
-    //console.log(event.target)
     if ($(event.target).hasClass("add-one")) {
       event.preventDefault();
       this.render(".add-ingr", "Ingr");
@@ -48,7 +36,6 @@ class CreateRecipe extends Base {
   //method for control css when keyup
   labelCss(event) {
     var label = $(event.target).prev();
-    //console.log(label);
     if ($(event.target).val() === '') {
       $(label).removeClass('active highlight');
     } else {
@@ -138,7 +125,6 @@ class CreateRecipe extends Base {
         $(".steps-here").empty();
         that.stepsList.render(".steps-here", "");
 
-        //console.log(that._stepsList);
 
       }
     })
