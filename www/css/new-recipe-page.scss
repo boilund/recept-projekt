@@ -39,7 +39,6 @@
 }
 
 .new-recept-contents .label {
-  margin-left: 20px;
   margin-top: 5px;
   position: absolute;
   transform: translateY(6px);
@@ -176,7 +175,7 @@ input[type="text"] {
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
   background-color: black;
-  border-color:black;
+  border-color: black;
   cursor: pointer;
   border-radius: 0px;
 }
@@ -240,6 +239,8 @@ input[type="text"] {
 
 */
 
+
+
 #receptTextarea {
   width: 100%;
   border: 2px solid #eee;
@@ -250,19 +251,11 @@ input[type="text"] {
   right: 20px;
   position: absolute;
   margin-top: 0px;
-  border-color:black;
+  border-color: black;
 }
 
 .add-ingredient {
   margin-bottom: 70px !important;
-}
-
-.single-ingr {
-  margin-bottom: 30px;
-}
-
-.form-wrapsingle-ingr {
-  margin-bottom: 15px;
 }
 
 .bottom {
@@ -343,8 +336,20 @@ input[type="text"] {
     margin-bottom: 0px;
   }
 
-  .card{
-    border:none;
+  .new-recept-contents .label {
+    margin-left: 20px;
+  }
+
+  .card {
+    border: none;
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .single-ingr {
+    height: 20px;
   }
 
   .new-recept-contents .category-select {
@@ -374,6 +379,11 @@ input[type="text"] {
 
   }
 
+  .new-recept-contents .label {
+    margin-left: 10px;
+  }
+
+
   .mob {
     margin-bottom: 25px;
   }
@@ -383,8 +393,24 @@ input[type="text"] {
     margin-right: 30px;
   }
 
+  .card {
+    margin-bottom: 10px;
+    border: none;
+
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .single-ingr {
+    height: 40px;
+  }
 
 
+  .ingredient-delet {
+    display: none;
+  }
 
   #large {
     display: none;
@@ -418,6 +444,30 @@ input[type="text"] {
   .ingredient-delet {
     display: none;
   }
+
+  .card {
+    border:1px lightgray solid;
+    
+  }
+
+  .card-body{
+    height:180px;
+    padding:20px;
+  }
+
+  .ing{
+    margin-bottom:10px;
+  }
+
+  #unit{
+    margin-left:3px;
+  }
+
+  
+
+  // .single-ingr {
+  //   height: 140px;
+  // }
 
   #ingredient-add {
     display: none;

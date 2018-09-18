@@ -4,8 +4,11 @@ templateIngr(){
 return `
 <div class="card">
     <div class="card-body">
-        <div class="row form-wrapsingle-ingr">
-            <div class=" col-md-5 col-sm-12 mob ">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        <div class="row form-wrap single-ingr">
+            <div class="col-lg-5 col-md-5 col-sm-12 ing">
               <label class="label" for=${ingrId}>
                 Ingrediens<span class="req"></span>
               </label>
@@ -14,17 +17,17 @@ return `
             </div>
           
           
-            <div class="col-md-3 col-sm-12 mob">
+            <div class="col-lg-3 col-md-3 col-sm-12 ing">
               <label class="label" >
                 Kvantitet<span class="req"> (g)</span>
               </label>
               <input type="text" class="text-input unit" />
             </div>
-            <div class="col-md-2 col-sm-12 select-wrap">
+            <div class="col-lg-2 col-md-3 col-sm-12 select-wrap ing">
                 <div class="form-group">
                   <label class="sr-only" for="unit">Välj enhet</label>
                   <select class="custom-select" id="unit">
-                    <option value="unit">Välj enhet</option>
+                    <option value="unit" id="unit-chosen">Välj enhet</option>
                     <option value="st">st</option>
                     <option value="g">g</option>
                     <option value="kg">kg</option>
@@ -36,7 +39,7 @@ return `
                 </div>
               </div>
           
-            <div class="col-md-2 ">
+            <div class="col-lg-2 ">
               <div class="ingredient-btn ingredient-delet"><i class="fas fa-minus-circle ingredient-btn"></i></div>
             </div>
           </div>
