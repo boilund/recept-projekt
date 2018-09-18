@@ -6,7 +6,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
   <div class="layout-wrap layout-row row">
     <div class="ax-product-grid-tile col">
       <!-- <label for="name-port" class="visuallyhidden">Name & port. </label> -->
-      <form title="recept-name" name="name-port">
+      <div title="recept-name" name="name-port">
         <div class="row form-wrap">
 
           <div class=" col-md-8 col-sm-12 mob">
@@ -20,10 +20,15 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
             <div class="form-group">
               <label class="sr-only" for="portions">Välj portion</label>
               <select class="custom-select" id="portions">
+                <option value="1">1 port.</option>
                 <option value="2">2 port.</option>
+                <option value="3">3 port.</option>
                 <option value="4">4 port.</option>
+                <option value="5">5 port.</option>
                 <option value="6">6 port.</option>
+                <option value="7">7 port.</option>
                 <option value="8">8 port.</option>
+                <option value="9">9 port.</option>
                 <option value="10">10 port.</option>
               </select>
             </div>
@@ -199,7 +204,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
 
 
 
-         <div class=" add-ingr" id="add-ingr">
+        <div class=" add-ingr" id="add-ingr">
           ${this.render("", "Ingr")}
 
 
@@ -212,7 +217,8 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
           <div class="form-group col-12">
             <h2 class="steps">Gör så här</h2>
             <label for="receptTextarea" class="v-none">steps</label>
-            <textarea class="form-control text-input" id="receptTextarea" rows="5"></textarea>
+            <ul class="steps-here"></ul>
+            <input class="form-control text-input" id="receptTextarea" />
           </div>
         </div>
         <div class="row form-wrap bottom">
@@ -222,7 +228,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
           </div>
         </div>
 
-      </form>
+      </div>
 
 
     </div>

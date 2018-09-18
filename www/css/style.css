@@ -319,6 +319,8 @@ p.heart-favorite {
   line-height: 1; }
 
 .new-recept-contents .label {
+  margin-left: 20px;
+  margin-top: 5px;
   position: absolute;
   transform: translateY(6px);
   left: 20px;
@@ -335,7 +337,7 @@ p.heart-favorite {
   margin: 2px; }
 
 .new-recept-contents .label.active {
-  transform: translateY(50px);
+  transform: translateY(40px);
   left: 2px;
   font-size: 12px; }
 
@@ -502,6 +504,9 @@ input[type="text"] {
 .single-ingr {
   margin-bottom: 30px; }
 
+.form-wrapsingle-ingr {
+  margin-bottom: 15px; }
+
 .bottom {
   margin-bottom: 40px; }
 
@@ -535,6 +540,8 @@ input[type="text"] {
   font-size: 1.75rem; }
 
 .ingredient-btn {
+  margin-top: -10px;
+  margin-left: 20px;
   padding: 0px;
   font-size: 40px; }
 

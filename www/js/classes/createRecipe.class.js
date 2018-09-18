@@ -2,23 +2,35 @@ class CreateRecipe extends Base {
   constructor() {
     super();
     this.load();
+    this.eventHandlers();
+    this.stepsList=[];
+
     //this.render1();
   }
 
-  renderIngr(){
+  // get stepsList() {
+  //   //console.log(`${this._stepsList}`)
+  //   return `${this._stepsList}`;
+  // }
+
+  // set stepsList(val) {
+  //   this._stepsList = val;
+  // }
+
+  renderIngr() {
     //$('.add-ingr').empty();
     this.render(".add-ingr", "Ingr");
   }
 
   //click add ingredients
 
-  click(event){
-    console.log(event.target)
-    if($(event.target).hasClass("add-one")){
+  click(event) {
+    //console.log(event.target)
+    if ($(event.target).hasClass("add-one")) {
       event.preventDefault();
       this.render(".add-ingr", "Ingr");
     }
-    if($(event.target).hasClass("ingredient-btn")){
+    if ($(event.target).hasClass("ingredient-btn")) {
       $(event.target).parent("div").parent("div").parent("div").empty();
     }
   }
@@ -27,21 +39,16 @@ class CreateRecipe extends Base {
     this.labelCss(event);
   }
 
+
+
   change(event) {
-    this.labelCss(event);
-  }
-
-
-  keyupIngr(event) {
-    this.labelCss(event);
-  }
-  changeIngr(event) {
     this.labelCss(event);
   }
 
   //method for control css when keyup
   labelCss(event) {
-    var label = event.target.labels[0];
+    var label = $(event.target).prev();
+    //console.log(label);
     if ($(event.target).val() === '') {
       $(label).removeClass('active highlight');
     } else {
@@ -52,22 +59,30 @@ class CreateRecipe extends Base {
 
 
 
-
+  //autocomplete
   load() {
     $.getJSON('/json/food.json').then((data) => {
-
-      let ingredient = $('#ingredient');
-
-      ingredient.keyup(() => {
-        var inputText = ingredient[0].value;
-        var list = this.search(data, inputText);
-        this.changeInput(list)
-
-      });
-
+      this.autoComplete(data);
     });
   }
 
+  autoComplete(data) {
+    let that = this;
+    $(".ingredient").on({
+      keyup: function (e) {
+        var inputText = $(e.target).val();
+        if (inputText) {
+          var list = that.search(data, inputText);
+          that.changeInput(e, list)
+        } else {
+          $(e.target).next().empty();
+          //autocomplete list get deleted by deleting input text
+        }
+
+      }
+
+    })
+  }
 
   search(jsonList, searchText) {
     if (searchText) {
@@ -77,39 +92,57 @@ class CreateRecipe extends Base {
         // "i");
         let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
         result.sort((a, b) => {
-          return a.attr< b.attr ? -1:1;
+          return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
         })
-
-        //console.log(result)
         return result;
       } else {
-        setSearch("vatten");
+        let result = [{
+          Namn: "vatten"
+        }];
+        return result;
       }
+    }
+  }
+
+  setSearch(e, val) {
+    console.log(val)
+    let target = $(e.target).next();
+    target.empty();
+    $(e.target).val(val);
+
+  }
+
+  changeInput(e, list) {
+    let target = $(e.target).next();
+
+    target.empty();
+    for (var i = 0, len = list.length; i < len; i++) {
+      let listText = list[i].Namn;
+      let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
+      $(target).append(node);
+      node.on("click", () => this.setSearch(e, listText));
 
     }
 
   }
 
-  setSearch(event,val) {
-    let v=$(event.target).val(val);
-    console.log(v);
-    // document
-    //   .getElementById("result")
-    //   .innerHTML = "";
-    $("#result").empty();
-  }
+  eventHandlers() {
+    let that = this;
+    $(document).on("keyup", "#receptTextarea", function (e) {
 
-  changeInput(list) {
-    if (list) {
-      var autoCompleteResult = list;
-      //console.log(autoCompleteResult)
-      $("#result").empty();
-      for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
-        var listText = autoCompleteResult[i].Namn;
-        console.log(listText)
-        $("#result").append(`<a class='list-group-item list-group-item-action' onclick='setSearch("${listText}")' >  ${listText}   </a>`);
+      if (e.keyCode === 13) {
+        let step = new Step($("#receptTextarea").val());
+        
+        $("#receptTextarea").val('');
+        that.stepsList.push(step);
+        $(".steps-here").empty();
+        that.stepsList.render(".steps-here", "");
+
+        //console.log(that._stepsList);
+
       }
-    }
-
+    })
   }
+
+  //       autocomplete
 }
