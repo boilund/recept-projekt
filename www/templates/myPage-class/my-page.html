@@ -27,6 +27,7 @@ Object.assign(MyPage.prototype, { template(){ return `
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
         <div class="row mt-4 my-favorite-cards">
+          <!-- render cards -->
           <div class="col-12 text-center pt-4">
             <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
           </div>
@@ -36,12 +37,11 @@ Object.assign(MyPage.prototype, { template(){ return `
       <!-- My recepts -->
       <div class="tab-pane fade" id="recipe" role="tabpanel" aria-labelledby="recipe-tab">
         <div class="row mt-4 my-recept-cards">
-        </div>
-
+          <!-- render cards -->
           <div class="col-12 text-center pt-4">
             <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
           </div>
-
+        </div>
       </div>
     </div>
   </div>
