@@ -1,0 +1,19 @@
+Object.assign(Navbar.prototype, { template(){ return `
+  <section class="row">
+    <div class="col menu-row bg-white">
+      <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <a class="pop navbar-brand" href="/"><img src="/imgs/logo.svg" alt="Smaklig måltid logo"
+          class="logo"></a>
+        <h1 class="logo-title mt-2"><a class="navbar-brand d-none d-md-block" href="/">Smaklig måltid</a></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
+          <a href="/my_page" class="pop btn  ml-1 nav-btn">Mina sidor</a>
+          <button class="btn m-1 nav-btn" type="submit">Logga ut</button>
+        </div>
+      </nav>
+    </div>
+  </section>
+`;}});
