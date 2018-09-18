@@ -9,8 +9,8 @@ Object.assign(Navbar.prototype, { template(){ return `
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
-          <a href="/my_page" class="pop btn  ml-1 nav-btn">Mina sidor</a>
+        <div class="collapse navbar-collapse d-md-flex justify-content-end parent" id="navbarSupportedContent">
+          ${this.url === "/my_page" ? this.toCreatePageButton : this.toMyPageButton }
           <button class="btn m-1 nav-btn" type="submit">Logga ut</button>
         </div>
       </nav>
