@@ -1,33 +1,48 @@
 class CreateRecipe extends Base {
   constructor() {
     super();
-    
+    this.load();
   }
 
-  keyup(event){
+  //render
+  renderIngredients() {
+    let that = this;
+    that.render('#add-ingredien', 'Ingredients');
+  }
+
+  keyup(event) {
     this.labelCss(event);
   }
 
-  keyupIngredients(event){
+  change(event) {
+    this.labelCss(event);
+  }
+
+
+  keyupIngredients(event) {
+    this.labelCss(event);
+  }
+  changeIngredients(event) {
     this.labelCss(event);
   }
 
   //method for control css when keyup
-  labelCss(event){
+  labelCss(event) {
     var label = event.target.labels[0];
-    if($(event.target).val()===''){
+    if ($(event.target).val() === '') {
       $(label).removeClass('active highlight');
-    }else{
+    } else {
       $(label).addClass('active highlight');
     }
   }
 
 
 
+
+
   load() {
-    return JSON._load('/food').then((data) => {
-      //console.log(data[0])
-      //let jsonList = data;
+    $.getJSON('/json/food.json').then((data) => {
+
       let ingredient = $('#ingredient');
 
       ingredient.keyup(() => {
@@ -48,6 +63,11 @@ class CreateRecipe extends Base {
         // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
         // "i");
         let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+        result.sort((a, b) => {
+          return a.attr< b.attr ? -1:1;
+        })
+
+        console.log(result)
         return result;
       } else {
         setSearch("vatten");
