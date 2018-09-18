@@ -248,6 +248,14 @@ input[type="text"]{
   margin-top: 0px;
 }
 
+.add-ingredient{
+  margin-bottom:70px !important;
+}
+
+.single-ingr{
+  margin-bottom:30px;
+}
+
 .bottom {
   margin-bottom: 40px;
 }
@@ -285,7 +293,7 @@ input[type="text"]{
 }
 
 .steps {
-  margin-top: 40px;
+  
   font-size: 1.75rem;
 }
 
@@ -298,7 +306,7 @@ input[type="text"]{
   font-size: 40px;
 }
 
-#ingredient-delet {
+.ingredient-delet {
   color: #e60019;
   margin-left: 20px;
 }
@@ -392,7 +400,7 @@ input[type="text"]{
 }
 
 @media screen and (max-width: 750px) {
-  #ingredient-delet {
+  .ingredient-delet {
     display: none;
   }
 

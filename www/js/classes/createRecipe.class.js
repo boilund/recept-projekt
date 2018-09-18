@@ -2,12 +2,25 @@ class CreateRecipe extends Base {
   constructor() {
     super();
     this.load();
+    //this.render1();
   }
 
-  //render
-  renderIngredients() {
-    let that = this;
-    that.render('#add-ingredien', 'Ingredients');
+  renderIngr(){
+    //$('.add-ingr').empty();
+    this.render(".add-ingr", "Ingr");
+  }
+
+  //click add ingredients
+
+  click(event){
+    console.log(event.target)
+    if($(event.target).hasClass("add-one")){
+      event.preventDefault();
+      this.render(".add-ingr", "Ingr");
+    }
+    if($(event.target).hasClass("ingredient-btn")){
+      $(event.target).parent("div").parent("div").parent("div").empty();
+    }
   }
 
   keyup(event) {
@@ -19,10 +32,10 @@ class CreateRecipe extends Base {
   }
 
 
-  keyupIngredients(event) {
+  keyupIngr(event) {
     this.labelCss(event);
   }
-  changeIngredients(event) {
+  changeIngr(event) {
     this.labelCss(event);
   }
 
@@ -77,8 +90,9 @@ class CreateRecipe extends Base {
 
   }
 
-  setSearch(val) {
-    $('input[name=ingredient]').val(val);
+  setSearch(event,val) {
+    let v=$(event.target).val(val);
+    console.log(v);
     // document
     //   .getElementById("result")
     //   .innerHTML = "";
@@ -92,7 +106,7 @@ class CreateRecipe extends Base {
       $("#result").empty();
       for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
         var listText = autoCompleteResult[i].Namn;
-        //console.log(listText)
+        console.log(listText)
         $("#result").append(`<a class='list-group-item list-group-item-action' onclick='setSearch("${listText}")' >  ${listText}   </a>`);
       }
     }

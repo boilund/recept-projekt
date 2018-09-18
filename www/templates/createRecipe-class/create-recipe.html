@@ -199,36 +199,13 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
 
 
 
-        <div class="row form-wrap" id="add-ingredien">
-          <div class=" col-md-7 col-sm-12 mob">
-            <label class="label" for="ingredient">
-              Ingrediens<span class="req"></span>
-            </label>
-            <input type="text" class="names" id="ingredient" />
-          </div>
-
-          <div class="col-md-3 col-sm-12 mob">
-            <label class="label" for="unit">
-              Kvantitet<span class="req"> (g)</span>
-            </label>
-            <input type="text" class="text-input" id="unit" />
-          </div>
-
-          <div class="col-md-2 ">
-            <div class="row ingredient-button-group mob">
-              <div class="ingredient-btn" id="ingredient-delet"><i class="fas fa-minus-circle"></i></div>
-              <!-- <div class="ingredient-btn" id="ingredient-add"><i class="fas fa-plus-circle"></i></div> -->
-
-            </div>
-          </div>
-          <!-- <div class="mob-wrap">
-
-            </div> -->
+         <div class=" add-ingr" id="add-ingr">
+          ${this.render("", "Ingr")}
 
 
         </div>
-        <div class="row form-wrap">
-          <button id="add-ingredient"> Mer ingrediens</button>
+        <div class="row form-wrap add-ingredient">
+          <button id="add-ingredient" class="add-one"> Mer ingrediens</button>
         </div>
 
         <div class="row form-wrap ">
