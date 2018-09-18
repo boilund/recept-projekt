@@ -67,7 +67,7 @@ class CreateRecipe extends Base {
           return a.attr< b.attr ? -1:1;
         })
 
-        console.log(result)
+        //console.log(result)
         return result;
       } else {
         setSearch("vatten");
@@ -92,7 +92,7 @@ class CreateRecipe extends Base {
       $("#result").empty();
       for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
         var listText = autoCompleteResult[i].Namn;
-        console.log(listText)
+        //console.log(listText)
         $("#result").append(`<a class='list-group-item list-group-item-action' onclick='setSearch("${listText}")' >  ${listText}   </a>`);
       }
     }
