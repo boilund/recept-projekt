@@ -61,6 +61,9 @@ class PopStateHandler {
     let methodName = urls[url];
     this[methodName]();
 
+    // Set the right button
+    this.app.navbar.changeButton(url);
+
   }
 
   startPage() {
@@ -88,7 +91,7 @@ class PopStateHandler {
     $('section.container-fluid').removeClass('heading-content-start-page');
     $('main').empty();
     this.app.recipe.render('.heading-content');
-    this.app.recipe.render('main', 2);
+    this.app.recipe.render('main', '2');
   }
 
   createRecipe() {
