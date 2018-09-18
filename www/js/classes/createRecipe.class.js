@@ -1,7 +1,6 @@
 class CreateRecipe extends Base {
   constructor() {
     super();
-    this.changeInput();
     this.load();
   }
 
@@ -13,9 +12,8 @@ class CreateRecipe extends Base {
 
       ingredient.keyup(() => {
         var inputText = ingredient[0].value;
-        //console.log(inputText);
-        var list = search(jsonList, inputText);
-        changeInput(list)
+        var list = this.search(jsonList, inputText);
+        this.changeInput(list)
 
       });
 
@@ -49,6 +47,7 @@ class CreateRecipe extends Base {
   changeInput(list) {
     if (list) {
       var autoCompleteResult = list;
+      console.log(autoCompleteResult)
       document
         .getElementById("result")
         .innerHTML = "";
