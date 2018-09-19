@@ -2,6 +2,7 @@ class App extends Base {
 
   constructor() {
     super();
+    this.user = "Catarina Bennetoft";
     this.load();
   }
 
