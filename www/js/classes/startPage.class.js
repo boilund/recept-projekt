@@ -13,4 +13,16 @@ class StartPage extends Base {
      this.slices + 8;
    }
   }
+
+  change2(e) {
+    this.selectedCategory = [];
+
+    if ($(e.target).hasClass("form-check-input")) {
+      const checkedElements = $("input:checked");
+      for (let i = 0; i < checkedElements.length; i++) {
+        this.selectedCategory.push(checkedElements[i].value);
+      }
+    }
+    console.log(this.selectedCategory);
+  }
 }
