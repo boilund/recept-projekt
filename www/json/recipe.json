@@ -25,7 +25,7 @@
 				"quantity": 2,
 				"unit": "tsk"
 			},
-			{ 
+			{
 				"name": "mjölk (gärna 1,5 %)",
 				"quantity": 2.5,
 				"unit": "dl"
@@ -72,7 +72,7 @@
 			}
 		],
 		"instructions": [
-			"Sätt ugnen på 250°C. Sätt in en plåt i ugnen.", 
+			"Sätt ugnen på 250°C. Sätt in en plåt i ugnen.",
 			"Pizzadeg: Blanda mjöl, salt och bakpulver. Rör i mjölk och olivolja och arbeta ihop till en deg.",
 			"Dela degen i fyra delar och lägg dem två och två på bakplåtspapper. Strö lite mjöl på degen, kavla eller platta ut dem till ca 20 cm i diameter (för 4 port).",
 			"Fyllning: Dela, kärna ur och skiva paprikorna. Ansa och strimla salladslöken. Skiva mozzarellan.",
@@ -187,11 +187,11 @@
 		"⚙": "Recipe"
 	},
 	{
-		"favorite": true,
+		"favorite": false,
 		"title": "Äppelpaj",
 		"img": "apple-pie.jpg",
 		"time": "60",
-		"likes": 79,
+		"likes": 61,
 		"category": ["Mellanmål", "Efterrätter", "Laktosfritt", "Nöttfritt", "Äggfritt", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
 		"author": "Catarina Bennetoft",
 		"url": "applepaj",
@@ -336,7 +336,7 @@
 		"favorite": false,
 		"title": "Vietnamesiska risnudlar",
 		"img": "rice-noodle.jpeg",
-		"time": "60-240",
+		"time": "90",
 		"likes": 51,
 		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Äggfritt", "Nötkött"],
 		"author": "Kim Taylor",
@@ -1390,7 +1390,7 @@
 	},
 	{
 		"favorite": true,
-		"title": "Fransk kycklinggryta med polentastekt potatis",
+		"title": "Kycklinggryta med potatis",
 		"img": "chikenpot.jpg",
 		"time": "90",
 		"likes": 203,
@@ -1474,7 +1474,7 @@
 			"Salta och peppra kyckling- delarna. Bryn sedan kyckling och lök i lite smör och olja i en stekpanna. Tillsätt kryddor och senap. Häll i öl och låt det koka upp. Blanda i grädden och låt grytan småputtra i cirka 15 minuter, tills såsen har kokat ner och är krämig.",
 			"Värm ugnen till 220 grader.",
 			"Koka potatisen i lättsaltat vatten i cirka 15 minuter. Häll av vattnet och låt potatisen ånga av. Häll sedan upp potatisen i en ugnsfast form och tillsätt polenta och olivolja, skaka om alltsammans så att potatisen paneras. Salta och peppra. Ugnsstek potatisen i ytterligare 25–30 minuter tills den blir gyllenbrun.",
-			"Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till." 
+			"Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
 		],
 		"nutrition": [
 			{
