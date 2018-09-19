@@ -4,12 +4,11 @@ class CreateRecipe extends Base {
     this.app = app;
     this.load().then((data) => {
       this.ingredientsOptions = data;
-      this._ingredientsList.push(new Ingredients(this));
-      this._ingredientsList.render("#addIngr", "");
     });
     this.eventHandlers();
     this._stepsList = [];
     this._ingredientsList = [];
+    this._ingredientsList.push(new Ingredients(this));
 
   }
 
@@ -35,7 +34,7 @@ class CreateRecipe extends Base {
       that._ingredientsList.push(ingredient);
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
-     
+
     }
 
 
@@ -60,8 +59,8 @@ class CreateRecipe extends Base {
 
   deleteIngr(item) {
     let i = this._ingredientsList.indexOf(item);
-    if(i>-1){
-      this._ingredientsList.splice(i,1);
+    if (i > -1) {
+      this._ingredientsList.splice(i, 1);
     }
     $("#addIngr").empty();
     this._ingredientsList.render("#addIngr", "");
@@ -69,8 +68,8 @@ class CreateRecipe extends Base {
 
   deleteStep(item) {
     let i = this._stepsList.indexOf(item);
-    if(i>-1){
-      this._stepsList.splice(i,1);
+    if (i > -1) {
+      this._stepsList.splice(i, 1);
     }
     $(".steps-here").empty();
     this._stepsList.render(".steps-here", "");
