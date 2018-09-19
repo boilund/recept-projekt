@@ -61,11 +61,13 @@ class PopStateHandler {
     let methodName = urls[url];
     this[methodName]();
 
+    // Set the right button
+    this.app.navbar.changeButton(url);
+
   }
 
   startPage() {
-    $('.heading-content').empty();
-    $('main').empty();
+    this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').addClass('heading-content-start-page');
     this.app.startPage.render('.heading-content-start-page');
@@ -73,31 +75,31 @@ class PopStateHandler {
   }
 
   myPage() {
-    $('.heading-content').empty();
-    $('.heading-content-start-page').empty();
+    this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
-    $('main').empty();
     this.app.myPage.render('main');
   }
 
   recipe() {
-    $('.heading-content').empty();
-    $('.heading-content-start-page').empty();
+    this.cleanUpPage();
     $('section.container-fluid').addClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
-    $('main').empty();
     this.app.recipe.render('.heading-content');
-    this.app.recipe.render('main', 2);
+    this.app.recipe.render('main', '2');
   }
 
   createRecipe() {
-    $('.heading-content').empty();
-    $('.heading-content-start-page').empty();
+    this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
-    $('main').empty();
     this.app.createRecipe.render('main');
+  }
+
+  cleanUpPage() {
+    $('.heading-content').empty();
+    $('.heading-content-start-page').empty();
+    $('main').empty();
   }
 
 }

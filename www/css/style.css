@@ -320,6 +320,8 @@ p.heart-favorite {
   line-height: 1; }
 
 .new-recept-contents .label {
+  margin-left: 20px;
+  margin-top: 5px;
   position: absolute;
   transform: translateY(6px);
   left: 20px;
@@ -336,7 +338,7 @@ p.heart-favorite {
   margin: 2px; }
 
 .new-recept-contents .label.active {
-  transform: translateY(50px);
+  transform: translateY(40px);
   left: 2px;
   font-size: 12px; }
 
@@ -497,6 +499,15 @@ input[type="text"] {
   position: absolute;
   margin-top: 0px; }
 
+.add-ingredient {
+  margin-bottom: 70px !important; }
+
+.single-ingr {
+  margin-bottom: 30px; }
+
+.form-wrapsingle-ingr {
+  margin-bottom: 15px; }
+
 .bottom {
   margin-bottom: 40px; }
 
@@ -527,14 +538,15 @@ input[type="text"] {
   margin-bottom: 20px; }
 
 .steps {
-  margin-top: 40px;
   font-size: 1.75rem; }
 
 .ingredient-btn {
+  margin-top: -10px;
+  margin-left: 20px;
   padding: 0px;
   font-size: 40px; }
 
-#ingredient-delet {
+.ingredient-delet {
   color: #e60019;
   margin-left: 20px; }
 
@@ -591,7 +603,7 @@ input[type="text"] {
   .form-check-label {
     padding-top: 10px; } }
 @media screen and (max-width: 750px) {
-  #ingredient-delet {
+  .ingredient-delet {
     display: none; }
 
   #ingredient-add {
