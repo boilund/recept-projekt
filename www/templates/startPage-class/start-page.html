@@ -68,6 +68,10 @@ Object.assign(StartPage.prototype, { template2(){ return `
               <label class="form-check-label mt-1" for="notkott">Nötkött</label>
             </div>
             <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="fisk">
+              <label class="form-check-label mt-1" for="notkott">Fisk</label>
+            </div>
+            <div class="form-check">
               <input class="form-check-input" type="checkbox" id="pasta">
               <label class="form-check-label " for="pasta">Pasta</label>
             </div>
@@ -81,7 +85,7 @@ Object.assign(StartPage.prototype, { template2(){ return `
           </div>
         </a>
         <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body border border-top-0 px-2 py-1">
+          <div class="card-body border border-top-0 px-2 py-1 pb-md-4 pb-xl-1">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="glutenfritt">
               <label class="form-check-label mt-1" for="glutenfritt">Glutenfritt</label>
@@ -104,7 +108,7 @@ Object.assign(StartPage.prototype, { template2(){ return `
             </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="lakto-ovo-vegetarianer">
-              <label class="form-check-label " for="lakto-ovo-vegetarianer">lakto-ovo-vegetarianer</label>
+              <label class="form-check-label " for="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</label>
             </div>
           </div>
         </div>
@@ -117,138 +121,9 @@ Object.assign(StartPage.prototype, { template2(){ return `
         <div class="col-12 text-center p-4">
           <h2>Populära recept</h2>
         </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/pizza.jpeg" alt="Mozzarella pizza">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Mozzarella pizza</p>
-                <p class="author text-secondary font-italic text-center">av Lisa Andersson</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>40 min</p>
-                <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>103</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/pasta.jpeg" alt="Basilikapesto med pasta">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Basilikapesto med pasta</p>
-                <p class="author text-secondary font-italic text-center">av Patrik Lindberg</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="far fa-heart mr-2"></i>61</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="/recipe/apple_pie" class="pop">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/apple-pie.jpg" alt="Äppelpaj">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Äppelpaj</p>
-                <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>40 min</p>
-                <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>79</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/sandwich.jpeg" alt="Avokado smörgås">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Avokado smörgås</p>
-                <p class="author text-secondary font-italic text-center">av Karin Barje</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="far fa-heart mr-2"></i>24</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/rice-noodle.jpeg" alt="Vegitarisk Risnudlar">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Vegitarisk Risnudlar</p>
-                <p class="author text-secondary font-italic text-center">av Kim Taylor</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="far fa-heart mr-2"></i>51</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/salad.jpeg" alt="Tomatsallad">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Tomatsallad</p>
-                <p class="author text-secondary font-italic text-center">av Johana Kersh</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>127</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/sushi.jpeg" alt="Sushirulle">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Sushirulle</p>
-                <p class="author text-secondary font-italic text-center">av Yukiko Lemke</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>85</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-6 col-lg-3 p-0">
-          <a href="#">
-            <div class="card recept-card">
-              <img class="card-img-top" src="/imgs/soup.jpeg" alt="Morotssoppa">
-              <div class="card-body pb-0">
-                <p class="card-title text-center">Morotssoppa</p>
-                <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-              </div>
-              <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                <p><i class="far fa-clock mr-2"></i>30 min</p>
-                <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>34</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-12 text-center pt-4">
-          <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
-        </div>
+        ${this.app.recipes.render('', 3)}
+      <div class="col-12 text-center pt-4">
+        <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.app.recipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
       </div>
     </section>
 

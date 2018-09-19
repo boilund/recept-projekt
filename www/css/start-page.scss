@@ -77,7 +77,11 @@
 
   .author {
 		font-size: 13px;
-	}
+  }
+  
+  .recipeCard:nth-child(n+10) {
+    display: none;
+  }
 
   .card:hover {
     opacity: 0.8;
@@ -107,6 +111,7 @@
 
   .fa-heart {
     color: map-get($colors, accent);
+    cursor: pointer;
   }
 
   .more-btn {

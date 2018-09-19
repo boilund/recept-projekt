@@ -1,0 +1,21 @@
+Object.assign(Recipe.prototype, { template3(){ return `
+  <div class="col-6 col-md-6 col-lg-3 p-0 recipeCard">
+    <a href="#">
+      <div class="card recept-card">
+        <a class="pop" href="/recipe/${this.url}">
+          <img class="card-img-top" src="/imgs/${this.img}" alt="${this.title}">
+        </a>
+        <div class="card-body pb-0">
+          <a class="pop" href="/recipe/${this.url}">
+            <p class="card-title text-center">${this.title}</p>
+            <p class="author text-secondary font-italic text-center">av ${this.author}</p>
+          </a>
+        </div>
+        <div class="card-footer text-muted d-flex justify-content-between pb-0">
+          <p><i class="far fa-clock mr-2"></i>${this.time} min</p>
+          <p class="d-inline-block"><i class="${this.favorite ? 'fas' : 'far' } fa-heart mr-2"></i>${this.likes}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+`;}});

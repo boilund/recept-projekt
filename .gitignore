@@ -1,4 +1,5 @@
 node_modules
+.DS_Store
 www/css/base.css
 www/css/base.css.map
 www/css/footer.css
@@ -24,6 +25,7 @@ www/css/style.css.map
 *.map
 *.map
 www/css/style.css.map
+*.map
 *.map
 *.map
 *.map

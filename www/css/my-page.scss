@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-.my-recipe-page {
+.my-page {
 
 	overflow-x: inherit;
 
@@ -42,11 +42,14 @@
 	.more-btn {
     background-color: map-get($colors, accent);
 		font-size: 13px;
-		display:none;
 
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  .recipeCard:nth-child(n+9) {
+    display: none;
   }
 
 }

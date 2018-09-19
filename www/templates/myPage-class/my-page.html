@@ -1,5 +1,5 @@
 Object.assign(MyPage.prototype, { template(){ return `
-  <div class="my-recipe-page">
+  <div class="my-page">
     <div class="row mt-5 py-3">
       <div class="col-12 text-center d-flex justify-content-center pt-2 pb-5">
         <i class="fas fa-utensils fa-2x mr-2 mt-1"></i>
@@ -26,136 +26,24 @@ Object.assign(MyPage.prototype, { template(){ return `
     <!-- My favorits -->
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
-        <div class="row mt-4">
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/pizza.jpeg" alt="Mozzarella pizza">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Mozzarella pizza</p>
-                  <p class="author text-secondary font-italic text-center">av Lisa Andersson</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>40 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>103</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="/recipe/apple_pie" class="pop">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/apple-pie.jpg" alt="Äppelpaj">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Äppelpaj</p>
-                  <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>40 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>79</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/salad.jpeg" alt="Tomatsallad">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Tomatsallad</p>
-                  <p class="author text-secondary font-italic text-center">av Johana Kersh</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>30 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>127</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/sushi.jpeg" alt="Sushirulle">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Sushirulle</p>
-                  <p class="author text-secondary font-italic text-center">av Yukiko Lemke</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>30 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>85</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/soup.jpeg" alt="Morotssoppa">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Morotssoppa</p>
-                  <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>30 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>34</p>
-                </div>
-              </div>
-            </a>
-
-          </div>
+        <div class="row mt-4 my-favorite-cards">
+          <!-- render cards -->
+          ${this.myFavorites.render('', 4)}
           <div class="col-12 text-center pt-4">
-            <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
+            <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.myFavorites.length <= 8 ? 'd-none' : ''}">Visa fler</div>
           </div>
         </div>
       </div>
 
       <!-- My recepts -->
       <div class="tab-pane fade" id="recipe" role="tabpanel" aria-labelledby="recipe-tab">
-        <div class="row mt-4">
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="/recept.html">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/apple-pie.jpg" alt="Äppelpaj">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Äppelpaj</p>
-                  <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>40 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>79</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/soup.jpeg" alt="Morotssoppa">
-                <div class="card-body pb-0">
-                  <p class="card-title text-center">Morotssoppa</p>
-                  <p class="author text-secondary font-italic text-center">av Catarina Bennetoft</p>
-                </div>
-                <div class="card-footer text-muted d-flex justify-content-between pb-0">
-                  <p><i class="far fa-clock mr-2"></i>30 min</p>
-                  <p class="d-inline-block"><i class="fas fa-heart mr-2"></i>34</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        </div>
-
+        <div class="row mt-4 my-recept-cards">
+          <!-- render cards -->
+          ${this.myRecipes.render('', 4)}
           <div class="col-12 text-center pt-4">
-            <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
+            <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.myRecipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
           </div>
-
+        </div>
       </div>
     </div>
   </div>

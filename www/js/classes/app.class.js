@@ -2,11 +2,18 @@ class App extends Base {
 
   constructor() {
     super();
+    this.user = "Catarina Bennetoft";
     this.load();
   }
 
   async load() {
     // TODO: load Json data
+    JSON._classes(Recipe);
+    this.recipes = await JSON._load('recipe.json');
+    this.recipes.forEach((obj) => {
+      obj.app = this;
+    });
+
     this.start();
   }
 
@@ -23,10 +30,11 @@ class App extends Base {
 
     // Create pages
     this.startPage = new StartPage(this);
-    this.myPage = new MyPage();
-    this.recipe = new Recipe();
-    //this.ingredients = new Ingredients(this);
+
+    this.myPage = new MyPage(this);
+    this.recipe = new Recipe(this);
     this.createRecipe = new CreateRecipe(this);
+
 
     // Initiate handling of SPA push/pop-state
     this.popState = new PopStateHandler(this);
