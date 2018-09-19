@@ -1,26 +1,20 @@
-Object.assign(Recipe.prototype, { template5(){
-  const { myRecipes } = this;
-
-  const html = myRecipes.map(recipe => {
-    return `
+Object.assign(Recipe.prototype, { template5(){ return `
     <div class="col-6 col-md-4 col-lg-3 px-2 mb-3">
       <div class="card recept-card">
-        <a class="pop" href="/recipe/${recipe.url}">
-          <img class="card-img-top" src="/imgs/${recipe.img}" alt="${recipe.title}">
+        <a class="pop" href="/recipe/${this.url}">
+          <img class="card-img-top" src="/imgs/${this.img}" alt="${this.title}">
         </a>
         <div class="card-body pb-0">
-          <a class="pop" href="/recipe/${recipe.url}">
-            <p class="card-title text-center">${recipe.title}</p>
-            <p class="author text-secondary font-italic text-center">av ${recipe.author}</p>
+          <a class="pop" href="/recipe/${this.url}">
+            <p class="card-title text-center">${this.title}</p>
+            <p class="author text-secondary font-italic text-center">av ${this.author}</p>
           </a>
         </div>
         <div class="card-footer text-muted d-flex justify-content-between pb-0">
-          <p><i class="far fa-clock mr-2"></i>${recipe.time}</p>
-          <p class="d-inline-block"><i class="${recipe.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>${recipe.likes}</p>
+          <p><i class="far fa-clock mr-2"></i>${this.time} min</p>
+          <p class="d-inline-block"><i class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>${this.likes}</p>
         </div>
       </div>
     </div>
-    `;});
-  return html.join('');
-}});
+`}});
 

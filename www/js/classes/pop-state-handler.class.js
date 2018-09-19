@@ -53,9 +53,13 @@ class PopStateHandler {
     let urls = {
       '/': 'startPage',
       '/my_page': 'myPage',
-      '/recipe/appelpaj': 'recipe',
       '/create_recipe': 'createRecipe',
     };
+
+    this.app.recipes.forEach((recipe) => {
+      const url = `/recipe/${recipe.url}`;
+      Object.assign(urls, { [url]: 'recipe' });
+    });
 
     // Call the right method
     let methodName = urls[url];
@@ -79,8 +83,6 @@ class PopStateHandler {
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
     this.app.myPage.render('main');
-    this.app.recipe.pickCards();
-    this.app.recipe.renderCards();
   }
 
   recipe() {
