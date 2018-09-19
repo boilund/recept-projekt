@@ -122,7 +122,9 @@ Object.assign(StartPage.prototype, { template2(){ return `
           <h2>Populära recept</h2>
         </div>
         ${this.app.recipes.render('', 3)}
- 
+      <div class="col-12 text-center pt-4">
+        <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.app.recipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
+      </div>
     </section>
 
   </div>
