@@ -33,42 +33,13 @@ class CreateRecipe extends Base {
 
       let ingredient = new Ingredients(this);
       that._ingredientsList.push(ingredient);
-      // that._ingredientsList.push(ingredient);
-      // that._ingredientsList.render()
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
-      //that.app.ingredients.render(".add-ingr", "");
-
-
-      //let addOneIngr = that.app.ingredients.createIngredient();
-      // //console.log(addOneIngr);
-
-      // console.log(that._ingredientsList);
+     
     }
 
 
 
-
-
-    // if ($(event.target).hasClass("delete-step")) {
-    //   let text = $(event.target).prev().text();
-    //   for (let i = 0; i < this.stepsList.length; i++) {
-    //     let context = this.stepsList[i].context;
-    //     if (new String(context).valueOf() === new String(text).valueOf()) {
-    //       console.log[i];
-    //     }
-    //   }
-
-    //   //not working and don't know why
-
-
-
-
-
-
-
-
-    // }
   }
 
   change(event) {
