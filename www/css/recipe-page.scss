@@ -125,10 +125,15 @@
   color: #fff;
 }
 
-.send-comment {
-  background-color: map-get($colors , font-black );
-  color: #fff;
+.comments {
+  display: none;
+  .send-comment {
+    background-color: map-get($colors , font-black );
+    color: #fff;
+  }
 }
+
+
 
 p.heart-favorite {
   color: #fff;

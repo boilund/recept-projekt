@@ -4,6 +4,10 @@ class Recipe extends Base {
     this.app = app;
   }
 
+  click2(e) {
+    $(e.target).hasClass('comments-btn') && $('.comments').toggle();
+  }
+
   click3(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.favorite ? this.likes-- : this.likes++;
