@@ -320,6 +320,17 @@ input[type="text"] {
   margin-left: 20px;
 }
 
+#add-one-step{
+  background-color: black;
+  color: white;
+  border-radius:0px;
+  border:none;
+}
+
+.step-input{
+  margin-bottom:50px !important;
+}
+
 
 
 
@@ -467,11 +478,17 @@ input[type="text"] {
     margin-left:3px;
   }
 
-  
+  #receptTextarea{
+    width:100%;
+    margin-bottom:20px;
+  }
 
-  // .single-ingr {
-  //   height: 140px;
-  // }
+  #add-one-step{
+    float:right;
+    text-align:right;
+    margin-bottom:40px;
+  }
+
 
   #ingredient-add {
     display: none;

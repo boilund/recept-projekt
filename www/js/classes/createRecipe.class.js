@@ -7,6 +7,14 @@ class CreateRecipe extends Base {
 
   }
 
+  get recipeTitle(){
+    return `${this.recipeTitle}`;
+  }
+
+  set recipeTitle(val){
+    this.recipeTitle=val;
+  }
+
   renderIngr() {
     this.render(".add-ingr", "Ingr");
   }
@@ -45,6 +53,8 @@ class CreateRecipe extends Base {
   change(event) {
     this.labelCss(event);
   }
+
+
 
   //method for control css when keyup
   labelCss(event) {
@@ -141,7 +151,6 @@ class CreateRecipe extends Base {
 
       if (e.keyCode === 13) {
         let step = new Step($("#receptTextarea").val());
-        
         $("#receptTextarea").val('');
         that.stepsList.push(step);
         $(".steps-here").empty();
@@ -149,9 +158,15 @@ class CreateRecipe extends Base {
       }
     })
 
-
-
+    $(document).on("click", "#add-one-step", function(){
+      let step = new Step($("#receptTextarea").val());
+      $("#receptTextarea").val('');
+      that.stepsList.push(step);
+      $(".steps-here").empty();
+      that.stepsList.render(".steps-here", "");
+    })
   }
+
 
  
 }
