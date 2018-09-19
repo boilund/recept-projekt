@@ -2,13 +2,14 @@ class App extends Base {
 
   constructor() {
     super();
+    this.user = "Catarina Bennetoft";
     this.load();
   }
 
   async load() {
     // TODO: load Json data
     JSON._classes(Recipe);
-    this.recipes = await JSON._load('recipes.json');
+    this.recipes = await JSON._load('recipe.json');
     this.recipes.forEach((obj) => {
       obj.app = this;
     });
