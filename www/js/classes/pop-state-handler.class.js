@@ -79,8 +79,6 @@ class PopStateHandler {
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
     this.app.myPage.render('main');
-    this.app.recipe.pickCards();
-    this.app.recipe.renderCards();
   }
 
   recipe() {

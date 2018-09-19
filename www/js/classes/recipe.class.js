@@ -8,7 +8,6 @@ class Recipe extends Base {
 
   varyLikes() {
     this.favorite ? this.likes-- : this.likes++;
-    this.app.recipes.sort((a, b) => b.likes - a.likes);
     this.favorite = !this.favorite; // "toggle"
   }
 
@@ -19,6 +18,8 @@ class Recipe extends Base {
   click3(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
+      this.app.recipes.sort((a, b) => b.likes - a.likes);
+      this.app.myPage.pickCards();
       this.app.popState.startPage();
       this.render('', 3);
     }
@@ -28,28 +29,19 @@ class Recipe extends Base {
   click4(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
+      this.app.myPage.pickCards();
       this.app.popState.myPage();
+      this.render('', 4);
     }
   }
 
   click5(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
+      this.app.myPage.pickCards();
       this.app.popState.myPage();
+      this.render('', 5);
     }
   }
 
-  pickCards() {
-    const {
-      user
-    } = this.app;
-
-    this.myFavorites = this.app.recipes.filter(recipe => recipe.favorite);
-    this.myRecipes = this.app.recipes.filter(recipe => user === recipe.author);
-  }
-
-  renderCards() {
-    this.render('.my-favorite-cards', '4');
-    this.render('.my-recept-cards', '5');
-  }
 }

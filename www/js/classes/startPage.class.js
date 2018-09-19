@@ -2,6 +2,7 @@ class StartPage extends Base {
   constructor(app) {
     super();
     this.app = app;
+    this.app.recipes.sort((a, b) => b.likes - a.likes);
   }
 
   click2(e) {
