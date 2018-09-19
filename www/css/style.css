@@ -140,7 +140,8 @@ footer {
     .start-main-content .card-footer {
       font-size: 15px; } }
 .start-main-content .fa-heart {
-  color: #e60019; }
+  color: #e60019;
+  cursor: pointer; }
 .start-main-content .more-btn {
   background-color: #e60019;
   font-size: 13px; }

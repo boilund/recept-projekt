@@ -1,0 +1,42 @@
+[
+  {
+    "favorite": true,
+    "title": "Äppelpaj",
+    "img": "apple-pie.jpg",
+    "time": "40min",
+    "likes": 77,
+    "author": "Catarina Bennetoft",
+    "url": "appelpaj",
+    "⚙": "Recipe"
+  },
+  {
+    "favorite": false,
+    "title": "Äppelpaj",
+    "img": "salad.jpeg",
+    "time": "40min",
+    "likes": 77,
+    "author": "Catarina Bennetoft",
+    "url": "appelpaj",
+    "⚙": "Recipe"
+  },
+  {
+    "favorite": true,
+    "title": "Äppelpaj",
+    "img": "pasta.jpeg",
+    "time": "40min",
+    "likes": 17,
+    "author": "Catarina Bennetoft",
+    "url": "appelpaj",
+    "⚙": "Recipe"
+  },
+  {
+    "favorite": true,
+    "title": "Äppelpaj",
+    "img": "pizza.jpeg",
+    "time": "40min",
+    "likes": 17,
+    "author": "Catarina Bennetoft",
+    "url": "appelpaj",
+    "⚙": "Recipe"
+  }
+]

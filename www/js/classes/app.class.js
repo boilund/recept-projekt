@@ -7,6 +7,12 @@ class App extends Base {
 
   async load() {
     // TODO: load Json data
+    JSON._classes(Recipe);
+    this.recipes = await JSON._load('recipes.json');
+    this.recipes.forEach((obj) => {
+      obj.app = this;
+    });
+
     this.start();
   }
 
@@ -24,7 +30,7 @@ class App extends Base {
     // Create pages
     this.startPage = new StartPage(this);
     this.myPage = new MyPage();
-    this.recipe = new Recipe();
+    this.recipe = new Recipe(this);
     this.createRecipe = new CreateRecipe();
 
     // Initiate handling of SPA push/pop-state
