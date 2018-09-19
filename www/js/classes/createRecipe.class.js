@@ -1,27 +1,77 @@
 class CreateRecipe extends Base {
   constructor() {
     super();
-    this.changeInput();
     this.load();
+    this.eventHandlers();
+    this.stepsList=[];
+
   }
 
+  renderIngr() {
+    this.render(".add-ingr", "Ingr");
+  }
+
+  //click add ingredients
+
+  click(event) {
+    if ($(event.target).hasClass("add-one")) {
+      event.preventDefault();
+      this.render(".add-ingr", "Ingr");
+    }
+    if ($(event.target).hasClass("ingredient-btn")) {
+      $(event.target).parent("div").parent("div").parent("div").empty();
+    }
+  }
+
+  keyup(event) {
+    this.labelCss(event);
+  }
+
+
+
+  change(event) {
+    this.labelCss(event);
+  }
+
+  //method for control css when keyup
+  labelCss(event) {
+    var label = $(event.target).prev();
+    if ($(event.target).val() === '') {
+      $(label).removeClass('active highlight');
+    } else {
+      $(label).addClass('active highlight');
+    }
+  }
+
+
+
+
+  //autocomplete
   load() {
-    return JSON._load('/food').then((data) => {
-      console.log(data[0])
-      let jsonList = data;
-      let ingredient = $('#ingredient');
-
-      ingredient.keyup(() => {
-        var inputText = ingredient[0].value;
-        //console.log(inputText);
-        var list = search(jsonList, inputText);
-        changeInput(list)
-
-      });
-
+    $.getJSON('/json/food.json').then((data) => {
+      this.autoComplete(data);
     });
   }
 
+  autoComplete(data) {
+    let that = this;
+    $(document).on("keyup", ".ingredient",function (e) {
+        console.log(e)
+        var inputText = $(e.target).val();
+        console.log(inputText)
+        if (inputText) {
+          var list = that.search(data, inputText);
+          console.log(list)
+          that.changeInput(e, list);
+        } else {
+          $(e.target).next().empty();
+          //autocomplete list get deleted by deleting input text
+        }
+
+      })
+
+
+  }
 
   search(jsonList, searchText) {
     if (searchText) {
@@ -30,33 +80,58 @@ class CreateRecipe extends Base {
         // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
         // "i");
         let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+        result.sort((a, b) => {
+          return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+        })
         return result;
       } else {
-        setSearch("vatten");
+        let result = [{
+          Namn: "vatten"
+        }];
+        return result;
       }
+    }
+  }
+
+  setSearch(e, val) {
+    console.log(val)
+    let target = $(e.target).next();
+    target.empty();
+    $(e.target).val(val);
+
+  }
+
+  changeInput(e, list) {
+    let target = $(e.target).next();
+
+    target.empty();
+    for (var i = 0, len = list.length; i < len; i++) {
+      let listText = list[i].Namn;
+      
+      let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
+      $(target).append(node);
+      node.on("click", () => this.setSearch(e, listText));
 
     }
 
   }
 
-  setSearch(val) {
-    $('input[name=ingredient]').val(val);
-    document
-      .getElementById("result")
-      .innerHTML = "";
-  }
+  eventHandlers() {
+    let that = this;
+    $(document).on("keyup", "#receptTextarea", function (e) {
 
-  changeInput(list) {
-    if (list) {
-      var autoCompleteResult = list;
-      document
-        .getElementById("result")
-        .innerHTML = "";
-      for (var i = 0, len = autoCompleteResult.length; i < len; i++) {
-        var listText = autoCompleteResult[i].Namn;
-        $("#result").append(`<a class='list-group-item list-group-item-action' onclick='setSearch("${listText}")' >  ${listText}   </a>`);
+      if (e.keyCode === 13) {
+        let step = new Step($("#receptTextarea").val());
+        
+        $("#receptTextarea").val('');
+        that.stepsList.push(step);
+        $(".steps-here").empty();
+        that.stepsList.render(".steps-here", "");
+
+
       }
-    }
-
+    })
   }
+
+  //       autocomplete
 }

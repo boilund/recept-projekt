@@ -8,6 +8,12 @@ class App extends Base {
 
   async load() {
     // TODO: load Json data
+    JSON._classes(Recipe);
+    this.recipes = await JSON._load('recipes.json');
+    this.recipes.forEach((obj) => {
+      obj.app = this;
+    });
+
     this.start();
   }
 
