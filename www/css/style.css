@@ -561,7 +561,7 @@ input[type="text"] {
   margin-left: 20px; }
 
 .card {
-  z-index: 1001 !important; }
+  z-index: 999 !important; }
 
 .list-group-item-action {
   z-index: 1001 !important; }

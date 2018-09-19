@@ -1,12 +1,245 @@
-class Ingredients extends Base{
-    constructor(app){
+class Ingredients extends Base {
+    constructor(parent) {
         super();
-        this.app=app;
-       
+        this.parent = parent;
+        this.itemNutrients = {};
+        this.coefficient = "";
+        this.nutrientsList = [];
+        this._quantity='';
+        this._name='';
     }
 
-    
+    get name() {
+        return this._name;
+    }
 
-        //   let newIngr = new Ingredients();
-        //   this.newIngr.render("#add-ingr", "" )
+    set name(val) {
+        this._name = val;
+    }
+
+    get quantity() {
+        return this._quantity;
+    }
+
+    set quantity(val) {
+        this._quantity = val;
+    }
+
+    get unit() {
+        return this._unit;
+    }
+
+    set unit(val) {
+        this._unit = val;
+    }
+
+    keyup(event) {
+
+        let that = this;
+        let target = $(event.target);
+        // ingredient name
+        if (target.hasClass("names")) {
+            var inputText = target.val();
+           
+            if (inputText) {
+                var list = that.search(that.parent.ingredientsOptions, inputText);
+                that.changeInput(event, list);
+            } else {
+                target.next().empty();
+                //autocomplete list get deleted by deleting input text
+            }
+
+            that.name = target.val();
+        }
+
+        // ingredient quantity
+        if (target.hasClass("quantity")) {
+            that._quantity = target.val();
+        }
+
+
+
+    }
+
+    click(event){
+        let that = this;
+        let target = $(event.target);
+        if (target.hasClass("ingredient-btn")) {
+            that.parent.deleteIngr(that);
+          }
+    }
+
+    change(event) {
+        // ingredient unit
+        let that = this;
+        let target = $(event.target);
+        if (target.hasClass("unit-select")) {
+            that._unit = target.val();
+            that.unitCalc(that._unit);
+        }
+    }
+
+    createIngredient() {
+        let oneIngredient = {};
+        this.calcNurtrients();
+        oneIngredient.name = this.name;
+        oneIngredient.quantity = this._quantity;
+        oneIngredient.unit = this._unit;
+
+        oneIngredient.nutrients = this.itemNutrients;
+
+        //console.log(oneIngredient);
+        return oneIngredient;
+    }
+
+    search(jsonList, searchText) {
+        if (searchText) {
+            if (searchText.toLowerCase() !== "vatten") {
+                let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
+                // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
+                // "i");
+                let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+                result.sort((a, b) => {
+                    return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+                })
+                return result;
+            } else {
+                let result = [{
+                    Namn: "vatten"
+                }];
+                return result;
+            }
+        }
+    }
+
+    setSearch(e, val) {
+        //console.log(val);
+
+        let target = $(e.target).next();
+        target.empty();
+        $(e.target).val(val);
+
+    }
+
+    changeInput(e, list) {
+        let that=this;
+        let target = $(e.target).next();
+
+        target.empty();
+        for (let i = 0, len = list.length; i < len; i++) {
+            let listText = list[i].Namn;
+
+            let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
+            $(target).append(node);
+            node.on("click", () => {
+                
+                that.setSearch(e, listText);
+                that.name=listText;
+                // console.log(i);
+                let item = list[i];
+                that.getNutrients(item);
+                //get nutrients
+                //return this;
+            });
+
+        }
+
+    }
+
+    //       autocomplete
+
+    getNutrients(item) {
+        let that = this;
+        // let nutrients = ;
+        that.nutrientsList = item.Naringsvarden.Naringsvarde
+        //console.log(nutrients);
+
+        //console.log(that.itemNutrients);
+    }
+
+    //unit calculation to 100g
+    unitCalc(unit) {
+        let that = this;
+        switch (unit) {
+            case 'st':
+                that.coefficient = 0.5;
+                break;
+            case 'g':
+                that.coefficient = 0.01;
+                break;
+            case 'kg':
+                that.coefficient = 10;
+                break;
+            case 'ml':
+                that.coefficient = 0.01;
+                break;
+            case 'dl':
+                that.coefficient = 1;
+                break;
+            case 'tsk':
+                that.coefficient = 0.05;
+                break;
+            case 'msk':
+                that.coefficient = 0.15;
+                break;
+            case 'krm':
+                that.coefficient = 0.01;
+                break;
+            default:
+                console.log("please select an unit");
+        }
+        //console.log(that.coefficient);
+    }
+
+    calcNurtrients() {
+        let that = this;
+        let c = that.coefficient;
+        let q = that._quantity;
+
+        console.log(c, q)
+
+        for (let nutrient of that.nutrientsList) {
+            let value = nutrient.Varde.replace(/,/g, '.') / 1;
+            if (nutrient.Namn === "Energi (kJ)") {
+                that.itemNutrients.EnergyKJ = value * c * q;
+            }
+            if (nutrient.Namn === "Energi (kcal)") {
+                that.itemNutrients.EnergyKCAL = value * q * c;
+            }
+            if (nutrient.Namn === "Fett") {
+                that.itemNutrients.Fat = value * q * c;
+            }
+            if (nutrient.Namn === "Summa mättad fettsyror") {
+                that.itemNutrients.TotalSaturatedFattyAcids = value * q * c;
+            }
+            if (nutrient.Namn === "Summa enkelomättade fettsyror") {
+                that.itemNutrients.TotalMonounsaturatedFattyAcids = value * q * c;
+            }
+            if (nutrient.Namn === "Summa fleromättade fettsyror") {
+                that.itemNutrients.TotalPolyunsaturatedFattyAcids = value * q * c;
+            }
+            if (nutrient.Namn === "Kolesterol") {
+                that.itemNutrients.Cholesterol = value * q * c;
+            }
+            if (nutrient.Namn === "Kolhydrater") {
+                that.itemNutrients.Carbohydrates = value * q * c;
+            }
+            if (nutrient.Namn === "Sackaros") {
+                that.itemNutrients.Sucrose = value * q * c;
+            }
+            if (nutrient.Namn === "Protein") {
+                that.itemNutrients.Protein = value * q * c;
+            }
+            if (nutrient.Namn === "Salt") {
+                that.itemNutrients.Salt = value * q * c;
+            }
+
+
+
+        }
+
+    }
+
+
+
 }
