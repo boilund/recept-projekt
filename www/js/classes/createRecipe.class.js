@@ -1,57 +1,81 @@
 class CreateRecipe extends Base {
-  constructor() {
+  constructor(app, ingredients) {
     super();
+    this.app=app;
     this.load();
     this.eventHandlers();
-    this.stepsList=[];
+    this._stepsList = [];
+    this._ingredientsList = [];
+    //this.renderIngr();
 
   }
 
-  get recipeTitle(){
-    return `${this.recipeTitle}`;
+  get recipeTitle() {
+    return `${this._recipeTitle}`;
   }
 
-  set recipeTitle(val){
-    this.recipeTitle=val;
+  set recipeTitle(val) {
+    this._recipeTitle = val;
   }
 
-  renderIngr() {
-    this.render(".add-ingr", "Ingr");
-  }
+  
 
   //click add ingredients
 
   click(event) {
-    if ($(event.target).hasClass("add-one")) {
+    let target= $(event.target);
+    if (target.hasClass("add-one")) {
       event.preventDefault();
-      this.render(".add-ingr", "Ingr");
+      let that = this;
+      // let ingredient = new Ingredients();
+      // that._ingredientsList.push(ingredient);
+      // that._ingredientsList.render()
+      that.app.ingredients.render(".add-ingr", "");
     }
-    if ($(event.target).hasClass("ingredient-btn")) {
-      $(event.target).parent("div").parent("div").parent("div").parent("div").parent("div").empty();
+    if (target.hasClass("ingredient-btn")) {
+      target.parents("div.card").empty();
+      // delete templete here
+    
+   
+
+    
     }
 
-    if($(event.target).hasClass("delete-step")){
-      //delete from array
-      
-      
-      
-      
-      
-      
-      
-      // then rerender template
-      $(event.target).parent("li").empty();
-    }
+    // if ($(event.target).hasClass("delete-step")) {
+    //   let text = $(event.target).prev().text();
+    //   // for(let i=0; i< this.stepsList.length; i++){
+    //   //   let context= this.stepsList[i].context;
+    //   //   if(new String(context).valueOf()===new String(text).valueOf()){
+    //   //     console.log[i];
+    //   //   }
+    //   // }
+
+    //   //not working and don't know why
+
+
+
+
+
+
+
+
+    // }
+  }
+
+  change(event) {
+    this.labelCss(event);
   }
 
   keyup(event) {
     this.labelCss(event);
-  }
+    let target=$(event.target);
 
+    //get recipe-title
+    if (target.hasClass("recept-name")){
+      this._recipeTitle=target.val();
+    }
 
-
-  change(event) {
-    this.labelCss(event);
+    
   }
 
 
@@ -78,20 +102,20 @@ class CreateRecipe extends Base {
 
   autoComplete(data) {
     let that = this;
-    $(document).on("keyup", ".ingredient",function (e) {
-        console.log(e)
-        var inputText = $(e.target).val();
-        console.log(inputText)
-        if (inputText) {
-          var list = that.search(data, inputText);
-          console.log(list)
-          that.changeInput(e, list);
-        } else {
-          $(e.target).next().empty();
-          //autocomplete list get deleted by deleting input text
-        }
+    $(document).on("keyup", ".ingredient", function (e) {
+      console.log(e)
+      var inputText = $(e.target).val();
+      // console.log(inputText)
+      if (inputText) {
+        var list = that.search(data, inputText);
+        // console.log(list)
+        that.changeInput(e, list);
+      } else {
+        $(e.target).next().empty();
+        //autocomplete list get deleted by deleting input text
+      }
 
-      })
+    })
 
 
   }
@@ -117,7 +141,8 @@ class CreateRecipe extends Base {
   }
 
   setSearch(e, val) {
-    console.log(val)
+    console.log(val);
+
     let target = $(e.target).next();
     target.empty();
     $(e.target).val(val);
@@ -130,7 +155,7 @@ class CreateRecipe extends Base {
     target.empty();
     for (var i = 0, len = list.length; i < len; i++) {
       let listText = list[i].Namn;
-      
+
       let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
       $(target).append(node);
       node.on("click", () => this.setSearch(e, listText));
@@ -139,9 +164,9 @@ class CreateRecipe extends Base {
 
   }
 
-   //       autocomplete
+  //       autocomplete
 
-   //       steps 
+  //       steps 
 
   eventHandlers() {
     let that = this;
@@ -152,21 +177,29 @@ class CreateRecipe extends Base {
       if (e.keyCode === 13) {
         let step = new Step($("#receptTextarea").val());
         $("#receptTextarea").val('');
-        that.stepsList.push(step);
+        that._stepsList.push(step);
         $(".steps-here").empty();
-        that.stepsList.render(".steps-here", "");
+        that._stepsList.render(".steps-here", "");
       }
     })
 
-    $(document).on("click", "#add-one-step", function(){
+    $(document).on("click", "#add-one-step", function () {
       let step = new Step($("#receptTextarea").val());
       $("#receptTextarea").val('');
-      that.stepsList.push(step);
+      that._stepsList.push(step);
       $(".steps-here").empty();
-      that.stepsList.render(".steps-here", "");
+      that._stepsList.render(".steps-here", "");
     })
+
+    
+    
+
   }
 
 
- 
+
+
+
+
+
 }

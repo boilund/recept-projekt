@@ -207,6 +207,8 @@ input[type="text"] {
 
 
 
+
+
 /*
 
       checkboxes
@@ -329,6 +331,18 @@ input[type="text"] {
 
 .step-input{
   margin-bottom:50px !important;
+}
+
+.delete-step{
+  margin-left:20px;
+  
+}
+.card{
+  z-index:1001 !important;
+}
+
+.list-group-item-action{
+  z-index:1001 !important;
 }
 
 

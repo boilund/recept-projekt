@@ -557,6 +557,15 @@ input[type="text"] {
 .step-input {
   margin-bottom: 50px !important; }
 
+.delete-step {
+  margin-left: 20px; }
+
+.card {
+  z-index: 1001 !important; }
+
+.list-group-item-action {
+  z-index: 1001 !important; }
+
 @media screen and (min-width: 992px) {
   .new-recept-contents .ax-product-grid-tile {
     margin-left: 0px;

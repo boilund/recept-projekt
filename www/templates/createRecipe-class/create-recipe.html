@@ -10,10 +10,10 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         <div class="row form-wrap">
 
           <div class=" col-md-8 col-sm-12 mob">
-            <label class="label" for="recept-name">
+            <label class="label" for="recipe-name">
               Recptnamn<span class="req">*</span>
             </label>
-            <input type="text" class="names text-input" id="recept-name" />
+            <input type="text" class="names text-input recept-name" id="recipe-name" />
           </div>
 
           <div class="col-md-3 col-sm-12 select-wrap">
@@ -202,10 +202,10 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
 
 
 
+        <h2 class="steps">Lägg till ingredienser</h2>
 
-
-        <div class=" add-ingr" id="add-ingr">
-          ${this.render("", "Ingr")}
+        <div class=" add-ingr" id="addIngr">
+          ${this.app.ingredients.render()}
 
 
         </div>
