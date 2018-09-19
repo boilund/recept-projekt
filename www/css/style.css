@@ -122,6 +122,8 @@ footer {
       height: 310px; } }
 .start-main-content .author {
   font-size: 13px; }
+.start-main-content .recipeCard:nth-child(n+10) {
+  display: none; }
 .start-main-content .card:hover {
   opacity: 0.8; }
 .start-main-content .card-img-top {
