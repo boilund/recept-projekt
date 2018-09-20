@@ -15,7 +15,7 @@ class Recipe extends Base {
 
   showMore(page) {
     page === 'startPage' && $('.recipeCard:hidden').slice(0, this.app.startPage.sliceNr).show(10);
-    page === 'myPage' && $('.recipeCard:hidden').slice(0, this.app.myPage.sliceNr).show(10);
+    page === 'myPage' && $('.recipeCard:hidden').slice(0, this.app.myPage.slice).show(10);
     $('.recipeCard:hidden').length == 0 && $('.more-btn').hide();
   }
 
