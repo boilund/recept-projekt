@@ -9,17 +9,23 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
       <div title="recept-name" name="name-port">
         <div class="row form-wrap">
 
-          <div class=" col-md-8 col-sm-12 mob">
+          <div class=" col-md-6 col-sm-12 mob">
             <label class="label" for="recipe-name">
               Recptnamn<span class="req">*</span>
             </label>
             <input type="text" class="names text-input recept-name" id="recipe-name" />
           </div>
+          <div class=" col-md-3 col-sm-12 mob">
+            <label class="label" for="time">
+              Tillagningstid (min)<span class="req">*</span>
+            </label>
+            <input type="text" class="names text-input time" id="time" />
+          </div>
 
           <div class="col-md-3 col-sm-12 select-wrap">
             <div class="form-group">
               <label class="sr-only" for="portions">Välj portion</label>
-              <select class="custom-select" id="portions">
+              <select class="custom-select portions" id="portions">
                 <option value="1">1 port.</option>
                 <option value="2">2 port.</option>
                 <option value="3">3 port.</option>
@@ -218,23 +224,23 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
             <h2 class="steps">Gör så här</h2>
           </div>
         </div>
-          <ol class="steps-here list-group list-group-flush cooking-instructions"></ol>
-          <div class="row form-wrap step-input">
-            <div class="col-lg-10 col-md-10">
-              <label for="receptTextarea" class="v-none">steps</label>
-              <input class="form-control text-input" id="receptTextarea" />
-            </div>
-            <div class="col-lg-1 col-md-1">
-              <button id="add-one-step" class="btn btn-secondary">Lägg till</button>
-            </div>
+        <ol class="steps-here list-group list-group-flush cooking-instructions"></ol>
+        <div class="row form-wrap step-input">
+          <div class="col-lg-10 col-md-10">
+            <label for="receptTextarea" class="v-none">steps</label>
+            <input class="form-control text-input" id="receptTextarea" />
           </div>
+          <div class="col-lg-1 col-md-1">
+            <button id="add-one-step" class="btn btn-secondary">Lägg till</button>
+          </div>
+        </div>
 
 
-       
+
         <div class="row form-wrap bottom">
           <div class=" recept-button-group">
             <a class="button button-block recept-btn" id="recept-cancel" href="index.html" role="button">Avbryt</a>
-            <a class="button button-block recept-btn" id="recept-submit" href="my-recept.html" role="button">Spara</a>
+            <a class="button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
           </div>
         </div>
 
