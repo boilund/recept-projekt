@@ -15,14 +15,6 @@
 
 	.recept-card {
     height: 100%;
-
-		@include small {
-			height: 320px;
-		}
-
-		@include large {
-			height: 320px;
-		}
 	}
 
 	.card-footer {

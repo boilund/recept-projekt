@@ -79,29 +79,15 @@
 			"Bred peston på degen. Lägg på paprika, salladslök, mozzarella och solroskärnor. Strö på parmesan.",
 			"Ta ut den varma plåten och dra över bakplåtspapperet med pizzorna på plåten. Grädda mitt i ugnen ca 15 minuter. Gör likadant med nästa omgång."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "VIVECA",
-				"comment": "Riktigt gott! Hade mycket ruccola på efteråt, blev sååå bra!",
-				"date": "2013-09-23"
-			},
-			{
-				"name": "BIANCA",
-				"comment": "Ingrediensernas mått är väldigt krånglig. 9/10 dl mjölk? 2/5 dl olivolja? osv. Hur mycket är det? BB",
-				"date": "2017-02-06"
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -161,29 +147,15 @@
 			"Lägg vitlök, basilika, ost, nötter och salt i en matberedare. Kör tills allt är finfördelat. Allt kan också hackas fint med kniv. Tillsätt oljan, lite i taget, under omrörning eller medan maskinen är på. Rör i vattnet. Smaka av med svartpeppar och eventuellt mer salt.",
 			"Koka pastan enligt anvisning på förpackningen och blanda den med ev med strimlad rökt skinka och strimlad röd paprika."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -224,29 +196,15 @@
 			"Blanda mjöl och socker, häll över äpplena. Skiva kylskåpskallt smör med en osthyvel och lägg det över, så att det täcker mjöl- och sockerblandningen.",
 			"Grädda i ugnen tills ytan fått en gyllenbrun färg, ca 45 minuter."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -307,29 +265,15 @@
 			"Dela avokadon och skiva den tunt i skalet och gröp ur den med en sked.",
 			"Skala ägget och dela det i två delar på längden. Lägg avokadon på brödet och toppa med ägget, chiliflakes, salt, några droppar citron samt smörgåskrasse."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -417,29 +361,15 @@
 			"Sila av buljongen, häll tillbaka i kastrullen och koka upp.",
 			"Servera nudlarna i portionsskålar och toppa med strimlade grönsaker, böngroddar, örter och biff. Slå på het buljong och toppa med jordnötter och lime i klyftor. Vill man ha sin rätt lite mustigare och saltare ringlar man på lite fisksås. Eller för en hetare variant, se receptet het chilisås under Tips."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -499,29 +429,15 @@
 			"Bryt fetaosten i bitar och lägg på tomaterna. Skala och strimla rödlöken. Riv basilika och mynta i bitar (använd inte kniv).",
 			"Fördela örterna och rödlöken på tomaterna. Ringla över olivolja, salta och peppra."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -624,29 +540,15 @@
 			"Lägg ett noriark på sushimattan med kortsidan mot dig och den matta sidan uppåt. Lägg ett tunt lager ris på noriarket, låt 4 cm längst upp vara utan ris. Strössla över tunt med sesamfrön. Dra en tunn sträng wasabi med fingret längs med riset. Lägg sedan på lax, gurka och avokado längs kortsidan. Tryck till hårt och rulla ihop rullen. Fukta den rislösa delen av noriarket med lite vatten och tryck till så rullen håller ihop. Gör likadant med alla rullarna, skär sedan i munsstora bitar.",
 			"Servera sushin med soja och gari samt srirachamajonnäs att doppa i."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
-		"comments": [
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			},
-			{
-				"name": "",
-				"comment": "",
-				"date": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"⚙": "Recipe"
 	},
 	{
@@ -701,17 +603,15 @@
 			"Ta mixern eller matberedaren och kör tills du får en slät puré. Godast blir den att mixa med lagerbergsbladen kvar i.",
 			"Salta, peppra och servera, gärna med en ostmacka till."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -810,17 +710,15 @@
 			"Hetta upp oljan till 185 grader i en djup kastrull. Oljan ska bubbla så fort falafeln går i, men inte för häftigt, då är den för varm.",
 			"Gör bollarna. Använder du skedar, så ta en sked smet och skopa smeten från den ena skeden till den andra och lägg försiktigt ner falafeln i oljan. Lägg i några falaflar i taget och vänta i några sekunder innan du rör runt så att de inte går sönder. Använd gärna en hålslev eller en sil när du plockar upp falafeln. Den ska vara gyllenbrun och ytan ska vara lite hård. Lägg på en bit hushållspapper och servera så snart som möjligt."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -898,17 +796,15 @@
 			"När du har en klumpfri smet så hettar du upp lite mjölkfritt smör i en stekpanna och klickar ut små pannkakor med hjälp av en sked.",
 			"Stek dina amerikanska pannkakor gyllenbruna på båda sidor och servera med färska bär och lönnsirap."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -999,17 +895,15 @@
 			"Dela körsbärstomaterna i halvor. Plocka basilikabladen.",
 			"Ta ut formen. Lägg ut körsbärstomaterna i formen och toppa med färsk basilika. Servera gratängen direkt med pasta."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1084,17 +978,15 @@
 			"Klicka upp smeten i muffinsplåten eller i muffinsformar.",
 			"Grädda mitt i ugnen i 10 minuter, ta ut och låt svalna på ett galler."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1167,17 +1059,15 @@
 			"Häll på grädden och låt koka upp.",
 			"Servera med ris eller potatis eller något annat du tycker passar. Servera gärna någon starkare röra till - ajvar till exempel - så de vuxna får lite smak också..."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1271,17 +1161,15 @@
 			"Ta grytan från plattan och sila av skyn i en mindre kastrull. Låt koka upp. Rör ut mjölet i crème fraîchen och vispa ner i skyn. Låt småkoka i 4 minuter.",
 			"Servera grytan med potatismos, rivna morötter och en sallad."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1363,17 +1251,15 @@
 			"Stek all lök och köttfärs i oljan. Blanda ner kålen och låt den steka med några minuter. Blanda ner soja, vinäger och råsocker och koka ca 5 minuter. Smaka av med peppar och ev salt.",
 			"Till servering: Servera köttfärsgrytan med potatis, rårörda lingon och bröd."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1476,17 +1362,15 @@
 			"Koka potatisen i lättsaltat vatten i cirka 15 minuter. Häll av vattnet och låt potatisen ånga av. Häll sedan upp potatisen i en ugnsfast form och tillsätt polenta och olivolja, skaka om alltsammans så att potatisen paneras. Salta och peppra. Ugnsstek potatisen i ytterligare 25–30 minuter tills den blir gyllenbrun.",
 			"Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",
@@ -1541,17 +1425,15 @@
 		"instructions": [
 			"Mixa!"
 		],
-		"nutrition": [
-			{
-				"kj": "",
-				"kcal": "",
-				"fat": "",
-				"saturatedFat": "",
-				"carbohydrates": "",
-				"protein": "",
-				"salt": ""
-			}
-		],
+		"nutrition": {
+			"kj": "",
+			"kcal": "",
+			"fat": "",
+			"saturatedFat": "",
+			"carbohydrates": "",
+			"protein": "",
+			"salt": ""
+		},
 		"comments": [
 			{
 				"name": "",

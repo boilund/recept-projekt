@@ -3,7 +3,7 @@ class MyPage extends Base {
     super();
     this.app = app;
     this.pickCards();
-    this.sliceNr = 8;
+    this.slice = 0;
   }
 
   pickCards() {
@@ -17,7 +17,7 @@ class MyPage extends Base {
     if ($(e.target).hasClass('more-btn')) {
       $('.recipeCard:hidden').slice(0, 8).show(10);
       $('.recipeCard:hidden').length == 0 && $(e.target).hide();
-      this.slices + 8;
+      this.slice = this.slice + 8;
     }
   }
 
