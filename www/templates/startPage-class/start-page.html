@@ -117,13 +117,15 @@ Object.assign(StartPage.prototype, { template2(){ return `
 
     <section class="col-md-8 col-lg-9 main-contents">
       <div class="row">
-
         <div class="col-12 text-center p-4">
           <h2>Populära recept</h2>
         </div>
-        ${this.app.recipes.render('', 3)}
-      <div class="col-12 text-center pt-4">
-        <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.app.recipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
+        <div class="cards row p-4">
+          ${this.filteredCards.length ? this.filteredCards.render('', 3) : this.app.recipes.render('', 3)}
+        </div>
+        <div class="col-12 text-center pt-4">
+          <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.app.recipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
+        </div>
       </div>
     </section>
 
