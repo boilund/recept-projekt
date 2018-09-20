@@ -4,6 +4,11 @@ class Recipe extends Base {
     this.app = app;
   }
 
+  saveRecipeInfo(ingrediens, instructions, nutrition) {
+    this.ingrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    this.instructions = instructions.map((x) => `<li class="list-group-item border-0 pl-0 pb-0">${x}</li>`);
+  }
+
   varyLikes() {
     this.favorite ? this.likes-- : this.likes++;
     this.favorite = !this.favorite; // "toggle"
@@ -11,6 +16,13 @@ class Recipe extends Base {
 
   click2(e) {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
+    $(e.target).hasClass('fa-print') && window.print();
+    if ($(e.target).hasClass('fa-heart')) {
+      this.varyLikes();
+      this.app.myPage.pickCards();
+      this.app.popState.startPage();
+      this.app.popState.recipe();
+    }
   }
 
   showMore(page) {

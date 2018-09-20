@@ -1,23 +1,20 @@
 Object.assign(Recipe.prototype, { template2(){ return `
-  <section class="row recept-main-content">
+  <section class="row recept-main-content px-0">
     <div class="col">
-      <img src="/imgs/apple-pie.jpg" class="img-fluid reciep-picture" alt="Äppelpaj">
-      <!-- <div class="reciep-picture rounded">
-        <span class="sr-only"> Bild på maträtten</span>
-      </div> -->
+      <img src="/imgs/${this.img}" class="img-fluid reciep-picture" alt="${this.title}">
     </div>
   </section>
   <section class="row">
     <div class="col">
       <div class="float-right icons mt-3 mb-5 mr-3">
-        <i class="fas fa-heart mr-2"></i>
+        <i class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
         <i class="fas fa-print"></i>
       </div>
     </div>
   </section>
   <section class="row">
     <div class="col-md-8">
-      <h2 class="font-weight-bold mt-3 d-inline-block">Ingredienser</h2>
+      <h2 class="font-weight-bold mt-3 mb-4 d-inline-block">Ingredienser</h2>
       <form class="ml-2 mb-0 d-inline-block">
         <div class="form-group mb-0">
           <label class="sr-only" for="portions">Välj portion</label>
@@ -31,34 +28,11 @@ Object.assign(Recipe.prototype, { template2(){ return `
         </div>
       </form>
       <ul class="list-group list-group-flush cooking-ingredients">
-        <li class="list-group-item border-0 pl-0 pb-0">1 rulle färsk smördeg</li>
-        <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 dl socker</li>
-        <li class="list-group-item border-0 pl-0 pb-0 pt-2">3 tsk mortlade fänkålfrön</li>
-        <li class="list-group-item border-0 pl-0 pb-0 pt-2">1 uppvispat ägg</li>
-        <li class="list-group-item border-0 pl-0 pb-0 pt-2">4 fasta syrlig äpplen</li>
-        <li class="list-group-item border-0 pl-0 pb-0 pt-2">50 g rumstempererat smör</li>
+        ${this.app.recipe.ingrediens.join('')}
       </ul>
       <h2 class="font-weight-bold mt-5">Gör så här:</h2>
       <ol class="list-group list-group-flush cooking-instructions">
-        <li class="list-group-item border-0 pl-0 pb-0">
-          Värm ugnen till 220°C.
-        </li>
-        <li class="list-group-item border-0 pl-0 pb-0">
-           Blanda socker och mortlade fänkål. Vänd ner hälften av sockret i smöret och blanda väl.
-        </li>
-        <li class="list-group-item border-0 pl-0 pb-0">
-           Klyfta äpplena.
-        </li>
-        <li class="list-group-item border-0 pl-0 pb-0">
-           Rulla ut smördegen på ett bakplåtspapper, vik in kanten ca 1 cm, nagga degen med en gaffel. Pensla kanerna med uppvispat
-          ägg och strö över resterande socker på kanten.
-        </li>
-        <li class="list-group-item border-0 pl-0 pb-0">
-           Lägg ut äppelklyftorna och klicka ut smöret jämt över äpplena.
-        </li>
-        <li class="list-group-item border-0 pl-0 pb-0">
-           Lyft över pizzan till dem varma plåten och grädda ca 15 min tills gyllene.
-        </li>
+        ${this.app.recipe.instructions.join('')}
       </ol>
     </div>
     <div class="col-md-4">
@@ -67,19 +41,27 @@ Object.assign(Recipe.prototype, { template2(){ return `
         <tbody>
           <tr>
             <th scope="row">energi</th>
-            <td class="text-right">1153 kJ / 276 kCal</td>
+            <td class="text-right">${this.nutrition.kj} kJ / ${this.nutrition.kcal} kCal</td>
           </tr>
           <tr>
             <th scope="row">fett</th>
-            <td class="text-right">11 g</td>
+            <td class="text-right">${this.nutrition.fat} g</td>
+          </tr>
+          <tr>
+            <th scope="row">Mättad fett</th>
+            <td class="text-right">${this.nutrition.saturatedFat} g</td>
           </tr>
           <tr>
             <th scope="row">kolhydrat</th>
-            <td class="text-right">43 g</td>
+            <td class="text-right">${this.nutrition.carbohydrates} g</td>
+          </tr>
+          <tr>
+            <th scope="row">Protein</th>
+            <td class="text-right">${this.nutrition.protein} g</td>
           </tr>
           <tr>
             <th scope="row">salt</th>
-            <td class="text-right">0.15 g</td>
+            <td class="text-right">${this.nutrition.salt} g</td>
           </tr>
         </tbody>
       </table>
