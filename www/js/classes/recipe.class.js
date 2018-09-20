@@ -31,18 +31,19 @@ class Recipe extends Base {
     $('.recipeCard:hidden').length == 0 && $('.more-btn').hide();
   }
 
+  // start-page cards
   click3(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
       this.app.recipes.sort((a, b) => b.likes - a.likes);
       this.app.myPage.pickCards();
-      this.app.popState.startPage();
-      this.render('', 3);
+      $('.main-contents').empty();
+      this.app.startPage.render('.main-contents', 4);
       this.showMore('startPage');
     }
   }
 
-  // mina-sidor
+  // mina-favoriter cards
   click4(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
@@ -52,6 +53,7 @@ class Recipe extends Base {
     }
   }
 
+  // mina-recept cards
   click5(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
