@@ -71,7 +71,6 @@ class PopStateHandler {
   }
 
   startPage() {
-    this.app.myPage.slice = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').addClass('heading-content-start-page');
@@ -80,7 +79,6 @@ class PopStateHandler {
   }
 
   myPage() {
-    this.app.startPage.sliceNr = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
@@ -88,8 +86,6 @@ class PopStateHandler {
   }
 
   recipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
     this.cleanUpPage();
     $('section.container-fluid').addClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
@@ -98,8 +94,6 @@ class PopStateHandler {
   }
 
   createRecipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');

@@ -49,33 +49,37 @@
       &:after{
         font-family: 'Font Awesome 5 Free';
         content: "\f107";
-        padding-right:2px;
+        padding-right:2px;   
       }
     }
   }
-
-
-
+  
+  
+  
 	.heading-toggle.collapsed {
     .header-name  {
       &:after {
         content: "\f105";
-      }
+      }  
     }
   }
 
 
   .recept-card {
     width: 100%;
-    height: 100%;
+    height: 320px;
     border-radius: 0%;
+
+    @include medium {
+      height: 310px;
+    }
   }
 
   .author {
 		font-size: 13px;
   }
-
-  .recipeCard:nth-child(n+9) {
+  
+  .recipeCard:nth-child(n+10) {
     display: none;
   }
 
@@ -143,3 +147,4 @@ aside {
     background-color: #d4d4d4;
   }
 }
+
