@@ -106,6 +106,8 @@ footer {
     @media (min-width: 992px) {
       .search-row h2 {
         font-size: 2rem; } }
+  .search-row .search-input {
+    width: inherit; }
 
 .start-main-content .heading-toggle .header-name:after {
   font-family: 'Font Awesome 5 Free';
