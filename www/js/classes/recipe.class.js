@@ -48,7 +48,20 @@ class Recipe extends Base {
       this.varyLikes();
       this.app.myPage.pickCards();
       this.app.popState.myPage();
-      this.render('', 4);
+      this.showMore('myPage');
+    }
+  }
+
+  click5(e) {
+    if ($(e.target).hasClass('fa-heart')) {
+      this.varyLikes();
+      this.app.myPage.pickCards();
+
+      $('.favorite-cards').empty();
+      this.app.myPage.myFavorites.render('.favorite-cards', '4');
+
+      $('.my-cards').empty();
+      this.app.myPage.myRecipes.render('.my-cards', '5');
       this.showMore('myPage');
     }
   }
