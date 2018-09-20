@@ -4,7 +4,7 @@ class Recipe extends Base {
     this.app = app;
   }
 
-  saveRecipeInfo(ingrediens, instructions, nutrition) {
+  saveRecipeInfo(ingrediens, instructions) {
     this.ingrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
     this.instructions = instructions.map((x) => `<li class="list-group-item border-0 pl-0 pb-0">${x}</li>`);
   }
