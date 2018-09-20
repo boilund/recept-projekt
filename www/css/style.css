@@ -122,7 +122,7 @@ footer {
       height: 310px; } }
 .start-main-content .author {
   font-size: 13px; }
-.start-main-content .recipeCard:nth-child(n+10) {
+.start-main-content .recipeCard:nth-child(n+9) {
   display: none; }
 .start-main-content .card:hover {
   opacity: 0.8; }
@@ -293,391 +293,310 @@ p.heart-favorite {
 
 .new-recept-contents {
   padding-top: 60px;
-  background-color: white; }
+  background-color: white;
+  /*
+                img uploader
+  */
+  /*
 
-.names {
-  width: 100%; }
+        checkboxes
+  */
+  /*
+      recept ingredient and steps
 
-.new-recept-contents .ax-product-grid-header {
-  padding: 0px; }
-
-.new-recept-contents .layout-wrap {
-  flex-wrap: wrap; }
-
-.new-recept-contents .layout-row {
-  flex-direction: row;
-  box-sizing: border-box;
-  display: flex; }
-
-.new-recept-contents .ax-product-grid-tile {
-  display: block;
-  background-color: #fff;
-  box-sizing: border-box; }
-
-.new-recept-contents form {
-  margin-top: 40px; }
-
-.new-recept-contents .label,
-.custom-select {
-  color: rgba(128, 128, 128, 0.5);
-  transition: all 0.25s ease;
-  line-height: 1; }
-
-.new-recept-contents .label {
-  margin-top: 5px;
-  position: absolute;
-  transform: translateY(6px);
-  left: 20px;
-  transition: all 0.25s ease;
-  pointer-events: none; }
-
-.new-recept-contents select {
-  position: absolute;
-  padding-right: 50px;
-  left: 13px;
-  margin-top: 0px; }
-
-.new-recept-contents .label .req {
-  margin: 2px; }
-
-.new-recept-contents .label.active {
-  transform: translateY(40px);
-  left: 2px;
-  font-size: 12px; }
-
-.new-recept-contents .label .active .req {
-  opacity: 0; }
-
-.new-recept-contents .label.highlight {
-  color: rgba(128, 128, 128, 0.8);
-  left: 20px; }
-
-.new-recept-contents .search-input,
-textarea {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 9px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid lightgray;
-  color: black;
-  border-radius: 4px;
-  transition: border-color .25s ease, box-shadow .25s ease; }
-
-.new-recept-contents input,
-textarea,
-select :focus {
-  outline: 0; }
-
-.new-recept-contents textarea {
-  border: 2px solid lightgray;
-  resize: vertical; }
-
-/*
-              img uploader
-*/
-#file-drag {
-  float: left;
-  clear: both;
-  width: 100%;
-  margin: 15px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  background-color: #eee;
-  border-radius: 7px;
-  border: 3px solid #eee;
-  transition: all .2s ease;
-  user-select: none; }
-
-#uploader-start {
-  float: left;
-  clear: both;
-  width: 100%; }
-
-#uploader-start .hidden {
-  display: none; }
-
-#uploader-start i.fa {
-  font-size: 50px;
-  margin-bottom: 1rem;
-  transition: all .2s ease-in-out;
-  color: #aaa; }
-
-input[type="file"] {
-  display: none; }
-
-input[type="text"] {
-  width: 100%;
-  height: 38px;
-  margin-right: 20px;
-  border-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: lightgray;
-  padding-left: 20px; }
-
-.v-none {
-  display: none; }
-
-#file-image {
-  display: inline;
-  margin: 0 auto .5rem auto;
-  max-width: 180px; }
-
-#file-image.hidden {
-  display: none; }
-
-#file-upload-btn {
-  display: inline-block;
-  margin: .5rem .5rem 1rem .5rem;
-  clear: both;
-  text-decoration: none;
-  text-transform: initial;
-  outline: none;
-  padding: 10px;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-  box-sizing: border-box;
-  background-color: black;
-  border-color: black;
-  cursor: pointer;
-  border-radius: 0px; }
-
-#mob-upload-btn {
-  padding: 10px;
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-  box-sizing: border-box;
-  background-color: black;
-  border-radius: 0px; }
-
-#notimage {
-  display: block;
-  float: left;
-  clear: both;
-  width: 100%; }
-
-#notimage.hidden {
-  display: none; }
-
-#large {
-  display: block;
-  width: 100%; }
-
-/*
-
-      checkboxes
-*/
-.form-check {
-  height: 40px;
-  width: 100%; }
-
-.form-check-label {
-  display: inline-block;
-  padding-top: 10px;
-  margin-top: 3px; }
-
-.form-check-input {
-  display: block;
-  height: 100%;
-  padding: 9px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid lightgray;
-  color: black;
-  border-radius: 4px;
-  transition: border-color .25s ease, box-shadow .25s ease; }
-
-/*
-     recept ingredient and steps
-
-*/
-#receptTextarea {
-  width: 100%;
-  border: 2px solid #eee; }
-
-.recept-button-group,
-#add-ingredient {
-  right: 20px;
-  position: absolute;
-  margin-top: 0px;
-  border-color: black; }
-
-.add-ingredient {
-  margin-bottom: 70px !important; }
-
-.bottom {
-  margin-bottom: 40px; }
-
-.ingredient-button-group {
-  right: 40px;
-  position: absolute;
-  margin-top: -8px; }
-
-#recept-cancel {
-  background-color: #e60019;
-  color: white; }
-
-.recept-btn,
-#add-ingredient {
-  padding: 10px; }
-
-#recept-submit,
-#add-ingredient,
-.upload-file-btn {
-  background-color: black;
-  color: white; }
-
-.upload-file-btn {
-  margin-left: 15px; }
-
-#add-ingredient {
-  margin-top: 15px;
-  margin-bottom: 20px; }
-
-.steps {
-  font-size: 1.75rem; }
-
-.ingredient-btn {
-  margin-top: -10px;
-  margin-left: 20px;
-  padding: 0px;
-  font-size: 40px; }
-
-.ingredient-delet {
-  color: #e60019;
-  margin-left: 20px; }
-
-#ingredient-add {
-  color: green;
-  margin-left: 20px; }
-
-#add-one-step {
-  background-color: black;
-  color: white;
-  border-radius: 0px;
-  border: none; }
-
-.step-input {
-  margin-bottom: 50px !important; }
-
-.delete-step {
-  margin-left: 20px; }
-
-.card {
-  z-index: 999 !important; }
-
-.list-group-item-action {
-  z-index: 1001 !important; }
-
-@media screen and (min-width: 992px) {
-  .new-recept-contents .ax-product-grid-tile {
-    margin-left: 0px;
-    margin-right: -10px;
-    padding-bottom: 50px;
-    margin-bottom: 0px; }
-
-  .close {
+  */ }
+  .new-recept-contents .names {
+    width: 100%; }
+  .new-recept-contents .new-recept-contents .ax-product-grid-header {
+    padding: 0px; }
+  .new-recept-contents .new-recept-contents .layout-wrap {
+    flex-wrap: wrap; }
+  .new-recept-contents .new-recept-contents .layout-row {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex; }
+  .new-recept-contents .new-recept-contents .ax-product-grid-tile {
+    display: block;
+    background-color: #fff;
+    box-sizing: border-box; }
+  .new-recept-contents .new-recept-contents form {
+    margin-top: 40px; }
+  .new-recept-contents .new-recept-contents .label,
+  .new-recept-contents .custom-select {
+    color: rgba(128, 128, 128, 0.5);
+    transition: all 0.25s ease;
+    line-height: 1; }
+  .new-recept-contents .new-recept-contents .label {
+    margin-top: 5px;
+    position: absolute;
+    transform: translateY(6px);
+    left: 20px;
+    transition: all 0.25s ease;
+    pointer-events: none; }
+  .new-recept-contents .new-recept-contents select {
+    position: absolute;
+    padding-right: 50px;
+    left: 13px;
+    margin-top: 0px; }
+  .new-recept-contents .new-recept-contents .label .req {
+    margin: 2px; }
+  .new-recept-contents .new-recept-contents .label.active {
+    transform: translateY(40px);
+    left: 2px;
+    font-size: 12px; }
+  .new-recept-contents .new-recept-contents .label .active .req {
+    opacity: 0; }
+  .new-recept-contents .new-recept-contents .label.highlight {
+    color: rgba(128, 128, 128, 0.8);
+    left: 20px; }
+  .new-recept-contents .new-recept-contents .search-input,
+  .new-recept-contents textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 9px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid lightgray;
+    color: black;
+    border-radius: 4px;
+    transition: border-color .25s ease, box-shadow .25s ease; }
+  .new-recept-contents .new-recept-contents input,
+  .new-recept-contents textarea,
+  .new-recept-contents select :focus {
+    outline: 0; }
+  .new-recept-contents .new-recept-contents textarea {
+    border: 2px solid lightgray;
+    resize: vertical; }
+  .new-recept-contents #file-drag {
+    float: left;
+    clear: both;
+    width: 100%;
+    margin: 15px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 7px;
+    border: 3px solid #eee;
+    transition: all .2s ease;
+    user-select: none; }
+  .new-recept-contents #uploader-start {
+    float: left;
+    clear: both;
+    width: 100%; }
+  .new-recept-contents #uploader-start .hidden {
     display: none; }
-
-  .new-recept-contents .label {
-    margin-left: 20px; }
-
-  .card {
-    border: none; }
-
-  .card-body {
-    padding: 10px; }
-
-  .single-ingr {
-    height: 20px; }
-
-  .new-recept-contents .category-select {
-    right: -26px; }
-
-  .new-recept-contents .form-wrap {
-    margin-bottom: 30px; }
-
-  #mobil-pad {
-    display: none !important; }
-
-  .form-check-label {
-    padding-top: 10px; } }
-@media only screen and (max-width: 992px) {
-  .new-recept-contents .ax-product-grid-tile {
-    margin: 0px;
-    padding-bottom: 50px; }
-
-  .new-recept-contents .label {
-    margin-left: 10px; }
-
-  .mob {
-    margin-bottom: 25px; }
-
-  .select-wrap {
-    margin-bottom: 65px;
-    margin-right: 30px; }
-
-  .card {
-    margin-bottom: 10px;
-    border: none; }
-
-  .card-body {
-    padding: 10px; }
-
-  .single-ingr {
-    height: 40px; }
-
-  .ingredient-delet {
+  .new-recept-contents #uploader-start i.fa {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    transition: all .2s ease-in-out;
+    color: #aaa; }
+  .new-recept-contents input[type="file"] {
     display: none; }
-
-  #large {
+  .new-recept-contents input[type="text"] {
+    width: 100%;
+    height: 38px;
+    margin-right: 20px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding-left: 20px; }
+  .new-recept-contents .v-none {
     display: none; }
-
-  #mobil-pad {
-    display: block; }
-
-  .checkbox-wrap {
-    padding-bottom: 20px; }
-
-  .form-check {
+  .new-recept-contents #file-image {
+    display: inline;
+    margin: 0 auto .5rem auto;
+    max-width: 180px; }
+  .new-recept-contents #file-image.hidden {
+    display: none; }
+  .new-recept-contents #file-upload-btn {
+    display: inline-block;
+    margin: .5rem .5rem 1rem .5rem;
+    clear: both;
+    text-decoration: none;
+    text-transform: initial;
+    outline: none;
+    padding: 10px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+    border-radius: 0px; }
+  .new-recept-contents #mob-upload-btn {
+    padding: 10px;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 0px; }
+  .new-recept-contents #notimage {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%; }
+  .new-recept-contents #notimage.hidden {
+    display: none; }
+  .new-recept-contents #large {
+    display: block;
+    width: 100%; }
+  .new-recept-contents .form-check {
     height: 40px;
     width: 100%; }
-
-  .form-check-input {
-    display: block; }
-
-  .form-check-label {
-    padding-top: 10px; } }
-@media screen and (max-width: 750px) {
-  .ingredient-delet {
-    display: none; }
-
-  .card {
-    border: 1px lightgray solid; }
-
-  .card-body {
-    height: 180px;
-    padding: 20px; }
-
-  .ing {
-    margin-bottom: 10px; }
-
-  #unit {
-    margin-left: 3px; }
-
-  #receptTextarea {
+  .new-recept-contents .form-check-label {
+    display: inline-block;
+    padding-top: 10px;
+    margin-top: 3px; }
+  .new-recept-contents .form-check-input {
+    display: block;
+    height: 100%;
+    padding: 9px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid lightgray;
+    color: black;
+    border-radius: 4px;
+    transition: border-color .25s ease, box-shadow .25s ease; }
+  .new-recept-contents #receptTextarea {
     width: 100%;
-    margin-bottom: 20px; }
-
-  #add-one-step {
-    float: right;
-    text-align: right;
+    border: 2px solid #eee; }
+  .new-recept-contents .recept-button-group,
+  .new-recept-contents #add-ingredient {
+    right: 20px;
+    position: absolute;
+    margin-top: 0px;
+    border-color: black; }
+  .new-recept-contents .add-ingredient {
+    margin-bottom: 70px !important; }
+  .new-recept-contents .bottom {
     margin-bottom: 40px; }
+  .new-recept-contents .ingredient-button-group {
+    right: 40px;
+    position: absolute;
+    margin-top: -8px; }
+  .new-recept-contents #recept-cancel {
+    background-color: #e60019;
+    color: white; }
+  .new-recept-contents .recept-btn,
+  .new-recept-contents #add-ingredient {
+    padding: 10px; }
+  .new-recept-contents #recept-submit,
+  .new-recept-contents #add-ingredient,
+  .new-recept-contents .upload-file-btn {
+    background-color: black;
+    color: white; }
+  .new-recept-contents .upload-file-btn {
+    margin-left: 15px; }
+  .new-recept-contents #add-ingredient {
+    margin-top: 15px;
+    margin-bottom: 20px; }
+  .new-recept-contents .steps {
+    font-size: 1.75rem; }
+  .new-recept-contents .ingredient-btn {
+    margin-top: -10px;
+    margin-left: 20px;
+    padding: 0px;
+    font-size: 40px; }
+  .new-recept-contents .ingredient-delet {
+    color: #e60019;
+    margin-left: 20px; }
+  .new-recept-contents #ingredient-add {
+    color: green;
+    margin-left: 20px; }
+  .new-recept-contents #add-one-step {
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    border: none; }
+  .new-recept-contents .step-input {
+    margin-bottom: 50px !important; }
+  .new-recept-contents .delete-step {
+    margin-left: 20px; }
+  .new-recept-contents .card {
+    z-index: 999 !important; }
+  .new-recept-contents .list-group-item-action {
+    z-index: 1001 !important; }
+  @media screen and (min-width: 992px) {
+    .new-recept-contents .new-recept-contents .ax-product-grid-tile {
+      margin-left: 0px;
+      margin-right: -10px;
+      padding-bottom: 50px;
+      margin-bottom: 0px; }
+    .new-recept-contents .close {
+      display: none; }
+    .new-recept-contents .new-recept-contents .label {
+      margin-left: 20px; }
+    .new-recept-contents .card {
+      border: none; }
+    .new-recept-contents .card-body {
+      padding: 10px; }
+    .new-recept-contents .single-ingr {
+      height: 20px; }
+    .new-recept-contents .new-recept-contents .category-select {
+      right: -26px; }
+    .new-recept-contents .new-recept-contents .form-wrap {
+      margin-bottom: 30px; }
+    .new-recept-contents #mobil-pad {
+      display: none !important; }
+    .new-recept-contents .form-check-label {
+      padding-top: 10px; } }
+  @media only screen and (max-width: 992px) {
+    .new-recept-contents .new-recept-contents .ax-product-grid-tile {
+      margin: 0px;
+      padding-bottom: 50px; }
+    .new-recept-contents .new-recept-contents .label {
+      margin-left: 10px; }
+    .new-recept-contents .mob {
+      margin-bottom: 25px; }
+    .new-recept-contents .select-wrap {
+      margin-bottom: 65px;
+      margin-right: 30px; }
+    .new-recept-contents .card {
+      margin-bottom: 10px;
+      border: none; }
+    .new-recept-contents .card-body {
+      padding: 10px; }
+    .new-recept-contents .single-ingr {
+      height: 40px; }
+    .new-recept-contents .ingredient-delet {
+      display: none; }
+    .new-recept-contents #large {
+      display: none; }
+    .new-recept-contents #mobil-pad {
+      display: block; }
+    .new-recept-contents .checkbox-wrap {
+      padding-bottom: 20px; }
+    .new-recept-contents .form-check {
+      height: 40px;
+      width: 100%; }
+    .new-recept-contents .form-check-input {
+      display: block; }
+    .new-recept-contents .form-check-label {
+      padding-top: 10px; } }
+  @media screen and (max-width: 750px) {
+    .new-recept-contents .ingredient-delet {
+      display: none; }
+    .new-recept-contents .card {
+      border: 1px lightgray solid; }
+    .new-recept-contents .card-body {
+      height: 180px;
+      padding: 20px; }
+    .new-recept-contents .ing {
+      margin-bottom: 10px; }
+    .new-recept-contents #unit {
+      margin-left: 3px; }
+    .new-recept-contents #receptTextarea {
+      width: 100%;
+      margin-bottom: 20px; }
+    .new-recept-contents #add-one-step {
+      float: right;
+      text-align: right;
+      margin-bottom: 40px; }
+    .new-recept-contents #ingredient-add {
+      display: none; } }
 
-  #ingredient-add {
-    display: none; } }
 .my-page {
   overflow-x: inherit; }
   .my-page .fa-utensils {

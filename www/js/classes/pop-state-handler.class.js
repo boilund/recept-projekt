@@ -71,6 +71,8 @@ class PopStateHandler {
   }
 
   startPage() {
+    this.app.myPage.slice = 0;
+    this.app.startPage.filteredCards.length = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').addClass('heading-content-start-page');
@@ -79,6 +81,7 @@ class PopStateHandler {
   }
 
   myPage() {
+    this.app.startPage.sliceNr = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
@@ -86,14 +89,17 @@ class PopStateHandler {
   }
 
   recipe() {
+    this.app.startPage.sliceNr = 0;
+    this.app.myPage.slice = 0;
     this.cleanUpPage();
     $('section.container-fluid').addClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
-    this.app.recipe.render('.heading-content');
-    this.app.recipe.render('main', '2');
+    this.renderCorrectRecipe();
   }
 
   createRecipe() {
+    this.app.startPage.sliceNr = 0;
+    this.app.myPage.slice = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').removeClass('heading-content-start-page');
@@ -105,5 +111,16 @@ class PopStateHandler {
     $('.heading-content-start-page').empty();
     $('main').empty();
   }
+
+  renderCorrectRecipe() {
+    const url = location.pathname.split('/')[2];
+    const recipe = this.app.recipes.filter(recipe => recipe.url === url);
+    const { ingridiens, instructions, defaultPortion } = recipe[0];
+    this.app.recipe.saveRecipeInfo(ingridiens, instructions);
+    recipe.render('.heading-content');
+    recipe.render('main', '2');
+    $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
+  }
+
 
 }

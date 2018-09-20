@@ -1,0 +1,116 @@
+Object.assign(StartPage.prototype, { template3(){ return `
+
+  <aside class="col-md-4 col-lg-3 pb-3">
+    <a href="/create_recipe" class="pop btn btn-danger btn-lg btn-block text-white new-recept-btn mt-md-5 mb-1">Skapa ett
+      nytt recept</a>
+    <div id="accordion" role="tablist">
+      <a class=" heading-toggle text-dark border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+        aria-controls="collapseOne">
+        <div class="card-header header-name border p-3 side-card" role="tab" id="headingOne">
+          Måltider
+        </div>
+      </a>
+      <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body border border-top-0 border-bottom-0 px-2 py-1">
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="frukost" value="Frukost">
+            <label class="form-check-label mb-1" for="frukost">Frukost</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="lunch" value="Lunch">
+            <label class="form-check-label mb-1" for="lunch">Lunch</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="mellanmol" value="Mellanmål">
+            <label class="form-check-label mb-1" for="mellanmol">Mellanmål</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="forratter" value="Förrätter">
+            <label class="form-check-label mb-1" for="forratter">Förrätter</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="huvudratter" value="Huvudrätter">
+            <label class="form-check-label mb-1" for="huvudratter">Huvudrätter</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="efterratt" value="Efterrätter">
+            <label class="form-check-label mb-1" for="efterratter">Efterrätter</label>
+          </div>
+        </div>
+      </div>
+      <a class="collapsed text-dark heading-toggle border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseTwo" aria-expanded="true"
+        aria-controls="collapseTwo">
+        <div class="card-header header-name border p-3 side-card" role="tab" id="headingTwo">
+          Ingredienser
+        </div>
+      </a>
+      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body border border-top-0 border-bottom-0 px-2 py-1">
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="flaskkott" value="Fläskkött">
+            <label class="form-check-label mb-1" for="flaskkott">Fläskkött</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="fars" value="Färs">
+            <label class="form-check-label mb-1" for="fars">Färs</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="korv" value="Korv">
+            <label class="form-check-label mb-1" for="korv">Korv</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="kyckling" value="Kyckling & Fågel">
+            <label class="form-check-label mb-1" for="kyckling">Kyckling & Fågel</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="notkott" value="Nötkött">
+            <label class="form-check-label mb-1" for="notkott">Nötkött</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="fisk" value="Fisk">
+            <label class="form-check-label mb-1" for="notkott">Fisk</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="pasta" value="Pasta">
+            <label class="form-check-label " for="pasta">Pasta</label>
+          </div>
+        </div>
+      </div>
+
+      <a class="collapsed text-dark heading-toggle  border-0 p-0 font-weight-bold" data-toggle="collapse" href="#collapseThree" aria-expanded="true"
+        aria-controls="collapseThree">
+        <div class="card-header header-name border p-3 side-card" role="tab" id="headingThree">
+          Speciallkost
+        </div>
+      </a>
+      <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body border border-top-0 px-2 py-1 pb-md-4 pb-xl-1">
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="glutenfritt" value="Glutenfritt">
+            <label class="form-check-label mb-1" for="glutenfritt">Glutenfritt</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="laktosfritt" value="Laktosfritt">
+            <label class="form-check-label mb-1" for="laktosfritt">Laktosfritt</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="aggfritt" value="Äggfritt">
+            <label class="form-check-label mb-1" for="aggfritt">Äggfritt</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="veganer" value="Veganer">
+            <label class="form-check-label mb-1" for="veganer">Veganer</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="lakto-vegetarianer" value="Lakto-vegetarianer">
+            <label class="form-check-label mb-1" for="lakto-vegetarianer">Lakto-vegetarianer</label>
+          </div>
+          <div class="form-check m-1">
+            <input class="form-check-input" type="checkbox" id="lakto-ovo-vegetarianer" value="Lakto-ovo-vegetarianer">
+            <label class="form-check-label " for="lakto-ovo-vegetarianer">Lakto-ovo-vegetarianer</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+`;}});
