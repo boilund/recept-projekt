@@ -22,8 +22,10 @@ class StartPage extends Base {
     };
     this.filteredCards = this.app.recipes.filter(recipe => isIncluded(recipe.category));
 
-    this.app.popState.startPage();
-    this.app.recipe.render('', 3);
+    // empty only main contents because checkbox need to maintain checks,
+    // then render filtered cards
+    $('.main-contents').empty();
+    this.render('.main-contents', 4);
   }
 
   change2(e) {
