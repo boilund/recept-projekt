@@ -115,11 +115,8 @@ footer {
   content: "\f105"; }
 .start-main-content .recept-card {
   width: 100%;
-  height: 320px;
+  height: 100%;
   border-radius: 0%; }
-  @media (min-width: 768px) {
-    .start-main-content .recept-card {
-      height: 310px; } }
 .start-main-content .author {
   font-size: 13px; }
 .start-main-content .recipeCard:nth-child(n+9) {
@@ -605,12 +602,6 @@ p.heart-favorite {
     font-size: 13px; }
   .my-page .recept-card {
     height: 100%; }
-    @media (min-width: 576px) {
-      .my-page .recept-card {
-        height: 320px; } }
-    @media (min-width: 992px) {
-      .my-page .recept-card {
-        height: 320px; } }
   .my-page .card-footer {
     background-color: #fff;
     border-top: none;
