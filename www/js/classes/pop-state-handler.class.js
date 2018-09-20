@@ -72,6 +72,7 @@ class PopStateHandler {
 
   startPage() {
     this.app.myPage.slice = 0;
+    this.app.startPage.filteredCards.length = 0;
     this.cleanUpPage();
     $('section.container-fluid').removeClass('heading-content');
     $('section.container-fluid').addClass('heading-content-start-page');
