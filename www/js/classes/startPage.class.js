@@ -4,6 +4,7 @@ class StartPage extends Base {
     this.app = app;
     this.app.recipes.sort((a, b) => b.likes - a.likes);
     this.sliceNr = 8;
+    this.filteredCards = [];
   }
 
   click2(e) {
@@ -15,7 +16,6 @@ class StartPage extends Base {
   }
 
   pickFilteredCards(selectedCategory) {
-    this.filteredCards = [];
 
     const isIncluded = (category) => {
       return selectedCategory.some(item => category.includes(item));
