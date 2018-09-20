@@ -49,18 +49,18 @@
       &:after{
         font-family: 'Font Awesome 5 Free';
         content: "\f107";
-        padding-right:2px;   
+        padding-right:2px;
       }
     }
   }
-  
-  
-  
+
+
+
 	.heading-toggle.collapsed {
     .header-name  {
       &:after {
         content: "\f105";
-      }  
+      }
     }
   }
 
@@ -78,8 +78,8 @@
   .author {
 		font-size: 13px;
   }
-  
-  .recipeCard:nth-child(n+10) {
+
+  .recipeCard:nth-child(n+9) {
     display: none;
   }
 
