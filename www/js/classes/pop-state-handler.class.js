@@ -78,6 +78,7 @@ class PopStateHandler {
     $('section.container-fluid').addClass('heading-content-start-page');
     this.app.startPage.render('.heading-content-start-page');
     this.app.startPage.render('main', '2');
+    this.autocomplete();
   }
 
   myPage() {
@@ -120,6 +121,30 @@ class PopStateHandler {
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
+  }
+
+  autocomplete() {
+    const options = {
+      url: '../json/recipe.json',
+      getValue: 'title',
+      list: {
+        maxNumberOfElements: 10,
+        sort: {
+          enabled: true
+        },
+        match: {
+          enabled: true
+        }
+      },
+      template: {
+        type: "custom",
+        method: (value, item) => {
+          return `<a href="/recipe/${item.url}">${value}</a>`;
+        }
+      },
+    };
+
+    $('.search-input').easyAutocomplete(options);
   }
 
 
