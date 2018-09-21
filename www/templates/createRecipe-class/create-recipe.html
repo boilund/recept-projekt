@@ -45,209 +45,225 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         </div>
         <div class="row form-wrap uploader" id="file-upload-form">
           <div id="large">
-            <label for="file-upload" class="v-none">First name:</label>
-            <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
-            <div id="file-drag">
-              <img id="file-image" src="#" alt="Preview" class="hidden">
+            <input id="file-upload" class="fileUpload" type="file" name="fileUpload" accept="image/*" />
+            <label for="file-upload" id="file-drag" class="file-drag">
+              <img id="file-image" alt=" Preview" class="hidden">
               <div id="uploader-start">
                 <i class="fa fa-download" aria-hidden="true"></i>
-                <div>Välj en fil eller dra här</div>
+                <div class="file-browser">Välj en fil eller dra här</div>
                 <div id="notimage" class="hidden">Endast bild</div>
                 <span class="btn btn-primary" id="file-upload-btn">Välj en fil</span>
               </div>
+              <div id="response">
+                <div id="messages"></div>
+              </div>
+            </label>
+          </div>
+
+        </div>
+        <div class="row form-wrap">
+          <div class="mobil-pad input-group mb-3 " id="mobil-pad">
+            <div class=" input-group-prepend">
+              <input id="small-upload" class="fileUpload custom-file-input" type="file" name="fileUpload" accept="image/*" />
+              <label class="custom-file-label" for="small-upload">Välj en fil</label>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <h2 class="steps">Välj kategori</h2>
+      <div class="row form-wrap checkbox-wrap">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="btn-group-vertical">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Frukost" id="Frukost">
+              <label class="form-check-label" for="Frukost">
+                Frukost
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Lunch" id="Lunch">
+              <label class="form-check-label" for="Lunch">
+                Lunch
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Mellanmål" id="mellanmal">
+              <label class="form-check-label" for="mellanmal">
+                Mellanmål
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Förrätter" id="forratter">
+              <label class="form-check-label" for="forratter">
+                Förrätter
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Huvudrätter" id="huvudratter">
+              <label class="form-check-label" for="huvudratter">
+                Huvudrätter
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Efterrätter" id="efterratter">
+              <label class="form-check-label" for="efterratter">
+                Efterrätter
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="btn-group-vertical">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Glutenfritt" id="glutenfritt">
+              <label class="form-check-label" for="glutenfritt">
+                Glutenfritt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Laktosfritt" id="laktosfritt">
+              <label class="form-check-label" for="laktosfritt">
+                Laktosfritt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Nöttfritt" id="nottfritt">
+              <label class="form-check-label" for="nottfritt">
+                Nöttfritt
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Äggfritt" id="aggfritt">
+              <label class="form-check-label" for="aggfritt">
+                Äggfritt
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="btn-group-vertical">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="fläskkött" id="flaskkott">
+              <label class="form-check-label" for="flaskkott">
+                Fläskkött
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="färs" id="fars">
+              <label class="form-check-label" for="fars">
+                Färs
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="korv" id="korv">
+              <label class="form-check-label" for="korv">
+                Korv
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value=" Kyckling & Fågel" id="fagel">
+              <label class="form-check-label" for="fagel">
+                Kyckling & Fågel
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="fisk" id="fisk">
+                <label class="form-check-label" for="fisk">
+                  Fisk
+                </label>
+              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Nötkött" id="notkott">
+              <label class="form-check-label" for="notkott">
+                Nötkött
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Pasta" id="pasta">
+              <label class="form-check-label" for="pasta">
+                Pasta
+              </label>
             </div>
 
           </div>
-          <div class="mobil-pad" id="mobil-pad">
-            <div class="upload-file-btn btn mob mobil-pad" id="mob-upload-btn">Välj en fil</div>
-          </div>
+
         </div>
-        <h2 class="steps">Välj kategori</h2>
-        <div class="row form-wrap checkbox-wrap">
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="btn-group-vertical">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Frukost" id="Frukost">
-                <label class="form-check-label" for="Frukost">
-                  Frukost
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Lunch" id="Lunch">
-                <label class="form-check-label" for="Lunch">
-                  Lunch
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Mellanmål" id="mellanmal">
-                <label class="form-check-label" for="mellanmal">
-                  Mellanmål
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Förrätter" id="forratter">
-                <label class="form-check-label" for="forratter">
-                  Förrätter
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Huvudrätter" id="huvudratter">
-                <label class="form-check-label" for="huvudratter">
-                  Huvudrätter
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Efterrätter" id="efterratter">
-                <label class="form-check-label" for="efterratter">
-                  Efterrätter
-                </label>
-              </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-12">
+          <div class="btn-group-vertical">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Veganer" id="veganer">
+              <label class="form-check-label" for="veganer">
+                Veganer
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Lakto-vegetarianer" id="lakto-v">
+              <label class="form-check-label" for="lakto-v">
+                Lakto-vegetarianer
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Lakto-ovo-vegetarianer" id="l-ovo-v">
+              <label class="form-check-label" for="l-ovo-v">
+                Lakto-ovo-vegetarianer
+              </label>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="btn-group-vertical">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Glutenfritt" id="glutenfritt">
-                <label class="form-check-label" for="glutenfritt">
-                  Glutenfritt
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Laktosfritt" id="laktosfritt">
-                <label class="form-check-label" for="laktosfritt">
-                  Laktosfritt
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Nöttfritt" id="nottfritt">
-                <label class="form-check-label" for="nottfritt">
-                  Nöttfritt
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Äggfritt" id="aggfritt">
-                <label class="form-check-label" for="aggfritt">
-                  Äggfritt
-                </label>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="btn-group-vertical">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="fläskkött" id="flaskkott">
-                <label class="form-check-label" for="flaskkott">
-                  Fläskkött
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="färs" id="fars">
-                <label class="form-check-label" for="fars">
-                  Färs
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="korv" id="korv">
-                <label class="form-check-label" for="korv">
-                  Korv
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value=" Kyckling & Fågel" id="fagel">
-                <label class="form-check-label" for="fagel">
-                  Kyckling & Fågel
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Nötkött" id="notkott">
-                <label class="form-check-label" for="notkott">
-                  Nötkött
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Pasta" id="pasta">
-                <label class="form-check-label" for="pasta">
-                  Pasta
-                </label>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="btn-group-vertical">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Veganer" id="veganer">
-                <label class="form-check-label" for="veganer">
-                  Veganer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Lakto-vegetarianer" id="lakto-v">
-                <label class="form-check-label" for="lakto-v">
-                  Lakto-vegetarianer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Lakto-ovo-vegetarianer" id="l-ovo-v">
-                <label class="form-check-label" for="l-ovo-v">
-                  Lakto-ovo-vegetarianer
-                </label>
-              </div>
-            </div>
-          </div>
-
-
-
         </div>
 
 
-
-
-        <h2 class="steps">Lägg till ingredienser</h2>
-
-        <div class=" add-ingr" id="addIngr">
-          ${this._ingredientsList.render()}
-
-
-        </div>
-        <div class="row form-wrap add-ingredient">
-          <button id="add-ingredient" class="add-one"> Mer ingrediens</button>
-        </div>
-
-        <div class="row form-wrap ">
-          <div class="form-group col-12">
-            <h2 class="steps">Gör så här</h2>
-          </div>
-        </div>
-        <ol class="steps-here list-group list-group-flush cooking-instructions"></ol>
-        <div class="row form-wrap step-input">
-          <div class="col-lg-10 col-md-10">
-            <label for="receptTextarea" class="v-none">steps</label>
-            <input class="form-control text-input" id="receptTextarea" />
-          </div>
-          <div class="col-lg-1 col-md-1">
-            <button id="add-one-step" class="btn btn-secondary">Lägg till</button>
-          </div>
-        </div>
-
-
-
-        <div class="row form-wrap bottom">
-          <div class=" recept-button-group">
-            <a class="button button-block recept-btn" id="recept-cancel" href="index.html" role="button">Avbryt</a>
-            <a class="button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
-          </div>
-        </div>
 
       </div>
 
 
+
+
+      <h2 class="steps">Lägg till ingredienser</h2>
+
+      <div class=" add-ingr" id="addIngr">
+        ${this._ingredientsList.render()}
+
+
+      </div>
+      <div class="row form-wrap add-ingredient">
+        <button id="add-ingredient" class="add-one"> Mer ingrediens</button>
+      </div>
+
+      <div class="row form-wrap ">
+        <div class="form-group col-12">
+          <h2 class="steps">Gör så här</h2>
+        </div>
+      </div>
+      <ol class="steps-here list-group list-group-flush cooking-instructions"></ol>
+      <div class="row form-wrap step-input">
+        <div class="col-lg-10 col-md-10">
+          <label for="receptTextarea" class="v-none">steps</label>
+          <input class="form-control text-input" id="receptTextarea" />
+        </div>
+        <div class="col-lg-1 col-md-1">
+          <button id="add-one-step" class="btn btn-secondary">Lägg till</button>
+        </div>
+      </div>
+
+
+
+      <div class="row form-wrap bottom">
+        <div class=" recept-button-group">
+          <a class="button button-block recept-btn" id="recept-cancel" href="index.html" role="button">Avbryt</a>
+          <a class="button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
+        </div>
+      </div>
+
     </div>
+
+
+  </div>
   </div>
 </section>
 `;}});
