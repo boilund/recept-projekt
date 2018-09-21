@@ -71,54 +71,43 @@ class PopStateHandler {
   }
 
   startPage() {
-    this.app.myPage.slice = 0;
+    this.app.startPage.sliceNr = 0;
     this.app.startPage.filteredCards.length = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').addClass('heading-content-start-page');
+    this.cleanUpPage('removeClass', 'addClass');
     this.app.startPage.render('.heading-content-start-page');
     this.app.startPage.render('main', '2');
     this.autocomplete();
   }
 
   myPage() {
-    this.app.startPage.sliceNr = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
+    this.app.myPage.slice = 0;
+    this.cleanUpPage('removeClass', 'removeClass');
     this.app.myPage.render('main');
   }
 
   recipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').addClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
+    this.cleanUpPage('addClass', 'removeClass');
     this.renderCorrectRecipe();
   }
 
   createRecipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
+    this.cleanUpPage('removeClass', 'removeClass');
     this.app.createRecipe.render('main');
   }
 
-  cleanUpPage() {
+  cleanUpPage(method, method2) {
     $('.heading-content').empty();
     $('.heading-content-start-page').empty();
     $('main').empty();
+    $('section.container-fluid')[method]('heading-content');
+    $('section.container-fluid')[method2]('heading-content-start-page');
   }
 
   renderCorrectRecipe() {
     const url = location.pathname.split('/')[2];
     const recipe = this.app.recipes.filter(recipe => recipe.url === url);
-    const { ingridiens, instructions, defaultPortion } = recipe[0];
-    this.app.recipe.saveRecipeInfo(ingridiens, instructions, defaultPortion);
-    recipe[0].newIngrediens = [];
+    const { defaultPortion } = recipe[0];
+    recipe[0].newIngrediensHTML = [];
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);

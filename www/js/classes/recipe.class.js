@@ -4,13 +4,6 @@ class Recipe extends Base {
     this.app = app;
   }
 
-  saveRecipeInfo(ingrediens, instructions, defaultPortion) {
-    this.ingrediens = ingrediens;
-    this.defaultIngrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
-    this.instructions = instructions.map((x) => `<li class="list-group-item border-0 pl-0 pb-0">${x}</li>`);
-    this.defaultPortion = defaultPortion;
-  }
-
   varyLikes() {
     this.favorite ? this.likes-- : this.likes++;
     this.favorite = !this.favorite; // "toggle"
@@ -28,14 +21,14 @@ class Recipe extends Base {
   }
 
   makeNewIngrediensHtml(newIngrediens, portion) {
-    this.newIngrediens = newIngrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    this.newIngrediensHTML = newIngrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
     $('main').empty();
     this.render('main', '2');
     $(`.select-portions option[value=${portion}]`).prop('selected', true);
   }
 
   calculateIngrediens(portion) {
-    const newIngrediens = this.app.recipe.ingrediens.map(item => {
+    const newIngrediens = this.ingridiens.map(item => {
       return {
         ...item,
         quantity: item.quantity / this.defaultPortion * portion
@@ -44,6 +37,7 @@ class Recipe extends Base {
     this.makeNewIngrediensHtml(newIngrediens, portion);
   }
 
+  // recipe portions
   change2(e) {
     if ($(e.target).hasClass('select-portions')) {
       const selectedPortion = $('.select-portions').val();
