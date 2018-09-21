@@ -304,49 +304,49 @@ p.heart-favorite {
   */ }
   .new-recept-contents .names {
     width: 100%; }
-  .new-recept-contents .new-recept-contents .ax-product-grid-header {
+  .new-recept-contents .ax-product-grid-header {
     padding: 0px; }
-  .new-recept-contents .new-recept-contents .layout-wrap {
+  .new-recept-contents .layout-wrap {
     flex-wrap: wrap; }
-  .new-recept-contents .new-recept-contents .layout-row {
+  .new-recept-contents .layout-row {
     flex-direction: row;
     box-sizing: border-box;
     display: flex; }
-  .new-recept-contents .new-recept-contents .ax-product-grid-tile {
+  .new-recept-contents .ax-product-grid-tile {
     display: block;
     background-color: #fff;
     box-sizing: border-box; }
-  .new-recept-contents .new-recept-contents form {
+  .new-recept-contents form {
     margin-top: 40px; }
-  .new-recept-contents .new-recept-contents .label,
+  .new-recept-contents .label,
   .new-recept-contents .custom-select {
     color: rgba(128, 128, 128, 0.5);
     transition: all 0.25s ease;
     line-height: 1; }
-  .new-recept-contents .new-recept-contents .label {
+  .new-recept-contents .label {
     margin-top: 5px;
     position: absolute;
     transform: translateY(6px);
     left: 20px;
     transition: all 0.25s ease;
     pointer-events: none; }
-  .new-recept-contents .new-recept-contents select {
+  .new-recept-contents select {
     position: absolute;
     padding-right: 50px;
     left: 13px;
     margin-top: 0px; }
-  .new-recept-contents .new-recept-contents .label .req {
+  .new-recept-contents .label .req {
     margin: 2px; }
-  .new-recept-contents .new-recept-contents .label.active {
+  .new-recept-contents .label.active {
     transform: translateY(40px);
     left: 2px;
     font-size: 12px; }
-  .new-recept-contents .new-recept-contents .label .active .req {
+  .new-recept-contents .label .active .req {
     opacity: 0; }
-  .new-recept-contents .new-recept-contents .label.highlight {
+  .new-recept-contents .label.highlight {
     color: rgba(128, 128, 128, 0.8);
     left: 20px; }
-  .new-recept-contents .new-recept-contents .search-input,
+  .new-recept-contents .search-input,
   .new-recept-contents textarea {
     display: block;
     width: 100%;
@@ -358,11 +358,11 @@ p.heart-favorite {
     color: black;
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
-  .new-recept-contents .new-recept-contents input,
+  .new-recept-contents input,
   .new-recept-contents textarea,
   .new-recept-contents select :focus {
     outline: 0; }
-  .new-recept-contents .new-recept-contents textarea {
+  .new-recept-contents textarea {
     border: 2px solid lightgray;
     resize: vertical; }
   .new-recept-contents #file-drag {
@@ -456,6 +456,8 @@ p.heart-favorite {
     color: black;
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
+  .new-recept-contents .card {
+    margin-bottom: 20px; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }
@@ -511,10 +513,6 @@ p.heart-favorite {
     margin-bottom: 50px !important; }
   .new-recept-contents .delete-step {
     margin-left: 20px; }
-  .new-recept-contents .card {
-    z-index: 999 !important; }
-  .new-recept-contents .list-group-item-action {
-    z-index: 1001 !important; }
   @media screen and (min-width: 992px) {
     .new-recept-contents .new-recept-contents .ax-product-grid-tile {
       margin-left: 0px;

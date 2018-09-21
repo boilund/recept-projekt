@@ -62,7 +62,7 @@ class CreateRecipe extends Base {
     if (target.hasClass("submint-btn")) {
       this.calcPortionNutrition();
       let json = this.createRecipe();
-      //this.saveRecipe(json);
+      this.saveRecipe(json);
 
     }
 
@@ -245,7 +245,9 @@ class CreateRecipe extends Base {
     //   recipeList = data;
     //   recipeList.push(json);
     //   console.log(recipeList)
-       JSON._save('testCreate', json);
+       JSON._save('testCreate', json).then(()=>{
+         console.log("open new window of this recipe")
+       })
     //})
   }
 

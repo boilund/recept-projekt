@@ -91,8 +91,6 @@ class Ingredients extends Base {
         oneIngredient.unit = this._unit;
 
         oneIngredient.nutrients = this.itemNutrients;
-
-        //console.log(oneIngredient);
         return oneIngredient;
 
 

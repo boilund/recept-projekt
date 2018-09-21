@@ -6,38 +6,38 @@
     width: 100%;
   }
 
-  .new-recept-contents .ax-product-grid-header {
+  .ax-product-grid-header {
     padding: 0px;
   }
 
-  .new-recept-contents .layout-wrap {
+  .layout-wrap {
     flex-wrap: wrap;
   }
 
-  .new-recept-contents .layout-row {
+  .layout-row {
     flex-direction: row;
     box-sizing: border-box;
     display: flex;
   }
 
-  .new-recept-contents .ax-product-grid-tile {
+  .ax-product-grid-tile {
     display: block;
     background-color: #fff;
     box-sizing: border-box;
   }
 
-  .new-recept-contents form {
+  form {
     margin-top: 40px;
   }
 
-  .new-recept-contents .label,
+  .label,
   .custom-select {
     color: rgba(128, 128, 128, .5);
     transition: all 0.25s ease;
     line-height: 1;
   }
 
-  .new-recept-contents .label {
+  .label {
     margin-top: 5px;
     position: absolute;
     transform: translateY(6px);
@@ -46,33 +46,33 @@
     pointer-events: none;
   }
 
-  .new-recept-contents select {
+  select {
     position: absolute;
     padding-right: 50px;
     left: 13px;
     margin-top: 0px;
   }
 
-  .new-recept-contents .label .req {
+  .label .req {
     margin: 2px;
   }
 
-  .new-recept-contents .label.active {
+  .label.active {
     transform: translateY(40px);
     left: 2px;
     font-size: 12px;
   }
 
-  .new-recept-contents .label .active .req {
+  .label .active .req {
     opacity: 0;
   }
 
-  .new-recept-contents .label.highlight {
+  .label.highlight {
     color: rgba(128, 128, 128, .8);
     left: 20px;
   }
 
-  .new-recept-contents .search-input,
+  .search-input,
   textarea {
     display: block;
     width: 100%;
@@ -86,13 +86,13 @@
     transition: border-color .25s ease, box-shadow .25s ease;
   }
 
-  .new-recept-contents input,
+  input,
   textarea,
   select :focus {
     outline: 0;
   }
 
-  .new-recept-contents textarea {
+  textarea {
     border: 2px solid lightgray;
     resize: vertical;
   }
@@ -146,6 +146,7 @@
     border-style: solid;
     border-color: lightgray;
     padding-left: 20px;
+    //z-index:-1;
   }
 
   .v-none {
@@ -240,7 +241,13 @@
 
   */
 
+  .card {
+    margin-bottom: 20px;
+  }
 
+  // .result{
+  //   //z-index: 1000;
+  // }
 
   #receptTextarea {
     width: 100%;
@@ -321,28 +328,29 @@
     margin-left: 20px;
   }
 
-  #add-one-step{
+  #add-one-step {
     background-color: black;
     color: white;
-    border-radius:0px;
-    border:none;
+    border-radius: 0px;
+    border: none;
   }
 
-  .step-input{
-    margin-bottom:50px !important;
+  .step-input {
+    margin-bottom: 50px !important;
   }
 
-  .delete-step{
-    margin-left:20px;
+  .delete-step {
+    margin-left: 20px;
 
   }
-  .card{
-    z-index:999 !important;
-  }
 
-  .list-group-item-action{
-    z-index:1001 !important;
-  }
+  // .card {
+  //   z-index: 1 !important;
+  // }
+
+  // .list-group-item-action {
+  //   z-index: 1001 !important;
+  // }
 
 
 
@@ -360,8 +368,8 @@
       margin-bottom: 0px;
     }
 
-    .close{
-      display:none;
+    .close {
+      display: none;
     }
 
     .new-recept-contents .label {
@@ -474,32 +482,32 @@
     }
 
     .card {
-      border:1px lightgray solid;
+      border: 1px lightgray solid;
 
     }
 
-    .card-body{
-      height:180px;
-      padding:20px;
+    .card-body {
+      height: 180px;
+      padding: 20px;
     }
 
-    .ing{
-      margin-bottom:10px;
+    .ing {
+      margin-bottom: 10px;
     }
 
-    #unit{
-      margin-left:3px;
+    #unit {
+      margin-left: 3px;
     }
 
-    #receptTextarea{
-      width:100%;
-      margin-bottom:20px;
+    #receptTextarea {
+      width: 100%;
+      margin-bottom: 20px;
     }
 
-    #add-one-step{
-      float:right;
-      text-align:right;
-      margin-bottom:40px;
+    #add-one-step {
+      float: right;
+      text-align: right;
+      margin-bottom: 40px;
     }
 
 
