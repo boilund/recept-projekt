@@ -1,7 +1,7 @@
 @import "variables";
 @import "mixins";
 
-@media print { 
+@media print {
   .author,
   .cooking-time,
   .reciep-picture,
@@ -10,7 +10,7 @@
   .icons,
   footer,{
     display: none;
-  } 
+  }
 
 }
 
@@ -22,21 +22,33 @@
 
 .recipe-title {
   color: #fff;
-  font-size: 50pt;
-  @include extra-small{
-    font-size: 40pt;
+  font-size: 25pt;
+  @include small {
+    font-size: 28pt;
+  }
+  @include medium {
+    font-size: 32pt;
+  }
+  @include large {
+    font-size: 43pt;
   }
 }
 
 .heading-content {
-  min-height: 310px;
+  min-height: 300px;
   background-color: map-get($colors , accent );
+
+  @include small {
+    min-height: 280px;
+  }
+  @include large {
+    min-height: 310px;
+  }
 }
 
 .heading-text {
   position: relative;
-  top: 90%;
-  transform: perspective(1px) translateY(-50%);
+  top: 50%;
   text-align: center;
 }
 
