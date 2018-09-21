@@ -31,7 +31,7 @@ class Recipe extends Base {
     const newIngrediens = this.ingridiens.map(item => {
       return {
         ...item,
-        quantity: item.quantity / this.defaultPortion * portion
+        quantity: Math.round(item.quantity / this.defaultPortion * portion * 100) / 100
       }
     })
     this.makeNewIngrediensHtml(newIngrediens, portion);
