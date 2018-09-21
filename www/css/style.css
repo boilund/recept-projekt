@@ -75,11 +75,16 @@ footer {
   footer .h3 {
     font-size: 17px; }
 
+.cards-row {
+  margin-right: 0px;
+  margin-left: 0px; }
+
 .heading-content-start-page {
   position: relative;
   min-height: 300px;
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 2; }
   @media (min-width: 768px) {
     .heading-content-start-page {
       min-height: 500px; } }
@@ -107,7 +112,24 @@ footer {
       .search-row h2 {
         font-size: 2rem; } }
   .search-row .easy-autocomplete {
-    width: 90%; }
+    width: 70% !important; }
+    @media (min-width: 576px) {
+      .search-row .easy-autocomplete {
+        width: 80% !important; } }
+    @media (min-width: 768px) {
+      .search-row .easy-autocomplete {
+        width: 85% !important; } }
+    @media (min-width: 992px) {
+      .search-row .easy-autocomplete {
+        width: 90% !important; } }
+    .search-row .easy-autocomplete .easy-autocomplete-container {
+      width: 120%; }
+      @media (min-width: 576px) {
+        .search-row .easy-autocomplete .easy-autocomplete-container {
+          width: 80%; } }
+      @media (min-width: 992px) {
+        .search-row .easy-autocomplete .easy-autocomplete-container {
+          width: 60%; } }
 
 .start-main-content .heading-toggle .header-name:after {
   font-family: 'Font Awesome 5 Free';
