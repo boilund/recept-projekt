@@ -1,11 +1,17 @@
 @import "variables";
 @import "mixins";
 
+.cards-row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
 .heading-content-start-page {
   position: relative;
   min-height: 300px;
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
   background-size: cover;
+  z-index: 2;
 
   @include medium {
     min-height: 500px;
@@ -40,11 +46,28 @@
   }
 
   .easy-autocomplete {
-    width: 90%;
+    width: 70% !important;
+    @include small {
+      width: 80% !important;
+    }
+    @include medium {
+      width: 85% !important;
+    }
+     @include large {
+      width: 90% !important;
+    }
+
+    .easy-autocomplete-container {
+      width: 120%;
+      @include small {
+      width: 80%;
+      }
+      @include large {
+      width: 60%;
+      }
+    }
+
   }
-  // .search-input {
-  //   width: inherit;
-  // }
 
 }
 
