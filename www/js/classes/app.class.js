@@ -7,10 +7,11 @@ class App extends Base {
   }
 
   async load() {
-    // TODO: load Json data
     JSON._classes(Recipe);
     this.recipes = await JSON._load('recipe.json');
     this.recipes.forEach((obj) => {
+      obj.ingridiensHTML = obj.ingridiens.map(x => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+      obj.instructions = obj.instructions.map(instruction => `<li class="list-group-item border-0 pl-0 pb-0">${instruction}</li>`);
       obj.app = this;
     });
 
