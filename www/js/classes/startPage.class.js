@@ -4,6 +4,7 @@ class StartPage extends Base {
     this.app = app;
     this.app.recipes.sort((a, b) => b.likes - a.likes);
     this.filteredCards = [];
+    this.selectedCategory = [];
     this.sliceNr = 0;
   }
 

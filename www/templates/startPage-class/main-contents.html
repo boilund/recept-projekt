@@ -8,7 +8,7 @@ Object.assign(StartPage.prototype, { template4(){ return `
       ${this.filteredCards.length ? this.filteredCards.render('', 3) : this.app.recipes.render('', 3)}
     </div>
     <div class="col-12 text-center pt-4">
-      <div class="btn text-white rounded-0 px-4 py-3 more-btn ${this.app.recipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
+      <div class="btn text-white rounded-0 px-4 py-3 more-btn ${(this.app.recipes.length <= 8) || (this.filteredCards.length <=8 && this.selectedCategory.length> 0) ? 'd-none' : ''}">Visa fler</div>
     </div>
   </div>
 
