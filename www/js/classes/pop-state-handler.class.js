@@ -116,7 +116,7 @@ class PopStateHandler {
     const url = location.pathname.split('/')[2];
     const recipe = this.app.recipes.filter(recipe => recipe.url === url);
     const { ingridiens, instructions, defaultPortion } = recipe[0];
-    this.app.recipe.saveRecipeInfo(ingridiens, instructions);
+    this.app.recipe.saveRecipeInfo(ingridiens, instructions, defaultPortion);
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
