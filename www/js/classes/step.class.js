@@ -12,4 +12,8 @@ class Step extends Base{
             that.parent.deleteStep(that);
           }
     }
+
+    export(){
+        return this.context;
+    }
 }

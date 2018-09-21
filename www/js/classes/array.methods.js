@@ -15,6 +15,15 @@ Object.assign(Array.prototype, {
 
     return html;
 
+  },
+
+  export(){
+    let arr = [];
+    for (let item of this){
+      arr.push(item.export());
+    }
+
+    return arr;
   }
 
 });

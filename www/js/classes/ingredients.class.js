@@ -76,21 +76,21 @@ class Ingredients extends Base {
         if (target.hasClass("unit-select")) {
             that._unit = target.val();
             that.unitCalc(that._unit);
-            if (that._name && that._quantity) {
-                that.createIngredient();
-            }
+            // if (that._name && that._quantity) {
+            //     that.createIngredient();
+            // }
         }
     }
 
-    createIngredient() {
+    export() {
 
         let oneIngredient = {};
-        this.calcNurtrients();
+        oneIngredient.itemNutrients = this.calcNurtrients();
         oneIngredient.name = this.name;
         oneIngredient.quantity = this._quantity;
         oneIngredient.unit = this._unit;
 
-        oneIngredient.nutrients = this.itemNutrients;
+        //oneIngredient.nutrients = this.itemNutrients;
         return oneIngredient;
 
 
@@ -238,7 +238,7 @@ class Ingredients extends Base {
                 that.itemNutrients.Salt = Math.round(value * c * q);
             }
         }
-        //return that.nutrientsList;
+        return that.itemNutrients;
 
     }
 

@@ -55,10 +55,11 @@ class CreateRecipe extends Base {
   //click add ingredients
 
   click(event) {
+    let that = this;
     let target = $(event.target);
     if (target.hasClass("add-one")) {
       event.preventDefault();
-      let that = this;
+      
 
       let ingredient = new Ingredients(this);
       //that.app.ingredient.createIngredient();
@@ -86,10 +87,10 @@ class CreateRecipe extends Base {
     }
 
     if (target.hasClass("submint-btn")) {
-      this.calcPortionNutrition();
-      let json = this.createRecipe();
+      // that.calcPortionNutrition();
+      let json = that.createRecipe();
       // console.log(json)
-      //this.saveRecipe(json);
+      that.saveRecipe(json);
 
     }
 
@@ -142,13 +143,13 @@ class CreateRecipe extends Base {
   }
 
   uploadInit() {
-    console.log("Upload Initialised");
+    //console.log("Upload Initialised");
     let that = this;
     let xhr = new XMLHttpRequest();
     if (xhr.upload) {
       //let fileDrag = $(".file-drag");
       let fileDrag = document.getElementById('file-drag');
-      console.log(fileDrag)
+      //console.log(fileDrag)
       fileDrag.addEventListener('dragover', (e) => {
         that.fileDragHover(e);
       })
@@ -262,6 +263,8 @@ class CreateRecipe extends Base {
 
   createRecipe() {
     let newRecipe = {};
+    let ingredents = this._ingredientsList.export();
+
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
     //newRecipe.img =this._img;
@@ -271,28 +274,17 @@ class CreateRecipe extends Base {
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = Date.now();
     newRecipe.defaultPortion = this._portions;
-    newRecipe.ingredient = this._ingredientsList;
-    newRecipe.instructions = this._stepsList;
-    newRecipe.nutrition = this._nutrients;
+    newRecipe.ingredient = ingredents;
+    newRecipe.instructions = this._stepsList.export();
+    newRecipe.nutrition = this.calcPortionNutrition(ingredents);
     newRecipe.comments = [];
-    // newRecipe.⚙ = "Recipe";
+   
 
 
     return newRecipe;
   }
 
-  calcPortionNutrition() {
-    let that = this;
-    //console.log(this._ingredientsList);
-    let nList = [];
-    that._ingredientsList.forEach((i) => {
-      if (i.name) {
-        nList.push(i.itemNutrients);
-      }
-
-      // let i= Ingredients;
-      // console.log(i);
-    })
+  calcPortionNutrition(ingredientsList) {
     let kj = 0;
     let kcal = 0;
     let fat = 0;
@@ -301,25 +293,29 @@ class CreateRecipe extends Base {
     let protein = 0;
     let salt = 0;
 
-    for (let i = 0; i < nList.length; i++) {
-      let l = nList[i];
-      kj += l.EnergyKJ;
-      kcal += l.EnergyKCAL;
-      fat += l.Fat;
-      saturatedFat += l.TotalMonounsaturatedFattyAcids + l.TotalPolyunsaturatedFattyAcids;
-      carbohydrates += l.Carbohydrates;
-      protein += l.Protein;
-      salt += l.Salt;
-    }
+    ingredientsList.forEach((item) => {
+      if (item.name) {
+        //nList.push(item.itemNutrients)
+        let l = item.itemNutrients;
+        kj += l.EnergyKJ;
+        kcal += l.EnergyKCAL;
+        fat += l.Fat;
+        saturatedFat += l.TotalMonounsaturatedFattyAcids + l.TotalPolyunsaturatedFattyAcids;
+        carbohydrates += l.Carbohydrates;
+        protein += l.Protein;
+        salt += l.Salt;
+      }
+    });
 
-    that._nutrients.kj = kj;
-    that._nutrients.kcal = kcal;
-    that._nutrients.fat = fat;
-    that._nutrients.saturatedFat = saturatedFat;
-    that._nutrients.carbohydrates = carbohydrates;
-    that._nutrients.protein = protein;
-    that._nutrients.salt = salt;
-    //console.log(that._nutrients)
+    return {
+      kj,
+      kcal,
+      fat,
+      saturatedFat,
+      carbohydrates,
+      protein,
+      salt
+    }
   }
 
 
@@ -395,24 +391,13 @@ class CreateRecipe extends Base {
   }
 
   saveRecipe(json) {
-    delete(json.ingredient);
     console.log('json to save', json)
-    //return;
-    let recipeList = [];
-    // JSON._save('testCreate', {
-    //   recept: json
-    // });
-    // $.getJSON('/json/testCreate.json').then((data) => {
-    //   recipeList = data;
-    //   recipeList.push(json);
-    //   console.log(recipeList)
-    //json = {color:'yellow'};
-    JSON._save('testCreate', json).then((err) => {
-      err && (console.error(err));
-      $.getJSON('/json/testCreate.json').then((data) => {
-        console.log("open new window of this recipe", data)
-      });
-    })
+
+    JSON._save("testCreate", json).then(()=>{
+      console.log("saved!");
+    });
+
+    
   }
 
 
