@@ -6,7 +6,7 @@ class Recipe extends Base {
 
   saveRecipeInfo(ingrediens, instructions, defaultPortion) {
     this.ingrediens = ingrediens;
-    // this.ingrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    this.defaultIngrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
     this.instructions = instructions.map((x) => `<li class="list-group-item border-0 pl-0 pb-0">${x}</li>`);
     this.defaultPortion = defaultPortion;
   }
@@ -27,6 +27,13 @@ class Recipe extends Base {
     }
   }
 
+  makeNewIngrediensHtml(newIngrediens, portion) {
+    this.newIngrediens = newIngrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    $('main').empty();
+    this.render('main', '2');
+    $(`.select-portions option[value=${portion}]`).prop('selected', true);
+  }
+
   calculateIngrediens(portion) {
     const newIngrediens = this.app.recipe.ingrediens.map(item => {
       return {
@@ -34,7 +41,7 @@ class Recipe extends Base {
         quantity: item.quantity / this.defaultPortion * portion
       }
     })
-    console.log(newIngrediens);
+    this.makeNewIngrediensHtml(newIngrediens, portion);
   }
 
   change2(e) {
