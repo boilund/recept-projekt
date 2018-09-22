@@ -21,7 +21,7 @@
 .search-row {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 53%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 75%;
@@ -46,12 +46,9 @@
   }
 
   .easy-autocomplete {
-    width: 70% !important;
+    width: 79% !important;
     @include small {
-      width: 80% !important;
-    }
-    @include medium {
-      width: 85% !important;
+      width: 87% !important;
     }
      @include large {
       width: 90% !important;
