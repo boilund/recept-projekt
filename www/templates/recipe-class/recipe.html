@@ -33,11 +33,11 @@ Object.assign(Recipe.prototype, { template2(){ return `
         </div>
       </form>
       <ul class="list-group list-group-flush cooking-ingredients">
-        ${this.app.recipe.ingrediens.join('')}
+        ${this.newIngrediensHTML.length > 0 ? this.newIngrediensHTML.join('') : this.ingridiensHTML.join('')}
       </ul>
       <h2 class="font-weight-bold mt-5">Gör så här:</h2>
       <ol class="list-group list-group-flush cooking-instructions">
-        ${this.app.recipe.instructions.join('')}
+        ${this.instructions.join('')}
       </ol>
     </div>
     <div class="col-md-4">

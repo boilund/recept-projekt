@@ -1,11 +1,6 @@
 @import "variables";
 @import "mixins";
 
-.cards-row {
-  margin-right: 0px;
-  margin-left: 0px;
-}
-
 .heading-content-start-page {
   position: relative;
   min-height: 300px;
@@ -102,7 +97,7 @@
 		font-size: 13px;
   }
 
-  .recipeCard:nth-child(n+9) {
+  .recipeCard:nth-child(n+10) {
     display: none;
   }
 

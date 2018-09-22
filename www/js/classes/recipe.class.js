@@ -4,11 +4,6 @@ class Recipe extends Base {
     this.app = app;
   }
 
-  saveRecipeInfo(ingrediens, instructions) {
-    this.ingrediens = ingrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
-    this.instructions = instructions.map((x) => `<li class="list-group-item border-0 pl-0 pb-0">${x}</li>`);
-  }
-
   varyLikes() {
     this.favorite ? this.likes-- : this.likes++;
     this.favorite = !this.favorite; // "toggle"
@@ -22,6 +17,31 @@ class Recipe extends Base {
       this.app.myPage.pickCards();
       this.app.popState.startPage();
       this.app.popState.recipe();
+    }
+  }
+
+  makeNewIngrediensHtml(newIngrediens, portion) {
+    this.newIngrediensHTML = newIngrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    $('main').empty();
+    this.render('main', '2');
+    $(`.select-portions option[value=${portion}]`).prop('selected', true);
+  }
+
+  calculateIngrediens(portion) {
+    const newIngrediens = this.ingridiens.map(item => {
+      return {
+        ...item,
+        quantity: Math.round(item.quantity / this.defaultPortion * portion * 100) / 100
+      }
+    })
+    this.makeNewIngrediensHtml(newIngrediens, portion);
+  }
+
+  // recipe portions
+  change2(e) {
+    if ($(e.target).hasClass('select-portions')) {
+      const selectedPortion = $('.select-portions').val();
+      this.calculateIngrediens(selectedPortion);
     }
   }
 
