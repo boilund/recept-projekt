@@ -42,7 +42,7 @@ class Recipe extends Base {
     const newIngrediens = this.ingridiens.map(item => {
       return {
         ...item,
-        quantity: Math.round(item.quantity / this.defaultPortion * portion * roundingElement[item.unit]) / roundingElement[item.unit]
+        quantity: item.unit === "" ? "" : Math.round(item.quantity / this.defaultPortion * portion * roundingElement[item.unit]) / roundingElement[item.unit]
       };
     });
     this.makeNewIngrediensHtml(newIngrediens, portion);
