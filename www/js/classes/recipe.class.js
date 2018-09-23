@@ -28,12 +28,23 @@ class Recipe extends Base {
   }
 
   calculateIngrediens(portion) {
+    // Choose rounding element by each unit of ingredients
+    const roundingElement = {
+      "g": 0.1,
+      "kg": 100,
+      "ml": 1,
+      "dl": 10,
+      "st": 10,
+      "tsk": 10,
+      "msk": 10,
+      "krm": 1,
+    };
     const newIngrediens = this.ingridiens.map(item => {
       return {
         ...item,
-        quantity: Math.round(item.quantity / this.defaultPortion * portion * 100) / 100
-      }
-    })
+        quantity: Math.round(item.quantity / this.defaultPortion * portion * roundingElement[item.unit]) / roundingElement[item.unit]
+      };
+    });
     this.makeNewIngrediensHtml(newIngrediens, portion);
   }
 
