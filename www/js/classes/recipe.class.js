@@ -13,10 +13,12 @@ class Recipe extends Base {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
     $(e.target).hasClass('fa-print') && window.print();
     if ($(e.target).hasClass('fa-heart')) {
+      const selectedPortion = $('.select-portions').val();
       this.varyLikes();
       this.app.myPage.pickCards();
       this.app.popState.startPage();
       this.app.popState.recipe();
+      this.calculateIngrediens(selectedPortion);
     }
   }
 
@@ -56,10 +58,9 @@ class Recipe extends Base {
     }
   }
 
-  showMore(page) {
-    page === 'startPage' && $('.recipeCard:hidden').slice(0, this.app.startPage.sliceNr).show(10);
-    page === 'myPage' && $('.recipeCard:hidden').slice(0, this.app.myPage.slice).show(10);
-    $('.recipeCard:hidden').length == 0 && $('.more-btn').hide();
+  showMore(selector, slice, btn) {
+    $(selector).slice(0, slice).show(10);
+    $(selector).length == 0 && $(btn).hide();
   }
 
   // start-page cards
@@ -70,7 +71,11 @@ class Recipe extends Base {
       this.app.myPage.pickCards();
       $('.main-contents').empty();
       this.app.startPage.render('.main-contents', 4);
-      this.showMore('startPage');
+      this.showMore(
+        '.recipeCard:hidden',
+        this.app.startPage.sliceNr,
+        '.more-btn'
+      );
     }
   }
 
@@ -80,7 +85,11 @@ class Recipe extends Base {
       this.varyLikes();
       this.app.myPage.pickCards();
       this.app.popState.myPage();
-      this.showMore('myPage');
+      this.showMore(
+        '.recipeCard-fav:hidden',
+        this.app.myPage.sliceFav,
+        '.more-btn-fav'
+      );
     }
   }
 
@@ -95,7 +104,12 @@ class Recipe extends Base {
 
       $('.my-cards').empty();
       this.app.myPage.myRecipes.render('.my-cards', '5');
-      this.showMore('myPage');
+      
+      this.showMore(
+        '.my-recipeCard:hidden',
+        this.app.myPage.sliceMyRecipe,
+        '.my-more-btn'
+      );
     }
   }
 

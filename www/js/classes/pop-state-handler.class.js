@@ -80,7 +80,8 @@ class PopStateHandler {
   }
 
   myPage() {
-    this.app.myPage.slice = 0;
+    this.app.myPage.sliceFav = 0;
+    this.app.myPage.sliceMyRecipe = 0;
     this.cleanUpPage('removeClass', 'removeClass');
     this.app.myPage.render('main');
   }

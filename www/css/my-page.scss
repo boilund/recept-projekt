@@ -31,7 +31,7 @@
     color: map-get($colors, accent);
 	}
 
-	.more-btn {
+	.more-btn, .my-more-btn, .more-btn-fav {
     background-color: map-get($colors, accent);
 		font-size: 13px;
 
@@ -40,8 +40,8 @@
     }
   }
 
-  .recipeCard:nth-child(n+9) {
+	.recipeCard-fav:nth-child(n+9),
+	.my-recipeCard:nth-child(n+9) {
     display: none;
-  }
-
+	}
 }

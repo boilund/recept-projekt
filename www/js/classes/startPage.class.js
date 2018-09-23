@@ -10,9 +10,9 @@ class StartPage extends Base {
 
   click2(e) {
    if($(e.target).hasClass('more-btn')) {
-     $('.recipeCard:hidden').slice(0, 8).show(10);
+     const sliced = $('.recipeCard:hidden').slice(0, 8).show(10);
      $('.recipeCard:hidden').length == 0 && $(e.target).hide();
-     this.sliceNr = this.sliceNr + 8;
+     this.sliceNr = this.sliceNr + sliced.length;
    }
   }
 
@@ -31,6 +31,7 @@ class StartPage extends Base {
 
   change2(e) {
     if ($(e.target).hasClass("form-check-input")) {
+      this.sliceNr = 0;
       this.selectedCategory = [];
       const checkedElements = $("input:checked");
       for (let i = 0; i < checkedElements.length; i++) {
