@@ -18,6 +18,7 @@ class Recipe extends Base {
       this.app.myPage.pickCards();
       this.app.popState.startPage();
       this.app.popState.recipe();
+      this.hasPortionChanged(selectedPortion);
       this.calculateIngrediens(selectedPortion);
     }
   }
@@ -50,10 +51,15 @@ class Recipe extends Base {
     this.makeNewIngrediensHtml(newIngrediens, portion);
   }
 
+  hasPortionChanged(portion) {
+    this.changePortion = parseInt(portion) === this.defaultPortion ? false : true;
+  }
+
   // recipe portions
   change2(e) {
     if ($(e.target).hasClass('select-portions')) {
       const selectedPortion = $('.select-portions').val();
+      this.hasPortionChanged(selectedPortion);
       this.calculateIngrediens(selectedPortion);
     }
   }

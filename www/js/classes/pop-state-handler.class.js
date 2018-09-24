@@ -113,12 +113,13 @@ class PopStateHandler {
   renderCorrectRecipe() {
     const url = location.pathname.split('/')[2];
     const recipe = this.app.recipes.filter(recipe => recipe.url === url);
-    const { defaultPortion } = recipe[0];
+    const { title, defaultPortion } = recipe[0];
     recipe[0].newIngrediensHTML = [];
+    recipe[0].changePortion = false;
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
-    $('title').text(`Recept - ${url} | Smaklig måltid`);
+    $('title').text(`Recept - ${title} | Smaklig måltid`);
   }
 
   autocomplete() {
