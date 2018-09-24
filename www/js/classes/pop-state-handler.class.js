@@ -71,6 +71,7 @@ class PopStateHandler {
   }
 
   startPage() {
+    $('title').text('Startsida | Smaklig måltid');
     this.app.startPage.sliceNr = 0;
     this.app.startPage.filteredCards.length = 0;
     this.cleanUpPage('removeClass', 'addClass');
@@ -80,6 +81,7 @@ class PopStateHandler {
   }
 
   myPage() {
+    $('title').text('Mina sidor | Smaklig måltid');
     this.app.myPage.sliceFav = 0;
     this.app.myPage.sliceMyRecipe = 0;
     this.cleanUpPage('removeClass', 'removeClass');
@@ -92,6 +94,7 @@ class PopStateHandler {
   }
 
   createRecipe() {
+    $('title').text('Skapa recept | Smaklig måltid');
     this.cleanUpPage('removeClass', 'removeClass');
     this.app.createRecipe.render('main');
   }
@@ -112,6 +115,7 @@ class PopStateHandler {
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
+    $('title').text(`Recept - ${url} | Smaklig måltid`);
   }
 
   autocomplete() {
