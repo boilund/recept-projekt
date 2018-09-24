@@ -43,5 +43,9 @@
 	.recipeCard-fav:nth-child(n+9),
 	.my-recipeCard:nth-child(n+9) {
     display: none;
-	}
+  }
+
+  .no-cards-msg {
+    margin: 60px auto;
+  }
 }

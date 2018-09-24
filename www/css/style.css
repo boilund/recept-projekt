@@ -648,5 +648,7 @@ p.heart-favorite {
   .my-page .recipeCard-fav:nth-child(n+9),
   .my-page .my-recipeCard:nth-child(n+9) {
     display: none; }
+  .my-page .no-cards-msg {
+    margin: 60px auto; }
 
 /*# sourceMappingURL=style.css.map */
