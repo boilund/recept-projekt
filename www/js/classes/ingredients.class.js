@@ -83,16 +83,18 @@ class Ingredients extends Base {
     }
 
     export() {
-
+        let returnInfo=[];
         let oneIngredient = {};
-        oneIngredient.itemNutrients = this.calcNurtrients();
+        let itemNutrients=this.calcNurtrients();
+        //oneIngredient.itemNutrients = 
         oneIngredient.name = this.name;
         oneIngredient.quantity = this._quantity;
         oneIngredient.unit = this._unit;
-
+        returnInfo.push(oneIngredient);
+        returnInfo.push(itemNutrients);
         //oneIngredient.nutrients = this.itemNutrients;
-        return oneIngredient;
-
+        //return oneIngredient;
+        return returnInfo;
 
     }
 

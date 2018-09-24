@@ -1,37 +1,25 @@
 {
   "favorite": true,
+  "img": "Screen%20Shot%202018-09-14%20at%2023.20.32.png",
   "likes": 1,
   "category": [],
   "author": "Catarina Bennetoft",
-  "url": 1537564325459,
-  "ingredient": [
+  "url": 1537781462533,
+  "ingredients": [
     {
-      "itemNutrients": {
-        "TotalMonounsaturatedFattyAcids": 0,
-        "TotalPolyunsaturatedFattyAcids": 0,
-        "Cholesterol": 1,
-        "Sucrose": 0,
-        "EnergyKJ": 48,
-        "EnergyKCAL": 11,
-        "Carbohydrates": 2,
-        "Protein": 0,
-        "Fat": 0,
-        "Salt": 0
-      },
-      "name": "Ris a la malta m lättmjölk mellangrädde fett 4%",
-      "quantity": "10",
-      "unit": "g"
+      "name": "",
+      "quantity": ""
     }
   ],
   "instructions": [],
   "nutrition": {
-    "kj": 48,
-    "kcal": 11,
-    "fat": 0,
-    "saturatedFat": 0,
-    "carbohydrates": 2,
-    "protein": 0,
-    "salt": 0
+    "kj": null,
+    "kcal": null,
+    "fat": null,
+    "saturatedFat": null,
+    "carbohydrates": null,
+    "protein": null,
+    "salt": null
   },
   "comments": []
 }

@@ -59,7 +59,7 @@ class CreateRecipe extends Base {
     let target = $(event.target);
     if (target.hasClass("add-one")) {
       event.preventDefault();
-      
+
 
       let ingredient = new Ingredients(this);
       //that.app.ingredient.createIngredient();
@@ -244,47 +244,40 @@ class CreateRecipe extends Base {
 
 
 
-
-
-  // fileDragHover(e, fileDrag) {
-  //   //var fileDrag = document.getElementById('file-drag');
-  //   //console.log("drag")
-  //   // e.stopPropagation();
-  //   // e.preventDefault();
-
-  //   //fileDrag.className = (e.type === 'dragover' ? 'hover' : 'modal-body file-upload');
-
-  //   //fileDrag.addClass('modal-body file-upload');
-  //   console.log(fileDrag)
-  // }
-
-  //img upload above
-
-
   createRecipe() {
     let newRecipe = {};
     let ingredents = this._ingredientsList.export();
+    let onlyIngredients = [];
+    let singleNutrient=[];
+    for (let ing of ingredents) {
+      onlyIngredients.push(ing[0]);
+      singleNutrient.push(ing[1]);
+    }
+    console.log(singleNutrient)
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    //newRecipe.img =this._img;
+    newRecipe.img =this._img;
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = Date.now();
     newRecipe.defaultPortion = this._portions;
-    newRecipe.ingredient = ingredents;
+    newRecipe.ingredients = onlyIngredients;
+    //newRecipe.ingredient = ingredents;
     newRecipe.instructions = this._stepsList.export();
-    newRecipe.nutrition = this.calcPortionNutrition(ingredents);
+    newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
-   
+    //newRecipe.⚙="Recipe";
+
 
 
     return newRecipe;
   }
 
   calcPortionNutrition(ingredientsList) {
+    console.log(ingredientsList)
     let kj = 0;
     let kcal = 0;
     let fat = 0;
@@ -294,17 +287,13 @@ class CreateRecipe extends Base {
     let salt = 0;
 
     ingredientsList.forEach((item) => {
-      if (item.name) {
-        //nList.push(item.itemNutrients)
-        let l = item.itemNutrients;
-        kj += l.EnergyKJ;
-        kcal += l.EnergyKCAL;
-        fat += l.Fat;
-        saturatedFat += l.TotalMonounsaturatedFattyAcids + l.TotalPolyunsaturatedFattyAcids;
-        carbohydrates += l.Carbohydrates;
-        protein += l.Protein;
-        salt += l.Salt;
-      }
+        kj += item.EnergyKJ;
+        kcal += item.EnergyKCAL;
+        fat += item.Fat;
+        saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
+        carbohydrates += item.Carbohydrates;
+        protein += item.Protein;
+        salt += item.Salt;
     });
 
     return {
@@ -391,13 +380,22 @@ class CreateRecipe extends Base {
   }
 
   saveRecipe(json) {
-    console.log('json to save', json)
+    //let newRecipeList=[];
+    let that = this;
 
-    JSON._save("testCreate", json).then(()=>{
+    that.app.recipes.push(json);
+    console.log(that.app.recipes);
+
+
+    // console.log('json to save', json)
+    //let that = this;
+    //let newRecipeList = this.app.recipes.push(json);
+
+    JSON._save("testCreate", json).then(() => {
       console.log("saved!");
     });
 
-    
+
   }
 
 
