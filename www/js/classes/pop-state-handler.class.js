@@ -68,6 +68,9 @@ class PopStateHandler {
     // Set the right button
     this.app.navbar.changeButton(url);
 
+    // Scroll to top of page
+    window.scrollTo(0, 0);
+
   }
 
   startPage() {
