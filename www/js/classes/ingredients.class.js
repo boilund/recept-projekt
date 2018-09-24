@@ -82,19 +82,45 @@ class Ingredients extends Base {
         }
     }
 
-    export() {
-        let returnInfo=[];
+    export () {
+        let returnInfo = [];
         let oneIngredient = {};
-        let itemNutrients=this.calcNurtrients();
-        //oneIngredient.itemNutrients = 
-        oneIngredient.name = this.name;
-        oneIngredient.quantity = this._quantity;
-        oneIngredient.unit = this._unit;
-        returnInfo.push(oneIngredient);
-        returnInfo.push(itemNutrients);
-        //oneIngredient.nutrients = this.itemNutrients;
-        //return oneIngredient;
-        return returnInfo;
+        let itemNutrients = {};
+        if (this.name !== "vatten") {
+            itemNutrients = this.calcNurtrients();
+            //oneIngredient.itemNutrients = 
+            oneIngredient.name = this.name;
+            oneIngredient.quantity = this._quantity;
+            oneIngredient.unit = this._unit;
+            returnInfo.push(oneIngredient);
+            returnInfo.push(itemNutrients);
+            //oneIngredient.nutrients = this.itemNutrients;
+            //return oneIngredient;
+            return returnInfo;
+        } else {
+            oneIngredient.name = this.name;
+            oneIngredient.quantity = this._quantity;
+            oneIngredient.unit = this._unit;
+            itemNutrients.EnergyKJ = 0;
+            itemNutrients.EnergyKCAL = 0;
+            itemNutrients.Fat=0;
+            itemNutrients.TotalSaturatedFattyAcids=0;
+            itemNutrients.TotalMonounsaturatedFattyAcids=0;
+            itemNutrients.TotalPolyunsaturatedFattyAcids=0;
+            itemNutrients.Cholesterol=0;
+            itemNutrients.Carbohydrates=0;
+            itemNutrients.Sucrose=0;
+            itemNutrients.Protein=0;
+            itemNutrients.Salt=0;
+
+            returnInfo.push(oneIngredient);
+            returnInfo.push(itemNutrients);
+            //oneIngredient.nutrients = this.itemNutrients;
+            //return oneIngredient;
+            return returnInfo;
+
+        }
+
 
     }
 
@@ -157,7 +183,7 @@ class Ingredients extends Base {
     getNutrients(item) {
         let that = this;
         // let nutrients = ;
-        that.nutrientsList = item.Naringsvarden.Naringsvarde
+        that.nutrientsList = item.Naringsvarden.Naringsvarde;
         //console.log(nutrients);
 
         //console.log(that.itemNutrients);

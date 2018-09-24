@@ -207,7 +207,7 @@ class CreateRecipe extends Base {
         '<strong>' + that._img + '</strong>'
       );
       $("#file-image").removeClass("hidden");
-      $("#file-image").attr("src", '"./img/' + that._img + '"');
+      $("#file-image").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
       //$("#file-image").src=URL.createObjectURL(file);
 
     } else {
@@ -248,7 +248,7 @@ class CreateRecipe extends Base {
     let newRecipe = {};
     let ingredents = this._ingredientsList.export();
     let onlyIngredients = [];
-    let singleNutrient=[];
+    let singleNutrient = [];
     for (let ing of ingredents) {
       onlyIngredients.push(ing[0]);
       singleNutrient.push(ing[1]);
@@ -257,7 +257,7 @@ class CreateRecipe extends Base {
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    newRecipe.img =this._img;
+    newRecipe.img = this._img;
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
@@ -269,6 +269,7 @@ class CreateRecipe extends Base {
     newRecipe.instructions = this._stepsList.export();
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
+    //newRecipe.⚙ = "Recipe";
     //newRecipe.⚙="Recipe";
 
 
@@ -287,13 +288,13 @@ class CreateRecipe extends Base {
     let salt = 0;
 
     ingredientsList.forEach((item) => {
-        kj += item.EnergyKJ;
-        kcal += item.EnergyKCAL;
-        fat += item.Fat;
-        saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
-        carbohydrates += item.Carbohydrates;
-        protein += item.Protein;
-        salt += item.Salt;
+      kj += item.EnergyKJ;
+      kcal += item.EnergyKCAL;
+      fat += item.Fat;
+      saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
+      carbohydrates += item.Carbohydrates;
+      protein += item.Protein;
+      salt += item.Salt;
     });
 
     return {
@@ -383,17 +384,12 @@ class CreateRecipe extends Base {
     //let newRecipeList=[];
     let that = this;
 
-    that.app.recipes.push(json);
-    console.log(that.app.recipes);
-
-
-    // console.log('json to save', json)
-    //let that = this;
-    //let newRecipeList = this.app.recipes.push(json);
-
-    JSON._save("testCreate", json).then(() => {
-      console.log("saved!");
-    });
+    $.getJSON("./json/recipe.json").then((data) => {
+      data.push(json);
+      JSON._save("recipe", data).then(() => {
+        console.log("saved!");
+      });
+    })
 
 
   }
