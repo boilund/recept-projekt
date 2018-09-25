@@ -80,14 +80,14 @@
 			"Ta ut den varma plåten och dra över bakplåtspapperet med pizzorna på plåten. Grädda mitt i ugnen ca 15 minuter. Gör likadant med nästa omgång."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "3510.50",
+      "kcal": "840",
+      "fat": "38.50",
+      "saturatedFat": "14",
+      "carbohydrates": "87.50",
+      "protein": "31.50",
+      "salt": "2.4"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -148,14 +148,14 @@
 			"Koka pastan enligt anvisning på förpackningen och blanda den med ev med strimlad rökt skinka och strimlad röd paprika."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "2401",
+      "kcal": "574",
+      "fat": "16.4",
+      "saturatedFat": "3.2",
+      "carbohydrates": "52",
+      "protein": "12.5",
+      "salt": "0.27"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -197,14 +197,14 @@
 			"Grädda i ugnen tills ytan fått en gyllenbrun färg, ca 45 minuter."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "1652",
+      "kcal": "395",
+      "fat": "22.3",
+      "saturatedFat": "4.7",
+      "carbohydrates": "43",
+      "protein": "5.2",
+      "salt": "0.6"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -266,14 +266,14 @@
 			"Skala ägget och dela det i två delar på längden. Lägg avokadon på brödet och toppa med ägget, chiliflakes, salt, några droppar citron samt smörgåskrasse."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "669",
+      "kcal": "160",
+      "fat": "19.2",
+      "saturatedFat": "9.1",
+      "carbohydrates": "15",
+      "protein": "12.3",
+      "salt": "0.7"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -362,14 +362,14 @@
 			"Servera nudlarna i portionsskålar och toppa med strimlade grönsaker, böngroddar, örter och biff. Slå på het buljong och toppa med jordnötter och lime i klyftor. Vill man ha sin rätt lite mustigare och saltare ringlar man på lite fisksås. Eller för en hetare variant, se receptet het chilisås under Tips."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "2181",
+      "kcal": "521",
+      "fat": "19.7",
+      "saturatedFat": "5.3",
+      "carbohydrates": "59.7",
+      "protein": "35.6",
+      "salt": "2"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -430,13 +430,13 @@
 			"Fördela örterna och rödlöken på tomaterna. Ringla över olivolja, salta och peppra."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "869",
+      "kcal": "208",
+      "fat": "16",
+      "saturatedFat": "32.5",
+      "carbohydrates": "4",
+      "protein": "11",
+      "salt": "1.6"
 		},
 		"⚙": "Recipe"
 	},
@@ -541,14 +541,14 @@
 			"Servera sushin med soja och gari samt srirachamajonnäs att doppa i."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "1399",
+      "kcal": "334.37",
+      "fat": "11.36",
+      "saturatedFat": "2.16",
+      "carbohydrates": "38.47",
+      "protein": "8",
+      "salt": "1.07"
+    },
 		"⚙": "Recipe"
 	},
 	{
@@ -604,14 +604,14 @@
 			"Salta, peppra och servera, gärna med en ostmacka till."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "618",
+      "kcal": "148",
+      "fat": "6.2",
+      "saturatedFat": "2.2",
+      "carbohydrates": "20.4",
+      "protein": "2.8",
+      "salt": "1.2"
+    },
 		"comments": [
 			{
 				"name": "",
@@ -711,14 +711,14 @@
 			"Gör bollarna. Använder du skedar, så ta en sked smet och skopa smeten från den ena skeden till den andra och lägg försiktigt ner falafeln i oljan. Lägg i några falaflar i taget och vänta i några sekunder innan du rör runt så att de inte går sönder. Använd gärna en hålslev eller en sil när du plockar upp falafeln. Den ska vara gyllenbrun och ytan ska vara lite hård. Lägg på en bit hushållspapper och servera så snart som möjligt."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "1054",
+      "kcal": "252",
+      "fat": "12",
+      "saturatedFat": "0.9",
+      "carbohydrates": "26",
+      "protein": "8",
+      "salt": "1.3"
+    },
 		"comments": [
 			{
 				"name": "",
@@ -797,13 +797,13 @@
 			"Stek dina amerikanska pannkakor gyllenbruna på båda sidor och servera med färska bär och lönnsirap."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "1220",
+      "kcal": "290",
+      "fat": "10",
+      "saturatedFat": "1.5",
+      "carbohydrates": "42",
+      "protein": "7.5",
+      "salt": "1"
 		},
 		"comments": [
 			{
@@ -896,13 +896,13 @@
 			"Ta ut formen. Lägg ut körsbärstomaterna i formen och toppa med färsk basilika. Servera gratängen direkt med pasta."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "1807",
+      "kcal": "432",
+      "fat": "24.2",
+      "saturatedFat": "13",
+      "carbohydrates": "15.5",
+      "protein": "37.5",
+      "salt": "2.5"
 		},
 		"comments": [
 			{
@@ -979,13 +979,13 @@
 			"Grädda mitt i ugnen i 10 minuter, ta ut och låt svalna på ett galler."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "1269",
+      "kcal": "292",
+      "fat": "10.6",
+      "saturatedFat": "5.2",
+      "carbohydrates": "41.5",
+      "protein": "6.6",
+      "salt": "1.4"
 		},
 		"comments": [
 			{
@@ -1060,14 +1060,14 @@
 			"Servera med ris eller potatis eller något annat du tycker passar. Servera gärna någon starkare röra till - ajvar till exempel - så de vuxna får lite smak också..."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "2341",
+      "kcal": "560",
+      "fat": "32",
+      "saturatedFat": "16",
+      "carbohydrates": "48",
+      "protein": "18",
+      "salt": "2"
+    },
 		"comments": [
 			{
 				"name": "",
@@ -1162,14 +1162,14 @@
 			"Servera grytan med potatismos, rivna morötter och en sallad."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "2393",
+      "kcal": "572",
+      "fat": "24.8",
+      "saturatedFat": "6.1",
+      "carbohydrates": "72.1",
+      "protein": "21.9",
+      "salt": "2.8"
+    },
 		"comments": [
 			{
 				"name": "",
@@ -1252,14 +1252,14 @@
 			"Till servering: Servera köttfärsgrytan med potatis, rårörda lingon och bröd."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
-		},
+      "kj": "1916",
+      "kcal": "458",
+      "fat": "19.2",
+      "saturatedFat": "5.4",
+      "carbohydrates": "45.8",
+      "protein": "19.8",
+      "salt": "2.4"
+    },
 		"comments": [
 			{
 				"name": "",
@@ -1363,13 +1363,13 @@
 			"Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "2040",
+      "kcal": "483",
+      "fat": "20.5",
+      "saturatedFat": "6.3",
+      "carbohydrates": "51.5",
+      "protein": "18.5",
+      "salt": "2"
 		},
 		"comments": [
 			{
@@ -1426,13 +1426,13 @@
 			"Mixa!"
 		],
 		"nutrition": {
-			"kj": "",
-			"kcal": "",
-			"fat": "",
-			"saturatedFat": "",
-			"carbohydrates": "",
-			"protein": "",
-			"salt": ""
+			"kj": "728",
+			"kcal": "174",
+			"fat": "2.8",
+			"saturatedFat": "0.8",
+			"carbohydrates": "30.2",
+			"protein": "5.8",
+			"salt": "0.3"
 		},
 		"comments": [
 			{
