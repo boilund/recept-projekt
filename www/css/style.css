@@ -519,7 +519,8 @@ p.heart-favorite {
     margin-bottom: 20px; }
   .new-recept-contents .result {
     height: 40vh;
-    overflow: auto; }
+    overflow: auto;
+    border-bottom: 1px solid lightgray; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }

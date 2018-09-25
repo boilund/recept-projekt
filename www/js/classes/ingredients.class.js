@@ -45,11 +45,11 @@ class Ingredients extends Base {
             var inputText = target.val();
 
             if (inputText) {
-                if(inputText.toString().length>=3){
+                if (inputText.toString().length >= 3) {
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
                 }
-                
+
             } else {
                 target.next().empty();
                 //autocomplete list get deleted by deleting input text
@@ -136,15 +136,15 @@ class Ingredients extends Base {
         if (searchText) {
             if (searchText.toLowerCase() !== "vatten") {
                 //if (searchText.length > 3) {
-                    let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
-                        "i");
-                    let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
-                    result.sort((a, b) => {
-                        return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
-                    })
-                    return result;
-                //}
-                //let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
+                // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
+                //     "i");
+                searchText = searchText.toLowerCase()
+                let result = jsonList.filter(x => x.Namn.toLowerCase().includes(searchText));
+                //let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+                result.sort((a, b) => {
+                    return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+                })
+                return result;
 
 
             } else {
@@ -172,6 +172,7 @@ class Ingredients extends Base {
         target.empty();
         for (let i = 0, len = list.length; i < len; i++) {
             let listText = list[i].Namn;
+            $(".result").removeClass("hidden");
 
             let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
             $(target).append(node);

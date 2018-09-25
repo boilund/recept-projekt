@@ -305,6 +305,8 @@
   .result{
     height: 40vh;
     overflow:auto;
+    border-bottom:1px solid lightgray;
+   // z-index:1002;
   }
 
   #receptTextarea {
@@ -409,6 +411,8 @@
   .list-group-item-action {
     z-index: 1001 !important;
   }
+
+
 
 
 
