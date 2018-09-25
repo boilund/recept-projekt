@@ -302,9 +302,10 @@
     margin-bottom: 20px;
   }
 
-  // .result{
-  //   //z-index: 1000;
-  // }
+  .result{
+    height: 40vh;
+    overflow:auto;
+  }
 
   #receptTextarea {
     width: 100%;

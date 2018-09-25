@@ -517,6 +517,9 @@ p.heart-favorite {
     transition: border-color .25s ease, box-shadow .25s ease; }
   .new-recept-contents .card {
     margin-bottom: 20px; }
+  .new-recept-contents .result {
+    height: 40vh;
+    overflow: auto; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }
