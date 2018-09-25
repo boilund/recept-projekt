@@ -76,13 +76,19 @@ class CreateRecipe extends Base {
     }
 
     if (target.hasClass("submint-btn")) {
+      
+      // event.preventDefault();
       // that.calcPortionNutrition();
       if (this.validateInput()) {
+
         let json = that.createRecipe();
-        // console.log(json)
         that.saveRecipe(json);
+      }else{
+        event.preventDefault();
+        console.log("not alowed");
+        return;
       }
-      return;
+     
     }
 
 
@@ -378,10 +384,10 @@ class CreateRecipe extends Base {
       data.push(json);
       JSON._save("recipe", data).then(() => {
         console.log("saved!");
-        $("#savedSuccessModal").modal('show');
+        //$("#savedSuccessModal").modal('show');
         const url = `/recipe/${json.url}`;
         Object.assign(this.app.popState.urls, { [url]: 'recipe' });
-        //location.replace("http://localhost:3000/my_page");
+        location.replace("http://localhost:3000/my_page");
       });
     })
 
