@@ -327,6 +327,7 @@ class CreateRecipe extends Base {
       $(".ingr-d-none").addClass("active highlight");
     }
   }
+ 
 
 
   //autocomplete
