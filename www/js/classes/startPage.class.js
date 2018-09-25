@@ -8,7 +8,7 @@ class StartPage extends Base {
     this.sliceNr = 0;
   }
 
-  showMoreCards() {
+  showMoreCards(e) {
     const sliced = $('.recipeCard:hidden').slice(0, 8).show(10);
     $('.recipeCard:hidden').length == 0 && $(e.target).hide();
     this.sliceNr = this.sliceNr + sliced.length;
@@ -16,13 +16,13 @@ class StartPage extends Base {
 
   click4(e) {
    if($(e.target).hasClass('more-btn')) {
-     this.showMoreCards();
+     this.showMoreCards(e);
    }
   }
 
   keyup4(e) {
     if ($(e.target).hasClass('more-btn') && e.which === 13) {
-      this.showMoreCards();
+      this.showMoreCards(e);
     }
   }
 
