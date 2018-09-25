@@ -654,7 +654,8 @@ p.heart-favorite {
     .new-recept-contents .ingredient-delet {
       display: none; }
     .new-recept-contents .card {
-      border: 1px lightgray solid; }
+      border: 1px lightgray solid;
+      height: 200px; }
     .new-recept-contents .card-body {
       height: 180px;
       padding: 20px; }
@@ -666,7 +667,8 @@ p.heart-favorite {
       width: 92%;
       padding: 10px; }
     .new-recept-contents #unit {
-      margin-left: 3px; }
+      margin-left: 3px;
+      margin-bottom: 5px; }
     .new-recept-contents #receptTextarea {
       width: 100%;
       margin-bottom: 20px; }
