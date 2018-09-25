@@ -11,7 +11,7 @@ return `
         <div class="row form-wrap single-ingr">
             <div class="col-lg-5 col-md-5 col-sm-12 ing">
               <label class="label ingr-d-none" for=${ingrId}>
-                Ingrediens<span class="req"></span>
+                Ingrediens<span class="req">*</span>
               </label>
               <input type="text" class="names ingredient ingr-css" id=${ingrId} value="${this.name}"/>
               <div  class="list-group result"></div>
@@ -20,7 +20,7 @@ return `
           
             <div class="col-lg-3 col-md-3 col-sm-12 ing">
               <label class="label ingr-d-none" >
-                Kvantitet<span class="req"> (g)</span>
+                Kvantitet<span class="req">*</span>
               </label>
               <input type="text" class="text-input unit quantity ingr-css" value="${this._quantity}" />
             </div>

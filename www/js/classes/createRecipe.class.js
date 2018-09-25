@@ -244,7 +244,7 @@ class CreateRecipe extends Base {
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = Date.now();
     newRecipe.defaultPortion = this._portions;
-    newRecipe.ingredients = onlyIngredients;
+    newRecipe.ingridiens = onlyIngredients;
     //newRecipe.ingredient = ingredents;
     newRecipe.instructions = this._stepsList.export();
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
