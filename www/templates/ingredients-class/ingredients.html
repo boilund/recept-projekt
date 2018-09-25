@@ -13,7 +13,7 @@ return `
               <label class="label ingr-d-none" for=${ingrId}>
                 Ingrediens<span class="req">*</span>
               </label>
-              <input type="text" class="names ingredient ingr-css" id=${ingrId} value="${this.name}"/>
+              <input type="text" class="names ingredient ingr-css" id=${ingrId} value="${this.name}" required />
               <div  class="list-group result"></div>
             </div>
 
@@ -22,8 +22,8 @@ return `
               <label class="label ingr-d-none" >
                 Kvantitet<span class="req">*</span>
               </label>
-              <input type="text" class="text-input unit quantity ingr-css" value="${this._quantity}" />
-              <p id="quantity-validation" class="mt-4 text-danger"></p>
+              <input type="text" class="text-input unit quantity ingr-css" value="${this._quantity}" required />
+              <p class="mt-2 text-danger quantity-validation"></p>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-12 select-wrap ing">
                 <div class="form-group">
