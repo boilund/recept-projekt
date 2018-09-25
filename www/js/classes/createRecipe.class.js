@@ -77,10 +77,12 @@ class CreateRecipe extends Base {
 
     if (target.hasClass("submint-btn")) {
       // that.calcPortionNutrition();
-      let json = that.createRecipe();
-      // console.log(json)
-      that.saveRecipe(json);
-
+      if (this.validateInput()) {
+        let json = that.createRecipe();
+        // console.log(json)
+        that.saveRecipe(json);
+      }
+      return;
     }
 
 
@@ -120,10 +122,18 @@ class CreateRecipe extends Base {
     //get cooking time
     if (target.hasClass("time")) {
       this._time = target.val();
+      this.validateTimeInput();
     }
   }
 
-
+  validateTimeInput() {
+    if (isNaN(this._time) || this._time < 1) {
+      document.getElementById("time-validation").innerHTML = "Vänligen ange ett nummer större än 1";
+      return false;
+      }
+      document.getElementById("time-validation").innerHTML = "";
+    return true;
+  }
 
   // img upload start here
   imgUpload() {
@@ -335,7 +345,7 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-  //       steps 
+  //       steps
 
   eventHandlers() {
     let that = this;
@@ -378,10 +388,23 @@ class CreateRecipe extends Base {
 
   }
 
-
-
-
-
-
+  validateInput() {
+    if (
+      this._recipeTitle !== undefined &&
+      this.validateTimeInput() &&
+      this._img &&
+      this._categoriesList &&
+      this._categoriesList.length &&
+      this._ingredientsList.some(i => i._name !== "") &&
+      this._ingredientsList.some(i => i._quantity !== "") &&
+      this._ingredientsList.some(i => i.unit !== undefined) &&
+      this._stepsList.length > 0
+    ) {
+      console.log('validate true')
+    return true;
+  }
+    console.log('validate false')
+    return false;
+  }
 
 }
