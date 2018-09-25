@@ -98,6 +98,8 @@ footer {
       width: 60%; } }
   .search-row .search-col {
     padding: 30px; }
+  .search-row #search-btn {
+    border-radius: 0 .25rem .25rem 0 !important; }
   .search-row h2 {
     color: #fff;
     font-size: 1.3rem; }
