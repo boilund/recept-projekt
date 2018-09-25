@@ -119,7 +119,12 @@ class CreateRecipe extends Base {
     //get cooking time
     if (target.hasClass("time")) {
       this._time = target.val();
+      if (isNaN(this._time)) {
+        document.getElementById("time-validation").innerHTML = "Vänligen ange ett nummer";
+        return;
     }
+      document.getElementById("time-validation").innerHTML = "";
+  }
   }
 
 
