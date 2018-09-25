@@ -6,9 +6,9 @@ Object.assign(Recipe.prototype, { template2(){ return `
   </section>
   <section class="row">
     <div class="col">
-      <div class="float-right icons mt-3 mb-5 mr-3">
-        <i class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
-        <i class="fas fa-print"></i>
+      <div class="float-right icons mt-3 mb-4 mr-3">
+        <i title="lägg till favoriter" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
+        <i title="skriv ut" class="fas fa-print"></i>
       </div>
     </div>
   </section>
@@ -32,6 +32,14 @@ Object.assign(Recipe.prototype, { template2(){ return `
           </select>
         </div>
       </form>
+      <seciton class="row">
+        <div class="col-12 col-md-6">
+          <div class="mt-3 mt-md-0 alert alert-danger ${this.changePortion ? '' : 'd-none'}" role="alert">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="font-weight-bold d-inline">Tillagningstiden kan påverkas när du ändrar antal portioner!</p>
+          </div>
+        </div>
+      </seciton>
       <ul class="list-group list-group-flush cooking-ingredients">
         ${this.newIngrediensHTML.length > 0 ? this.newIngrediensHTML.join('') : this.ingridiensHTML.join('')}
       </ul>
@@ -53,7 +61,7 @@ Object.assign(Recipe.prototype, { template2(){ return `
             <td class="text-right">${this.nutrition.fat} g</td>
           </tr>
           <tr>
-            <th scope="row">Mättad fett</th>
+            <th scope="row">mättad fett</th>
             <td class="text-right">${this.nutrition.saturatedFat} g</td>
           </tr>
           <tr>
@@ -61,7 +69,7 @@ Object.assign(Recipe.prototype, { template2(){ return `
             <td class="text-right">${this.nutrition.carbohydrates} g</td>
           </tr>
           <tr>
-            <th scope="row">Protein</th>
+            <th scope="row">protein</th>
             <td class="text-right">${this.nutrition.protein} g</td>
           </tr>
           <tr>

@@ -3,7 +3,8 @@ class MyPage extends Base {
     super();
     this.app = app;
     this.pickCards();
-    this.slice = 0;
+    this.sliceFav = 0;
+    this.sliceMyRecipe = 0;
   }
 
   pickCards() {
@@ -14,11 +15,25 @@ class MyPage extends Base {
   }
 
   click(e) {
-    if ($(e.target).hasClass('more-btn')) {
-      $('.recipeCard:hidden').slice(0, 8).show(10);
-      $('.recipeCard:hidden').length == 0 && $(e.target).hide();
-      this.slice = this.slice + 8;
+    if ($(e.target).hasClass('more-btn-fav')) {
+      this.sliceCards(
+        e.target, 
+        '.recipeCard-fav:hidden', 
+        'sliceFav'
+      );
+    } else if ($(e.target).hasClass('my-more-btn')) {
+      this.sliceCards(
+        e.target, 
+        '.my-recipeCard:hidden', 
+        'sliceMyRecipe'
+      );
     }
+  }
+
+  sliceCards(target, selector, slice) {
+    const sliced = $(selector).slice(0, 8).show(10);
+    $(selector).length == 0 && $(target).hide();
+    this[slice] = this[slice] + sliced.length;
   }
 
 }

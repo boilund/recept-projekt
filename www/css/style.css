@@ -188,6 +188,7 @@ aside .side-card {
   .comments-btn,
   .comments,
   .icons,
+  .alert,
   footer {
     display: none; } }
 .recept-main-content {
@@ -641,12 +642,15 @@ p.heart-favorite {
         font-size: 15px; } }
   .my-page .fa-heart {
     color: #e60019; }
-  .my-page .more-btn {
+  .my-page .more-btn, .my-page .my-more-btn, .my-page .more-btn-fav {
     background-color: #e60019;
     font-size: 13px; }
-    .my-page .more-btn:hover {
+    .my-page .more-btn:hover, .my-page .my-more-btn:hover, .my-page .more-btn-fav:hover {
       opacity: 0.8; }
-  .my-page .recipeCard:nth-child(n+9) {
+  .my-page .recipeCard-fav:nth-child(n+9),
+  .my-page .my-recipeCard:nth-child(n+9) {
     display: none; }
+  .my-page .no-cards-msg {
+    margin: 60px auto; }
 
 /*# sourceMappingURL=style.css.map */

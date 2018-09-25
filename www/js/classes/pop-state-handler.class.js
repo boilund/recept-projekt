@@ -68,9 +68,13 @@ class PopStateHandler {
     // Set the right button
     this.app.navbar.changeButton(url);
 
+    // Scroll to top of page
+    window.scrollTo(0, 0);
+
   }
 
   startPage() {
+    $('title').text('Startsida | Smaklig måltid');
     this.app.startPage.sliceNr = 0;
     this.app.startPage.filteredCards.length = 0;
     this.cleanUpPage('removeClass', 'addClass');
@@ -80,7 +84,9 @@ class PopStateHandler {
   }
 
   myPage() {
-    this.app.myPage.slice = 0;
+    $('title').text('Mina sidor | Smaklig måltid');
+    this.app.myPage.sliceFav = 0;
+    this.app.myPage.sliceMyRecipe = 0;
     this.cleanUpPage('removeClass', 'removeClass');
     this.app.myPage.render('main');
   }
@@ -91,6 +97,7 @@ class PopStateHandler {
   }
 
   createRecipe() {
+    $('title').text('Skapa recept | Smaklig måltid');
     this.cleanUpPage('removeClass', 'removeClass');
     this.app.createRecipe.render('main');
   }
@@ -106,11 +113,13 @@ class PopStateHandler {
   renderCorrectRecipe() {
     const url = location.pathname.split('/')[2];
     const recipe = this.app.recipes.filter(recipe => recipe.url === url);
-    const { defaultPortion } = recipe[0];
+    const { title, defaultPortion } = recipe[0];
     recipe[0].newIngrediensHTML = [];
+    recipe[0].changePortion = false;
     recipe.render('.heading-content');
     recipe.render('main', '2');
     $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
+    $('title').text(`Recept - ${title} | Smaklig måltid`);
   }
 
   autocomplete() {
