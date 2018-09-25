@@ -370,7 +370,7 @@ p.heart-favorite {
   .new-recept-contents .label .req {
     margin: 2px; }
   .new-recept-contents .label.active {
-    transform: translateY(40px);
+    transform: translateY(-20px);
     left: 2px;
     font-size: 12px; }
   .new-recept-contents .label .active .req {
@@ -437,7 +437,8 @@ p.heart-favorite {
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
-    padding-left: 20px; }
+    padding-left: 20px;
+    z-index: 1; }
   .new-recept-contents .v-none {
     display: none; }
   .new-recept-contents #file-image {
@@ -571,6 +572,8 @@ p.heart-favorite {
     margin-bottom: 50px !important; }
   .new-recept-contents .delete-step {
     margin-left: 20px; }
+  .new-recept-contents .list-group-item-action {
+    z-index: 1001 !important; }
   @media screen and (min-width: 992px) {
     .new-recept-contents .new-recept-contents .ax-product-grid-tile {
       margin-left: 0px;
@@ -587,10 +590,10 @@ p.heart-favorite {
       padding: 10px; }
     .new-recept-contents .single-ingr {
       height: 20px; }
-    .new-recept-contents .new-recept-contents .category-select {
+    .new-recept-contents .category-select {
       right: -26px; }
-    .new-recept-contents .new-recept-contents .form-wrap {
-      margin-bottom: 30px; }
+    .new-recept-contents .form-wrap {
+      margin-top: 30px; }
     .new-recept-contents #mobil-pad {
       display: none !important; }
     .new-recept-contents #mobil-review {

@@ -7,6 +7,7 @@ class Ingredients extends Base {
         this.nutrientsList = [];
         this._quantity = '';
         this._name = '';
+
     }
 
     get name() {
@@ -33,6 +34,8 @@ class Ingredients extends Base {
         this._unit = val;
     }
 
+
+
     keyup(event) {
 
         let that = this;
@@ -42,8 +45,11 @@ class Ingredients extends Base {
             var inputText = target.val();
 
             if (inputText) {
-                var list = that.search(that.parent.ingredientsOptions, inputText);
-                that.changeInput(event, list);
+                if(inputText.toString().length>=3){
+                    var list = that.search(that.parent.ingredientsOptions, inputText);
+                    that.changeInput(event, list);
+                }
+                
             } else {
                 target.next().empty();
                 //autocomplete list get deleted by deleting input text
@@ -66,7 +72,9 @@ class Ingredients extends Base {
         let target = $(event.target);
         if (target.hasClass("ingredient-btn")) {
             that.parent.deleteIngr(that);
+
         }
+
     }
 
     change(event) {
@@ -103,15 +111,15 @@ class Ingredients extends Base {
             oneIngredient.unit = this._unit;
             itemNutrients.EnergyKJ = 0;
             itemNutrients.EnergyKCAL = 0;
-            itemNutrients.Fat=0;
-            itemNutrients.TotalSaturatedFattyAcids=0;
-            itemNutrients.TotalMonounsaturatedFattyAcids=0;
-            itemNutrients.TotalPolyunsaturatedFattyAcids=0;
-            itemNutrients.Cholesterol=0;
-            itemNutrients.Carbohydrates=0;
-            itemNutrients.Sucrose=0;
-            itemNutrients.Protein=0;
-            itemNutrients.Salt=0;
+            itemNutrients.Fat = 0;
+            itemNutrients.TotalSaturatedFattyAcids = 0;
+            itemNutrients.TotalMonounsaturatedFattyAcids = 0;
+            itemNutrients.TotalPolyunsaturatedFattyAcids = 0;
+            itemNutrients.Cholesterol = 0;
+            itemNutrients.Carbohydrates = 0;
+            itemNutrients.Sucrose = 0;
+            itemNutrients.Protein = 0;
+            itemNutrients.Salt = 0;
 
             returnInfo.push(oneIngredient);
             returnInfo.push(itemNutrients);
@@ -127,14 +135,18 @@ class Ingredients extends Base {
     search(jsonList, searchText) {
         if (searchText) {
             if (searchText.toLowerCase() !== "vatten") {
-                let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
-                // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
-                // "i");
-                let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
-                result.sort((a, b) => {
-                    return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
-                })
-                return result;
+                //if (searchText.length > 3) {
+                    let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
+                        "i");
+                    let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+                    result.sort((a, b) => {
+                        return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+                    })
+                    return result;
+                //}
+                //let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
+
+
             } else {
                 let result = [{
                     Namn: "vatten"

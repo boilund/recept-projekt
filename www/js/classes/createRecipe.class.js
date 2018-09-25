@@ -66,6 +66,7 @@ class CreateRecipe extends Base {
       that._ingredientsList.push(ingredient);
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
+      that.inputLabel();
 
     }
 
@@ -211,13 +212,13 @@ class CreateRecipe extends Base {
           '<strong> Please upload a smaller file (< ' + fileSizeLimit + ' MB). </strong>'
         );
 
-        
-      } 
+
+      }
       // xhr.open('POST', document.getElementById('file-upload-form').action, true);
-        // xhr.setRequestHeader('X-File-Name', file.name);
-        // xhr.setRequestHeader('X-File-Size', file.size);
-        // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-        // xhr.send(file);
+      // xhr.setRequestHeader('X-File-Name', file.name);
+      // xhr.setRequestHeader('X-File-Size', file.size);
+      // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+      // xhr.send(file);
     }
   }
 
@@ -319,7 +320,13 @@ class CreateRecipe extends Base {
     }
   }
 
-
+  inputLabel() {
+    if ($(".ingr-css").val() !== "") {
+      console.log($(event.target).parent("div").prev())
+      //console.log($(".ingr-css").prev())
+      $(".ingr-d-none").addClass("active highlight");
+    }
+  }
 
 
   //autocomplete
