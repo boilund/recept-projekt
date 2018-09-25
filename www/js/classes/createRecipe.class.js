@@ -189,10 +189,10 @@ class CreateRecipe extends Base {
         '<strong>' + that._img + '</strong>'
       );
       $("#file-image").removeClass("hidden");
-      $("#file-image").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+      $("#file-image").attr("src", "../imgs/carrot-soup.jpeg");
       //$("#file-image").src=URL.createObjectURL(file);
       $("#mobil-review").removeClass("hidden");
-      $("#mobil-review").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+      $("#mobil-review").attr("src", "../imgs/carrot-soup.jpeg");
     } else {
       $('#notimage').removeClass('hidden');
       $('#file-upload-form').trigger("reset");
@@ -237,7 +237,7 @@ class CreateRecipe extends Base {
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    newRecipe.img = this._img;
+    newRecipe.img = "carrot-soup.jpeg";
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
@@ -250,7 +250,7 @@ class CreateRecipe extends Base {
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
     newRecipe["⚙"] = "Recipe";
-    //newRecipe.⚙="Recipe";
+
 
 
 
