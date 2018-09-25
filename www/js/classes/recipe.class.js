@@ -9,17 +9,30 @@ class Recipe extends Base {
     this.favorite = !this.favorite; // "toggle"
   }
 
+  // reicpe page
+  pressHearts2() {
+    const selectedPortion = $('.select-portions').val();
+    this.varyLikes();
+    this.app.myPage.pickCards();
+    this.app.popState.startPage();
+    this.app.popState.recipe();
+    this.hasPortionChanged(selectedPortion);
+    this.calculateIngrediens(selectedPortion);
+  }
+  // recipe page
   click2(e) {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
     $(e.target).hasClass('fa-print') && window.print();
     if ($(e.target).hasClass('fa-heart')) {
-      const selectedPortion = $('.select-portions').val();
-      this.varyLikes();
-      this.app.myPage.pickCards();
-      this.app.popState.startPage();
-      this.app.popState.recipe();
-      this.hasPortionChanged(selectedPortion);
-      this.calculateIngrediens(selectedPortion);
+      this.pressHearts2();
+    }
+  }
+  // recipe page
+  keyup2(e) {
+    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+      this.pressHearts2();
+    } else if ($(e.target).hasClass('fa-print') && e.which === 13) {
+      window.print();
     }
   }
 
@@ -72,51 +85,83 @@ class Recipe extends Base {
   // start-page cards
   click3(e) {
     if ($(e.target).hasClass('fa-heart')) {
-      this.varyLikes();
-      this.app.recipes.sort((a, b) => b.likes - a.likes);
-      this.app.myPage.pickCards();
-      $('.main-contents').empty();
-      this.app.startPage.render('.main-contents', 4);
-      this.showMore(
-        '.recipeCard:hidden',
-        this.app.startPage.sliceNr,
-        '.more-btn'
-      );
+      this.pressHearts3();
     }
+  }
+  // start page
+  keyup3(e) {
+    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+      this.pressHearts3();
+    }
+  }
+  // start page
+  pressHearts3() {
+    this.varyLikes();
+    this.app.recipes.sort((a, b) => b.likes - a.likes);
+    this.app.myPage.pickCards();
+    $('.main-contents').empty();
+    this.app.startPage.render('.main-contents', 4);
+    this.showMore(
+      '.recipeCard:hidden',
+      this.app.startPage.sliceNr,
+      '.more-btn'
+    );
   }
 
   // mina-favoriter cards
   click4(e) {
     if ($(e.target).hasClass('fa-heart')) {
-      this.varyLikes();
-      this.app.myPage.pickCards();
-      this.app.popState.myPage();
-      this.showMore(
-        '.recipeCard-fav:hidden',
-        this.app.myPage.sliceFav,
-        '.more-btn-fav'
-      );
+      this.pressHearts4();
     }
+  }
+
+  // mina favoriter
+  keyup4(e) {
+    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+      this.pressHearts4();
+    }
+  }
+  // mina favoriter
+  pressHearts4() {
+    this.varyLikes();
+    this.app.myPage.pickCards();
+    this.app.popState.myPage();
+    this.showMore(
+      '.recipeCard-fav:hidden',
+      this.app.myPage.sliceFav,
+      '.more-btn-fav'
+    );
   }
 
   // mina-recept cards
   click5(e) {
     if ($(e.target).hasClass('fa-heart')) {
-      this.varyLikes();
-      this.app.myPage.pickCards();
-
-      $('.favorite-cards').empty();
-      this.app.myPage.myFavorites.render('.favorite-cards', '4');
-
-      $('.my-cards').empty();
-      this.app.myPage.myRecipes.render('.my-cards', '5');
-
-      this.showMore(
-        '.my-recipeCard:hidden',
-        this.app.myPage.sliceMyRecipe,
-        '.my-more-btn'
-      );
+      this.pressHearts5();
     }
+  }
+
+  // mina recept
+  keyup5(e) {
+    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+      this.pressHearts5();
+    }
+  }
+  // mina recept
+  pressHearts5() {
+    this.varyLikes();
+    this.app.myPage.pickCards();
+
+    $('.favorite-cards').empty();
+    this.app.myPage.myFavorites.render('.favorite-cards', '4');
+
+    $('.my-cards').empty();
+    this.app.myPage.myRecipes.render('.my-cards', '5');
+
+    this.showMore(
+      '.my-recipeCard:hidden',
+      this.app.myPage.sliceMyRecipe,
+      '.my-more-btn'
+    );
   }
 
 }

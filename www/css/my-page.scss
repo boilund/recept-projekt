@@ -28,7 +28,8 @@
 	}
 
   .fa-heart {
-    color: map-get($colors, accent);
+		color: map-get($colors, accent);
+		cursor: pointer;
 	}
 
 	.more-btn, .my-more-btn, .more-btn-fav {

@@ -692,7 +692,8 @@ p.heart-favorite {
       .my-page .card-footer {
         font-size: 15px; } }
   .my-page .fa-heart {
-    color: #e60019; }
+    color: #e60019;
+    cursor: pointer; }
   .my-page .more-btn, .my-page .my-more-btn, .my-page .more-btn-fav {
     background-color: #e60019;
     font-size: 13px; }
