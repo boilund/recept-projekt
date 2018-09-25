@@ -11,8 +11,8 @@ Object.assign(Recipe.prototype, { template5(){ return `
         </a>
       </div>
       <div class="card-footer text-muted d-flex justify-content-between pb-0">
-        <p><i class="far fa-clock mr-2"></i>${this.time} min</p>
-        <p class="d-inline-block"><i class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>${this.likes}</p>
+        <p><i title="Tillagningstid" class="far fa-clock mr-2"></i>${this.time} min</p>
+        <p class="d-inline-block"><i title="lägg till favoriter" aria-label="lägg till favoriter" tabindex="0" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>${this.likes}</p>
       </div>
     </div>
   </div>

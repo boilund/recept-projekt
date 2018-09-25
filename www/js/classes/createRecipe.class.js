@@ -66,6 +66,7 @@ class CreateRecipe extends Base {
       that._ingredientsList.push(ingredient);
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
+      that.inputLabel();
 
     }
 
@@ -250,7 +251,7 @@ class CreateRecipe extends Base {
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = Date.now();
     newRecipe.defaultPortion = this._portions;
-    newRecipe.ingredients = onlyIngredients;
+    newRecipe.ingridiens = onlyIngredients;
     //newRecipe.ingredient = ingredents;
     newRecipe.instructions = this._stepsList.export();
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
@@ -326,7 +327,13 @@ class CreateRecipe extends Base {
     }
   }
 
-
+  inputLabel() {
+    if ($(".ingr-css").val() !== "") {
+      console.log($(event.target).parent("div").prev())
+      //console.log($(".ingr-css").prev())
+      $(".ingr-d-none").addClass("active highlight");
+    }
+  }
 
 
   //autocomplete
@@ -357,10 +364,6 @@ class CreateRecipe extends Base {
       $(".steps-here").empty();
       that._stepsList.render(".steps-here", "");
     })
-
-
-
-
   }
 
   saveRecipe(json) {
@@ -371,6 +374,9 @@ class CreateRecipe extends Base {
       data.push(json);
       JSON._save("recipe", data).then(() => {
         console.log("saved!");
+        const url = `/recipe/${json.url}`;
+        Object.assign(this.app.popState.urls, { [url]: 'recipe' });
+        //location.replace("http://localhost:3000/my_page");
       });
     })
 

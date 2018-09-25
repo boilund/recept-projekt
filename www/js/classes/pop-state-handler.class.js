@@ -50,7 +50,7 @@ class PopStateHandler {
 
     // A small "dictionary" of what method to call
     // on which url
-    let urls = {
+    this.urls = {
       '/': 'startPage',
       '/my_page': 'myPage',
       '/create_recipe': 'createRecipe',
@@ -58,11 +58,11 @@ class PopStateHandler {
 
     this.app.recipes.forEach((recipe) => {
       const url = `/recipe/${recipe.url}`;
-      Object.assign(urls, { [url]: 'recipe' });
+      Object.assign(this.urls, { [url]: 'recipe' });
     });
 
     // Call the right method
-    let methodName = urls[url];
+    let methodName = this.urls[url];
     this[methodName]();
 
     // Set the right button
@@ -112,7 +112,10 @@ class PopStateHandler {
 
   renderCorrectRecipe() {
     const url = location.pathname.split('/')[2];
-    const recipe = this.app.recipes.filter(recipe => recipe.url === url);
+    console.log(url);
+    console.log(this.app.recipes);
+    const recipe = this.app.recipes.filter(recipe => recipe.url == url);
+    console.log(recipe);
     const { title, defaultPortion } = recipe[0];
     recipe[0].newIngrediensHTML = [];
     recipe[0].changePortion = false;
@@ -139,7 +142,7 @@ class PopStateHandler {
         type: "custom",
         method: (value, item) => {
           // return item.url.length > 0 ? `<a href="/recipe/${item.url}">${value}</a>` : `<p>Din sökning gav 0 träffar.</p>`;
-          return `<a href="/recipe/${item.url}">${value}</a>`;
+          return `<a class="pop" href="/recipe/${item.url}">${value}</a>`;
         }
       },
     };

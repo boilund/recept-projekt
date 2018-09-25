@@ -259,8 +259,32 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
       <div class="row form-wrap bottom">
         <div class=" recept-button-group">
           <a class="pop button button-block recept-btn" id="recept-cancel" href="/" role="button">Avbryt</a>
-          <a class="pop button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
+          <a class="pop button button-block recept-btn submint-btn" id="recept-submit" role="button" data-toggle="modal"
+            data-target="#savedSuccessModal">Spara</a>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="savedSuccessModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Recept Sparad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  Ditt recept har sparats. Ta en titt på min sida!
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a type="button" href="/my_page" class="btn btn-primary">Save changes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
