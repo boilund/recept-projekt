@@ -357,10 +357,6 @@ class CreateRecipe extends Base {
       $(".steps-here").empty();
       that._stepsList.render(".steps-here", "");
     })
-
-
-
-
   }
 
   saveRecipe(json) {
@@ -371,6 +367,7 @@ class CreateRecipe extends Base {
       data.push(json);
       JSON._save("recipe", data).then(() => {
         console.log("saved!");
+        location.replace("http://localhost:3000/my_page");
       });
     })
 
