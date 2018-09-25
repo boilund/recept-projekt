@@ -33,7 +33,7 @@ class Recipe extends Base {
   calculateIngrediens(portion) {
     // Choose rounding element by each unit of ingredients
     const roundingElement = {
-      "g": 0.1,
+      "g": 1,
       "kg": 100,
       "ml": 1,
       "dl": 10,
@@ -110,7 +110,7 @@ class Recipe extends Base {
 
       $('.my-cards').empty();
       this.app.myPage.myRecipes.render('.my-cards', '5');
-      
+
       this.showMore(
         '.my-recipeCard:hidden',
         this.app.myPage.sliceMyRecipe,
