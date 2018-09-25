@@ -562,6 +562,8 @@ p.heart-favorite {
       margin-bottom: 30px; }
     .new-recept-contents #mobil-pad {
       display: none !important; }
+    .new-recept-contents #mobil-review {
+      display: none !important; }
     .new-recept-contents .form-check-label {
       padding-top: 10px; } }
   @media only screen and (max-width: 992px) {
@@ -586,6 +588,8 @@ p.heart-favorite {
       display: none; }
     .new-recept-contents #large {
       display: none; }
+    .new-recept-contents #time {
+      width: 100%; }
     .new-recept-contents #mobil-pad {
       display: block;
       left: 12px;
@@ -600,6 +604,13 @@ p.heart-favorite {
       display: block; }
     .new-recept-contents .form-check-label {
       padding-top: 10px; } }
+  @media screen and (min-width: 750px) {
+    .new-recept-contents #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      margin-left: 140px;
+      float: center; } }
   @media screen and (max-width: 750px) {
     .new-recept-contents .ingredient-delet {
       display: none; }
@@ -620,10 +631,14 @@ p.heart-favorite {
     .new-recept-contents #receptTextarea {
       width: 100%;
       margin-bottom: 20px; }
+    .new-recept-contents #mobil-review {
+      max-width: 100%;
+      padding: 20px; }
     .new-recept-contents #add-one-step {
       float: right;
       text-align: right;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      margin-left: 10px; }
     .new-recept-contents #ingredient-add {
       display: none; } }
 

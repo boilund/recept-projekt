@@ -1692,29 +1692,5 @@
       }
     ],
     "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "likes": 1,
-    "category": [],
-    "author": "Catarina Bennetoft",
-    "url": 1537781847310,
-    "ingredients": [
-      {
-        "name": "",
-        "quantity": ""
-      }
-    ],
-    "instructions": [],
-    "nutrition": {
-      "kj": null,
-      "kcal": null,
-      "fat": null,
-      "saturatedFat": null,
-      "carbohydrates": null,
-      "protein": null,
-      "salt": null
-    },
-    "comments": []
   }
 ]

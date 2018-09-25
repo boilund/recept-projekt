@@ -70,18 +70,6 @@ class CreateRecipe extends Base {
     }
 
     if (target.hasClass("upload-file-btn")) {
-
-
-
-
-
-
-
-
-
-
-
-
       this.fileSelectHandler(event);
 
     }
@@ -160,11 +148,6 @@ class CreateRecipe extends Base {
         that.fileSelectHandler(e);
       })
 
-
-      // File Drop
-      //fileDrag.addEventListener('dragover', this.fileDragHover(this), false);
-      // fileDrag.addEventListener('dragleave', fileDragHover, false);
-      // fileDrag.addEventListener('drop', fileSelectHandler, false);
     }
 
   }
@@ -195,8 +178,6 @@ class CreateRecipe extends Base {
   parseFile(file) {
     let that = this;
     console.log(file.name);
-    // var fileType = file.type;
-    // console.log(fileType);
     that._img = encodeURI(file.name);
 
     let isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(that._img);
@@ -209,7 +190,8 @@ class CreateRecipe extends Base {
       $("#file-image").removeClass("hidden");
       $("#file-image").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
       //$("#file-image").src=URL.createObjectURL(file);
-
+      $("#mobil-review").removeClass("hidden");
+      $("#mobil-review").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
     } else {
       $('#notimage').removeClass('hidden');
       $('#file-upload-form').trigger("reset");
@@ -223,22 +205,19 @@ class CreateRecipe extends Base {
     // pBar = document.getElementById('file-progress'),
     let fileSizeLimit = 1024; // In MB
     if (xhr.upload) {
-
-
       // Check if file is less than x MB
-      if (file.size <= fileSizeLimit * 1024 * 1024) {
-
-        xhr.open('POST', document.getElementById('file-upload-form').action, true);
-        xhr.setRequestHeader('X-File-Name', file.name);
-        xhr.setRequestHeader('X-File-Size', file.size);
-        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-        xhr.send(file);
-      } else {
+      if (file.size >= fileSizeLimit * 1024 * 1024) {
         $("#messages").append(
           '<strong> Please upload a smaller file (< ' + fileSizeLimit + ' MB). </strong>'
         );
 
-      }
+        
+      } 
+      // xhr.open('POST', document.getElementById('file-upload-form').action, true);
+        // xhr.setRequestHeader('X-File-Name', file.name);
+        // xhr.setRequestHeader('X-File-Size', file.size);
+        // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        // xhr.send(file);
     }
   }
 
@@ -253,7 +232,7 @@ class CreateRecipe extends Base {
       onlyIngredients.push(ing[0]);
       singleNutrient.push(ing[1]);
     }
-    console.log(singleNutrient)
+    //console.log(singleNutrient)
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
@@ -269,7 +248,7 @@ class CreateRecipe extends Base {
     newRecipe.instructions = this._stepsList.export();
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
-    //newRecipe.⚙ = "Recipe";
+    newRecipe["⚙"] = "Recipe";
     //newRecipe.⚙="Recipe";
 
 
@@ -348,8 +327,6 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-
-
   //       steps 
 
   eventHandlers() {
@@ -357,7 +334,6 @@ class CreateRecipe extends Base {
 
     // press enter render step
     $(document).on("keyup", "#receptTextarea", function (e) {
-
       if (e.keyCode === 13) {
         let step = new Step($("#receptTextarea").val(), that);
         $("#receptTextarea").val('');
@@ -382,7 +358,7 @@ class CreateRecipe extends Base {
 
   saveRecipe(json) {
     //let newRecipeList=[];
-    let that = this;
+    //let that = this;
 
     $.getJSON("./json/recipe.json").then((data) => {
       data.push(json);

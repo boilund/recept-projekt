@@ -9,20 +9,20 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
       <div title="recept-name" name="name-port">
         <div class="row form-wrap">
 
-          <div class=" col-md-6 col-sm-12 mob">
+          <div class=" col-lg-6  col-md-6  col-sm-12 mob">
             <label class="label" for="recipe-name">
               Recptnamn<span class="req">*</span>
             </label>
             <input type="text" class="names text-input recept-name" id="recipe-name" />
           </div>
-          <div class=" col-md-3 col-sm-12 mob">
+          <div class=" col-lg-3  col-md-6 col-sm-12 mob">
             <label class="label" for="time">
               Tillagningstid (min)<span class="req">*</span>
             </label>
             <input type="text" class="names text-input time" id="time" />
           </div>
 
-          <div class="col-md-3 col-sm-12 select-wrap">
+          <div class="col-lg-3 col-md-6 col-sm-12 select-wrap">
             <div class="form-group">
               <label class="sr-only" for="portions">Välj portion</label>
               <select class="custom-select portions" id="portions">
@@ -61,9 +61,11 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
           </div>
 
         </div>
-        <div class="row form-wrap">
+        <div class="row form-wrap"> <img id="mobil-review" alt=" Preview" class="mobil-review hidden">
           <div class="mobil-pad input-group mb-3 " id="mobil-pad">
+           
             <div class=" input-group-prepend">
+
               <input id="small-upload" class="fileUpload custom-file-input" type="file" name="fileUpload" accept="image/*" />
               <label class="custom-file-label" for="small-upload">Välj en fil</label>
             </div>
@@ -172,11 +174,11 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
               </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="fisk" id="fisk">
-                <label class="form-check-label" for="fisk">
-                  Fisk
-                </label>
-              </div>
+              <input class="form-check-input" type="checkbox" value="fisk" id="fisk">
+              <label class="form-check-label" for="fisk">
+                Fisk
+              </label>
+            </div>
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="Nötkött" id="notkott">
               <label class="form-check-label" for="notkott">

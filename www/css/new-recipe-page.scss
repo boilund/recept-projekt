@@ -247,12 +247,12 @@
   }
 
   #large {
-    margin-top:20px;
+    margin-top: 20px;
     display: block;
     width: 100%;
   }
 
-  #mobil-pad label{
+  #mobil-pad label {
     color: rgba(128, 128, 128, .8);
   }
 
@@ -451,14 +451,13 @@
       display: none !important;
 
     }
+    #mobil-review{
+      display: none !important;
+    }
 
     .form-check-label {
       padding-top: 10px;
     }
-
-
-
-
 
   }
 
@@ -506,12 +505,18 @@
       display: none;
     }
 
+    #time {
+      width: 100%;
+    }
+
     #mobil-pad {
       display: block;
       left: 12px;
       width: 95%;
       padding: 10px;
     }
+
+
 
     .checkbox-wrap {
       padding-bottom: 20px;
@@ -531,6 +536,16 @@
     }
 
 
+  }
+
+  @media screen and (min-width: 750px) {
+    #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      margin-left: 140px;
+      float: center;
+    }
   }
 
   @media screen and (max-width: 750px) {
@@ -568,10 +583,17 @@
       margin-bottom: 20px;
     }
 
+    #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      // margin-top:40px;
+    }
+
     #add-one-step {
       float: right;
       text-align: right;
       margin-bottom: 40px;
+      margin-left: 10px;
     }
 
 
