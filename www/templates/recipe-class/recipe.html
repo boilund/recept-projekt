@@ -7,8 +7,8 @@ Object.assign(Recipe.prototype, { template2(){ return `
   <section class="row">
     <div class="col">
       <div class="float-right icons mt-3 mb-4 mr-3">
-        <i title="lägg till favoriter" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
-        <i title="skriv ut" class="fas fa-print"></i>
+        <i aria-label="lägg till favoriter" tabindex="0" title="lägg till favoriter" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
+        <i aria-label="skriv ut" tabindex="0" title="skriv ut" class="fas fa-print"></i>
       </div>
     </div>
   </section>

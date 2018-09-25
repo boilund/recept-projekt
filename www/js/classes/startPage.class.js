@@ -8,12 +8,22 @@ class StartPage extends Base {
     this.sliceNr = 0;
   }
 
-  click2(e) {
+  showMoreCards() {
+    const sliced = $('.recipeCard:hidden').slice(0, 8).show(10);
+    $('.recipeCard:hidden').length == 0 && $(e.target).hide();
+    this.sliceNr = this.sliceNr + sliced.length;
+  }
+
+  click4(e) {
    if($(e.target).hasClass('more-btn')) {
-     const sliced = $('.recipeCard:hidden').slice(0, 8).show(10);
-     $('.recipeCard:hidden').length == 0 && $(e.target).hide();
-     this.sliceNr = this.sliceNr + sliced.length;
+     this.showMoreCards();
    }
+  }
+
+  keyup4(e) {
+    if ($(e.target).hasClass('more-btn') && e.which === 13) {
+      this.showMoreCards();
+    }
   }
 
   pickFilteredCards(selectedCategory) {
