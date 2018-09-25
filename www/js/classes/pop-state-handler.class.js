@@ -129,11 +129,11 @@ class PopStateHandler {
       template: {
         type: "custom",
         method: (value, item) => {
-          return `<a href="/recipe/${item.url}">${value}</a>`;
+          return item.url.length > 0 ? `<a href="/recipe/${item.url}">${value}</a>` : `<p>Din sökning gav 0 träffar.</p>`;
         }
       },
     };
-
+   
     $('.search-input').easyAutocomplete(options);
   }
 
