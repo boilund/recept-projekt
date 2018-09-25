@@ -76,9 +76,11 @@ class CreateRecipe extends Base {
 
     if (target.hasClass("submint-btn")) {
       // that.calcPortionNutrition();
-      let json = that.createRecipe();
-      // console.log(json)
-      that.saveRecipe(json);
+      if (this.validateInput()) {
+        let json = that.createRecipe();
+        // console.log(json)
+        that.saveRecipe(json);
+      }
 
     }
 
@@ -122,9 +124,9 @@ class CreateRecipe extends Base {
       if (isNaN(this._time)) {
         document.getElementById("time-validation").innerHTML = "Vänligen ange ett nummer";
         return;
-    }
+      }
       document.getElementById("time-validation").innerHTML = "";
-  }
+    }
   }
 
 
@@ -216,13 +218,13 @@ class CreateRecipe extends Base {
           '<strong> Please upload a smaller file (< ' + fileSizeLimit + ' MB). </strong>'
         );
 
-        
-      } 
+
+      }
       // xhr.open('POST', document.getElementById('file-upload-form').action, true);
-        // xhr.setRequestHeader('X-File-Name', file.name);
-        // xhr.setRequestHeader('X-File-Size', file.size);
-        // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-        // xhr.send(file);
+      // xhr.setRequestHeader('X-File-Name', file.name);
+      // xhr.setRequestHeader('X-File-Size', file.size);
+      // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+      // xhr.send(file);
     }
   }
 
@@ -332,7 +334,7 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-  //       steps 
+  //       steps
 
   eventHandlers() {
     let that = this;
@@ -375,10 +377,8 @@ class CreateRecipe extends Base {
 
   }
 
-
-
-
-
-
+  validateInput() {
+    return true;
+  }
 
 }

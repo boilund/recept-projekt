@@ -13,12 +13,13 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
             <label class="label" for="recipe-name">
               Recptnamn<span class="req">*</span>
             </label>
-            <input type="text" class="names text-input recept-name" id="recipe-name" />
+            <input type="text" class="names text-input recept-name" id="recipe-name" required />
           </div>
           <div class=" col-lg-3  col-md-6 col-sm-12 mob">
             <label class="label" for="time">
               Tillagningstid (min)<span class="req">*</span>
             </label>
+            <input type="text" class="names text-input time" id="time" required />
             <p id="time-validation" class="mt-4 text-danger"></p>
           </div>
 
@@ -63,7 +64,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         </div>
         <div class="row form-wrap"> <img id="mobil-review" alt=" Preview" class="mobil-review hidden">
           <div class="mobil-pad input-group mb-3 " id="mobil-pad">
-           
+
             <div class=" input-group-prepend">
 
               <input id="small-upload" class="fileUpload custom-file-input" type="file" name="fileUpload" accept="image/*" />
@@ -257,8 +258,8 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
 
       <div class="row form-wrap bottom">
         <div class=" recept-button-group">
-          <a class="button button-block recept-btn" id="recept-cancel" href="index.html" role="button">Avbryt</a>
-          <a class="button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
+          <a class="pop button button-block recept-btn" id="recept-cancel" href="/" role="button">Avbryt</a>
+          <a class="pop button button-block recept-btn submint-btn" id="recept-submit" role="button">Spara</a>
         </div>
       </div>
 

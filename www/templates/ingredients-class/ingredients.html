@@ -15,13 +15,14 @@ return `
               <input type="text" class="names ingredient" id=${ingrId} value="${this.name}"/>
               <div  class="list-group result"></div>
             </div>
-          
-          
+
+
             <div class="col-lg-3 col-md-3 col-sm-12 ing">
               <label class="label" >
                 Kvantitet<span class="req"> (g)</span>
               </label>
               <input type="text" class="text-input unit quantity" value="${this._quantity}" />
+              <p id="quantity-validation" class="mt-4 text-danger"></p>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-12 select-wrap ing">
                 <div class="form-group">
@@ -39,7 +40,7 @@ return `
                   </select>
                 </div>
               </div>
-          
+
             <div class="col-lg-2 ">
               <div class="ingredient-btn ingredient-delet"><i class="fas fa-minus-circle ingredient-btn"></i></div>
             </div>
