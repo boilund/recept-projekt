@@ -1,14 +1,14 @@
 Object.assign(StartPage.prototype, { template(){ return `
-  <div class="row search-row">
-    <div class="col search-col">
-      <h2>Vad är du sugen på att laga?</h2>
-      <form class="input-group search-form">
-        <label class="sr-only" for="search">Sök recept</label>
-        <input type="text" class="form-control search-input m-0" id="search-input" placeholder="Sök recept...">
-        <div class="input-group-append">
-          <button class="btn btn-secondary" type="button" id="search-btn"><i class="fas fa-search px-1"></i></button>
-        </div>
-      </form>
-    </div>
+<div class="row search-row">
+  <div class="col search-col">
+    <h2>Vad är du sugen på att laga?</h2>
+    <form class="input-group search-form">
+      <label class="sr-only" for="search-input">Sök recept</label>
+      <input type="text" class="form-control search-input m-0" id="search-input" placeholder="Sök recept...">
+      <!-- <div class="input-group-append d-flex flex-column"> -->
+        <button class="btn btn-secondary" type="button" id="search-btn"><i class="fas fa-search px-1"></i></button>
+      </div>
+    </form>
   </div>
+</div>
 `;}});

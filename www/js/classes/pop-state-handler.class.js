@@ -68,48 +68,84 @@ class PopStateHandler {
     // Set the right button
     this.app.navbar.changeButton(url);
 
+    // Scroll to top of page
+    window.scrollTo(0, 0);
+
   }
 
   startPage() {
-    this.app.myPage.slice = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').addClass('heading-content-start-page');
+    $('title').text('Startsida | Smaklig måltid');
+    this.app.startPage.sliceNr = 0;
+    this.app.startPage.filteredCards.length = 0;
+    this.cleanUpPage('removeClass', 'addClass');
     this.app.startPage.render('.heading-content-start-page');
     this.app.startPage.render('main', '2');
+    this.autocomplete();
   }
 
   myPage() {
-    this.app.startPage.sliceNr = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
+    $('title').text('Mina sidor | Smaklig måltid');
+    this.app.myPage.sliceFav = 0;
+    this.app.myPage.sliceMyRecipe = 0;
+    this.cleanUpPage('removeClass', 'removeClass');
     this.app.myPage.render('main');
   }
 
   recipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').addClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
-    this.app.recipe.render('.heading-content');
-    this.app.recipe.render('main', '2');
+    this.cleanUpPage('addClass', 'removeClass');
+    this.renderCorrectRecipe();
   }
 
   createRecipe() {
-    this.app.startPage.sliceNr = 0;
-    this.app.myPage.slice = 0;
-    this.cleanUpPage();
-    $('section.container-fluid').removeClass('heading-content');
-    $('section.container-fluid').removeClass('heading-content-start-page');
+    $('title').text('Skapa recept | Smaklig måltid');
+    this.cleanUpPage('removeClass', 'removeClass');
     this.app.createRecipe.render('main');
   }
 
-  cleanUpPage() {
+  cleanUpPage(method, method2) {
     $('.heading-content').empty();
     $('.heading-content-start-page').empty();
     $('main').empty();
+    $('section.container-fluid')[method]('heading-content');
+    $('section.container-fluid')[method2]('heading-content-start-page');
   }
+
+  renderCorrectRecipe() {
+    const url = location.pathname.split('/')[2];
+    const recipe = this.app.recipes.filter(recipe => recipe.url === url);
+    const { title, defaultPortion } = recipe[0];
+    recipe[0].newIngrediensHTML = [];
+    recipe[0].changePortion = false;
+    recipe.render('.heading-content');
+    recipe.render('main', '2');
+    $(`.select-portions option[value=${defaultPortion}]`).prop('selected', true);
+    $('title').text(`Recept - ${title} | Smaklig måltid`);
+  }
+
+  autocomplete() {
+    const options = {
+      url: '../json/recipe.json',
+      getValue: 'title',
+      list: {
+        maxNumberOfElements: 10,
+        sort: {
+          enabled: true
+        },
+        match: {
+          enabled: true
+        }
+      },
+      template: {
+        type: "custom",
+        method: (value, item) => {
+          // return item.url.length > 0 ? `<a href="/recipe/${item.url}">${value}</a>` : `<p>Din sökning gav 0 träffar.</p>`;
+          return `<a href="/recipe/${item.url}">${value}</a>`;
+        }
+      },
+    };
+   
+    $('.search-input').easyAutocomplete(options);
+  }
+
 
 }

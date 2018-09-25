@@ -11,33 +11,111 @@ class Recipe extends Base {
 
   click2(e) {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
+    $(e.target).hasClass('fa-print') && window.print();
+    if ($(e.target).hasClass('fa-heart')) {
+      const selectedPortion = $('.select-portions').val();
+      this.varyLikes();
+      this.app.myPage.pickCards();
+      this.app.popState.startPage();
+      this.app.popState.recipe();
+      this.hasPortionChanged(selectedPortion);
+      this.calculateIngrediens(selectedPortion);
+    }
   }
 
-  showMore(page) {
-    page === 'startPage' && $('.recipeCard:hidden').slice(0, this.app.startPage.sliceNr).show(10);
-    page === 'myPage' && $('.recipeCard:hidden').slice(0, this.app.myPage.slice).show(10);
-    $('.recipeCard:hidden').length == 0 && $('.more-btn').hide();
+  makeNewIngrediensHtml(newIngrediens, portion) {
+    this.newIngrediensHTML = newIngrediens.map((x) => `<li class="list-group-item border-0 pl-0 pb-0 pt-2">${x.quantity} ${x.unit} ${x.name}</li>`);
+    $('main').empty();
+    this.render('main', '2');
+    $(`.select-portions option[value=${portion}]`).prop('selected', true);
   }
 
+  calculateIngrediens(portion) {
+    // Choose rounding element by each unit of ingredients
+    const roundingElement = {
+      "g": 0.1,
+      "kg": 100,
+      "ml": 1,
+      "dl": 10,
+      "st": 10,
+      "tsk": 10,
+      "msk": 10,
+      "krm": 1,
+    };
+    const newIngrediens = this.ingridiens.map(item => {
+      return {
+        ...item,
+        quantity: item.unit === "" ? "" : Math.round(item.quantity / this.defaultPortion * portion * roundingElement[item.unit]) / roundingElement[item.unit]
+      };
+    });
+    this.makeNewIngrediensHtml(newIngrediens, portion);
+  }
+
+  hasPortionChanged(portion) {
+    this.changePortion = parseInt(portion) === this.defaultPortion ? false : true;
+  }
+
+  // recipe portions
+  change2(e) {
+    if ($(e.target).hasClass('select-portions')) {
+      const selectedPortion = $('.select-portions').val();
+      this.hasPortionChanged(selectedPortion);
+      this.calculateIngrediens(selectedPortion);
+    }
+  }
+
+  showMore(selector, slice, btn) {
+    $(selector).slice(0, slice).show(10);
+    $(selector).length == 0 && $(btn).hide();
+  }
+
+  // start-page cards
   click3(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
       this.app.recipes.sort((a, b) => b.likes - a.likes);
       this.app.myPage.pickCards();
-      this.app.popState.startPage();
-      this.render('', 3);
-      this.showMore('startPage');
+      $('.main-contents').empty();
+      this.app.startPage.render('.main-contents', 4);
+      this.showMore(
+        '.recipeCard:hidden',
+        this.app.startPage.sliceNr,
+        '.more-btn'
+      );
     }
   }
 
-  // mina-sidor
+  // mina-favoriter cards
   click4(e) {
     if ($(e.target).hasClass('fa-heart')) {
       this.varyLikes();
       this.app.myPage.pickCards();
       this.app.popState.myPage();
-      this.render('', 4);
-      this.showMore('myPage');
+      this.showMore(
+        '.recipeCard-fav:hidden',
+        this.app.myPage.sliceFav,
+        '.more-btn-fav'
+      );
+    }
+  }
+
+  // mina-recept cards
+  click5(e) {
+    if ($(e.target).hasClass('fa-heart')) {
+      this.varyLikes();
+      this.app.myPage.pickCards();
+
+      $('.favorite-cards').empty();
+      this.app.myPage.myFavorites.render('.favorite-cards', '4');
+
+      $('.my-cards').empty();
+      this.app.myPage.myRecipes.render('.my-cards', '5');
+      
+      this.showMore(
+        '.my-recipeCard:hidden',
+        this.app.myPage.sliceMyRecipe,
+        '.my-more-btn'
+      );
     }
   }
 

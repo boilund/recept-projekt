@@ -40,7 +40,7 @@ header {
 .navbar {
   height: 68px;
   letter-spacing: 1px;
-  z-index: 1; }
+  z-index: 3; }
 
 .logo {
   width: 55px; }
@@ -80,7 +80,8 @@ footer {
   position: relative;
   min-height: 300px;
   background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 2; }
   @media (min-width: 768px) {
     .heading-content-start-page {
       min-height: 500px; } }
@@ -88,7 +89,7 @@ footer {
 .search-row {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 53%;
   transform: translateY(-50%) translateX(-50%);
   -webkit-transform: translateY(-50%) translateX(-50%);
   width: 75%;
@@ -98,6 +99,8 @@ footer {
       width: 60%; } }
   .search-row .search-col {
     padding: 30px; }
+  .search-row #search-btn {
+    border-radius: 0 .25rem .25rem 0 !important; }
   .search-row h2 {
     color: #fff;
     font-size: 1.3rem; }
@@ -107,6 +110,22 @@ footer {
     @media (min-width: 992px) {
       .search-row h2 {
         font-size: 2rem; } }
+  .search-row .easy-autocomplete {
+    width: 79% !important; }
+    @media (min-width: 576px) {
+      .search-row .easy-autocomplete {
+        width: 87% !important; } }
+    @media (min-width: 992px) {
+      .search-row .easy-autocomplete {
+        width: 90% !important; } }
+    .search-row .easy-autocomplete .easy-autocomplete-container {
+      width: 120%; }
+      @media (min-width: 576px) {
+        .search-row .easy-autocomplete .easy-autocomplete-container {
+          width: 80%; } }
+      @media (min-width: 992px) {
+        .search-row .easy-autocomplete .easy-autocomplete-container {
+          width: 60%; } }
 
 .start-main-content .heading-toggle .header-name:after {
   font-family: 'Font Awesome 5 Free';
@@ -120,7 +139,7 @@ footer {
   border-radius: 0%; }
 .start-main-content .author {
   font-size: 13px; }
-.start-main-content .recipeCard:nth-child(n+9) {
+.start-main-content .recipeCard:nth-child(n+10) {
   display: none; }
 .start-main-content .card:hover {
   opacity: 0.8; }
@@ -170,6 +189,7 @@ aside .side-card {
   .comments-btn,
   .comments,
   .icons,
+  .alert,
   footer {
     display: none; } }
 .recept-main-content {
@@ -179,19 +199,30 @@ aside .side-card {
 
 .recipe-title {
   color: #fff;
-  font-size: 50pt; }
-  @media (max-width: 575px) {
+  font-size: 25pt; }
+  @media (min-width: 576px) {
     .recipe-title {
-      font-size: 40pt; } }
+      font-size: 28pt; } }
+  @media (min-width: 768px) {
+    .recipe-title {
+      font-size: 32pt; } }
+  @media (min-width: 992px) {
+    .recipe-title {
+      font-size: 43pt; } }
 
 .heading-content {
-  min-height: 310px;
+  min-height: 300px;
   background-color: #e60019; }
+  @media (min-width: 576px) {
+    .heading-content {
+      min-height: 280px; } }
+  @media (min-width: 992px) {
+    .heading-content {
+      min-height: 310px; } }
 
 .heading-text {
   position: relative;
-  top: 90%;
-  transform: perspective(1px) translateY(-50%);
+  top: 50%;
   text-align: center; }
 
 .cooking-time {
@@ -209,14 +240,14 @@ aside .side-card {
   font-size: 12pt; }
 
 .reciep-picture {
-  /*  background: url("/imgs/apple-pie.jpg");
-   background-size: cover;
-   min-height: 400px; */
   width: 100%;
-  height: 450px; }
-  @media (max-width: 575px) {
+  height: 100%; }
+  @media (min-width: 576px) {
     .reciep-picture {
-      height: 100%; } }
+      max-height: 300px; } }
+  @media (min-width: 768px) {
+    .reciep-picture {
+      max-height: 500px; } }
 
 .cooking-ingredients li {
   font-size: 14.5pt;
@@ -227,14 +258,14 @@ aside .side-card {
   color: #fff; }
 
 .cooking-instructions {
-  width: 75%;
+  width: 90%;
   font-size: 15pt;
   margin-left: 30px;
   margin-bottom: 10px;
   font-family: 'Zilla Slab', serif; }
-  @media (min-width: 576px) {
+  @media (min-width: 992px) {
     .cooking-instructions {
-      width: 100%; } }
+      width: 75%; } }
   .cooking-instructions li {
     counter-increment: cookingStep;
     margin-bottom: 5px;
@@ -659,12 +690,15 @@ p.heart-favorite {
         font-size: 15px; } }
   .my-page .fa-heart {
     color: #e60019; }
-  .my-page .more-btn {
+  .my-page .more-btn, .my-page .my-more-btn, .my-page .more-btn-fav {
     background-color: #e60019;
     font-size: 13px; }
-    .my-page .more-btn:hover {
+    .my-page .more-btn:hover, .my-page .my-more-btn:hover, .my-page .more-btn-fav:hover {
       opacity: 0.8; }
-  .my-page .recipeCard:nth-child(n+9) {
+  .my-page .recipeCard-fav:nth-child(n+9),
+  .my-page .my-recipeCard:nth-child(n+9) {
     display: none; }
+  .my-page .no-cards-msg {
+    margin: 60px auto; }
 
 /*# sourceMappingURL=style.css.map */
