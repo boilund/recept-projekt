@@ -6,38 +6,39 @@
     width: 100%;
   }
 
-  .new-recept-contents .ax-product-grid-header {
+  .ax-product-grid-header {
     padding: 0px;
   }
 
-  .new-recept-contents .layout-wrap {
+  .layout-wrap {
     flex-wrap: wrap;
   }
 
-  .new-recept-contents .layout-row {
+  .layout-row {
     flex-direction: row;
     box-sizing: border-box;
     display: flex;
   }
 
-  .new-recept-contents .ax-product-grid-tile {
+  .ax-product-grid-tile {
     display: block;
     background-color: #fff;
     box-sizing: border-box;
   }
 
-  .new-recept-contents form {
-    margin-top: 40px;
+  h2 {
+    margin-top: 20px;
   }
 
-  .new-recept-contents .label,
+  .label,
   .custom-select {
     color: rgba(128, 128, 128, .5);
     transition: all 0.25s ease;
     line-height: 1;
   }
 
-  .new-recept-contents .label {
+
+  .label {
     margin-top: 5px;
     position: absolute;
     transform: translateY(6px);
@@ -46,33 +47,39 @@
     pointer-events: none;
   }
 
-  .new-recept-contents select {
+  select {
     position: absolute;
     padding-right: 50px;
     left: 13px;
     margin-top: 0px;
   }
 
-  .new-recept-contents .label .req {
+  .label .req {
     margin: 2px;
   }
 
-  .new-recept-contents .label.active {
-    transform: translateY(40px);
+  .label.active {
+    transform: translateY(-20px);
     left: 2px;
     font-size: 12px;
   }
 
-  .new-recept-contents .label .active .req {
+  // .label.up{
+  //   // transform: translateY(-25px);
+  //   // left: 2px;
+  //   // font-size: 12px;
+  // }
+
+  .label .active .req {
     opacity: 0;
   }
 
-  .new-recept-contents .label.highlight {
+  .label.highlight {
     color: rgba(128, 128, 128, .8);
     left: 20px;
   }
 
-  .new-recept-contents .search-input,
+  .search-input,
   textarea {
     display: block;
     width: 100%;
@@ -86,13 +93,13 @@
     transition: border-color .25s ease, box-shadow .25s ease;
   }
 
-  .new-recept-contents input,
+  input,
   textarea,
   select :focus {
     outline: 0;
   }
 
-  .new-recept-contents textarea {
+  textarea {
     border: 2px solid lightgray;
     resize: vertical;
   }
@@ -116,11 +123,17 @@
     user-select: none;
   }
 
+  .file-browser {
+    text-decoration: underline;
+  }
+
   #uploader-start {
     float: left;
     clear: both;
     width: 100%;
   }
+
+
 
   #uploader-start .hidden {
     display: none;
@@ -133,9 +146,20 @@
     color: #aaa;
   }
 
-  input[type="file"] {
+  #file-upload {
     display: none;
   }
+
+  .custom-file-label::after {
+    content: "Välj en fil";
+    background-color: black !important;
+    border-radius: 0;
+    color: white;
+  }
+
+  // input[type="file"] {
+  //   display: none;
+  // }
 
   input[type="text"] {
     width: 100%;
@@ -146,6 +170,7 @@
     border-style: solid;
     border-color: lightgray;
     padding-left: 20px;
+    z-index:1;
   }
 
   .v-none {
@@ -188,6 +213,34 @@
     border-radius: 0px;
   }
 
+  .hidden {
+    display: none;
+  }
+
+  #file-image {
+    display: inline;
+    margin: 0 auto .5rem auto;
+    max-width: 180px;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  #response {
+    float: left;
+    clear: both;
+    width: 100%;
+
+    &.hidden {
+      display: none;
+    }
+
+    #messages {
+      margin-bottom: .5rem;
+    }
+  }
+
   #notimage {
     display: block;
     float: left;
@@ -200,8 +253,13 @@
   }
 
   #large {
+    margin-top: 20px;
     display: block;
     width: 100%;
+  }
+
+  #mobil-pad label {
+    color: rgba(128, 128, 128, .8);
   }
 
 
@@ -240,7 +298,13 @@
 
   */
 
+  .card {
+    margin-bottom: 20px;
+  }
 
+  // .result{
+  //   //z-index: 1000;
+  // }
 
   #receptTextarea {
     width: 100%;
@@ -321,27 +385,28 @@
     margin-left: 20px;
   }
 
-  #add-one-step{
+  #add-one-step {
     background-color: black;
     color: white;
-    border-radius:0px;
-    border:none;
+    border-radius: 0px;
+    border: none;
   }
 
-  .step-input{
-    margin-bottom:50px !important;
+  .step-input {
+    margin-bottom: 50px !important;
   }
 
-  .delete-step{
-    margin-left:20px;
+  .delete-step {
+    margin-left: 20px;
 
   }
-  .card{
-    z-index:999 !important;
-  }
 
-  .list-group-item-action{
-    z-index:1001 !important;
+  // .card {
+  //   z-index: 1 !important;
+  // }
+
+  .list-group-item-action {
+    z-index: 1001 !important;
   }
 
 
@@ -360,8 +425,8 @@
       margin-bottom: 0px;
     }
 
-    .close{
-      display:none;
+    .close {
+      display: none;
     }
 
     .new-recept-contents .label {
@@ -380,23 +445,26 @@
       height: 20px;
     }
 
-    .new-recept-contents .category-select {
+    .category-select {
       right: -26px;
     }
 
-    .new-recept-contents .form-wrap {
-      margin-bottom: 30px;
+    .form-wrap {
+     margin-top:30px;
+      //margin-bottom: 30px;
     }
 
     #mobil-pad {
+      display: none !important;
+
+    }
+    #mobil-review{
       display: none !important;
     }
 
     .form-check-label {
       padding-top: 10px;
     }
-
-
 
   }
 
@@ -444,9 +512,18 @@
       display: none;
     }
 
+    #time {
+      width: 100%;
+    }
+
     #mobil-pad {
       display: block;
+      left: 12px;
+      width: 95%;
+      padding: 10px;
     }
+
+
 
     .checkbox-wrap {
       padding-bottom: 20px;
@@ -468,38 +545,62 @@
 
   }
 
+  @media screen and (min-width: 750px) {
+    #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      margin-left: 140px;
+      float: center;
+    }
+  }
+
   @media screen and (max-width: 750px) {
     .ingredient-delet {
       display: none;
     }
 
     .card {
-      border:1px lightgray solid;
+      border: 1px lightgray solid;
 
     }
 
-    .card-body{
-      height:180px;
-      padding:20px;
+    .card-body {
+      height: 180px;
+      padding: 20px;
     }
 
-    .ing{
-      margin-bottom:10px;
+    .ing {
+      margin-bottom: 10px;
     }
 
-    #unit{
-      margin-left:3px;
+    #mobil-pad {
+      display: block;
+      left: 12px;
+      width: 92%;
+      padding: 10px;
     }
 
-    #receptTextarea{
-      width:100%;
-      margin-bottom:20px;
+    #unit {
+      margin-left: 3px;
     }
 
-    #add-one-step{
-      float:right;
-      text-align:right;
-      margin-bottom:40px;
+    #receptTextarea {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      // margin-top:40px;
+    }
+
+    #add-one-step {
+      float: right;
+      text-align: right;
+      margin-bottom: 40px;
+      margin-left: 10px;
     }
 
 

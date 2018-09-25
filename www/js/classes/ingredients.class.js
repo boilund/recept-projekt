@@ -7,6 +7,7 @@ class Ingredients extends Base {
         this.nutrientsList = [];
         this._quantity = '';
         this._name = '';
+
     }
 
     get name() {
@@ -33,6 +34,8 @@ class Ingredients extends Base {
         this._unit = val;
     }
 
+
+
     keyup(event) {
 
         let that = this;
@@ -42,8 +45,11 @@ class Ingredients extends Base {
             var inputText = target.val();
 
             if (inputText) {
-                var list = that.search(that.parent.ingredientsOptions, inputText);
-                that.changeInput(event, list);
+                if(inputText.toString().length>=3){
+                    var list = that.search(that.parent.ingredientsOptions, inputText);
+                    that.changeInput(event, list);
+                }
+                
             } else {
                 target.next().empty();
                 //autocomplete list get deleted by deleting input text
@@ -66,7 +72,9 @@ class Ingredients extends Base {
         let target = $(event.target);
         if (target.hasClass("ingredient-btn")) {
             that.parent.deleteIngr(that);
+
         }
+
     }
 
     change(event) {
@@ -76,24 +84,50 @@ class Ingredients extends Base {
         if (target.hasClass("unit-select")) {
             that._unit = target.val();
             that.unitCalc(that._unit);
-            if (that._name && that._quantity) {
-                that.createIngredient();
-            }
+            // if (that._name && that._quantity) {
+            //     that.createIngredient();
+            // }
         }
     }
 
-    createIngredient() {
-
+    export () {
+        let returnInfo = [];
         let oneIngredient = {};
-        this.calcNurtrients();
-        oneIngredient.name = this.name;
-        oneIngredient.quantity = this._quantity;
-        oneIngredient.unit = this._unit;
+        let itemNutrients = {};
+        if (this.name !== "vatten") {
+            itemNutrients = this.calcNurtrients();
+            //oneIngredient.itemNutrients = 
+            oneIngredient.name = this.name;
+            oneIngredient.quantity = this._quantity;
+            oneIngredient.unit = this._unit;
+            returnInfo.push(oneIngredient);
+            returnInfo.push(itemNutrients);
+            //oneIngredient.nutrients = this.itemNutrients;
+            //return oneIngredient;
+            return returnInfo;
+        } else {
+            oneIngredient.name = this.name;
+            oneIngredient.quantity = this._quantity;
+            oneIngredient.unit = this._unit;
+            itemNutrients.EnergyKJ = 0;
+            itemNutrients.EnergyKCAL = 0;
+            itemNutrients.Fat = 0;
+            itemNutrients.TotalSaturatedFattyAcids = 0;
+            itemNutrients.TotalMonounsaturatedFattyAcids = 0;
+            itemNutrients.TotalPolyunsaturatedFattyAcids = 0;
+            itemNutrients.Cholesterol = 0;
+            itemNutrients.Carbohydrates = 0;
+            itemNutrients.Sucrose = 0;
+            itemNutrients.Protein = 0;
+            itemNutrients.Salt = 0;
 
-        oneIngredient.nutrients = this.itemNutrients;
+            returnInfo.push(oneIngredient);
+            returnInfo.push(itemNutrients);
+            //oneIngredient.nutrients = this.itemNutrients;
+            //return oneIngredient;
+            return returnInfo;
 
-        //console.log(oneIngredient);
-        return oneIngredient;
+        }
 
 
     }
@@ -101,14 +135,18 @@ class Ingredients extends Base {
     search(jsonList, searchText) {
         if (searchText) {
             if (searchText.toLowerCase() !== "vatten") {
-                let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
-                // let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
-                // "i");
-                let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
-                result.sort((a, b) => {
-                    return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
-                })
-                return result;
+                //if (searchText.length > 3) {
+                    let regEx = new RegExp(searchText.split("").join("\\w*").replace(/\W/, ""),
+                        "i");
+                    let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
+                    result.sort((a, b) => {
+                        return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+                    })
+                    return result;
+                //}
+                //let regEx = new RegExp(`(^|\\s)${searchText}(\\s|$)`, 'ig');
+
+
             } else {
                 let result = [{
                     Namn: "vatten"
@@ -157,7 +195,7 @@ class Ingredients extends Base {
     getNutrients(item) {
         let that = this;
         // let nutrients = ;
-        that.nutrientsList = item.Naringsvarden.Naringsvarde
+        that.nutrientsList = item.Naringsvarden.Naringsvarde;
         //console.log(nutrients);
 
         //console.log(that.itemNutrients);
@@ -240,7 +278,7 @@ class Ingredients extends Base {
                 that.itemNutrients.Salt = Math.round(value * c * q);
             }
         }
-        //return that.nutrientsList;
+        return that.itemNutrients;
 
     }
 

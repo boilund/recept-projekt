@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -335,49 +336,49 @@ p.heart-favorite {
   */ }
   .new-recept-contents .names {
     width: 100%; }
-  .new-recept-contents .new-recept-contents .ax-product-grid-header {
+  .new-recept-contents .ax-product-grid-header {
     padding: 0px; }
-  .new-recept-contents .new-recept-contents .layout-wrap {
+  .new-recept-contents .layout-wrap {
     flex-wrap: wrap; }
-  .new-recept-contents .new-recept-contents .layout-row {
+  .new-recept-contents .layout-row {
     flex-direction: row;
     box-sizing: border-box;
     display: flex; }
-  .new-recept-contents .new-recept-contents .ax-product-grid-tile {
+  .new-recept-contents .ax-product-grid-tile {
     display: block;
     background-color: #fff;
     box-sizing: border-box; }
-  .new-recept-contents .new-recept-contents form {
-    margin-top: 40px; }
-  .new-recept-contents .new-recept-contents .label,
+  .new-recept-contents h2 {
+    margin-top: 20px; }
+  .new-recept-contents .label,
   .new-recept-contents .custom-select {
     color: rgba(128, 128, 128, 0.5);
     transition: all 0.25s ease;
     line-height: 1; }
-  .new-recept-contents .new-recept-contents .label {
+  .new-recept-contents .label {
     margin-top: 5px;
     position: absolute;
     transform: translateY(6px);
     left: 20px;
     transition: all 0.25s ease;
     pointer-events: none; }
-  .new-recept-contents .new-recept-contents select {
+  .new-recept-contents select {
     position: absolute;
     padding-right: 50px;
     left: 13px;
     margin-top: 0px; }
-  .new-recept-contents .new-recept-contents .label .req {
+  .new-recept-contents .label .req {
     margin: 2px; }
-  .new-recept-contents .new-recept-contents .label.active {
-    transform: translateY(40px);
+  .new-recept-contents .label.active {
+    transform: translateY(-20px);
     left: 2px;
     font-size: 12px; }
-  .new-recept-contents .new-recept-contents .label .active .req {
+  .new-recept-contents .label .active .req {
     opacity: 0; }
-  .new-recept-contents .new-recept-contents .label.highlight {
+  .new-recept-contents .label.highlight {
     color: rgba(128, 128, 128, 0.8);
     left: 20px; }
-  .new-recept-contents .new-recept-contents .search-input,
+  .new-recept-contents .search-input,
   .new-recept-contents textarea {
     display: block;
     width: 100%;
@@ -389,11 +390,11 @@ p.heart-favorite {
     color: black;
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
-  .new-recept-contents .new-recept-contents input,
+  .new-recept-contents input,
   .new-recept-contents textarea,
   .new-recept-contents select :focus {
     outline: 0; }
-  .new-recept-contents .new-recept-contents textarea {
+  .new-recept-contents textarea {
     border: 2px solid lightgray;
     resize: vertical; }
   .new-recept-contents #file-drag {
@@ -408,6 +409,8 @@ p.heart-favorite {
     border: 3px solid #eee;
     transition: all .2s ease;
     user-select: none; }
+  .new-recept-contents .file-browser {
+    text-decoration: underline; }
   .new-recept-contents #uploader-start {
     float: left;
     clear: both;
@@ -419,8 +422,13 @@ p.heart-favorite {
     margin-bottom: 1rem;
     transition: all .2s ease-in-out;
     color: #aaa; }
-  .new-recept-contents input[type="file"] {
+  .new-recept-contents #file-upload {
     display: none; }
+  .new-recept-contents .custom-file-label::after {
+    content: "Välj en fil";
+    background-color: black !important;
+    border-radius: 0;
+    color: white; }
   .new-recept-contents input[type="text"] {
     width: 100%;
     height: 38px;
@@ -429,7 +437,8 @@ p.heart-favorite {
     border-width: 1px;
     border-style: solid;
     border-color: lightgray;
-    padding-left: 20px; }
+    padding-left: 20px;
+    z-index: 1; }
   .new-recept-contents .v-none {
     display: none; }
   .new-recept-contents #file-image {
@@ -460,6 +469,22 @@ p.heart-favorite {
     box-sizing: border-box;
     background-color: black;
     border-radius: 0px; }
+  .new-recept-contents .hidden {
+    display: none; }
+  .new-recept-contents #file-image {
+    display: inline;
+    margin: 0 auto .5rem auto;
+    max-width: 180px; }
+    .new-recept-contents #file-image.hidden {
+      display: none; }
+  .new-recept-contents #response {
+    float: left;
+    clear: both;
+    width: 100%; }
+    .new-recept-contents #response.hidden {
+      display: none; }
+    .new-recept-contents #response #messages {
+      margin-bottom: .5rem; }
   .new-recept-contents #notimage {
     display: block;
     float: left;
@@ -468,8 +493,11 @@ p.heart-favorite {
   .new-recept-contents #notimage.hidden {
     display: none; }
   .new-recept-contents #large {
+    margin-top: 20px;
     display: block;
     width: 100%; }
+  .new-recept-contents #mobil-pad label {
+    color: rgba(128, 128, 128, 0.8); }
   .new-recept-contents .form-check {
     height: 40px;
     width: 100%; }
@@ -487,6 +515,8 @@ p.heart-favorite {
     color: black;
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
+  .new-recept-contents .card {
+    margin-bottom: 20px; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }
@@ -542,8 +572,6 @@ p.heart-favorite {
     margin-bottom: 50px !important; }
   .new-recept-contents .delete-step {
     margin-left: 20px; }
-  .new-recept-contents .card {
-    z-index: 999 !important; }
   .new-recept-contents .list-group-item-action {
     z-index: 1001 !important; }
   @media screen and (min-width: 992px) {
@@ -562,11 +590,13 @@ p.heart-favorite {
       padding: 10px; }
     .new-recept-contents .single-ingr {
       height: 20px; }
-    .new-recept-contents .new-recept-contents .category-select {
+    .new-recept-contents .category-select {
       right: -26px; }
-    .new-recept-contents .new-recept-contents .form-wrap {
-      margin-bottom: 30px; }
+    .new-recept-contents .form-wrap {
+      margin-top: 30px; }
     .new-recept-contents #mobil-pad {
+      display: none !important; }
+    .new-recept-contents #mobil-review {
       display: none !important; }
     .new-recept-contents .form-check-label {
       padding-top: 10px; } }
@@ -592,8 +622,13 @@ p.heart-favorite {
       display: none; }
     .new-recept-contents #large {
       display: none; }
+    .new-recept-contents #time {
+      width: 100%; }
     .new-recept-contents #mobil-pad {
-      display: block; }
+      display: block;
+      left: 12px;
+      width: 95%;
+      padding: 10px; }
     .new-recept-contents .checkbox-wrap {
       padding-bottom: 20px; }
     .new-recept-contents .form-check {
@@ -603,6 +638,13 @@ p.heart-favorite {
       display: block; }
     .new-recept-contents .form-check-label {
       padding-top: 10px; } }
+  @media screen and (min-width: 750px) {
+    .new-recept-contents #mobil-review {
+      max-width: 100%;
+      padding: 20px;
+      margin-bottom: 20px;
+      margin-left: 140px;
+      float: center; } }
   @media screen and (max-width: 750px) {
     .new-recept-contents .ingredient-delet {
       display: none; }
@@ -613,15 +655,24 @@ p.heart-favorite {
       padding: 20px; }
     .new-recept-contents .ing {
       margin-bottom: 10px; }
+    .new-recept-contents #mobil-pad {
+      display: block;
+      left: 12px;
+      width: 92%;
+      padding: 10px; }
     .new-recept-contents #unit {
       margin-left: 3px; }
     .new-recept-contents #receptTextarea {
       width: 100%;
       margin-bottom: 20px; }
+    .new-recept-contents #mobil-review {
+      max-width: 100%;
+      padding: 20px; }
     .new-recept-contents #add-one-step {
       float: right;
       text-align: right;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      margin-left: 10px; }
     .new-recept-contents #ingredient-add {
       display: none; } }
 

@@ -4,6 +4,7 @@ class CreateRecipe extends Base {
     this.app = app;
     this.load().then((data) => {
       this.ingredientsOptions = data;
+      this.imgUpload();
     });
     this.eventHandlers();
     this._stepsList = [];
@@ -39,6 +40,14 @@ class CreateRecipe extends Base {
     this._time = val;
   }
 
+  get img() {
+    return this._img;
+  }
+
+  set img(val) {
+    this._img = val;
+  }
+
 
 
 
@@ -46,23 +55,31 @@ class CreateRecipe extends Base {
   //click add ingredients
 
   click(event) {
+    let that = this;
     let target = $(event.target);
     if (target.hasClass("add-one")) {
       event.preventDefault();
-      let that = this;
+
 
       let ingredient = new Ingredients(this);
       //that.app.ingredient.createIngredient();
       that._ingredientsList.push(ingredient);
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
+      that.inputLabel();
+
+    }
+
+    if (target.hasClass("upload-file-btn")) {
+      this.fileSelectHandler(event);
 
     }
 
     if (target.hasClass("submint-btn")) {
-      this.calcPortionNutrition();
-      let json = this.createRecipe();
-      //this.saveRecipe(json);
+      // that.calcPortionNutrition();
+      let json = that.createRecipe();
+      // console.log(json)
+      that.saveRecipe(json);
 
     }
 
@@ -85,6 +102,11 @@ class CreateRecipe extends Base {
     }
     //console.log(this._categoriesList);
 
+    //upload file
+    if ((target).hasClass("fileUpload")) {
+      //console.log("upload")
+      this.fileSelectHandler(event);
+    }
   }
 
   keyup(event) {
@@ -99,44 +121,144 @@ class CreateRecipe extends Base {
     if (target.hasClass("time")) {
       this._time = target.val();
     }
+  }
 
 
 
+  // img upload start here
+  imgUpload() {
+    let that = this;
+    that.uploadInit();
+  }
+
+  uploadInit() {
+    //console.log("Upload Initialised");
+    let that = this;
+    let xhr = new XMLHttpRequest();
+    if (xhr.upload) {
+      //let fileDrag = $(".file-drag");
+      let fileDrag = document.getElementById('file-drag');
+      //console.log(fileDrag)
+      fileDrag.addEventListener('dragover', (e) => {
+        that.fileDragHover(e);
+      })
+      fileDrag.addEventListener('dragleave', (e) => {
+        that.fileDragHover(e);
+      })
+      fileDrag.addEventListener('drop', (e) => {
+        that.fileSelectHandler(e);
+      })
+
+    }
 
   }
+
+  fileDragHover(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $(e.target).addClass("modal-body file-upload");
+
+  }
+
+  fileSelectHandler(event) {
+    let that = this;
+    // Fetch FileList object
+    let files = event.target.files || event.dataTransfer.files;
+    console.log(files)
+    // Cancel event and hover styling
+    that.fileDragHover(event);
+
+    // // Process all File objects
+    for (let i = 0, f; f = files[i]; i++) {
+      that.parseFile(f);
+      that.uploadFile(f);
+    }
+  }
+
+
+  parseFile(file) {
+    let that = this;
+    console.log(file.name);
+    that._img = encodeURI(file.name);
+
+    let isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(that._img);
+    if (isGood) {
+      //console.log("img")
+      $("#uploader-start").addClass("hidden");
+      $("#messages").append(
+        '<strong>' + that._img + '</strong>'
+      );
+      $("#file-image").removeClass("hidden");
+      $("#file-image").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+      //$("#file-image").src=URL.createObjectURL(file);
+      $("#mobil-review").removeClass("hidden");
+      $("#mobil-review").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+    } else {
+      $('#notimage').removeClass('hidden');
+      $('#file-upload-form').trigger("reset");
+    }
+  }
+
+  uploadFile(file) {
+    //console.log(file.size)
+    let xhr = new XMLHttpRequest();
+
+    // pBar = document.getElementById('file-progress'),
+    let fileSizeLimit = 1024; // In MB
+    if (xhr.upload) {
+      // Check if file is less than x MB
+      if (file.size >= fileSizeLimit * 1024 * 1024) {
+        $("#messages").append(
+          '<strong> Please upload a smaller file (< ' + fileSizeLimit + ' MB). </strong>'
+        );
+
+
+      }
+      // xhr.open('POST', document.getElementById('file-upload-form').action, true);
+      // xhr.setRequestHeader('X-File-Name', file.name);
+      // xhr.setRequestHeader('X-File-Size', file.size);
+      // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+      // xhr.send(file);
+    }
+  }
+
+
+
   createRecipe() {
     let newRecipe = {};
+    let ingredents = this._ingredientsList.export();
+    let onlyIngredients = [];
+    let singleNutrient = [];
+    for (let ing of ingredents) {
+      onlyIngredients.push(ing[0]);
+      singleNutrient.push(ing[1]);
+    }
+    //console.log(singleNutrient)
+
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    //newRecipe.img =this._img;
+    newRecipe.img = this._img;
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = Date.now();
     newRecipe.defaultPortion = this._portions;
-    newRecipe.ingredient = this._ingredientsList;
-    newRecipe.instructions = this._stepsList;
-    newRecipe.nutrition = this._nutrients;
+    newRecipe.ingridiens = onlyIngredients;
+    //newRecipe.ingredient = ingredents;
+    newRecipe.instructions = this._stepsList.export();
+    newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
-   // newRecipe.⚙ = "Recipe";
+    newRecipe["⚙"] = "Recipe";
+    //newRecipe.⚙="Recipe";
+
 
 
     return newRecipe;
   }
 
-  calcPortionNutrition() {
-    let that = this;
-    //console.log(this._ingredientsList);
-    let nList = [];
-    that._ingredientsList.forEach((i) => {
-      if (i.name) {
-        nList.push(i.itemNutrients);
-      }
-
-      // let i= Ingredients;
-      // console.log(i);
-    })
+  calcPortionNutrition(ingredientsList) {
+    console.log(ingredientsList)
     let kj = 0;
     let kcal = 0;
     let fat = 0;
@@ -145,25 +267,25 @@ class CreateRecipe extends Base {
     let protein = 0;
     let salt = 0;
 
-    for (let i = 0; i < nList.length; i++) {
-      let l = nList[i];
-      kj += l.EnergyKJ;
-      kcal += l.EnergyKCAL;
-      fat += l.Fat;
-      saturatedFat += l.TotalMonounsaturatedFattyAcids + l.TotalPolyunsaturatedFattyAcids;
-      carbohydrates += l.Carbohydrates;
-      protein += l.Protein;
-      salt += l.Salt;
-    }
+    ingredientsList.forEach((item) => {
+      kj += item.EnergyKJ;
+      kcal += item.EnergyKCAL;
+      fat += item.Fat;
+      saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
+      carbohydrates += item.Carbohydrates;
+      protein += item.Protein;
+      salt += item.Salt;
+    });
 
-    that._nutrients.kj = kj;
-    that._nutrients.kcal = kcal;
-    that._nutrients.fat = fat;
-    that._nutrients.saturatedFat = saturatedFat;
-    that._nutrients.carbohydrates = carbohydrates;
-    that._nutrients.protein = protein;
-    that._nutrients.salt = salt;
-    //console.log(that._nutrients)
+    return {
+      kj,
+      kcal,
+      fat,
+      saturatedFat,
+      carbohydrates,
+      protein,
+      salt
+    }
   }
 
 
@@ -198,15 +320,19 @@ class CreateRecipe extends Base {
     }
   }
 
-
+  inputLabel() {
+    if ($(".ingr-css").val() !== "") {
+      console.log($(event.target).parent("div").prev())
+      //console.log($(".ingr-css").prev())
+      $(".ingr-d-none").addClass("active highlight");
+    }
+  }
 
 
   //autocomplete
   load() {
     return $.getJSON('/json/food.json');
   }
-
-
 
   //       steps 
 
@@ -215,7 +341,6 @@ class CreateRecipe extends Base {
 
     // press enter render step
     $(document).on("keyup", "#receptTextarea", function (e) {
-
       if (e.keyCode === 13) {
         let step = new Step($("#receptTextarea").val(), that);
         $("#receptTextarea").val('');
@@ -239,14 +364,17 @@ class CreateRecipe extends Base {
   }
 
   saveRecipe(json) {
-    let recipeList = [];
-    JSON._save('testCreate', {recept:json});
-    // $.getJSON('/json/testCreate.json').then((data) => {
-    //   recipeList = data;
-    //   recipeList.push(json);
-    //   console.log(recipeList)
-    //   JSON._save('testCreate', json);
-    //})
+    //let newRecipeList=[];
+    //let that = this;
+
+    $.getJSON("./json/recipe.json").then((data) => {
+      data.push(json);
+      JSON._save("recipe", data).then(() => {
+        console.log("saved!");
+      });
+    })
+
+
   }
 
 
