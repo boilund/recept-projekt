@@ -1574,39 +1574,5 @@
       }
     ],
     "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Frozen smoothie med gröna ärter och mango",
-    "img": "frozen-smoothie-med-mango.jpg",
-    "time": "10",
-    "likes": 1,
-    "category": [
-      "Efterrätter"
-    ],
-    "author": "Catarina Bennetoft",
-    "url": 1537871824800,
-    "defaultPortion": "2",
-    "ingridiens": [
-      {
-        "name": "Mango",
-        "quantity": "2",
-        "unit": "st"
-      }
-    ],
-    "instructions": [
-      "Testa denna gröna, fruktiga smoothie som är krämig som en glass! Banan, gröna ärter och mango mixas och smaksätts med lime, mynta och honung. Toppa med mango och ät med sked!"
-    ],
-    "nutrition": {
-      "kj": 288,
-      "kcal": 69,
-      "fat": 0,
-      "saturatedFat": 0,
-      "carbohydrates": 15,
-      "protein": 1,
-      "salt": 0
-    },
-    "comments": [],
-    "⚙": "Recipe"
   }
 ]

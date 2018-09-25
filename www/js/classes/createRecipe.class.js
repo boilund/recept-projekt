@@ -367,7 +367,9 @@ class CreateRecipe extends Base {
       data.push(json);
       JSON._save("recipe", data).then(() => {
         console.log("saved!");
-        location.replace("http://localhost:3000/my_page");
+        const url = `/recipe/${json.url}`;
+        Object.assign(this.app.popState.urls, { [url]: 'recipe' });
+        //location.replace("http://localhost:3000/my_page");
       });
     })
 
