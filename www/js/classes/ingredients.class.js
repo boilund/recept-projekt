@@ -72,10 +72,19 @@ class Ingredients extends Base {
         let target = $(event.target);
         if (target.hasClass("ingredient-btn")) {
             that.parent.deleteIngr(that);
+            that.inputLabel();
 
         }
 
     }
+
+    inputLabel() {
+        if ($(".ingr-css").val() !== "") {
+          console.log($(event.target).parent("div").prev())
+          //console.log($(".ingr-css").prev())
+          $(".ingr-d-none").addClass("active highlight");
+        }
+      }
 
     change(event) {
         // ingredient unit

@@ -178,7 +178,7 @@ class CreateRecipe extends Base {
 
   parseFile(file) {
     let that = this;
-    console.log(file.name);
+    //console.log(file.name);
     that._img = encodeURI(file.name);
 
     let isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(that._img);
