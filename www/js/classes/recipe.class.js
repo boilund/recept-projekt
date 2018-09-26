@@ -125,7 +125,9 @@ class Recipe extends Base {
   pressHearts4() {
     this.varyLikes();
     this.app.myPage.pickCards();
-    this.app.popState.myPage();
+    $('main').empty();
+    this.app.myPage.render('main');
+    /* this.app.popState.myPage(); */
     this.showMore(
       '.recipeCard-fav:hidden',
       this.app.myPage.sliceFav,
