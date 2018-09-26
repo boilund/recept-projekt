@@ -75,6 +75,7 @@ class CreateRecipe extends Base {
         if(isNaN(checkVal) || checkVal<0 ){
           //console.log(checkItems[i])
           $(checkItems[i]).next().removeClass("hidden");
+          $(checkItems[i]).parents("ing").addClass("mb-0");
         
         }else{
           $(checkItems[i]).next().addClass("hidden");
