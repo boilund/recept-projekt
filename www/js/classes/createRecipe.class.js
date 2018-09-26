@@ -6,7 +6,7 @@ class CreateRecipe extends Base {
       this.ingredientsOptions = data;
       this.imgUpload();
     });
-    this.eventHandlers();
+    //this.eventHandlers();
     this._stepsList = [];
     this._ingredientsList = [];
     this._ingredientsList.push(new Ingredients(this));
@@ -68,21 +68,21 @@ class CreateRecipe extends Base {
       that._ingredientsList.render(".add-ingr", "");
       that.inputLabel();
 
-      let checkItems=$(".quantity");
+      let checkItems = $(".quantity");
       console.log(checkItems)
-      for(let i=0; i<checkItems.length; i++){
-        let checkVal=checkItems[i].value
-        if(isNaN(checkVal) || checkVal<0 ){
+      for (let i = 0; i < checkItems.length; i++) {
+        let checkVal = checkItems[i].value
+        if (isNaN(checkVal) || checkVal < 0) {
           //console.log(checkItems[i])
           $(checkItems[i]).next().removeClass("hidden");
           $(checkItems[i]).parents("ing").addClass("mb-0");
-        
-        }else{
+
+        } else {
           $(checkItems[i]).next().addClass("hidden");
+        }
+
       }
-        
-      }
-      
+
 
     }
 
@@ -92,7 +92,7 @@ class CreateRecipe extends Base {
     }
 
     if (target.hasClass("submint-btn")) {
-      
+
       // event.preventDefault();
       // that.calcPortionNutrition();
       if (this.validateInput()) {
@@ -109,7 +109,13 @@ class CreateRecipe extends Base {
         </div>
       </div>`);
       }
-     
+
+    }
+
+    //   add    steps
+    if (target.hasClass("add-one-step")) {
+      //console.log(target)
+      this.showSteps();
     }
 
 
@@ -151,14 +157,22 @@ class CreateRecipe extends Base {
       this._time = target.val();
       this.validateTimeInput();
     }
+
+    //    add   steps
+    if (target.hasClass("receptTextarea")) {
+      if (event.keyCode == 13) {
+        this.showSteps();
+      }
+
+    }
   }
 
   validateTimeInput() {
     if (isNaN(this._time) || this._time < 1) {
       document.getElementById("time-validation").innerHTML = "Vänligen ange ett nummer större än 1";
       return false;
-      }
-      document.getElementById("time-validation").innerHTML = "";
+    }
+    document.getElementById("time-validation").innerHTML = "";
     return true;
   }
 
@@ -279,7 +293,7 @@ class CreateRecipe extends Base {
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
     newRecipe.author = "Catarina Bennetoft";
-    newRecipe.url =this._id;
+    newRecipe.url = this._id;
     newRecipe.defaultPortion = this._portions;
     newRecipe.ingridiens = onlyIngredients;
     //newRecipe.ingredient = ingredents;
@@ -358,13 +372,15 @@ class CreateRecipe extends Base {
   }
 
   inputLabel() {
-    let inputs=$(".ingr-css");
-    inputs.map((inpt)=>{
-      if(inpt.value!==""){
-        $(".ingr-d-none").addClass("active highlight");
-      }}
+    let inputs = $(".ingr-css");
+    inputs.map((inpt) => {
+        if (inpt.value !== "") {
+          $(".ingr-d-none").addClass("active highlight");
+        }
+      }
 
-    )}
+    )
+  }
 
 
   //autocomplete
@@ -372,30 +388,8 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-  //       steps
 
-  eventHandlers() {
-    let that = this;
 
-    // press enter render step
-    $(document).on("keyup", "#receptTextarea", function (e) {
-      if (e.keyCode === 13) {
-        let step = new Step($("#receptTextarea").val(), that);
-        $("#receptTextarea").val('');
-        that._stepsList.push(step);
-        $(".steps-here").empty();
-        that._stepsList.render(".steps-here", "");
-      }
-    })
-
-    $(document).on("click", "#add-one-step", function () {
-      let step = new Step($("#receptTextarea").val(), that);
-      $("#receptTextarea").val('');
-      that._stepsList.push(step);
-      $(".steps-here").empty();
-      that._stepsList.render(".steps-here", "");
-    })
-  }
 
   saveRecipe(json) {
     //let newRecipeList=[];
@@ -404,15 +398,17 @@ class CreateRecipe extends Base {
     $.getJSON("./json/recipe.json").then((data) => {
       data.push(json);
       $("#savedSuccessModal").modal('show');
-      $(".save-btn").on("click", ()=>{
+      $(".save-btn").on("click", () => {
         JSON._save("recipe", data).then(() => {
           console.log("saved!");
           const url = `/recipe/${json.url}`;
-          Object.assign(this.app.popState.urls, { [url]: 'recipe' });
+          Object.assign(this.app.popState.urls, {
+            [url]: 'recipe'
+          });
           //location.replace("http://localhost:3000/my_page");
         });
       })
-     
+
     })
 
 
@@ -430,9 +426,19 @@ class CreateRecipe extends Base {
       this._ingredientsList.some(i => i.unit !== undefined) &&
       this._stepsList.length > 0
     ) {
-    return true;
-  }
+      return true;
+    }
     return false;
+  }
+
+  showSteps() {
+    let that = this;
+    let step = new Step($("#receptTextarea").val(), that);
+    $("#receptTextarea").val('');
+    that._stepsList.push(step);
+    $(".steps-here").empty();
+    console.log(that._stepsList)
+    that._stepsList.render(".steps-here", "");
   }
 
 }

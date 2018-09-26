@@ -48,7 +48,7 @@ class Ingredients extends Base {
                     that.changeInput(event, list);
                 } else {
                     $(".result").addClass("hidden");
-                    $(".list-group").addClass("hidden");
+                    //$(".list-group").addClass("hidden");
                 }
 
             } else {
@@ -190,7 +190,7 @@ class Ingredients extends Base {
                     let item = list[i];
                     that.getNutrients(item);
                     $(".result").addClass("hidden");
-                    $(".list-group").addClass("hidden");
+                    //$(".list-group").addClass("hidden");
                     //get nutrients return this;
                 });
 
