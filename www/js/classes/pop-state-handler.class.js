@@ -146,8 +146,32 @@ class PopStateHandler {
         }
       },
     };
+
+    
    
     $('.search-input').easyAutocomplete(options);
+
+    $('.search-input').on('keyup', (e)=>{
+      e.preventDefault();
+      let selected = $('.search-input').getSelectedItemData().url;
+      if (selected) {
+        $('.search-btn').closest('form').attr('action', '/recipe/'+selected);
+      }
+
+      setTimeout(() => {
+        if ($('.search-input').val() != '') {
+          let containerList = $('#search-input')
+          .next('.easy-autocomplete-container')
+          .find('ul'); 
+          
+          if ($(containerList).children('li').length <= 0) { 
+            $(containerList)
+            .html('<li>Din sökning gav 0 träffar.</li>')
+            .show(); 
+          }
+        }
+      }, 10);
+    })
   }
 
 
