@@ -518,9 +518,11 @@ p.heart-favorite {
   .new-recept-contents .card {
     margin-bottom: 20px; }
   .new-recept-contents .result {
-    height: 40vh;
+    height: 40vw;
     overflow: auto;
-    border-bottom: 1px solid lightgray; }
+    -ms-overflow-style: auto;
+    border-bottom: 1px solid lightgray;
+    z-index: 1002; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }
@@ -580,6 +582,8 @@ p.heart-favorite {
     margin-left: 20px; }
   .new-recept-contents .list-group-item-action {
     z-index: 1001 !important; }
+  .new-recept-contents .validate-msg {
+    font-size: 12px; }
   @media screen and (min-width: 992px) {
     .new-recept-contents .new-recept-contents .ax-product-grid-tile {
       margin-left: 0px;

@@ -12,7 +12,7 @@ class CreateRecipe extends Base {
     this._ingredientsList.push(new Ingredients(this));
     this._categoriesList = [];
     this._nutrients = {};
-    this._id= Date.now();
+    this._id = Date.now();
 
   }
 
@@ -80,13 +80,18 @@ class CreateRecipe extends Base {
       // event.preventDefault();
       // that.calcPortionNutrition();
       if (this.validateInput()) {
-
+        $('.sumbit-alert').empty();
         let json = that.createRecipe();
         that.saveRecipe(json);
-      }else{
+      } else {
         event.preventDefault();
-        console.log("not alowed");
-        return;
+        $('.sumbit-alert').empty();
+        $('.sumbit-alert').append(`<div class="col-12 my-3">
+        <div class="mt-3 mt-md-0 alert alert-danger" role="alert">
+          <i class="fas fa-exclamation-circle"></i>
+          <p class="font-weight-bold d-inline">Du måste fylla i alla fält!</p>
+        </div>
+      </div>`);
       }
      
     }
@@ -409,10 +414,8 @@ class CreateRecipe extends Base {
       this._ingredientsList.some(i => i.unit !== undefined) &&
       this._stepsList.length > 0
     ) {
-      console.log('validate true')
     return true;
   }
-    console.log('validate false')
     return false;
   }
 

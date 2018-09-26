@@ -20,7 +20,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
               Tillagningstid (min)<span class="req">*</span>
             </label>
             <input type="text" class="names text-input time" id="time" required />
-            <p id="time-validation" class="mt-2 text-danger"></p>
+            <p id="time-validation" class="m-0 text-danger validate-msg"></p>
           </div>
 
           <div class="col-lg-3 col-md-6 col-sm-12 select-wrap">
@@ -254,8 +254,6 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         </div>
       </div>
 
-
-
       <div class="row form-wrap bottom">
         <div class="recept-button-group">
           <a class="btn button-block recept-btn" id="recept-cancel" href="/" role="button">Avbryt</a>
@@ -282,33 +280,13 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
               </div>
             </div>
           </div>
-
-        <!-- <div class="modal fade" id="savedSuccessModal"
-          aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Recept Sparad</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Vill du spara ditt recept?</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Stanna Kvar</button>
-                <a type="button" href="/recipe/${this._id}" class="btn btn-secondary  save-btn">Spara</a>
-              </div>
-            </div>
-          </div>
         </div>
-
-
       </div>
 
     </div>
 
+    <section class="row sumbit-alert">
+    </section>
 
   </div>
   </div>

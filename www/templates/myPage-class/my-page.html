@@ -32,7 +32,7 @@ Object.assign(MyPage.prototype, { template(){ return `
         </div>
         <div class="row">
           <div class="col-12 text-center pt-4">
-            <div class="btn text-white rounded-0 px-4 py-3 more-btn-fav
+            <div aria-label="visa fler recept" tabindex="0" class="btn text-white rounded-0 px-4 py-3 more-btn-fav
             ${this.myFavorites.length <= 8 ? 'd-none' : ''}">Visa fler</div>
           </div>
         </div>
@@ -46,7 +46,7 @@ Object.assign(MyPage.prototype, { template(){ return `
         </div>
         <div class="row">
           <div class="col-12 text-center pt-4">
-            <div class="btn text-white rounded-0 px-4 py-3 my-more-btn ${this.myRecipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
+            <div aria-label="visa fler recept" tabindex="0" class="btn text-white rounded-0 px-4 py-3 my-more-btn ${this.myRecipes.length <= 8 ? 'd-none' : ''}">Visa fler</div>
           </div>
         </div>
       </div>
