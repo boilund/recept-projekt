@@ -660,8 +660,7 @@ p.heart-favorite {
       max-height: 40vw;
       padding: 20px;
       margin-bottom: 20px;
-      margin-left: 140px;
-      float: center; } }
+      margin-left: 140px; } }
   @media screen and (max-width: 750px) {
     .new-recept-contents .ingredient-delet {
       display: none; }
