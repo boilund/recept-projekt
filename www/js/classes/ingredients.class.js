@@ -65,8 +65,8 @@ class Ingredients extends Base {
         if (target.hasClass("quantity")) {
             that._quantity = target.val();
 
-      if (isNaN(that._quantity)) {
-        document.getElementsByClassName("quantity-validation")[0].innerHTML = "Vänligen ange ett nummer";
+      if (isNaN(that._quantity) || that._quantity <= 0) {
+        document.getElementsByClassName("quantity-validation")[0].innerHTML = "Vänligen ange ett nummer större än 0";
         return;
       }
       document.getElementsByClassName("quantity-validation")[0].innerHTML = "";
