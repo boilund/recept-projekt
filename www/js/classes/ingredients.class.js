@@ -70,7 +70,7 @@ class Ingredients extends Base {
 
             if (isNaN(that._quantity) || that._quantity <= 0) {
                // console.log(target.next());
-                $(target.next()).removeClass("hidden")
+                $(target.next()).removeClass("hidden");
                 //append(" Vänligen ange ett nummer större än 0")
                     // document
                     //     .getElementById(`${quantityId}`)

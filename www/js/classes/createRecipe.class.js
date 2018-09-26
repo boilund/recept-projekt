@@ -68,7 +68,20 @@ class CreateRecipe extends Base {
       that._ingredientsList.render(".add-ingr", "");
       that.inputLabel();
 
-      console.log($(".quantity"))
+      let checkItems=$(".quantity");
+      console.log(checkItems)
+      for(let i=0; i<checkItems.length; i++){
+        let checkVal=checkItems[i].value
+        if(isNaN(checkVal) || checkVal<0 ){
+          //console.log(checkItems[i])
+          $(checkItems[i]).next().removeClass("hidden");
+        
+        }else{
+          $(checkItems[i]).next().addClass("hidden");
+      }
+        
+      }
+      
 
     }
 
