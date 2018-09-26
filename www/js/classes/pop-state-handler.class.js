@@ -112,7 +112,10 @@ class PopStateHandler {
 
   renderCorrectRecipe() {
     const url = location.pathname.split('/')[2];
+    console.log(url);
+    console.log(this.app.recipes);
     const recipe = this.app.recipes.filter(recipe => recipe.url == url);
+    console.log(recipe);
     const { title, defaultPortion } = recipe[0];
     recipe[0].newIngrediensHTML = [];
     recipe[0].changePortion = false;
@@ -148,7 +151,7 @@ class PopStateHandler {
    
     $('.search-input').easyAutocomplete(options);
 
-    $('.search-input').on('keyup', (e)=>{
+    $('.search-input').on('keyup', (e)=>{ 
       e.preventDefault();
       let selected = $('.search-input').getSelectedItemData().url;
       if (selected) {
