@@ -76,11 +76,19 @@ class CreateRecipe extends Base {
     }
 
     if (target.hasClass("submint-btn")) {
+      
+      // event.preventDefault();
       // that.calcPortionNutrition();
-      let json = that.createRecipe();
-      // console.log(json)
-      that.saveRecipe(json);
+      if (this.validateInput()) {
 
+        let json = that.createRecipe();
+        that.saveRecipe(json);
+      }else{
+        event.preventDefault();
+        console.log("not alowed");
+        return;
+      }
+     
     }
 
 
@@ -120,10 +128,18 @@ class CreateRecipe extends Base {
     //get cooking time
     if (target.hasClass("time")) {
       this._time = target.val();
+      this.validateTimeInput();
     }
   }
 
-
+  validateTimeInput() {
+    if (isNaN(this._time) || this._time < 1) {
+      document.getElementById("time-validation").innerHTML = "Vänligen ange ett nummer större än 1";
+      return false;
+      }
+      document.getElementById("time-validation").innerHTML = "";
+    return true;
+  }
 
   // img upload start here
   imgUpload() {
@@ -178,7 +194,7 @@ class CreateRecipe extends Base {
 
   parseFile(file) {
     let that = this;
-    console.log(file.name);
+    //console.log(file.name);
     that._img = encodeURI(file.name);
 
     let isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(that._img);
@@ -189,10 +205,10 @@ class CreateRecipe extends Base {
         '<strong>' + that._img + '</strong>'
       );
       $("#file-image").removeClass("hidden");
-      $("#file-image").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+      $("#file-image").attr("src", "../imgs/carrot-soup.jpeg");
       //$("#file-image").src=URL.createObjectURL(file);
       $("#mobil-review").removeClass("hidden");
-      $("#mobil-review").attr("src", "../imgs/frozen-smoothie-med-mango.jpg");
+      $("#mobil-review").attr("src", "../imgs/carrot-soup.jpeg");
     } else {
       $('#notimage').removeClass('hidden');
       $('#file-upload-form').trigger("reset");
@@ -237,7 +253,7 @@ class CreateRecipe extends Base {
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    newRecipe.img = this._img;
+    newRecipe.img = "carrot-soup.jpeg";
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
@@ -250,7 +266,7 @@ class CreateRecipe extends Base {
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
     newRecipe["⚙"] = "Recipe";
-    //newRecipe.⚙="Recipe";
+
 
 
 
@@ -327,6 +343,7 @@ class CreateRecipe extends Base {
       $(".ingr-d-none").addClass("active highlight");
     }
   }
+ 
 
 
   //autocomplete
@@ -334,7 +351,7 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-  //       steps 
+  //       steps
 
   eventHandlers() {
     let that = this;
@@ -357,10 +374,6 @@ class CreateRecipe extends Base {
       $(".steps-here").empty();
       that._stepsList.render(".steps-here", "");
     })
-
-
-
-
   }
 
   saveRecipe(json) {
@@ -371,16 +384,33 @@ class CreateRecipe extends Base {
       data.push(json);
       JSON._save("recipe", data).then(() => {
         console.log("saved!");
+        //$("#savedSuccessModal").modal('show');
+        const url = `/recipe/${json.url}`;
+        Object.assign(this.app.popState.urls, { [url]: 'recipe' });
+        location.replace("http://localhost:3000/my_page");
       });
     })
 
 
   }
 
-
-
-
-
-
+  validateInput() {
+    if (
+      this._recipeTitle !== undefined &&
+      this.validateTimeInput() &&
+      this._img &&
+      this._categoriesList &&
+      this._categoriesList.length &&
+      this._ingredientsList.some(i => i._name !== "") &&
+      this._ingredientsList.some(i => i._quantity !== "") &&
+      this._ingredientsList.some(i => i.unit !== undefined) &&
+      this._stepsList.length > 0
+    ) {
+      console.log('validate true')
+    return true;
+  }
+    console.log('validate false')
+    return false;
+  }
 
 }
