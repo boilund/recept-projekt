@@ -264,7 +264,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         </div>
 
         <!-- Modal -->
-        <!-- <div class="modal"id="savedSuccessModal" tabindex="-1" role="dialog">
+        <div class="modal"id="savedSuccessModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -274,15 +274,15 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Ditt recept har sparats. Ta en titt på min sida!</p>
+                  <p>Vill du spara ditt recept?</p>
                 </div>
                 <div class="modal-footer">
-                  <a type="button" href="/my_page" class="btn btn-primary">Till Mina Sidor</a>
+                  <a type="button" href="/recipe/${this._id}" class="btn btn-primary save-btn">Spara</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Stanna Kvar</button>
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
 
         <!-- <div class="modal fade" id="savedSuccessModal" 
           aria-hidden="true">

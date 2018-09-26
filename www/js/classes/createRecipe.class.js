@@ -12,7 +12,7 @@ class CreateRecipe extends Base {
     this._ingredientsList.push(new Ingredients(this));
     this._categoriesList = [];
     this._nutrients = {};
-
+    this._id= Date.now();
 
   }
 
@@ -258,7 +258,7 @@ class CreateRecipe extends Base {
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
     newRecipe.author = "Catarina Bennetoft";
-    newRecipe.url = Date.now();
+    newRecipe.url =this._id;
     newRecipe.defaultPortion = this._portions;
     newRecipe.ingridiens = onlyIngredients;
     //newRecipe.ingredient = ingredents;
@@ -382,13 +382,16 @@ class CreateRecipe extends Base {
 
     $.getJSON("./json/recipe.json").then((data) => {
       data.push(json);
-      JSON._save("recipe", data).then(() => {
-        console.log("saved!");
-        //$("#savedSuccessModal").modal('show');
-        const url = `/recipe/${json.url}`;
-        Object.assign(this.app.popState.urls, { [url]: 'recipe' });
-        location.replace("http://localhost:3000/my_page");
-      });
+      $("#savedSuccessModal").modal('show');
+      $(".save-btn").on("click", ()=>{
+        JSON._save("recipe", data).then(() => {
+          console.log("saved!");
+          const url = `/recipe/${json.url}`;
+          Object.assign(this.app.popState.urls, { [url]: 'recipe' });
+          //location.replace("http://localhost:3000/my_page");
+        });
+      })
+     
     })
 
 
