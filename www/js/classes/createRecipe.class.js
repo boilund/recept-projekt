@@ -68,6 +68,8 @@ class CreateRecipe extends Base {
       that._ingredientsList.render(".add-ingr", "");
       that.inputLabel();
 
+      console.log($(".quantity"))
+
     }
 
     if (target.hasClass("upload-file-btn")) {
