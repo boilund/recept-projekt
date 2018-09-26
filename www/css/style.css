@@ -540,7 +540,9 @@ p.heart-favorite {
     margin-top: -8px; }
   .new-recept-contents #recept-cancel {
     background-color: #e60019;
-    color: white; }
+    color: white;
+    border-radius: 0px;
+    border: none; }
   .new-recept-contents .recept-btn,
   .new-recept-contents #add-ingredient {
     padding: 10px; }
@@ -567,7 +569,7 @@ p.heart-favorite {
   .new-recept-contents #ingredient-add {
     color: green;
     margin-left: 20px; }
-  .new-recept-contents #add-one-step {
+  .new-recept-contents #add-one-step, .new-recept-contents #add-ingredient, .new-recept-contents #recept-submit {
     background-color: black;
     color: white;
     border-radius: 0px;

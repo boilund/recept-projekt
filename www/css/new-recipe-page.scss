@@ -339,6 +339,8 @@
   #recept-cancel {
     background-color: #e60019;
     color: white;
+    border-radius: 0px;
+    border: none;
   }
 
   .recept-btn,
@@ -388,7 +390,7 @@
     margin-left: 20px;
   }
 
-  #add-one-step {
+  #add-one-step, #add-ingredient, #recept-submit {
     background-color: black;
     color: white;
     border-radius: 0px;
