@@ -105,12 +105,7 @@ class Ingredients extends Base {
           }}
     
         )}
-        // if ($(".ingr-css").val() !== "") {
-        //     console.log($(".ingr-css").val())
-        //     console.log($(event.target).parent("div").prev())
-        //     $(".ingr-d-none").addClass("active highlight");
-        // }
-    //}
+     
 
     change(event) {
         // ingredient unit
