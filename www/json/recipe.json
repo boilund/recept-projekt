@@ -255,8 +255,8 @@
 			},
 			{
 				"name": "salt",
-				"quantity": 0.1,
-				"unit": "ml"
+				"quantity": 1,
+				"unit": "krm"
 			}
 		],
 		"instructions": [
@@ -589,13 +589,13 @@
 			},
 			{
 				"name": "salt",
-				"quantity": "",
-				"unit": ""
+				"quantity": "1",
+				"unit": "krm"
 			},
 			{
 				"name": "peppar",
-				"quantity": "",
-				"unit": ""
+				"quantity": "1",
+				"unit": "krm"
 			}
 		],
 		"instructions": [
