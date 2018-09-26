@@ -520,6 +520,7 @@ p.heart-favorite {
   .new-recept-contents .result {
     height: 40vw;
     overflow: auto;
+    -ms-overflow-style: auto;
     border-bottom: 1px solid lightgray;
     z-index: 1002; }
   .new-recept-contents #receptTextarea {
