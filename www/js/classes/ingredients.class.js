@@ -48,6 +48,9 @@ class Ingredients extends Base {
                 if (inputText.toString().length >= 3) {
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
+                }else{
+                    $(".result").addClass("hidden");
+                    $(".list-group").addClass("hidden");
                 }
 
             } else {
@@ -150,7 +153,6 @@ class Ingredients extends Base {
     changeInput(e, list) {
         let that = this;
         let target = $(e.target).next();
-
         target.empty();
         for (let i = 0, len = list.length; i < len; i++) {
             let listText = list[i].Namn;
@@ -166,6 +168,7 @@ class Ingredients extends Base {
                 let item = list[i];
                 that.getNutrients(item);
                 $(".result").addClass("hidden");
+                $(".list-group").addClass("hidden");
                 //get nutrients
                 //return this;
             });
