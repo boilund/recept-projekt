@@ -111,7 +111,7 @@ footer {
       .search-row h2 {
         font-size: 2rem; } }
   .search-row .easy-autocomplete {
-    width: 79% !important; }
+    width: 72% !important; }
     @media (min-width: 576px) {
       .search-row .easy-autocomplete {
         width: 87% !important; } }
