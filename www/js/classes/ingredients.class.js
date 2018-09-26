@@ -90,19 +90,27 @@ class Ingredients extends Base {
             that
                 .parent
                 .deleteIngr(that);
-            that.inputLabel();
+           that.inputLabel();
 
         }
 
     }
 
     inputLabel() {
-        if ($(".ingr-css").val() !== "") {
-            console.log($(".ingr-css").val())
-            console.log($(event.target).parent("div").prev())
+
+        let inputs=$(".ingr-css");
+        inputs.map((inpt)=>{
+          if(inpt.value!==""){
             $(".ingr-d-none").addClass("active highlight");
-        }
-    }
+          }}
+    
+        )}
+        // if ($(".ingr-css").val() !== "") {
+        //     console.log($(".ingr-css").val())
+        //     console.log($(event.target).parent("div").prev())
+        //     $(".ingr-d-none").addClass("active highlight");
+        // }
+    //}
 
     change(event) {
         // ingredient unit
