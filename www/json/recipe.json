@@ -1491,5 +1491,39 @@
       }
     ],
     "⚙": "Recipe"
+  },
+  {
+    "favorite": true,
+    "title": "abc",
+    "img": "carrot-soup.jpeg",
+    "time": "10",
+    "likes": 1,
+    "category": [
+      "Frukost"
+    ],
+    "author": "Catarina Bennetoft",
+    "url": 1537952998702,
+    "defaultPortion": "5",
+    "ingridiens": [
+      {
+        "name": "Äggakaka",
+        "quantity": "1",
+        "unit": "kg"
+      }
+    ],
+    "instructions": [
+      "a"
+    ],
+    "nutrition": {
+      "kj": 5213,
+      "kcal": 1246,
+      "fat": 62,
+      "saturatedFat": 38,
+      "carbohydrates": 100,
+      "protein": 70,
+      "salt": 7
+    },
+    "comments": [],
+    "⚙": "Recipe"
   }
 ]
