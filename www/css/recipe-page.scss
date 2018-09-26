@@ -162,6 +162,14 @@ p.heart-favorite {
   }
 }
 
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #d4d4d4;
+}
+
+.table-td, .table th {
+  border-color: #d5d5d5;
+}
+
 .icons {
   i {
     font-size: 20pt;
