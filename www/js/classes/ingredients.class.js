@@ -89,7 +89,8 @@ class Ingredients extends Base {
 
     inputLabel() {
         if ($(".ingr-css").val() !== "") {
-          console.log($(event.target).parent("div").prev())
+            console.log($(".ingr-css").val())
+          //console.log($(event.target).parent("div").prev())
           //console.log($(".ingr-css").prev())
           $(".ingr-d-none").addClass("active highlight");
         }
