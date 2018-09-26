@@ -34,8 +34,6 @@ class Ingredients extends Base {
         this._unit = val;
     }
 
-
-
     keyup(event) {
 
         let that = this;
@@ -48,13 +46,15 @@ class Ingredients extends Base {
                 if (inputText.toString().length >= 3) {
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
-                }else{
+                } else {
                     $(".result").addClass("hidden");
                     $(".list-group").addClass("hidden");
                 }
 
             } else {
-                target.next().empty();
+                target
+                    .next()
+                    .empty();
                 //autocomplete list get deleted by deleting input text
             }
 
@@ -63,24 +63,33 @@ class Ingredients extends Base {
 
         // ingredient quantity
         if (target.hasClass("quantity")) {
-            that._quantity = target.val();
+            const quantityId = $(".quantity-validation").attr('id');
 
-      if (isNaN(that._quantity)) {
-        document.getElementsByClassName("quantity-validation")[0].innerHTML = "Vänligen ange ett nummer";
-        return;
-      }
-      document.getElementsByClassName("quantity-validation")[0].innerHTML = "";
+            that._quantity = target.val();
+            console.log(quantityId, target.val());
+
+            if (isNaN(that._quantity) || that._quantity <= 0) {
+                document
+                    .getElementById(`${quantityId}`)
+                    .innerHTML = "Vänligen ange ett nummer större än 0";
+                return;
+            }
+            document
+                .getElementById(`${quantityId}`)
+                .innerHTML = "";
         }
 
-
-
     }
+
+
 
     click(event) {
         let that = this;
         let target = $(event.target);
         if (target.hasClass("ingredient-btn")) {
-            that.parent.deleteIngr(that);
+            that
+                .parent
+                .deleteIngr(that);
             that.inputLabel();
 
         }
@@ -90,11 +99,10 @@ class Ingredients extends Base {
     inputLabel() {
         if ($(".ingr-css").val() !== "") {
             console.log($(".ingr-css").val())
-          //console.log($(event.target).parent("div").prev())
-          //console.log($(".ingr-css").prev())
-          $(".ingr-d-none").addClass("active highlight");
+            console.log($(event.target).parent("div").prev())
+            $(".ingr-d-none").addClass("active highlight");
         }
-      }
+    }
 
     change(event) {
         // ingredient unit
@@ -103,29 +111,24 @@ class Ingredients extends Base {
         if (target.hasClass("unit-select")) {
             that._unit = target.val();
             that.unitCalc(that._unit);
-            // if (that._name && that._quantity) {
-            //     that.createIngredient();
-            // }
+            // if (that._name && that._quantity) {     that.createIngredient(); }
         }
     }
 
-    export () {
+    export() {
         let returnInfo = [];
         let oneIngredient = {};
         let itemNutrients = {};
-       
-            itemNutrients = this.calcNurtrients();
-            //oneIngredient.itemNutrients = 
-            oneIngredient.name = this.name;
-            oneIngredient.quantity = this._quantity;
-            oneIngredient.unit = this._unit;
-            returnInfo.push(oneIngredient);
-            returnInfo.push(itemNutrients);
-            //oneIngredient.nutrients = this.itemNutrients;
-            //return oneIngredient;
-            return returnInfo;
-       
 
+        itemNutrients = this.calcNurtrients();
+        //oneIngredient.itemNutrients =
+        oneIngredient.name = this.name;
+        oneIngredient.quantity = this._quantity;
+        oneIngredient.unit = this._unit;
+        returnInfo.push(oneIngredient);
+        returnInfo.push(itemNutrients);
+        //oneIngredient.nutrients = this.itemNutrients; return oneIngredient;
+        return returnInfo;
 
     }
 
@@ -135,10 +138,16 @@ class Ingredients extends Base {
             let result = jsonList.filter(x => x.Namn.toLowerCase().includes(searchText));
             //let result = jsonList.filter(x => x.Namn.match(regEx) !== null);
             result.sort((a, b) => {
-                return a.Namn.indexOf(searchText) < b.Namn.indexOf(searchText) ? -1 : 1;
+                return a
+                    .Namn
+                    .indexOf(searchText) < b
+                    .Namn
+                    .indexOf(searchText)
+                    ? -1
+                    : 1;
             })
             return result;
-            
+
         }
     }
 
@@ -170,8 +179,7 @@ class Ingredients extends Base {
                 that.getNutrients(item);
                 $(".result").addClass("hidden");
                 $(".list-group").addClass("hidden");
-                //get nutrients
-                //return this;
+                //get nutrients return this;
             });
 
         }
@@ -184,9 +192,7 @@ class Ingredients extends Base {
         let that = this;
         // let nutrients = ;
         that.nutrientsList = item.Naringsvarden.Naringsvarde;
-        //console.log(nutrients);
-
-        //console.log(that.itemNutrients);
+        //console.log(nutrients); console.log(that.itemNutrients);
     }
 
     //unit calculation to 100g
@@ -231,7 +237,9 @@ class Ingredients extends Base {
         //console.log(c, q)
 
         for (let nutrient of that.nutrientsList) {
-            let value = nutrient.Varde.replace(/,/g, '.') / 1;
+            let value = nutrient
+                .Varde
+                .replace(/,/g, '.') / 1;
             if (nutrient.Namn === "Energi (kJ)") {
                 that.itemNutrients.EnergyKJ = Math.round(value * c * q);
             }
@@ -269,7 +277,5 @@ class Ingredients extends Base {
         return that.itemNutrients;
 
     }
-  
-
 
 }

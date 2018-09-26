@@ -582,6 +582,8 @@ p.heart-favorite {
     margin-left: 20px; }
   .new-recept-contents .list-group-item-action {
     z-index: 1001 !important; }
+  .new-recept-contents .validate-msg {
+    font-size: 12px; }
   @media screen and (min-width: 992px) {
     .new-recept-contents .new-recept-contents .ax-product-grid-tile {
       margin-left: 0px;
