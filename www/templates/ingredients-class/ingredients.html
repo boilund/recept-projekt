@@ -19,11 +19,11 @@ return `
 
 
             <div class="col-lg-3 col-md-3 col-sm-12 ing">
-              <label class="label ingr-d-none" >
+              <label class="label ingr-d-none" for="quantity${ingrId}">
                 Kvantitet<span class="req">*</span>
               </label>
-              <input type="text" class="text-input unit quantity ingr-css" value="${this._quantity}" required />
-              <p class="m-0 text-danger quantity-validation validate-msg"></p>
+              <input type="text" class="text-input unit quantity ingr-css" id="quantity${ingrId}" value="${this._quantity}" required />
+              <p id="quantity-${ingrId}" class="m-0 text-danger quantity-validation validate-msg"></p>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-12 select-wrap ing">
                 <div class="form-group">
