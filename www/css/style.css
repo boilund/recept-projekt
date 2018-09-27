@@ -48,7 +48,7 @@ header {
     .logo {
       width: 60px; } }
 
-h1.logo-title {
+.logo-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 400; }
