@@ -522,13 +522,18 @@ p.heart-favorite {
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
   .new-recept-contents .card {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    z-index: 1 !important; }
+  .new-recept-contents .card-body {
+    z-index: 5 !important; }
+  .new-recept-contents .single-ingr {
+    z-index: 1 !important; }
   .new-recept-contents .result {
-    height: 40vw;
+    height: 20vw;
     overflow: auto;
     -ms-overflow-style: auto;
     border-bottom: 1px solid lightgray;
-    z-index: 1002; }
+    z-index: 1002 !important; }
   .new-recept-contents #receptTextarea {
     width: 100%;
     border: 2px solid #eee; }
@@ -587,7 +592,7 @@ p.heart-favorite {
   .new-recept-contents .delete-step {
     margin-left: 20px; }
   .new-recept-contents .list-group-item-action {
-    z-index: 1001 !important; }
+    z-index: 1003 !important; }
   .new-recept-contents .validate-msg {
     font-size: 12px; }
   @media screen and (min-width: 992px) {
@@ -672,6 +677,8 @@ p.heart-favorite {
       height: 200px; }
     .new-recept-contents .mob-card {
       height: 360px !important; }
+    .new-recept-contents .result {
+      height: 40vw; }
     .new-recept-contents .card-body {
       height: 180px;
       padding: 20px; }
