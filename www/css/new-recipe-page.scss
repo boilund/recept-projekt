@@ -293,11 +293,11 @@
 
   .card {
     margin-bottom: 20px;
-    z-index:1 !important;
+    // z-index:1 !important;
   }
 
   .card-body{
-    z-index:5 !important;
+    // z-index:5 !important;
   }
 
   .single-ingr{
@@ -410,7 +410,8 @@
 
 
   .list-group-item-action {
-    z-index: 1003 !important;
+    // z-index: 1003 !important;
+    z-index: 1;
   }
 
   .validate-msg {
@@ -447,9 +448,9 @@
     .single-ingr {
       height: 20px;
       
-      & div:first-child {
-        z-index: 3 !important;
-      }
+      // & div:first-child {
+      //   z-index: 3 !important;
+      // }
     }
 
     .category-select {
@@ -506,9 +507,9 @@
     .single-ingr {
       height: 40px;
 
-      & div:first-child {
-        z-index: 3 !important;
-      }
+      // & div:first-child {
+      //   z-index: 3 !important;
+      // }
     }
 
     .ingredient-delet {
