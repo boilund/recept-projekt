@@ -240,10 +240,10 @@ class CreateRecipe extends Base {
         '<strong>' + that._img + '</strong>'
       );
       $("#file-image").removeClass("hidden");
-      $("#file-image").attr("src", "../imgs/carrot-soup.jpeg");
+      $("#file-image").attr("src", `../imgs/${this._img}`);
       //$("#file-image").src=URL.createObjectURL(file);
       $("#mobil-review").removeClass("hidden");
-      $("#mobil-review").attr("src", "../imgs/carrot-soup.jpeg");
+      $("#mobil-review").attr("src", `../imgs/${this._img}`);
     } else {
       $('#notimage').removeClass('hidden');
       $('#file-upload-form').trigger("reset");
@@ -288,7 +288,7 @@ class CreateRecipe extends Base {
 
     newRecipe.favorite = true;
     newRecipe.title = this._recipeTitle;
-    newRecipe.img = "carrot-soup.jpeg";
+    newRecipe.img = this._img;
     newRecipe.time = this._time;
     newRecipe.likes = 1;
     newRecipe.category = this._categoriesList;
