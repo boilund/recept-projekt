@@ -34,7 +34,7 @@ class App extends Base {
 
     this.myPage = new MyPage(this);
     this.recipe = new Recipe(this);
-    this.createRecipe = new CreateRecipe(this);
+    //this.createRecipe = new CreateRecipe(this);
 
 
     // Initiate handling of SPA push/pop-state
