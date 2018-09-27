@@ -290,7 +290,7 @@ class CreateRecipe extends Base {
     newRecipe.title = this._recipeTitle;
     newRecipe.img = this._img;
     newRecipe.time = this._time;
-    newRecipe.likes = 1;
+    newRecipe.likes = 0;
     newRecipe.category = this._categoriesList;
     newRecipe.author = "Catarina Bennetoft";
     newRecipe.url = this._id;
