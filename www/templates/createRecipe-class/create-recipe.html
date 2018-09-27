@@ -5,8 +5,7 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
   </div>
   <div class="layout-wrap layout-row row">
     <div class="ax-product-grid-tile col">
-      <!-- <label for="name-port" class="visuallyhidden">Name & port. </label> -->
-      <div title="recept-name" name="name-port">
+      <div title="recept-name">
         <div class="row form-wrap">
 
           <div class=" col-lg-6  col-md-6  col-sm-12 mob">
@@ -261,22 +260,21 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
         </div>
 
         <!-- Modal -->
-        <div class="modal"id="savedSuccessModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Recept Sparad</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Vill du spara ditt recept?</p>
-                </div>
-                <div class="modal-footer">
-                  <a type="button" href="/recipe/${this._id}" class="btn btn-primary save-btn">Spara</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Stanna Kvar</button>
-                </div>
+        <div class="modal" id="savedSuccessModal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Recept Sparad</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Vill du spara ditt recept?</p>
+              </div>
+              <div class="modal-footer">
+                <a type="button" href="/recipe/${this._id}" class="btn btn-primary save-btn">Spara</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Stanna Kvar</button>
               </div>
             </div>
           </div>
@@ -286,9 +284,9 @@ Object.assign(CreateRecipe.prototype, { template(){ return `
     </div>
 
     <section class="row sumbit-alert">
+      <h2 class="sr-only">Felmeddelande</h2>
     </section>
 
-  </div>
   </div>
 </section>
 `;}});
