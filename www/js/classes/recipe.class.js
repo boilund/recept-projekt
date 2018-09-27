@@ -23,13 +23,16 @@ class Recipe extends Base {
   click2(e) {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
     $(e.target).hasClass('fa-print') && window.print();
-    if ($(e.target).hasClass('fa-heart')) {
+    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
       this.pressHearts2();
     }
   }
   // recipe page
   keyup2(e) {
-    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+    if ($(e.target).hasClass('fa-heart') 
+        && e.which === 13
+        && this.author != this.app.user
+      ) {
       this.pressHearts2();
     } else if ($(e.target).hasClass('fa-print') && e.which === 13) {
       window.print();
