@@ -186,14 +186,16 @@ aside .side-card {
 
 @media print {
   .author,
-  .cooking-time,
   .reciep-picture,
   .comments-btn,
   .comments,
   .icons,
   .alert,
   footer {
-    display: none; } }
+    display: none; }
+
+  .heading-content {
+    min-height: 150px !important; } }
 .recept-main-content {
   overflow-x: hidden;
   background-color: #fff;

@@ -3,7 +3,6 @@
 
 @media print {
   .author,
-  .cooking-time,
   .reciep-picture,
   .comments-btn,
   .comments,
@@ -13,6 +12,9 @@
     display: none;
   }
 
+  .heading-content {
+    min-height: 150px !important;
+  }
 }
 
 .recept-main-content {
