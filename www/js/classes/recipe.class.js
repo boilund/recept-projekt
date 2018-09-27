@@ -87,13 +87,13 @@ class Recipe extends Base {
 
   // start-page cards
   click3(e) {
-    if ($(e.target).hasClass('fa-heart')) {
+    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
       this.pressHearts3();
     }
   }
   // start page
   keyup3(e) {
-    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+    if ($(e.target).hasClass('fa-heart') && e.which === 13 && this.author != this.app.user) {
       this.pressHearts3();
     }
   }
