@@ -522,10 +522,7 @@ p.heart-favorite {
     border-radius: 4px;
     transition: border-color .25s ease, box-shadow .25s ease; }
   .new-recept-contents .card {
-    margin-bottom: 20px;
-    z-index: 1 !important; }
-  .new-recept-contents .card-body {
-    z-index: 5 !important; }
+    margin-bottom: 20px; }
   .new-recept-contents .single-ingr {
     z-index: 1 !important; }
   .new-recept-contents .result {
@@ -594,7 +591,7 @@ p.heart-favorite {
   .new-recept-contents .delete-step {
     margin-left: 20px; }
   .new-recept-contents .list-group-item-action {
-    z-index: 1003 !important; }
+    z-index: 1; }
   .new-recept-contents .validate-msg {
     font-size: 12px; }
   @media screen and (min-width: 992px) {
@@ -611,8 +608,6 @@ p.heart-favorite {
       border: none; }
     .new-recept-contents .single-ingr {
       height: 20px; }
-      .new-recept-contents .single-ingr div:first-child {
-        z-index: 3 !important; }
     .new-recept-contents .category-select {
       right: -26px; }
     .new-recept-contents .form-wrap {
@@ -644,8 +639,6 @@ p.heart-favorite {
       padding: 20px; }
     .new-recept-contents .single-ingr {
       height: 40px; }
-      .new-recept-contents .single-ingr div:first-child {
-        z-index: 3 !important; }
     .new-recept-contents .ingredient-delet {
       display: none; }
     .new-recept-contents #large {
