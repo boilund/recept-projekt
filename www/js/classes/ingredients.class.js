@@ -48,6 +48,7 @@ class Ingredients extends Base {
                     that.changeInput(event, list);
                 } else {
                     $(".result").addClass("hidden");
+                    target.parents(".card").removeClass("mob-card");
                     //$(".list-group").addClass("hidden");
                 }
 
@@ -178,6 +179,8 @@ class Ingredients extends Base {
             for (let i = 0, len = list.length; i < len; i++) {
                 let listText = list[i].Namn;
                 target.removeClass("hidden");
+
+                target.parents(".card").addClass("mob-card");
                 //$(".result").removeClass("hidden");
 
                 let node = $(`<a class='list-group-item list-group-item-action'>  ${listText}   </a>`);
@@ -189,8 +192,8 @@ class Ingredients extends Base {
                     // console.log(i);
                     let item = list[i];
                     that.getNutrients(item);
-                    $(".result").addClass("hidden");
-                    //$(".list-group").addClass("hidden");
+                    target.addClass("hidden");
+                    target.parents(".card").removeClass("mob-card");
                     //get nutrients return this;
                 });
 
