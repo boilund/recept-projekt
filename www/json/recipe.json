@@ -1,1495 +1,1504 @@
 [
-  {
-    "favorite": true,
-    "title": "Mozzarella pizza",
-    "img": "mozzarella-pizza.jpeg",
-    "time": "40",
-    "likes": 103,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Nöttfritt",
-      "Äggfritt",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Lisa Andersson",
-    "url": "mozzarella_pizza",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "vetemjöl",
-        "quantity": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "salt",
-        "quantity": 0.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "bakpulver",
-        "quantity": 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "mjölk (gärna 1,5 %)",
-        "quantity": 2.5,
-        "unit": "dl"
-      },
-      {
-        "name": "olivolja",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "röda paprikor",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "salladslök",
-        "quantity": 65,
-        "unit": "g"
-      },
-      {
-        "name": "mozzarella",
-        "quantity": 125,
-        "unit": "g"
-      },
-      {
-        "name": "pesto soltorkad tomat",
-        "quantity": 185,
-        "unit": "g"
-      },
-      {
-        "name": "solroskärnor",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "parmesanflarn",
-        "quantity": 45,
-        "unit": "g"
-      },
-      {
-        "name": "färska basilika",
-        "quantity": 20,
-        "unit": "g"
-      }
-    ],
-    "instructions": [
-      "Sätt ugnen på 250°C. Sätt in en plåt i ugnen.",
-      "Pizzadeg: Blanda mjöl, salt och bakpulver. Rör i mjölk och olivolja och arbeta ihop till en deg.",
-      "Dela degen i fyra delar och lägg dem två och två på bakplåtspapper. Strö lite mjöl på degen, kavla eller platta ut dem till ca 20 cm i diameter (för 4 port).",
-      "Fyllning: Dela, kärna ur och skiva paprikorna. Ansa och strimla salladslöken. Skiva mozzarellan.",
-      "Bred peston på degen. Lägg på paprika, salladslök, mozzarella och solroskärnor. Strö på parmesan.",
-      "Ta ut den varma plåten och dra över bakplåtspapperet med pizzorna på plåten. Grädda mitt i ugnen ca 15 minuter. Gör likadant med nästa omgång."
-    ],
-    "nutrition": {
-      "kj": "3510.50",
-      "kcal": "840",
-      "fat": "38.50",
-      "saturatedFat": "14",
-      "carbohydrates": "87.50",
-      "protein": "31.50",
-      "salt": "2.4"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Basilikapesto med pasta",
-    "img": "basilpasta.jpeg",
-    "time": "30",
-    "likes": 61,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Nöttfritt",
-      "Pasta",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Lisa Andersson",
-    "url": "basilikapesto_med_pasta",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "vitlöksklyftor",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "basilika",
-        "quantity": 20,
-        "unit": "g"
-      },
-      {
-        "name": "färskriven parmesanost eller annan lagrad ost, tex västerbotten eller svecia",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "valnötter, pinjenötter eller solrosfrön",
-        "quantity": 0.75,
-        "unit": "dl"
-      },
-      {
-        "name": "salt",
-        "quantity": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "olivolja, solrosolja eller rapsolja",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "vatten",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "pasta eller bandspagetti",
-        "quantity": 300,
-        "unit": "g"
-      }
-    ],
-    "instructions": [
-      "Skala vitlöksklyftorna. Repa bladen från basilikan.",
-      "Lägg vitlök, basilika, ost, nötter och salt i en matberedare. Kör tills allt är finfördelat. Allt kan också hackas fint med kniv. Tillsätt oljan, lite i taget, under omrörning eller medan maskinen är på. Rör i vattnet. Smaka av med svartpeppar och eventuellt mer salt.",
-      "Koka pastan enligt anvisning på förpackningen och blanda den med ev med strimlad rökt skinka och strimlad röd paprika."
-    ],
-    "nutrition": {
-      "kj": "2401",
-      "kcal": "574",
-      "fat": "16.4",
-      "saturatedFat": "3.2",
-      "carbohydrates": "52",
-      "protein": "12.5",
-      "salt": "0.27"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Äppelpaj",
-    "img": "apple-pie.jpg",
-    "time": "60",
-    "likes": 61,
-    "category": [
-      "Mellanmål",
-      "Efterrätter",
-      "Laktosfritt",
-      "Nöttfritt",
-      "Äggfritt",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Catarina Bennetoft",
-    "url": "applepaj",
-    "defaultPortion": 6,
-    "ingridiens": [
-      {
-        "name": "äpple",
-        "quantity": 7,
-        "unit": "st"
-      },
-      {
-        "name": "vetemjöl",
-        "quantity": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "socker",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "(laktosfritt) smör",
-        "quantity": 125,
-        "unit": "g"
-      }
-    ],
-    "instructions": [
-      "Värm ugnen till 175 grader.",
-      "Skala, kärna ur och klyfta äpplena. Lägg dem tätt i en form.",
-      "Blanda mjöl och socker, häll över äpplena. Skiva kylskåpskallt smör med en osthyvel och lägg det över, så att det täcker mjöl- och sockerblandningen.",
-      "Grädda i ugnen tills ytan fått en gyllenbrun färg, ca 45 minuter."
-    ],
-    "nutrition": {
-      "kj": "1652",
-      "kcal": "395",
-      "fat": "22.3",
-      "saturatedFat": "4.7",
-      "carbohydrates": "43",
-      "protein": "5.2",
-      "salt": "0.6"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Avokado smörgås",
-    "img": "avocado-sandwich.jpeg",
-    "time": "10",
-    "likes": 24,
-    "category": [
-      "Frukost",
-      "Lunch",
-      "Mellanmål",
-      "Laktosfritt",
-      "Nöttfritt",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Lisa Andersson",
-    "url": "avokado_smorgas",
-    "defaultPortion": 2,
-    "ingridiens": [
-      {
-        "name": "mjukt bröd, ljust eller mörkt",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "ägg",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "avokado",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "olivolja",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "citron",
-        "quantity": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "chiliflakes",
-        "quantity": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "smörgåskrasse",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "quantity": 0.1,
-        "unit": "ml"
-      }
-    ],
-    "instructions": [
-      "Koka upp vatten i en kastrull och sänk försiktigt ned ägget med en sked. Koka ägget i 6 minuter och 30 sekunder. Spola i kallt vatten.",
-      "Rosta eller grilla brödet. Stryk 1 msk olivolja på brödet.",
-      "Dela avokadon och skiva den tunt i skalet och gröp ur den med en sked.",
-      "Skala ägget och dela det i två delar på längden. Lägg avokadon på brödet och toppa med ägget, chiliflakes, salt, några droppar citron samt smörgåskrasse."
-    ],
-    "nutrition": {
-      "kj": "669",
-      "kcal": "160",
-      "fat": "19.2",
-      "saturatedFat": "9.1",
-      "carbohydrates": "15",
-      "protein": "12.3",
-      "salt": "0.7"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Vietnamesiska risnudlar",
-    "img": "rice-noodle.jpeg",
-    "time": "90",
-    "likes": 51,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Äggfritt",
-      "Nötkött"
-    ],
-    "author": "Kim Taylor",
-    "url": "vietnamesiska_risnudlar",
-    "defaultPortion": 2,
-    "ingridiens": [
-      {
-        "name": "risnudlar",
-        "quantity": 125,
-        "unit": "g"
-      },
-      {
-        "name": "olja till nudlarna",
-        "quantity": 0.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "morot",
-        "quantity": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "schalottenlök",
-        "quantity": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "sockerärtor",
-        "quantity": 25,
-        "unit": "g"
-      },
-      {
-        "name": "färska böngroddar",
-        "quantity": 75,
-        "unit": "g"
-      },
-      {
-        "name": "salta jordnötter",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "biff",
-        "quantity": 150,
-        "unit": "g"
-      },
-      {
-        "name": "(laktosfritt) smör till stekning",
-        "quantity": 0.5,
-        "unit": "msk"
-      },
-      {
-        "name": "salt",
-        "quantity": 0.25,
-        "unit": "tsk"
-      },
-      {
-        "name": "svartpeppar",
-        "quantity": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "plockade örter (t ex koriander, basilika och mynta)",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "lime i klyftor",
-        "quantity": 0.5,
-        "unit": "st"
-      }
-    ],
-    "instructions": [
-      "Buljong: Skär citrongräs och ingefära i grova skivor. Koka upp vatten och fond tillsammans med citrongräs, ingefära och skalad och halverad schalottenlök. Låt stå och dra 1 timme.",
-      "Koka risnudlarna enligt anvisning på paketet och spola dem i kallt vatten. Rör ner olja så att de inte klibbar ihop. Lägg i en skål.",
-      "Skala och skär morot och lök i tunna skivor. Skär sockerärterna i strimlor. Lägg morot, lök, sockerärter och böngroddar i en skål. Hacka jordnötterna och lägg i en skål.",
-      "Stek biffarna i smör i en het stekpanna ca 1 minut på varje sida. Krydda dem med salt och peppar. Låt svalna och skär dem i riktigt tunna skivor.",
-      "Sila av buljongen, häll tillbaka i kastrullen och koka upp.",
-      "Servera nudlarna i portionsskålar och toppa med strimlade grönsaker, böngroddar, örter och biff. Slå på het buljong och toppa med jordnötter och lime i klyftor. Vill man ha sin rätt lite mustigare och saltare ringlar man på lite fisksås. Eller för en hetare variant, se receptet het chilisås under Tips."
-    ],
-    "nutrition": {
-      "kj": "2181",
-      "kcal": "521",
-      "fat": "19.7",
-      "saturatedFat": "5.3",
-      "carbohydrates": "59.7",
-      "protein": "35.6",
-      "salt": "2"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Tomat- och fetaostsallad",
-    "img": "tomatosalad.jpeg",
-    "time": "15",
-    "likes": 127,
-    "category": [
-      "Lunch",
-      "Förrätter",
-      "Glutenfritt",
-      "Nöttfritt",
-      "Äggfritt",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Johana Kersh",
-    "url": "tomat_fetaostsallad",
-    "defaultPortion": 2,
-    "ingridiens": [
-      {
-        "name": "blandade tomater",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "name": "fetaost",
-        "quantity": 100,
-        "unit": "g"
-      },
-      {
-        "name": "rödlökar",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "basilikablad",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "plockade myntablad",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "olivolja",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "flingsalt",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "nymalen svartpeppar",
-        "quantity": "",
-        "unit": ""
-      }
-    ],
-    "instructions": [
-      "Skär tomaterna i bitar och lägg på ett stort fat eller form.",
-      "Bryt fetaosten i bitar och lägg på tomaterna. Skala och strimla rödlöken. Riv basilika och mynta i bitar (använd inte kniv).",
-      "Fördela örterna och rödlöken på tomaterna. Ringla över olivolja, salta och peppra."
-    ],
-    "nutrition": {
-      "kj": "869",
-      "kcal": "208",
-      "fat": "16",
-      "saturatedFat": "32.5",
-      "carbohydrates": "4",
-      "protein": "11",
-      "salt": "1.6"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Sushirulle med lax",
-    "img": "sushi.jpeg",
-    "time": "30",
-    "likes": 85,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Fisk"
-    ],
-    "author": "Yukiko Lemke",
-    "url": "sushirulle_med_lax",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "rundkornigt sushiris",
-        "quantity": 6,
-        "unit": "dl"
-      },
-      {
-        "name": "vatten",
-        "quantity": 6,
-        "unit": "dl"
-      },
-      {
-        "name": "risvinäger",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "strösocker",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "mirin (eller 2 msk vitt vin + 1 msk strösocker)",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "salt",
-        "quantity": 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "nori (sjögräsark)",
-        "quantity": 4,
-        "unit": "st"
-      },
-      {
-        "name": "rå lax (gärna av typ salma eller fröya)",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "name": "gurka",
-        "quantity": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "avokado",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "wasabi",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "name": "sesamfrön, rostade",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "japansk soja",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "gari (picklad ingefära)",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "majonnäs",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "sriracha",
-        "quantity": 1,
-        "unit": "msk"
-      }
-    ],
-    "instructions": [
-      "Börja med att tvätta riset. Lägg det i en stor bunke och häll på vatten. Rör om med händerna och byt vatten i bunken tills vattnet är klart och genomskinligt. Häll av och låt droppa av ordentligt i en sil.",
-      "Koka riset i 6 dl vatten (utan salt!) på låg medelvärme i 18 minuter. Dra av från värmen och låt stå i 15 minuter. Lägg sedan riset i en stor skål.",
-      "Blanda risvinäger med socker, salt och mirin till sockerkristallerna löst sig. Häll över riset och blanda försiktigt med en fuktig träslev eller slickepott.",
-      "Skär lax och gurka i 1 cm breda stavar, gärna lika långa som kortsidan på norin. Skär avokado i smala klyftor. Blanda majonnäs med sriracha.",
-      "Lägg ett noriark på sushimattan med kortsidan mot dig och den matta sidan uppåt. Lägg ett tunt lager ris på noriarket, låt 4 cm längst upp vara utan ris. Strössla över tunt med sesamfrön. Dra en tunn sträng wasabi med fingret längs med riset. Lägg sedan på lax, gurka och avokado längs kortsidan. Tryck till hårt och rulla ihop rullen. Fukta den rislösa delen av noriarket med lite vatten och tryck till så rullen håller ihop. Gör likadant med alla rullarna, skär sedan i munsstora bitar.",
-      "Servera sushin med soja och gari samt srirachamajonnäs att doppa i."
-    ],
-    "nutrition": {
-      "kj": "1399",
-      "kcal": "334.37",
-      "fat": "11.36",
-      "saturatedFat": "2.16",
-      "carbohydrates": "38.47",
-      "protein": "8",
-      "salt": "1.07"
-    },
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Grundrecept på falafel",
-    "img": "falafel.jpg",
-    "time": "45",
-    "likes": 66,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Äggfritt",
-      "Nöttfritt",
-      "Veganer",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Nidal Kersh",
-    "url": "falafel",
-    "defaultPortion": 6,
-    "ingridiens": [
-      {
-        "name": "kikärter, blötlagda",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "name": "gula lökar",
-        "quantity": 5,
-        "unit": "st"
-      },
-      {
-        "name": "hela vitlökar",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "färsk koriander",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "name": "persilja",
-        "quantity": 10,
-        "unit": "g"
-      },
-      {
-        "name": "salladslök",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "malen spiskummin",
-        "quantity": 4,
-        "unit": "msk"
-      },
-      {
-        "name": "torkad koriander",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "chilifrukter",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "vatten",
-        "quantity": 500,
-        "unit": "ml"
-      },
-      {
-        "name": "bikarbonat",
-        "quantity": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "olja, till fritering",
-        "quantity": 2000,
-        "unit": "ml"
-      }
-    ],
-    "instructions": [
-      "Blötlägg kikärterna i vatten över natten, eller 9–12 timmar. Tänk på att de sväller nästan tre gånger sin storlek, så ha i mycket vatten. Låt kikärterna rinna av i ett durkslag.",
-      "Skala och hacka lök och vitlök. Dela chilin i bitar. Mixa till en slät massa i en matberedare tillsammans med hackad persilja och koriander. Flytta över i en bunke.",
-      "Mixa de blötlagda kikärterna i omgångar, tillsätt lite vatten. Det ska inte bli en slät massa utan vara lite grynigt. Tillsätt till bunken med lökblandningen. Tillsätt de torkade kryddorna och bikarbonat. Bikarbonat gör att falafeln fluffar upp vid friteringen.",
-      "Hetta upp oljan till 185 grader i en djup kastrull. Oljan ska bubbla så fort falafeln går i, men inte för häftigt, då är den för varm.",
-      "Gör bollarna. Använder du skedar, så ta en sked smet och skopa smeten från den ena skeden till den andra och lägg försiktigt ner falafeln i oljan. Lägg i några falaflar i taget och vänta i några sekunder innan du rör runt så att de inte går sönder. Använd gärna en hålslev eller en sil när du plockar upp falafeln. Den ska vara gyllenbrun och ytan ska vara lite hård. Lägg på en bit hushållspapper och servera så snart som möjligt."
-    ],
-    "nutrition": {
-      "kj": "1054",
-      "kcal": "252",
-      "fat": "12",
-      "saturatedFat": "0.9",
-      "carbohydrates": "26",
-      "protein": "8",
-      "salt": "1.3"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Amerikanska veganpannkakor",
-    "img": "pancake.jpg",
-    "time": "15",
-    "likes": 368,
-    "category": [
-      "Frukost",
-      "Lunch",
-      "Mellanmål",
-      "Efterrätter",
-      "Laktosfritt",
-      "Nöttfritt",
-      "Äggfritt",
-      "Veganer",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Catarina Bennetoft",
-    "url": "amerikanska_veganpannkakor",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "vetemjöl",
-        "quantity": 5,
-        "unit": "dl"
-      },
-      {
-        "name": "bakpulver",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "strösocker",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "vaniljsocker",
-        "quantity": 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "(laktosfri) mjölk, t ex soja-, mandel- eller havremjölk",
-        "quantity": 2.5,
-        "unit": "dl"
-      },
-      {
-        "name": "vatten",
-        "quantity": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "hallon",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "name": "blåbär",
-        "quantity": 30,
-        "unit": "g"
-      },
-      {
-        "name": "banan",
-        "quantity": 1,
-        "unit": "st"
-      }
-    ],
-    "instructions": [
-      "Rör ihop vetemjöl, bakpulver, strösocker och vaniljsocker i en bunke.",
-      "Vispa ner veganmjölk och vatten.",
-      "När du har en klumpfri smet så hettar du upp lite mjölkfritt smör i en stekpanna och klickar ut små pannkakor med hjälp av en sked.",
-      "Stek dina amerikanska pannkakor gyllenbruna på båda sidor och servera med färska bär och lönnsirap."
-    ],
-    "nutrition": {
-      "kj": "1220",
-      "kcal": "290",
-      "fat": "10",
-      "saturatedFat": "1.5",
-      "carbohydrates": "42",
-      "protein": "7.5",
-      "salt": "1"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Italiensk kycklinggratäng",
-    "img": "chiken-gratin.jpg",
-    "time": "30",
-    "likes": 523,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Nöttfritt",
-      "Äggfritt",
-      "Kyckling & Fågel"
-    ],
-    "author": "Jessica Frej",
-    "url": "italiensk_kycklinggratang",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "kycklinglårfiléer med skinn",
-        "quantity": 8,
-        "unit": "st"
-      },
-      {
-        "name": "soltorkade tomater i olja",
-        "quantity": 10,
-        "unit": "st"
-      },
-      {
-        "name": "klyfta vitlök",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "röd chili utan kärnor",
-        "quantity": 0.5,
-        "unit": "st"
-      },
-      {
-        "name": "torkad timjan",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "torkad oregano",
-        "quantity": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "utspädd kycklingbuljong",
-        "quantity": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "vispgrädde",
-        "quantity": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "parmesan, fint riven",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "flingsalt",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "nymald svartpeppar",
-        "quantity": "",
-        "unit": ""
-      }
-    ],
-    "instructions": [
-      "Värm ugnen till 180 grader, varmluft.",
-      "Fräs kycklingen på medelvärme tills den får lite färg runtom, i cirka 5 minuter. Salta och peppra. Lägg över i en ugnsform.",
-      "Strimla de soltorkade tomaterna. Skala och finhacka vitlöken. Finhacka chilin. Fräs tomaterna, vitlöken och chilin i cirka 2 minuter, tills det börjar dofta härligt.",
-      "Krydda med timjan och oregano och häll i buljongen. Tillsätt grädden och parmesanosten. Låt det sjuda försiktigt tills osten smälter.",
-      "Skeda såsen över kycklingen i formen. Grädda i mitten av ugnen i cirka 15 minuter.",
-      "Dela körsbärstomaterna i halvor. Plocka basilikabladen.",
-      "Ta ut formen. Lägg ut körsbärstomaterna i formen och toppa med färsk basilika. Servera gratängen direkt med pasta."
-    ],
-    "nutrition": {
-      "kj": "1807",
-      "kcal": "432",
-      "fat": "24.2",
-      "saturatedFat": "13",
-      "carbohydrates": "15.5",
-      "protein": "37.5",
-      "salt": "2.5"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Glutenfria vinbärsscones",
-    "img": "scone.jpg",
-    "time": "25",
-    "likes": 241,
-    "category": [
-      "Frukost",
-      "Lunch",
-      "Mellanmål",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Nöttfritt",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Elisabeth Johansson",
-    "url": "glutenfria_vinbarsscones",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "glutenfri mix, till exempel Lailas mjölmix, glutenfri eller gör egen",
-        "quantity": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "havregryn (glutenfri havre, gjord på ren havre)",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "bakpulver",
-        "quantity": 2,
-        "unit": "tsk"
-      },
-      {
-        "name": "salt",
-        "quantity": 0.5,
-        "unit": "tsk"
-      },
-      {
-        "name": "(laktosfri) smör, mjukt",
-        "quantity": 50,
-        "unit": "g"
-      },
-      {
-        "name": "ägg",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "(laktosfri) gräddfil",
-        "quantity": 1.5,
-        "unit": "dl"
-      },
-      {
-        "name": "vinbär",
-        "quantity": 1,
-        "unit": "dl"
-      }
-    ],
-    "instructions": [
-      "Sätt ugnen på 250 grader.",
-      "Smörj en muffinsplåt med smör (har du inte någon muffinsplåt kan du köpa muffinsformar gjorda av lite grövre papper för mer stadga).",
-      "Blanda alla torra ingredienser i en bunke.",
-      "Vispa i smöret med elvisp. Tillsätt ägg och gräddfil. Vänd i vinbären.",
-      "Klicka upp smeten i muffinsplåten eller i muffinsformar.",
-      "Grädda mitt i ugnen i 10 minuter, ta ut och låt svalna på ett galler."
-    ],
-    "nutrition": {
-      "kj": "1269",
-      "kcal": "292",
-      "fat": "10.6",
-      "saturatedFat": "5.2",
-      "carbohydrates": "41.5",
-      "protein": "6.6",
-      "salt": "1.4"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Korv stroganoff med paprika",
-    "img": "sausage-stroganoff.jpg",
-    "time": "30",
-    "likes": 109,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Äggfritt",
-      "Korv"
-    ],
-    "author": "Joel Jakobsson",
-    "url": "korv_stroganoff",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "gul lök",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "röd paprika",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "tomatopuré",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "falukorv",
-        "quantity": 700,
-        "unit": "g"
-      },
-      {
-        "name": "olivolja",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "krossad tomat",
-        "quantity": 400,
-        "unit": "g"
-      },
-      {
-        "name": "grädde",
-        "quantity": 0.5,
-        "unit": "dl"
-      }
-    ],
-    "instructions": [
-      "Skär paprikan i strimlor.",
-      "Hacka löken ganska fint.",
-      "Stek lök, paprika och tomatpuré i oljan.",
-      "Skär korven i mindre delar, en skiva delas på 3 ungefär.",
-      "Låt korven steka med i grytan.",
-      "När lök och korv fått färg, häll på tomatkonserv.",
-      "Låt koka i 10 minuter.",
-      "Häll på grädden och låt koka upp.",
-      "Servera med ris eller potatis eller något annat du tycker passar. Servera gärna någon starkare röra till - ajvar till exempel - så de vuxna får lite smak också..."
-    ],
-    "nutrition": {
-      "kj": "2341",
-      "kcal": "560",
-      "fat": "32",
-      "saturatedFat": "16",
-      "carbohydrates": "48",
-      "protein": "18",
-      "salt": "2"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Portergryta med fläskkött",
-    "img": "pork-pot.jpg",
-    "time": "120",
-    "likes": 22,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Nöttfritt",
-      "Äggfritt",
-      "Fläskkött"
-    ],
-    "author": "Yukiko Lemke",
-    "url": "portergryta_med_flaskkott",
-    "defaultPortion": 10,
-    "ingridiens": [
-      {
-        "name": "svartvinbärssaft ",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "soja",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "buljongtärningar",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "gul lök",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "vitlöksklyftor",
-        "quantity": 2,
-        "unit": "st"
-      },
-      {
-        "name": "timjan",
-        "quantity": 1,
-        "unit": "tsk"
-      },
-      {
-        "name": "benfritt fläskkött ",
-        "quantity": 1500,
-        "unit": "g"
-      },
-      {
-        "name": "svartpeppar",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "skyn från köttkoket",
-        "quantity": 7,
-        "unit": "dl"
-      },
-      {
-        "name": "vetemjöl",
-        "quantity": 4,
-        "unit": "msk"
-      },
-      {
-        "name": "crème fraîche",
-        "quantity": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "öl",
-        "quantity": 330,
-        "unit": "ml"
-      }
-    ],
-    "instructions": [
-      "Koka upp öl, saft, soja, buljongtärningar, hackad gul lök och vitlök, timjan och nymald svartpeppar.",
-      "Putsa köttet från överflödigt fett och skär det i 2–3 cm stora bitar. Lägg köttet i grytan (det behöver inte brynas).",
-      "Låt köttet puttra under lock i 1–1 1/2 timme eller tills det är riktigt mört.",
-      "Ta grytan från plattan och sila av skyn i en mindre kastrull. Låt koka upp. Rör ut mjölet i crème fraîchen och vispa ner i skyn. Låt småkoka i 4 minuter.",
-      "Servera grytan med potatismos, rivna morötter och en sallad."
-    ],
-    "nutrition": {
-      "kj": "2393",
-      "kcal": "572",
-      "fat": "24.8",
-      "saturatedFat": "6.1",
-      "carbohydrates": "72.1",
-      "protein": "21.9",
-      "salt": "2.8"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Kål- och köttfärsgryta",
-    "img": "beefstew.jpg",
-    "time": "30",
-    "likes": 13,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Nöttfritt",
-      "Äggfritt",
-      "Färs"
-    ],
-    "author": "Catarina Bennetoft",
-    "url": "kal_och_kottfarsgryta",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "gul lök",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "purjolök",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "vitkål",
-        "quantity": 300,
-        "unit": "g"
-      },
-      {
-        "name": "olja",
-        "quantity": 1,
-        "unit": "msk"
-      },
-      {
-        "name": "köttfärs",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "name": "soja",
-        "quantity": 3,
-        "unit": "msk"
-      },
-      {
-        "name": "balsamvinäger",
-        "quantity": 3,
-        "unit": "msk"
-      },
-      {
-        "name": "råsocker",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "peppar",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "salt",
-        "quantity": "",
-        "unit": ""
-      }
-    ],
-    "instructions": [
-      "Skala och hacka lök och vitlök. Ansa och strimla purjolök och vitkål.",
-      "Stek all lök och köttfärs i oljan. Blanda ner kålen och låt den steka med några minuter. Blanda ner soja, vinäger och råsocker och koka ca 5 minuter. Smaka av med peppar och ev salt.",
-      "Till servering: Servera köttfärsgrytan med potatis, rårörda lingon och bröd."
-    ],
-    "nutrition": {
-      "kj": "1916",
-      "kcal": "458",
-      "fat": "19.2",
-      "saturatedFat": "5.4",
-      "carbohydrates": "45.8",
-      "protein": "19.8",
-      "salt": "2.4"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": false,
-    "title": "Kycklinggryta med potatis",
-    "img": "chikenpot.jpg",
-    "time": "90",
-    "likes": 203,
-    "category": [
-      "Lunch",
-      "Huvudrätter",
-      "Glutenfritt",
-      "Laktosfritt",
-      "Äggfritt",
-      "Kyckling & Fågel"
-    ],
-    "author": "Catarina Bennetoft",
-    "url": "kycklinggryta_med_potatis",
-    "defaultPortion": 4,
-    "ingridiens": [
-      {
-        "name": "urbenade och delade kycklinglår",
-        "quantity": 500,
-        "unit": "g"
-      },
-      {
-        "name": "små pärllökar",
-        "quantity": 200,
-        "unit": "g"
-      },
-      {
-        "name": "torkad timjan",
-        "quantity": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "torkad dragon",
-        "quantity": 2,
-        "unit": "krm"
-      },
-      {
-        "name": "malen muskotnöt",
-        "quantity": 1,
-        "unit": "krm"
-      },
-      {
-        "name": "dijonsenap",
-        "quantity": 2,
-        "unit": "msk"
-      },
-      {
-        "name": "öl",
-        "quantity": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "(laktosfri) vispgrädde",
-        "quantity": 3,
-        "unit": "dl"
-      },
-      {
-        "name": "kvistar hackad färsk dragon till servering",
-        "quantity": 2.5,
-        "unit": "st"
-      },
-      {
-        "name": "salt",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "nymalen vit- eller svartpeppar",
-        "quantity": "",
-        "unit": ""
-      },
-      {
-        "name": "potatis",
-        "quantity": 1000,
-        "unit": "g"
-      },
-      {
-        "name": "grov polenta",
-        "quantity": 1,
-        "unit": "dl"
-      },
-      {
-        "name": "olivolja",
-        "quantity": 3,
-        "unit": "msk"
-      }
-    ],
-    "instructions": [
-      "Salta och peppra kyckling- delarna. Bryn sedan kyckling och lök i lite smör och olja i en stekpanna. Tillsätt kryddor och senap. Häll i öl och låt det koka upp. Blanda i grädden och låt grytan småputtra i cirka 15 minuter, tills såsen har kokat ner och är krämig.",
-      "Värm ugnen till 220 grader.",
-      "Koka potatisen i lättsaltat vatten i cirka 15 minuter. Häll av vattnet och låt potatisen ånga av. Häll sedan upp potatisen i en ugnsfast form och tillsätt polenta och olivolja, skaka om alltsammans så att potatisen paneras. Salta och peppra. Ugnsstek potatisen i ytterligare 25–30 minuter tills den blir gyllenbrun.",
-      "Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
-    ],
-    "nutrition": {
-      "kj": "2040",
-      "kcal": "483",
-      "fat": "20.5",
-      "saturatedFat": "6.3",
-      "carbohydrates": "51.5",
-      "protein": "18.5",
-      "salt": "2"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  },
-  {
-    "favorite": true,
-    "title": "Bärsmoothie",
-    "img": "smoothie.jpg",
-    "time": "10",
-    "likes": 111,
-    "category": [
-      "Frukost",
-      "Mellanmål",
-      "Glutenfritt",
-      "Lakto-vegetarianer",
-      "Lakto-ovo-vegetarianer"
-    ],
-    "author": "Marie Lindberg",
-    "url": "barsmoothie",
-    "defaultPortion": 2,
-    "ingridiens": [
-      {
-        "name": "banan",
-        "quantity": 1,
-        "unit": "st"
-      },
-      {
-        "name": "hallon och blåbär (eller variera med andra frukter och bär)",
-        "quantity": 2,
-        "unit": "dl"
-      },
-      {
-        "name": "grekisk yoghurt, 10 %",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "fet mjölk",
-        "quantity": 0.5,
-        "unit": "dl"
-      },
-      {
-        "name": "äkta vaniljpulver",
-        "quantity": 1,
-        "unit": "krm"
-      }
-    ],
-    "instructions": [
-      "Mixa!"
-    ],
-    "nutrition": {
-      "kj": "728",
-      "kcal": "174",
-      "fat": "2.8",
-      "saturatedFat": "0.8",
-      "carbohydrates": "30.2",
-      "protein": "5.8",
-      "salt": "0.3"
-    },
-    "comments": [
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      },
-      {
-        "name": "",
-        "comment": "",
-        "date": ""
-      }
-    ],
-    "⚙": "Recipe"
-  }
+	{
+		"favorite": true,
+		"title": "Mozzarella pizza",
+		"img": "mozzarella-pizza.jpeg",
+		"time": "40",
+		"likes": 103,
+		"category": ["Lunch", "Huvudrätter", "Nöttfritt", "Äggfritt", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Lisa Andersson",
+		"url": "mozzarella_pizza",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "vetemjöl",
+				"quantity": 5,
+				"unit": "dl"
+			},
+			{
+				"name": "salt",
+				"quantity": 0.5,
+				"unit": "tsk"
+			},
+			{
+				"name": "bakpulver",
+				"quantity": 2,
+				"unit": "tsk"
+			},
+			{
+				"name": "mjölk (gärna 1,5 %)",
+				"quantity": 2.5,
+				"unit": "dl"
+			},
+			{
+				"name": "olivolja",
+				"quantity": 0.5,
+				"unit": "dl"
+			},
+			{
+				"name": "röda paprikor",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "salladslök",
+				"quantity": 65,
+				"unit": "g"
+			},
+			{
+				"name": "mozzarella",
+				"quantity": 125,
+				"unit": "g"
+			},
+			{
+				"name": "pesto soltorkad tomat",
+				"quantity": 185,
+				"unit": "g"
+			},
+			{
+				"name": "solroskärnor",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "parmesanflarn",
+				"quantity": 45,
+				"unit": "g"
+			},
+			{
+				"name": "färska basilika",
+				"quantity": 20,
+				"unit": "g"
+			}
+		],
+		"instructions": [
+			"Sätt ugnen på 250°C. Sätt in en plåt i ugnen.",
+			"Pizzadeg: Blanda mjöl, salt och bakpulver. Rör i mjölk och olivolja och arbeta ihop till en deg.",
+			"Dela degen i fyra delar och lägg dem två och två på bakplåtspapper. Strö lite mjöl på degen, kavla eller platta ut dem till ca 20 cm i diameter (för 4 port).",
+			"Fyllning: Dela, kärna ur och skiva paprikorna. Ansa och strimla salladslöken. Skiva mozzarellan.",
+			"Bred peston på degen. Lägg på paprika, salladslök, mozzarella och solroskärnor. Strö på parmesan.",
+			"Ta ut den varma plåten och dra över bakplåtspapperet med pizzorna på plåten. Grädda mitt i ugnen ca 15 minuter. Gör likadant med nästa omgång."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "VIVECA",
+				"comment": "Riktigt gott! Hade mycket ruccola på efteråt, blev sååå bra!",
+				"date": "2013-09-23"
+			},
+			{
+				"name": "BIANCA",
+				"comment": "Ingrediensernas mått är väldigt krånglig. 9/10 dl mjölk? 2/5 dl olivolja? osv. Hur mycket är det? BB",
+				"date": "2017-02-06"
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Basilikapesto med pasta",
+		"img": "basilpasta.jpeg",
+		"time": "30",
+		"likes": 61,
+		"category": ["Lunch", "Huvudrätter", "Nöttfritt", "Pasta", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Lisa Andersson",
+		"url": "basilikapesto_med_pasta",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "vitlöksklyftor",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "basilika",
+				"quantity": 20,
+				"unit": "g"
+			},
+			{
+				"name": "färskriven parmesanost eller annan lagrad ost, tex västerbotten eller svecia",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "valnötter, pinjenötter eller solrosfrön",
+				"quantity": 0.75,
+				"unit": "dl"
+			},
+			{
+				"name": "salt",
+				"quantity": 1,
+				"unit": "krm"
+			},
+			{
+				"name": "olivolja, solrosolja eller rapsolja",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "vatten",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "pasta eller bandspagetti",
+				"quantity": 300,
+				"unit": "g"
+			}
+		],
+		"instructions": [
+			"Skala vitlöksklyftorna. Repa bladen från basilikan.",
+			"Lägg vitlök, basilika, ost, nötter och salt i en matberedare. Kör tills allt är finfördelat. Allt kan också hackas fint med kniv. Tillsätt oljan, lite i taget, under omrörning eller medan maskinen är på. Rör i vattnet. Smaka av med svartpeppar och eventuellt mer salt.",
+			"Koka pastan enligt anvisning på förpackningen och blanda den med ev med strimlad rökt skinka och strimlad röd paprika."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Äppelpaj",
+		"img": "apple-pie.jpg",
+		"time": "60",
+		"likes": 61,
+		"category": ["Mellanmål", "Efterrätter", "Laktosfritt", "Nöttfritt", "Äggfritt", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Catarina Bennetoft",
+		"url": "applepaj",
+		"defaultPortion": 6,
+		"ingridiens": [
+			{
+				"name": "äpple",
+				"quantity": 7,
+				"unit": "st"
+			},
+			{
+				"name": "vetemjöl",
+				"quantity": 2,
+				"unit": "dl"
+			},
+			{
+				"name": "socker",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "(laktosfritt) smör",
+				"quantity": 125,
+				"unit": "g"
+			}
+		],
+		"instructions": [
+			"Värm ugnen till 175 grader.",
+			"Skala, kärna ur och klyfta äpplena. Lägg dem tätt i en form.",
+			"Blanda mjöl och socker, häll över äpplena. Skiva kylskåpskallt smör med en osthyvel och lägg det över, så att det täcker mjöl- och sockerblandningen.",
+			"Grädda i ugnen tills ytan fått en gyllenbrun färg, ca 45 minuter."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Avokado smörgås",
+		"img": "avocado-sandwich.jpeg",
+		"time": "10",
+		"likes": 24,
+		"category": ["Frukost", "Lunch", "Mellanmål", "Laktosfritt", "Nöttfritt", "Lakto-ovo-vegetarianer"],
+		"author": "Lisa Andersson",
+		"url": "avokado_smorgas",
+		"defaultPortion": 2,
+		"ingridiens": [
+			{
+				"name": "mjukt bröd, ljust eller mörkt",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "ägg",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "avokado",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "olivolja",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "citron",
+				"quantity": 0.5,
+				"unit": "st"
+			},
+			{
+				"name": "chiliflakes",
+				"quantity": 1,
+				"unit": "tsk"
+			},
+			{
+				"name": "smörgåskrasse",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "salt",
+				"quantity": 0.1,
+				"unit": "ml"
+			}
+		],
+		"instructions": [
+			"Koka upp vatten i en kastrull och sänk försiktigt ned ägget med en sked. Koka ägget i 6 minuter och 30 sekunder. Spola i kallt vatten.",
+			"Rosta eller grilla brödet. Stryk 1 msk olivolja på brödet.",
+			"Dela avokadon och skiva den tunt i skalet och gröp ur den med en sked.",
+			"Skala ägget och dela det i två delar på längden. Lägg avokadon på brödet och toppa med ägget, chiliflakes, salt, några droppar citron samt smörgåskrasse."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Vietnamesiska risnudlar",
+		"img": "rice-noodle.jpeg",
+		"time": "90",
+		"likes": 51,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Äggfritt", "Nötkött"],
+		"author": "Kim Taylor",
+		"url": "vietnamesiska_risnudlar",
+		"defaultPortion": 2,
+		"ingridiens": [
+			{
+				"name": "risnudlar",
+				"quantity": 125,
+				"unit": "g"
+			},
+			{
+				"name": "olja till nudlarna",
+				"quantity": 0.5,
+				"unit": "tsk"
+			},
+			{
+				"name": "morot",
+				"quantity": 0.5,
+				"unit": "st"
+			},
+			{
+				"name": "schalottenlök",
+				"quantity": 0.5,
+				"unit": "st"
+			},
+			{
+				"name": "sockerärtor",
+				"quantity": 25,
+				"unit": "g"
+			},
+			{
+				"name": "färska böngroddar",
+				"quantity": 75,
+				"unit": "g"
+			},
+			{
+				"name": "salta jordnötter",
+				"quantity": 0.5,
+				"unit": "dl"
+			},
+			{
+				"name": "biff",
+				"quantity": 150,
+				"unit": "g"
+			},
+			{
+				"name": "(laktosfritt) smör till stekning",
+				"quantity": 0.5,
+				"unit": "msk"
+			},
+			{
+				"name": "salt",
+				"quantity": 0.25,
+				"unit": "tsk"
+			},
+			{
+				"name": "svartpeppar",
+				"quantity": 1,
+				"unit": "krm"
+			},
+			{
+				"name": "plockade örter (t ex koriander, basilika och mynta)",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "lime i klyftor",
+				"quantity": 0.5,
+				"unit": "st"
+			}
+		],
+		"instructions": [
+			"Buljong: Skär citrongräs och ingefära i grova skivor. Koka upp vatten och fond tillsammans med citrongräs, ingefära och skalad och halverad schalottenlök. Låt stå och dra 1 timme.",
+			"Koka risnudlarna enligt anvisning på paketet och spola dem i kallt vatten. Rör ner olja så att de inte klibbar ihop. Lägg i en skål.",
+			"Skala och skär morot och lök i tunna skivor. Skär sockerärterna i strimlor. Lägg morot, lök, sockerärter och böngroddar i en skål. Hacka jordnötterna och lägg i en skål.",
+			"Stek biffarna i smör i en het stekpanna ca 1 minut på varje sida. Krydda dem med salt och peppar. Låt svalna och skär dem i riktigt tunna skivor.",
+			"Sila av buljongen, häll tillbaka i kastrullen och koka upp.",
+			"Servera nudlarna i portionsskålar och toppa med strimlade grönsaker, böngroddar, örter och biff. Slå på het buljong och toppa med jordnötter och lime i klyftor. Vill man ha sin rätt lite mustigare och saltare ringlar man på lite fisksås. Eller för en hetare variant, se receptet het chilisås under Tips."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Tomat- och fetaostsallad",
+		"img": "tomatosalad.jpeg",
+		"time": "15",
+		"likes": 127,
+		"category": ["Lunch", "Förrätter", "Glutenfritt", "Nöttfritt", "Äggfritt", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Johana Kersh",
+		"url": "tomat_fetaostsallad",
+		"defaultPortion": 2,
+		"ingridiens": [
+			{
+				"name": "blandade tomater",
+				"quantity": 500,
+				"unit": "g"
+			},
+			{
+				"name": "fetaost",
+				"quantity": 100,
+				"unit": "g"
+			},
+			{
+				"name": "rödlökar",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "basilikablad",
+				"quantity": 0.5,
+				"unit": "dl"
+			},
+			{
+				"name": "plockade myntablad",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "olivolja",
+				"quantity": 0.5,
+				"unit": "dl"
+			},
+			{
+				"name": "flingsalt",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "nymalen svartpeppar",
+				"quantity": "",
+				"unit": ""
+			}
+		],
+		"instructions": [
+			"Skär tomaterna i bitar och lägg på ett stort fat eller form.",
+			"Bryt fetaosten i bitar och lägg på tomaterna. Skala och strimla rödlöken. Riv basilika och mynta i bitar (använd inte kniv).",
+			"Fördela örterna och rödlöken på tomaterna. Ringla över olivolja, salta och peppra."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Sushirulle med lax",
+		"img": "sushi.jpeg",
+		"time": "30",
+		"likes": 85,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Fisk"],
+		"author": "Yukiko Lemke",
+		"url": "sushirulle_med_lax",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "rundkornigt sushiris",
+				"quantity": 6,
+				"unit": "dl"
+			},
+			{
+				"name": "vatten",
+				"quantity": 6,
+				"unit": "dl"
+			},
+			{
+				"name": "risvinäger",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "strösocker",
+				"quantity": 0.5,
+				"unit": "dl"
+			},
+			{
+				"name": "mirin (eller 2 msk vitt vin + 1 msk strösocker)",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "salt",
+				"quantity": 2,
+				"unit": "tsk"
+			},
+			{
+				"name": "nori (sjögräsark)",
+				"quantity": 4,
+				"unit": "st"
+			},
+			{
+				"name": "rå lax (gärna av typ salma eller fröya)",
+				"quantity": 400,
+				"unit": "g"
+			},
+			{
+				"name": "gurka",
+				"quantity": 0.5,
+				"unit": "st"
+			},
+			{
+				"name": "avokado",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "wasabi",
+				"quantity": 50,
+				"unit": "g"
+			},
+			{
+				"name": "sesamfrön, rostade",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "japansk soja",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "gari (picklad ingefära)",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "majonnäs",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "sriracha",
+				"quantity": 1,
+				"unit": "msk"
+			}
+		],
+		"instructions": [
+			"Börja med att tvätta riset. Lägg det i en stor bunke och häll på vatten. Rör om med händerna och byt vatten i bunken tills vattnet är klart och genomskinligt. Häll av och låt droppa av ordentligt i en sil.",
+			"Koka riset i 6 dl vatten (utan salt!) på låg medelvärme i 18 minuter. Dra av från värmen och låt stå i 15 minuter. Lägg sedan riset i en stor skål.",
+			"Blanda risvinäger med socker, salt och mirin till sockerkristallerna löst sig. Häll över riset och blanda försiktigt med en fuktig träslev eller slickepott.",
+			"Skär lax och gurka i 1 cm breda stavar, gärna lika långa som kortsidan på norin. Skär avokado i smala klyftor. Blanda majonnäs med sriracha.",
+			"Lägg ett noriark på sushimattan med kortsidan mot dig och den matta sidan uppåt. Lägg ett tunt lager ris på noriarket, låt 4 cm längst upp vara utan ris. Strössla över tunt med sesamfrön. Dra en tunn sträng wasabi med fingret längs med riset. Lägg sedan på lax, gurka och avokado längs kortsidan. Tryck till hårt och rulla ihop rullen. Fukta den rislösa delen av noriarket med lite vatten och tryck till så rullen håller ihop. Gör likadant med alla rullarna, skär sedan i munsstora bitar.",
+			"Servera sushin med soja och gari samt srirachamajonnäs att doppa i."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Morotssoppa",
+		"img": "carrot-soup.jpeg",
+		"time": "30",
+		"likes": 34,
+		"category": ["Lunch", "Förrätter", "Glutenfritt", "Laktosfritt", "Äggfritt", "Lakto-vegetariner", "Lakto-ovo-vegetarianer"],
+		"author": "Catarina Bennetoft",
+		"url": "morotssoppa",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "gul lök, skalad och skivad",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "stora morötter, skalade och skivade",
+				"quantity": 8,
+				"unit": "st"
+			},
+			{
+				"name": "lagerblad",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "(laktosfritt) margarin alternativt smör",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "vatten",
+				"quantity": 8,
+				"unit": "dl"
+			},
+			{
+				"name": "salt",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "peppar",
+				"quantity": "",
+				"unit": ""
+			}
+		],
+		"instructions": [
+			"Lägg lök och morötter med lagerbladen i en stor gryta. Bryn lite lätt innan du slår på vatten och låt det koka i 20 minuter med buljongtärningarna.",
+			"Ta mixern eller matberedaren och kör tills du får en slät puré. Godast blir den att mixa med lagerbergsbladen kvar i.",
+			"Salta, peppra och servera, gärna med en ostmacka till."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Grundrecept på falafel",
+		"img": "falafel.jpg",
+		"time": "45",
+		"likes": 66,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Äggfritt", "Nöttfritt", "Veganer", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Nidal Kersh",
+		"url": "falafel",
+		"defaultPortion": 6,
+		"ingridiens": [
+			{
+				"name": "kikärter, blötlagda",
+				"quantity": 500,
+				"unit": "g"
+			},
+			{
+				"name": "gula lökar",
+				"quantity": 5,
+				"unit": "st"
+			},
+			{
+				"name": "hela vitlökar",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "färsk koriander",
+				"quantity": 10,
+				"unit": "g"
+			},
+			{
+				"name": "persilja",
+				"quantity": 10,
+				"unit": "g"
+			},
+			{
+				"name": "salladslök",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "malen spiskummin",
+				"quantity": 4,
+				"unit": "msk"
+			},
+			{
+				"name": "torkad koriander",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "chilifrukter",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "salt",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "vatten",
+				"quantity": 500,
+				"unit": "ml"
+			},
+			{
+				"name": "bikarbonat",
+				"quantity": 1,
+				"unit": "tsk"
+			},
+			{
+				"name": "olja, till fritering",
+				"quantity": 2000,
+				"unit": "ml"
+			}
+		],
+		"instructions": [
+			"Blötlägg kikärterna i vatten över natten, eller 9–12 timmar. Tänk på att de sväller nästan tre gånger sin storlek, så ha i mycket vatten. Låt kikärterna rinna av i ett durkslag.",
+			"Skala och hacka lök och vitlök. Dela chilin i bitar. Mixa till en slät massa i en matberedare tillsammans med hackad persilja och koriander. Flytta över i en bunke.",
+			"Mixa de blötlagda kikärterna i omgångar, tillsätt lite vatten. Det ska inte bli en slät massa utan vara lite grynigt. Tillsätt till bunken med lökblandningen. Tillsätt de torkade kryddorna och bikarbonat. Bikarbonat gör att falafeln fluffar upp vid friteringen.",
+			"Hetta upp oljan till 185 grader i en djup kastrull. Oljan ska bubbla så fort falafeln går i, men inte för häftigt, då är den för varm.",
+			"Gör bollarna. Använder du skedar, så ta en sked smet och skopa smeten från den ena skeden till den andra och lägg försiktigt ner falafeln i oljan. Lägg i några falaflar i taget och vänta i några sekunder innan du rör runt så att de inte går sönder. Använd gärna en hålslev eller en sil när du plockar upp falafeln. Den ska vara gyllenbrun och ytan ska vara lite hård. Lägg på en bit hushållspapper och servera så snart som möjligt."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Amerikanska veganpannkakor",
+		"img": "pancake.jpg",
+		"time": "15",
+		"likes": 368,
+		"category": ["Frukost", "Lunch", "Mellanmål", "Efterrätter", "Laktosfritt", "Nöttfritt", "Äggfritt", "Veganer", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+		"author": "Catarina Bennetoft",
+		"url": "amerikanska_veganpannkakor",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "Amerikanska veganpannkakor",
+				"quantity": 5,
+				"unit": "dl"
+			},
+			{
+				"name": "bakpulver",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "strösocker",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "vaniljsocker",
+				"quantity": 2,
+				"unit": "tsk"
+			},
+			{
+				"name": "(laktosfri) mjölk, t ex soja-, mandel- eller havremjölk",
+				"quantity": 2.5,
+				"unit": "dl"
+			},
+			{
+				"name": "vatten",
+				"quantity": 1.5,
+				"unit": "dl"
+			},
+			{
+				"name": "hallon",
+				"quantity": 30,
+				"unit": "g"
+			},
+			{
+				"name": "blåbär",
+				"quantity": 30,
+				"unit": "g"
+			},
+			{
+				"name": "banan",
+				"quantity": 1,
+				"unit": "st"
+			}
+		],
+		"instructions": [
+			"Rör ihop vetemjöl, bakpulver, strösocker och vaniljsocker i en bunke.",
+			"Vispa ner veganmjölk och vatten.",
+			"När du har en klumpfri smet så hettar du upp lite mjölkfritt smör i en stekpanna och klickar ut små pannkakor med hjälp av en sked.",
+			"Stek dina amerikanska pannkakor gyllenbruna på båda sidor och servera med färska bär och lönnsirap."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Italiensk kycklinggratäng",
+		"img": "chiken-gratin.jpg",
+		"time": "30",
+		"likes": 523,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Nöttfritt", "Äggfritt", "Kyckling & Fågel"],
+		"author": "Jessica Frej",
+		"url": "italiensk_kycklinggratang",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "kycklinglårfiléer med skinn",
+				"quantity": 8,
+				"unit": "st"
+			},
+			{
+				"name": "soltorkade tomater i olja",
+				"quantity": 10,
+				"unit": "st"
+			},
+			{
+				"name": "klyfta vitlök",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "röd chili utan kärnor",
+				"quantity": 0.5,
+				"unit": "st"
+			},
+			{
+				"name": "torkad timjan",
+				"quantity": 1,
+				"unit": "tst"
+			},
+			{
+				"name": "torkad oregano",
+				"quantity": 1,
+				"unit": "tsk"
+			},
+			{
+				"name": "utspädd kycklingbuljong",
+				"quantity": 3,
+				"unit": "dl"
+			},
+			{
+				"name": "vispgrädde",
+				"quantity": 1.5,
+				"unit": "dl"
+			},
+			{
+				"name": "parmesan, fint riven",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "flingsalt",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "nymald svartpeppar",
+				"quantity": "",
+				"unit": ""
+			}
+		],
+		"instructions": [
+			"Värm ugnen till 180 grader, varmluft.",
+			"Fräs kycklingen på medelvärme tills den får lite färg runtom, i cirka 5 minuter. Salta och peppra. Lägg över i en ugnsform.",
+			"Strimla de soltorkade tomaterna. Skala och finhacka vitlöken. Finhacka chilin. Fräs tomaterna, vitlöken och chilin i cirka 2 minuter, tills det börjar dofta härligt.",
+			"Krydda med timjan och oregano och häll i buljongen. Tillsätt grädden och parmesanosten. Låt det sjuda försiktigt tills osten smälter.",
+			"Skeda såsen över kycklingen i formen. Grädda i mitten av ugnen i cirka 15 minuter.",
+			"Dela körsbärstomaterna i halvor. Plocka basilikabladen.",
+			"Ta ut formen. Lägg ut körsbärstomaterna i formen och toppa med färsk basilika. Servera gratängen direkt med pasta."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Glutenfria vinbärsscones",
+		"img": "scone.jpg",
+		"time": "25",
+		"likes": 241,
+		"category": ["Frukost", "Lunch", "Mellanmål", "Glutenfritt", "Laktosfritt", "Nöttfritt", "Lakto-ovo-vegetarianer"],
+		"author": "Elisabeth Johansson",
+		"url": "glutenfria_vinbarsscones",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "glutenfri mix, till exempel Lailas mjölmix, glutenfri eller gör egen",
+				"quantity": 3,
+				"unit": "dl"
+			},
+			{
+				"name": "havregryn (glutenfri havre, gjord på ren havre)",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "bakpulver",
+				"quantity": 2,
+				"unit": "tsk"
+			},
+			{
+				"name": "salt",
+				"quantity": 0.5,
+				"unit": "tsk"
+			},
+			{
+				"name": "(laktosfri) smör, mjukt",
+				"quantity": 50,
+				"unit": "g"
+			},
+			{
+				"name": "ägg",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "(laktosfri) gräddfil",
+				"quantity": 1.5,
+				"unit": "dl"
+			},
+			{
+				"name": "vinbär",
+				"quantity": 1,
+				"unit": "dl"
+			}
+		],
+		"instructions": [
+			"Sätt ugnen på 250 grader.",
+			"Smörj en muffinsplåt med smör (har du inte någon muffinsplåt kan du köpa muffinsformar gjorda av lite grövre papper för mer stadga).",
+			"Blanda alla torra ingredienser i en bunke.",
+			"Vispa i smöret med elvisp. Tillsätt ägg och gräddfil. Vänd i vinbären.",
+			"Klicka upp smeten i muffinsplåten eller i muffinsformar.",
+			"Grädda mitt i ugnen i 10 minuter, ta ut och låt svalna på ett galler."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Korv stroganoff med paprika",
+		"img": "sausage-stroganoff.jpg",
+		"time": "30",
+		"likes": 109,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Äggfritt", "Korv"],
+		"author": "Joel Jakobsson",
+		"url": "korv_stroganoff",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "gul lök",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "röd paprika",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "tomatopuré",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "falukorv",
+				"quantity": 700,
+				"unit": "g"
+			},
+			{
+				"name": "olivolja",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "krossad tomat",
+				"quantity": 400,
+				"unit": "g"
+			},
+			{
+				"name": "grädde",
+				"quantity": 0.5,
+				"unit": "dl"
+			}
+		],
+		"instructions": [
+			"Skär paprikan i strimlor.",
+			"Hacka löken ganska fint.",
+			"Stek lök, paprika och tomatpuré i oljan.",
+			"Skär korven i mindre delar, en skiva delas på 3 ungefär.",
+			"Låt korven steka med i grytan.",
+			"När lök och korv fått färg, häll på tomatkonserv.",
+			"Låt koka i 10 minuter.",
+			"Häll på grädden och låt koka upp.",
+			"Servera med ris eller potatis eller något annat du tycker passar. Servera gärna någon starkare röra till - ajvar till exempel - så de vuxna får lite smak också..."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Portergryta med fläskkött",
+		"img": "pork-pot.jpg",
+		"time": "120",
+		"likes": 22,
+		"category": ["Lunch", "Huvudrätter", "Nöttfritt", "Äggfritt", "Fläskkött"],
+		"author": "Yukiko Lemke",
+		"url": "portergryta_med_flaskkott",
+		"defaultPortion": 10,
+		"ingridiens": [
+			{
+				"name": "svartvinbärssaft ",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "soja",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "buljongtärningar",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "gul lök",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "vitlöksklyftor",
+				"quantity": 2,
+				"unit": "st"
+			},
+			{
+				"name": "timjan",
+				"quantity": 1,
+				"unit": "tsk"
+			},
+			{
+				"name": "benfritt fläskkött ",
+				"quantity": 1500,
+				"unit": "g"
+			},
+			{
+				"name": "svartpeppar",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "skyn från köttkoket",
+				"quantity": 7,
+				"unit": "dl"
+			},
+			{
+				"name": "vetemjöl",
+				"quantity": 4,
+				"unit": "msk"
+			},
+			{
+				"name": "crème fraîche",
+				"quantity": 2,
+				"unit": "dl"
+			},
+			{
+				"name": "öl",
+				"quantity": 330,
+				"unit": "ml"
+			}
+		],
+		"instructions": [
+			"Koka upp öl, saft, soja, buljongtärningar, hackad gul lök och vitlök, timjan och nymald svartpeppar.",
+			"Putsa köttet från överflödigt fett och skär det i 2–3 cm stora bitar. Lägg köttet i grytan (det behöver inte brynas).",
+			"Låt köttet puttra under lock i 1–1 1/2 timme eller tills det är riktigt mört.",
+			"Ta grytan från plattan och sila av skyn i en mindre kastrull. Låt koka upp. Rör ut mjölet i crème fraîchen och vispa ner i skyn. Låt småkoka i 4 minuter.",
+			"Servera grytan med potatismos, rivna morötter och en sallad."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": false,
+		"title": "Kål- och köttfärsgryta",
+		"img": "beefstew.jpg",
+		"time": "30",
+		"likes": 13,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Nöttfritt", "Äggfritt", "Färs"],
+		"author": "Catarina Bennetoft",
+		"url": "kal_och_kottfarsgryta",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "gul lök",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "purjolök",
+				"quantity": 1,
+				"unit": "st"
+			},
+			{
+				"name": "vitkål",
+				"quantity": 300,
+				"unit": "g"
+			},
+			{
+				"name": "olja",
+				"quantity": 1,
+				"unit": "msk"
+			},
+			{
+				"name": "köttfärs",
+				"quantity": 500,
+				"unit": "g"
+			},
+			{
+				"name": "soja",
+				"quantity": 3,
+				"unit": "msk"
+			},
+			{
+				"name": "balsamvinäger",
+				"quantity": 3,
+				"unit": "msk"
+			},
+			{
+				"name": "råsocker",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "peppar",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "salt",
+				"quantity": "",
+				"unit": ""
+			}
+		],
+		"instructions": [
+			"Skala och hacka lök och vitlök. Ansa och strimla purjolök och vitkål.",
+			"Stek all lök och köttfärs i oljan. Blanda ner kålen och låt den steka med några minuter. Blanda ner soja, vinäger och råsocker och koka ca 5 minuter. Smaka av med peppar och ev salt.",
+			"Till servering: Servera köttfärsgrytan med potatis, rårörda lingon och bröd."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	},
+	{
+		"favorite": true,
+		"title": "Kycklinggryta med potatis",
+		"img": "chikenpot.jpg",
+		"time": "90",
+		"likes": 203,
+		"category": ["Lunch", "Huvudrätter", "Glutenfritt", "Laktosfritt", "Äggfritt", "Kyckling & Fågel"],
+		"author": "Catarina Bennetoft",
+		"url": "kycklinggryta_med_potatis",
+		"defaultPortion": 4,
+		"ingridiens": [
+			{
+				"name": "urbenade och delade kycklinglår",
+				"quantity": 500,
+				"unit": "g"
+			},
+			{
+				"name": "små pärllökar",
+				"quantity": 200,
+				"unit": "g"
+			},
+			{
+				"name": "torkad timjan",
+				"quantity": 1,
+				"unit": "krm"
+			},
+			{
+				"name": "torkad dragon",
+				"quantity": 2,
+				"unit": "krm"
+			},
+			{
+				"name": "malen muskotnöt",
+				"quantity": 1,
+				"unit": "krm"
+			},
+			{
+				"name": "dijonsenap",
+				"quantity": 2,
+				"unit": "msk"
+			},
+			{
+				"name": "öl",
+				"quantity": 2,
+				"unit": "dl"
+			},
+			{
+				"name": "(laktosfri) vispgrädde",
+				"quantity": 3,
+				"unit": "dl"
+			},
+			{
+				"name": "kvistar hackad färsk dragon till servering",
+				"quantity": 2.5,
+				"unit": "st"
+			},
+			{
+				"name": "salt",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "nymalen vit- eller svartpeppar",
+				"quantity": "",
+				"unit": ""
+			},
+			{
+				"name": "potatis",
+				"quantity": 1000,
+				"unit": "g"
+			},
+			{
+				"name": "grov polenta",
+				"quantity": 1,
+				"unit": "dl"
+			},
+			{
+				"name": "olivolja",
+				"quantity": 3,
+				"unit": "msk"
+			}
+		],
+		"instructions": [
+			"Salta och peppra kyckling- delarna. Bryn sedan kyckling och lök i lite smör och olja i en stekpanna. Tillsätt kryddor och senap. Häll i öl och låt det koka upp. Blanda i grädden och låt grytan småputtra i cirka 15 minuter, tills såsen har kokat ner och är krämig.",
+			"Värm ugnen till 220 grader.",
+			"Koka potatisen i lättsaltat vatten i cirka 15 minuter. Häll av vattnet och låt potatisen ånga av. Häll sedan upp potatisen i en ugnsfast form och tillsätt polenta och olivolja, skaka om alltsammans så att potatisen paneras. Salta och peppra. Ugnsstek potatisen i ytterligare 25–30 minuter tills den blir gyllenbrun.",
+			"Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
+		],
+		"nutrition": [
+			{
+				"kj": "",
+				"kcal": "",
+				"fat": "",
+				"saturatedFat": "",
+				"carbohydrates": "",
+				"protein": "",
+				"salt": ""
+			}
+		],
+		"comments": [
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			},
+			{
+				"name": "",
+				"comment": "",
+				"date": ""
+			}
+		],
+		"⚙": "Recipe"
+	}
 ]
