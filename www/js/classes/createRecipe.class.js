@@ -433,12 +433,16 @@ class CreateRecipe extends Base {
 
   showSteps() {
     let that = this;
-    let step = new Step($("#receptTextarea").val(), that);
-    $("#receptTextarea").val('');
-    that._stepsList.push(step);
-    $(".steps-here").empty();
-    console.log(that._stepsList)
-    that._stepsList.render(".steps-here", "");
+    let text = $("#receptTextarea").val();
+    if(text){
+      let step = new Step(text, that);
+      $("#receptTextarea").val('');
+      that._stepsList.push(step);
+      $(".steps-here").empty();
+      console.log(that._stepsList)
+      that._stepsList.render(".steps-here", "");
+    }
+   
   }
 
 }
