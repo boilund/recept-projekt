@@ -670,6 +670,8 @@ p.heart-favorite {
     .new-recept-contents .card {
       border: 1px lightgray solid;
       height: 200px; }
+    .new-recept-contents .mob-card {
+      height: 360px !important; }
     .new-recept-contents .card-body {
       height: 180px;
       padding: 20px; }
