@@ -1,11 +1,13 @@
 Object.assign(Recipe.prototype, { template2(){ return `
   <section class="row recept-main-content px-0">
     <div class="col">
+      <h2 class="sr-only">Recept foto</h2>
       <img src="/imgs/${this.img}" class="img-fluid reciep-picture" alt="${this.title}">
     </div>
   </section>
   <section class="row">
     <div class="col">
+      <h2 class="sr-only">Favorit icon och skriva ut icon</h2>
       <div class="float-right icons mt-3 mb-4 mr-3">
         <i aria-label="lägg till favoriter" tabindex="0" title="lägg till favoriter" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
         <i aria-label="skriv ut" tabindex="0" title="skriv ut" class="fas fa-print"></i>
@@ -32,14 +34,14 @@ Object.assign(Recipe.prototype, { template2(){ return `
           </select>
         </div>
       </form>
-      <seciton class="row">
+      <div class="row">
         <div class="col-12 col-md-6">
           <div class="mt-3 mt-md-0 alert alert-danger ${this.changePortion ? '' : 'd-none'}" role="alert">
             <i class="fas fa-exclamation-circle"></i>
             <p class="font-weight-bold d-inline">Tillagningstiden kan påverkas när du ändrar antal portioner!</p>
           </div>
         </div>
-      </seciton>
+      </div>
       <ul class="list-group list-group-flush cooking-ingredients">
         ${this.newIngrediensHTML.length > 0 ? this.newIngrediensHTML.join('') : this.ingridiensHTML.join('')}
       </ul>

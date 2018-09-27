@@ -293,14 +293,23 @@
 
   .card {
     margin-bottom: 20px;
+    z-index:1 !important;
+  }
+
+  .card-body{
+    z-index:5 !important;
+  }
+
+  .single-ingr{
+    z-index:1 !important;
   }
 
   .result{
-    height: 40vw;
+    height: 20vw;
     overflow:auto;
     -ms-overflow-style: auto;
     border-bottom:1px solid lightgray;
-    z-index:1002;
+    z-index:1002 !important;
   }
 
   #receptTextarea {
@@ -399,12 +408,9 @@
     margin-left: 20px;
   }
 
-  // .card {
-  //   z-index: 1 !important;
-  // }
 
   .list-group-item-action {
-    z-index: 1001 !important;
+    z-index: 1003 !important;
   }
 
   .validate-msg {
@@ -564,6 +570,14 @@
       height:200px;
     }
 
+    .mob-card{
+      height:360px !important;
+    }
+
+    .result{
+      height: 40vw;
+    }
+
     .card-body {
       height: 180px;
       padding: 20px;
@@ -603,6 +617,7 @@
       margin-bottom: 40px;
       margin-left: 10px;
     }
+
 
 
     #ingredient-add {
