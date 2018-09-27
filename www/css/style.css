@@ -682,7 +682,7 @@ p.heart-favorite {
       border: 1px lightgray solid;
       height: 200px; }
     .new-recept-contents .mob-card {
-      height: 360px !important; }
+      height: 460px !important; }
     .new-recept-contents .result {
       height: 40vw; }
     .new-recept-contents .card-body {
@@ -712,6 +712,9 @@ p.heart-favorite {
       margin-left: 10px; }
     .new-recept-contents #ingredient-add {
       display: none; } }
+  @media screen and (max-width: 450px) {
+    .new-recept-contents .mob-card {
+      height: 360px !important; } }
 
 .my-page {
   overflow-x: inherit; }

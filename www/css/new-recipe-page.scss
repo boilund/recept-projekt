@@ -479,8 +479,8 @@
   }
 
   @media only screen and (max-width: 992px) {
-    h1{
-      margin-bottom:25px;
+    h1 {
+      margin-bottom: 25px;
     }
 
     .new-recept-contents .ax-product-grid-tile {
@@ -557,8 +557,8 @@
   }
 
   @media screen and (min-width: 750px) {
-   
-    
+
+
     #mobil-review {
       max-width: 60vw;
       max-height: 40vw;
@@ -584,7 +584,7 @@
     }
 
     .mob-card {
-      height: 360px !important;
+      height: 460px !important;
     }
 
     .result {
@@ -637,4 +637,11 @@
       display: none;
     }
   }
-}
+
+    @media screen and (max-width: 450px) {
+      .mob-card {
+        height: 360px !important;
+      }
+    }
+
+  }
