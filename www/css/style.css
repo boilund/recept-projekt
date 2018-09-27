@@ -579,7 +579,9 @@ p.heart-favorite {
   .new-recept-contents #ingredient-add {
     color: green;
     margin-left: 20px; }
-  .new-recept-contents #add-one-step, .new-recept-contents #add-ingredient, .new-recept-contents #recept-submit {
+  .new-recept-contents #add-one-step,
+  .new-recept-contents #add-ingredient,
+  .new-recept-contents #recept-submit {
     background-color: black;
     color: white;
     border-radius: 0px;
@@ -618,6 +620,8 @@ p.heart-favorite {
     .new-recept-contents .form-check-label {
       padding-top: 10px; } }
   @media only screen and (max-width: 992px) {
+    .new-recept-contents h1 {
+      margin-bottom: 25px; }
     .new-recept-contents .new-recept-contents .ax-product-grid-tile {
       margin: 0px;
       padding-bottom: 50px; }
@@ -663,6 +667,8 @@ p.heart-favorite {
       margin-bottom: 20px;
       margin-left: 140px; } }
   @media screen and (max-width: 750px) {
+    .new-recept-contents h1 {
+      font-size: 2rem; }
     .new-recept-contents .ingredient-delet {
       display: none; }
     .new-recept-contents .card {

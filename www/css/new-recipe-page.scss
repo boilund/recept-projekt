@@ -167,7 +167,7 @@
     border-style: solid;
     border-color: lightgray;
     padding-left: 20px;
-    z-index:1;
+    z-index: 1;
   }
 
   .v-none {
@@ -300,16 +300,16 @@
     // z-index:5 !important;
   }
 
-  .single-ingr{
-    z-index:1 !important;
+  .single-ingr {
+    z-index: 1 !important;
   }
 
-  .result{
+  .result {
     height: 20vw;
-    overflow:auto;
+    overflow: auto;
     -ms-overflow-style: auto;
-    border-bottom:1px solid lightgray;
-    z-index:1002 !important;
+    border-bottom: 1px solid lightgray;
+    z-index: 1002 !important;
   }
 
   #receptTextarea {
@@ -393,7 +393,9 @@
     margin-left: 20px;
   }
 
-  #add-one-step, #add-ingredient, #recept-submit {
+  #add-one-step,
+  #add-ingredient,
+  #recept-submit {
     background-color: black;
     color: white;
     border-radius: 0px;
@@ -458,7 +460,7 @@
     }
 
     .form-wrap {
-      margin-top:30px;
+      margin-top: 30px;
       //margin-bottom: 30px;
       z-index: 1 !important;
     }
@@ -466,7 +468,8 @@
     #mobil-pad {
       display: none !important;
     }
-    #mobil-review{
+
+    #mobil-review {
       display: none !important;
     }
 
@@ -477,6 +480,10 @@
   }
 
   @media only screen and (max-width: 992px) {
+    h1{
+      margin-bottom:25px;
+    }
+
     .new-recept-contents .ax-product-grid-tile {
       margin: 0px;
       padding-bottom: 50px;
@@ -551,9 +558,11 @@
   }
 
   @media screen and (min-width: 750px) {
+   
+    
     #mobil-review {
       max-width: 60vw;
-      max-height:40vw;
+      max-height: 40vw;
       padding: 20px;
       margin-bottom: 20px;
       margin-left: 140px;
@@ -562,20 +571,24 @@
   }
 
   @media screen and (max-width: 750px) {
+    h1 {
+      font-size: 2rem;
+    }
+
     .ingredient-delet {
       display: none;
     }
 
     .card {
       border: 1px lightgray solid;
-      height:200px;
+      height: 200px;
     }
 
-    .mob-card{
-      height:360px !important;
+    .mob-card {
+      height: 360px !important;
     }
 
-    .result{
+    .result {
       height: 40vw;
     }
 
@@ -607,7 +620,7 @@
 
     #mobil-review {
       max-width: 100vw;
-      max-height:60vw;
+      max-height: 60vw;
       padding: 20px;
       // margin-top:40px;
     }

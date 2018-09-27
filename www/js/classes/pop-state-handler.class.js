@@ -99,7 +99,9 @@ class PopStateHandler {
   createRecipe() {
     $('title').text('Skapa recept | Smaklig måltid');
     this.cleanUpPage('removeClass', 'removeClass');
-    this.app.createRecipe.render('main');
+    this.createRecipe = new CreateRecipe(this);
+    this.createRecipe.render('main');
+    //this.app.createRecipe.render('main');
   }
 
   cleanUpPage(method, method2) {
