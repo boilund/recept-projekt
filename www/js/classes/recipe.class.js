@@ -137,14 +137,17 @@ class Recipe extends Base {
 
   // mina-recept cards
   click5(e) {
-    if ($(e.target).hasClass('fa-heart')) {
+    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
       this.pressHearts5();
     }
   }
 
   // mina recept
   keyup5(e) {
-    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
+    if ($(e.target).hasClass('fa-heart') 
+        && e.which === 13
+        && this.author != this.app.user
+      ) {
       this.pressHearts5();
     }
   }

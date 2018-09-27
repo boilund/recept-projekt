@@ -286,7 +286,7 @@ class CreateRecipe extends Base {
     }
     //console.log(singleNutrient)
 
-    newRecipe.favorite = true;
+    newRecipe.favorite = false;
     newRecipe.title = this._recipeTitle;
     newRecipe.img = this._img;
     newRecipe.time = this._time;

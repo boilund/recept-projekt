@@ -719,7 +719,7 @@
     "⚙": "Recipe"
   },
   {
-    "favorite": true,
+    "favorite": false,
     "title": "Amerikanska veganpannkakor",
     "img": "pancake.jpg",
     "time": "15",
@@ -1306,7 +1306,7 @@
     "⚙": "Recipe"
   },
   {
-    "favorite": true,
+    "favorite": false,
     "title": "Kycklinggryta med potatis",
     "img": "chikenpot.jpg",
     "time": "90",
