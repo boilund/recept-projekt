@@ -101,7 +101,6 @@ class PopStateHandler {
     this.cleanUpPage('removeClass', 'removeClass');
     this.createRecipe = new CreateRecipe(this);
     this.createRecipe.render('main');
-    //this.app.createRecipe.render('main');
   }
 
   cleanUpPage(method, method2) {
