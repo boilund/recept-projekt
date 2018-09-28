@@ -62,7 +62,6 @@ class CreateRecipe extends Base {
 
 
       let ingredient = new Ingredients(this);
-      //that.app.ingredient.createIngredient();
       that._ingredientsList.push(ingredient);
       $(".add-ingr").empty();
       that._ingredientsList.render(".add-ingr", "");
@@ -72,17 +71,12 @@ class CreateRecipe extends Base {
       for (let i = 0; i < checkItems.length; i++) {
         let checkVal = checkItems[i].value
         if (isNaN(checkVal) || checkVal < 0) {
-          //console.log(checkItems[i])
           $(checkItems[i]).next().removeClass("hidden");
           $(checkItems[i]).parents("ing").addClass("mb-0");
-
         } else {
           $(checkItems[i]).next().addClass("hidden");
         }
-
       }
-
-
     }
 
     if (target.hasClass("upload-file-btn")) {
@@ -92,8 +86,6 @@ class CreateRecipe extends Base {
 
     if (target.hasClass("submint-btn")) {
 
-      // event.preventDefault();
-      // that.calcPortionNutrition();
       if (this.validateInput()) {
         $('.sumbit-alert').empty();
         let json = that.createRecipe();
@@ -113,12 +105,8 @@ class CreateRecipe extends Base {
 
     //   add    steps
     if (target.hasClass("add-one-step")) {
-      //console.log(target)
       this.showSteps();
     }
-
-
-
   }
 
   change(event) {
@@ -134,11 +122,9 @@ class CreateRecipe extends Base {
       let category = target.val();
       that._categoriesList.push(category);
     }
-    //console.log(this._categoriesList);
 
     //upload file
     if ((target).hasClass("fileUpload")) {
-      //console.log("upload")
       this.fileSelectHandler(event);
     }
   }
@@ -182,13 +168,10 @@ class CreateRecipe extends Base {
   }
 
   uploadInit() {
-    //console.log("Upload Initialised");
     let that = this;
     let xhr = new XMLHttpRequest();
     if (xhr.upload) {
-      //let fileDrag = $(".file-drag");
       let fileDrag = document.getElementById('file-drag');
-      //console.log(fileDrag)
       fileDrag.addEventListener('dragover', (e) => {
         that.fileDragHover(e);
       })
@@ -216,7 +199,6 @@ class CreateRecipe extends Base {
     let files = event.target.files || event.dataTransfer.files;
     // Cancel event and hover styling
     that.fileDragHover(event);
-
     // // Process all File objects
     for (let i = 0, f; f = files[i]; i++) {
       that.parseFile(f);
@@ -227,19 +209,16 @@ class CreateRecipe extends Base {
 
   parseFile(file) {
     let that = this;
-    //console.log(file.name);
     that._img = encodeURI(file.name);
 
     let isGood = (/\.(?=gif|jpg|png|jpeg)/gi).test(that._img);
     if (isGood) {
-      //console.log("img")
       $("#uploader-start").addClass("hidden");
       $("#messages").append(
         '<strong>' + that._img + '</strong>'
       );
       $("#file-image").removeClass("hidden");
       $("#file-image").attr("src", `../imgs/${this._img}`);
-      //$("#file-image").src=URL.createObjectURL(file);
       $("#mobil-review").removeClass("hidden");
       $("#mobil-review").attr("src", `../imgs/${this._img}`);
     } else {
@@ -251,8 +230,6 @@ class CreateRecipe extends Base {
   uploadFile(file) {
     //console.log(file.size)
     let xhr = new XMLHttpRequest();
-
-    // pBar = document.getElementById('file-progress'),
     let fileSizeLimit = 1024; // In MB
     if (xhr.upload) {
       // Check if file is less than x MB
@@ -260,14 +237,7 @@ class CreateRecipe extends Base {
         $("#messages").append(
           '<strong> Please upload a smaller file (< ' + fileSizeLimit + ' MB). </strong>'
         );
-
-
       }
-      // xhr.open('POST', document.getElementById('file-upload-form').action, true);
-      // xhr.setRequestHeader('X-File-Name', file.name);
-      // xhr.setRequestHeader('X-File-Size', file.size);
-      // xhr.setRequestHeader('Content-Type', 'multipart/form-data');
-      // xhr.send(file);
     }
   }
 
@@ -282,7 +252,6 @@ class CreateRecipe extends Base {
       onlyIngredients.push(ing[0]);
       singleNutrient.push(ing[1]);
     }
-    //console.log(singleNutrient)
 
     newRecipe.favorite = false;
     newRecipe.title = this._recipeTitle;
@@ -294,7 +263,6 @@ class CreateRecipe extends Base {
     newRecipe.url = this._id;
     newRecipe.defaultPortion = this._portions;
     newRecipe.ingridiens = onlyIngredients;
-    //newRecipe.ingredient = ingredents;
     newRecipe.instructions = this._stepsList.export();
     newRecipe.nutrition = this.calcPortionNutrition(singleNutrient);
     newRecipe.comments = [];
@@ -391,12 +359,7 @@ class CreateRecipe extends Base {
     return $.getJSON('/json/food.json');
   }
 
-
-
-
   saveRecipe(json) {
-    //let newRecipeList=[];
-    //let that = this;
 
     $.getJSON("./json/recipe.json").then((data) => {
       data.push(json);
@@ -407,7 +370,6 @@ class CreateRecipe extends Base {
           Object.assign(this.app.popState.urls, {
             [url]: 'recipe'
           });
-          //location.replace("http://localhost:3000/my_page");
         });
       })
 
