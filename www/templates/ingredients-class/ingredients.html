@@ -2,7 +2,7 @@ Object.assign(Ingredients.prototype, {
 template(){
   const ingrId = Date.now();
 return `
-<div class="card">
+<div class="card ingr">
     <div class="card-body">
         <button type="button" class="close ingredient-btn" aria-label="Close">
             <span class="ingredient-btn" aria-hidden="true">&times;</span>
@@ -14,7 +14,7 @@ return `
                 Ingrediens<span class="req">*</span>
               </label>
               <input type="text" class="names ingredient ingr-css" id=${ingrId} value="${this.name}" required />
-              <div  class="list-group result hidden"></div>
+              <div  class="list-group hidden"><div class="result"></div></div>
             </div>
 
 

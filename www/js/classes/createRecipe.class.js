@@ -69,7 +69,6 @@ class CreateRecipe extends Base {
       that.inputLabel();
 
       let checkItems = $(".quantity");
-      console.log(checkItems)
       for (let i = 0; i < checkItems.length; i++) {
         let checkVal = checkItems[i].value
         if (isNaN(checkVal) || checkVal < 0) {
@@ -215,7 +214,6 @@ class CreateRecipe extends Base {
     let that = this;
     // Fetch FileList object
     let files = event.target.files || event.dataTransfer.files;
-    console.log(files)
     // Cancel event and hover styling
     that.fileDragHover(event);
 
@@ -309,11 +307,12 @@ class CreateRecipe extends Base {
   }
 
   calcPortionNutrition(ingredientsList) {
-    console.log(ingredientsList)
     let kj = 0;
     let kcal = 0;
     let fat = 0;
     let saturatedFat = 0;
+    let monounsaturatedFattyAcids = 0;
+    let polyunsaturatedFattyAcids = 0;
     let carbohydrates = 0;
     let protein = 0;
     let salt = 0;
@@ -322,7 +321,9 @@ class CreateRecipe extends Base {
       kj += item.EnergyKJ;
       kcal += item.EnergyKCAL;
       fat += item.Fat;
-      saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
+      saturatedFat += item.TotalSaturatedFattyAcids;
+      monounsaturatedFattyAcids += item.TotalMonounsaturatedFattyAcids;
+      polyunsaturatedFattyAcids += item.TotalPolyunsaturatedFattyAcids;
       carbohydrates += item.Carbohydrates;
       protein += item.Protein;
       salt += item.Salt;
@@ -333,6 +334,8 @@ class CreateRecipe extends Base {
       kcal,
       fat,
       saturatedFat,
+      monounsaturatedFattyAcids,
+      polyunsaturatedFattyAcids,
       carbohydrates,
       protein,
       salt
@@ -400,7 +403,6 @@ class CreateRecipe extends Base {
       $("#savedSuccessModal").modal('show');
       $(".save-btn").on("click", () => {
         JSON._save("recipe", data).then(() => {
-          console.log("saved!");
           const url = `/recipe/${json.url}`;
           Object.assign(this.app.popState.urls, {
             [url]: 'recipe'
@@ -439,7 +441,6 @@ class CreateRecipe extends Base {
       $("#receptTextarea").val('');
       that._stepsList.push(step);
       $(".steps-here").empty();
-      console.log(that._stepsList)
       that._stepsList.render(".steps-here", "");
     }
    

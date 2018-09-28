@@ -44,9 +44,11 @@ class Ingredients extends Base {
 
             if (inputText) {
                 if (inputText.toString().length >= 3) {
+                    that.nutrientsList=[];
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
                 } else {
+                    that.nutrientsList=[];
                     $(".result").addClass("hidden");
                     target.parents(".card").removeClass("mob-card");
                     //$(".list-group").addClass("hidden");
@@ -174,11 +176,15 @@ class Ingredients extends Base {
         changeInput(e, list) {
           
             let that = this;
+            let lockInput=e.target;
             let target = $(e.target).next();
-            target.empty();
+            target=target.html("<div class='result> </div>")
+            target.removeClass('hidden');
+            //target.parent().removeClass('hidden');
+            //target.empty();
             for (let i = 0, len = list.length; i < len; i++) {
                 let listText = list[i].Namn;
-                target.removeClass("hidden");
+                //target.removeClass("hidden");
 
                 target.parents(".card").addClass("mob-card");
                 //$(".result").removeClass("hidden");
@@ -196,6 +202,15 @@ class Ingredients extends Base {
                     target.parents(".card").removeClass("mob-card");
                     //get nutrients return this;
                 });
+
+                $("main").click(()=>{
+                    if(that.nutrientsList.length===0){
+                        $(lockInput).val("");
+                        target.addClass("hidden");
+                        target.parents(".card").removeClass("mob-card");
+                    }
+                   
+                })
 
             }
 
@@ -239,7 +254,7 @@ class Ingredients extends Base {
                     that.coefficient = 0.01;
                     break;
                 default:
-                    console.log("please select an unit");
+
             }
             //console.log(that.coefficient);
         }
@@ -256,37 +271,37 @@ class Ingredients extends Base {
                     .Varde
                     .replace(/,/g, '.') / 1;
                 if (nutrient.Namn === "Energi (kJ)") {
-                    that.itemNutrients.EnergyKJ = Math.round(value * c * q);
+                    that.itemNutrients.EnergyKJ = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Energi (kcal)") {
-                    that.itemNutrients.EnergyKCAL = Math.round(value * c * q);
+                    that.itemNutrients.EnergyKCAL = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Fett") {
-                    that.itemNutrients.Fat = Math.round(value * c * q);
+                    that.itemNutrients.Fat = Math.round(value * c * (q / this.parent._portions));
                 }
-                if (nutrient.Namn === "Summa mättad fettsyror") {
-                    that.itemNutrients.TotalSaturatedFattyAcids = Math.round(value * c * q);
+                if (nutrient.Namn === "Summa mättade fettsyror") {
+                    that.itemNutrients.TotalSaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Summa enkelomättade fettsyror") {
-                    that.itemNutrients.TotalMonounsaturatedFattyAcids = Math.round(value * c * q);
+                    that.itemNutrients.TotalMonounsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Summa fleromättade fettsyror") {
-                    that.itemNutrients.TotalPolyunsaturatedFattyAcids = Math.round(value * c * q);
+                    that.itemNutrients.TotalPolyunsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Kolesterol") {
-                    that.itemNutrients.Cholesterol = Math.round(value * c * q);
+                    that.itemNutrients.Cholesterol = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Kolhydrater") {
-                    that.itemNutrients.Carbohydrates = Math.round(value * c * q);
+                    that.itemNutrients.Carbohydrates = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Sackaros") {
-                    that.itemNutrients.Sucrose = Math.round(value * c * q);
+                    that.itemNutrients.Sucrose = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Protein") {
-                    that.itemNutrients.Protein = Math.round(value * c * q);
+                    that.itemNutrients.Protein = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Salt") {
-                    that.itemNutrients.Salt = Math.round(value * c * q);
+                    that.itemNutrients.Salt = Math.round(value * c * (q / this.parent._portions));
                 }
             }
             return that.itemNutrients;
