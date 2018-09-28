@@ -174,7 +174,8 @@ class Ingredients extends Base {
         changeInput(e, list) {
           
             let that = this;
-            let target = $(e.target).next();
+            let target = $(e.target).next().find('.result');
+            target.parent().removeClass('hidden');
             target.empty();
             for (let i = 0, len = list.length; i < len; i++) {
                 let listText = list[i].Namn;
@@ -192,7 +193,7 @@ class Ingredients extends Base {
                     // console.log(i);
                     let item = list[i];
                     that.getNutrients(item);
-                    target.addClass("hidden");
+                    target.parent().addClass("hidden");
                     target.parents(".card").removeClass("mob-card");
                     //get nutrients return this;
                 });
