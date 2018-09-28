@@ -15,40 +15,30 @@ class MyPage extends Base {
   }
 
   click(e) {
-    if ($(e.target).hasClass('more-btn-fav')) {
-      this.sliceCards(
-        e.target, 
-        '.recipeCard-fav:hidden', 
-        'sliceFav'
-      );
-    } else if ($(e.target).hasClass('my-more-btn')) {
-      this.sliceCards(
-        e.target, 
-        '.my-recipeCard:hidden', 
-        'sliceMyRecipe'
-      );
-    }
+    this.validateUserAndEvent(e, 'sliceCards');
   }
 
   keyup(e) {
-    if ($(e.target).hasClass('more-btn-fav') && e.which == 13) {
-      this.sliceCards(
-        e.target,
-        '.recipeCard-fav:hidden',
-        'sliceFav'
-      );
-    } else if ($(e.target).hasClass('my-more-btn') && e.which == 13) {
-      this.sliceCards(
-        e.target,
-        '.my-recipeCard:hidden',
-        'sliceMyRecipe'
-      );
-    }
+    this.validateUserAndEvent(e, 'sliceCards');
   }
 
+  validateUserAndEvent(e, method) {
+    const moreFavBtn = $(e.target).hasClass('more-btn-fav');
+    const myRecipeBtn = $(e.target).hasClass('my-more-btn');
 
+    if (this.author === this.app.user || !moreFavBtn || !moreFavBtn) { return; }
+    const parameters = myRecipeBtn ? [
+      '.my-recipeCard:hidden',
+      'sliceMyRecipe'
+    ] : [
+      '.recipeCard-fav:hidden',
+      'sliceFav'
+    ];
 
-  sliceCards(target, selector, slice) {
+    (e.type === 'click' || e.which === 13) && this[method](e.target, parameters);
+  }
+
+  sliceCards(target, [selector, slice]) {
     const sliced = $(selector).slice(0, 8).show(10);
     $(selector).length == 0 && $(target).hide();
     this[slice] = this[slice] + sliced.length;
