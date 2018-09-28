@@ -44,9 +44,11 @@ class Ingredients extends Base {
 
             if (inputText) {
                 if (inputText.toString().length >= 3) {
+                    that.nutrientsList=[];
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
                 } else {
+                    that.nutrientsList=[];
                     $(".result").addClass("hidden");
                     target.parents(".card").removeClass("mob-card");
                     //$(".list-group").addClass("hidden");
@@ -177,7 +179,7 @@ class Ingredients extends Base {
             let lockInput=e.target;
             let target = $(e.target).next();
             target=target.html("<div class='result> </div>")
-            console.log(target)
+            //console.log(target)
             target.removeClass('hidden');
             //target.parent().removeClass('hidden');
             //target.empty();
@@ -203,9 +205,9 @@ class Ingredients extends Base {
                 });
 
                 $("main").click(()=>{
-                    console.log(that.nutrientsList)
+                    //console.log(that.nutrientsList)
                     if(that.nutrientsList.length===0){
-                        console.log("here")
+                        //√console.log("here")
                         $(lockInput).val("");
                         target.addClass("hidden");
                         target.parents(".card").removeClass("mob-card");
