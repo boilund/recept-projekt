@@ -44,9 +44,11 @@ class Ingredients extends Base {
 
             if (inputText) {
                 if (inputText.toString().length >= 3) {
+                    that.nutrientsList=[];
                     var list = that.search(that.parent.ingredientsOptions, inputText);
                     that.changeInput(event, list);
                 } else {
+                    that.nutrientsList=[];
                     $(".result").addClass("hidden");
                     target.parents(".card").removeClass("mob-card");
                     //$(".list-group").addClass("hidden");

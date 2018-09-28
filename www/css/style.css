@@ -527,7 +527,7 @@ p.heart-favorite {
     margin-bottom: 20px; }
   .new-recept-contents .single-ingr {
     z-index: 1 !important; }
-  .new-recept-contents .result {
+  .new-recept-contents .ingr .list-group {
     height: 20vw;
     overflow: auto;
     -ms-overflow-style: auto;
@@ -678,8 +678,9 @@ p.heart-favorite {
       height: 200px; }
     .new-recept-contents .mob-card {
       height: 460px !important; }
-    .new-recept-contents .result {
-      height: 40vw; }
+    .new-recept-contents .ingr .list-group {
+      height: 40vw;
+      border: 1px lightgray solid; }
     .new-recept-contents .card-body {
       height: 180px;
       padding: 20px; }
