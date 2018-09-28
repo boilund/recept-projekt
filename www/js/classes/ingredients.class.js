@@ -174,12 +174,16 @@ class Ingredients extends Base {
         changeInput(e, list) {
           
             let that = this;
-            let target = $(e.target).next().find('.result');
-            target.parent().removeClass('hidden');
-            target.empty();
+            let lockInput=e.target;
+            let target = $(e.target).next();
+            target=target.html("<div class='result> </div>")
+            console.log(target)
+            target.removeClass('hidden');
+            //target.parent().removeClass('hidden');
+            //target.empty();
             for (let i = 0, len = list.length; i < len; i++) {
                 let listText = list[i].Namn;
-                target.removeClass("hidden");
+                //target.removeClass("hidden");
 
                 target.parents(".card").addClass("mob-card");
                 //$(".result").removeClass("hidden");
@@ -193,10 +197,21 @@ class Ingredients extends Base {
                     // console.log(i);
                     let item = list[i];
                     that.getNutrients(item);
-                    target.parent().addClass("hidden");
+                    target.addClass("hidden");
                     target.parents(".card").removeClass("mob-card");
                     //get nutrients return this;
                 });
+
+                $("main").click(()=>{
+                    console.log(that.nutrientsList)
+                    if(that.nutrientsList.length===0){
+                        console.log("here")
+                        $(lockInput).val("");
+                        target.addClass("hidden");
+                        target.parents(".card").removeClass("mob-card");
+                    }
+                   
+                })
 
             }
 
