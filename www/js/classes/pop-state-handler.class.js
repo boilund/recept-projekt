@@ -101,7 +101,6 @@ class PopStateHandler {
     this.cleanUpPage('removeClass', 'removeClass');
     this.createRecipe = new CreateRecipe(this);
     this.createRecipe.render('main');
-    //this.app.createRecipe.render('main');
   }
 
   cleanUpPage(method, method2) {
@@ -140,21 +139,18 @@ class PopStateHandler {
       template: {
         type: "custom",
         method: (value, item) => {
-          // return item.url.length > 0 ? `<a href="/recipe/${item.url}">${value}</a>` : `<p>Din sökning gav 0 träffar.</p>`;
           return `<a class="pop" href="/recipe/${item.url}">${value}</a>`;
         }
       },
     };
 
-    
-   
     $('.search-input').easyAutocomplete(options);
 
-    $('.search-input').on('keyup', (e)=>{ 
+    $('.search-input').on('keyup', (e) => {
       e.preventDefault();
       let selected = $('.search-input').getSelectedItemData().url;
       if (selected) {
-        $('.search-btn').closest('form').attr('action', '/recipe/'+selected);
+        $('.search-btn').closest('form').attr('action', '/recipe/' + selected);
       }
 
       setTimeout(() => {
@@ -172,6 +168,5 @@ class PopStateHandler {
       }, 10);
     })
   }
-
 
 }
