@@ -26,7 +26,7 @@ class MyPage extends Base {
     const moreFavBtn = $(e.target).hasClass('more-btn-fav');
     const myRecipeBtn = $(e.target).hasClass('my-more-btn');
 
-    if (this.author === this.app.user || !moreFavBtn || !moreFavBtn) { return; }
+    if (!moreFavBtn || !moreFavBtn) { return; }
     const parameters = myRecipeBtn ? [
       '.my-recipeCard:hidden',
       'sliceMyRecipe'
