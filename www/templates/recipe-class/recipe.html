@@ -56,7 +56,7 @@ Object.assign(Recipe.prototype, { template2(){ return `
         <tbody>
           <tr>
             <th scope="row">energi</th>
-            <td class="text-right">${this.nutrition.kj} kJ / ${this.nutrition.kcal} kCal</td>
+            <td class="text-right">${this.nutrition.kj} kJ <br> ${this.nutrition.kcal} kCal</td>
           </tr>
           <tr>
             <th scope="row">fett</th>
@@ -65,6 +65,14 @@ Object.assign(Recipe.prototype, { template2(){ return `
           <tr>
             <th scope="row">mättad fett</th>
             <td class="text-right">${this.nutrition.saturatedFat} g</td>
+          </tr>
+          <tr>
+            <th scope="row">enkelomättade fettsyror</th>
+            <td class="text-right">${this.nutrition.monounsaturatedFattyAcids} g</td>
+          </tr>
+          <tr>
+            <th scope="row">fleromättade fettsyror</th>
+            <td class="text-right">${this.nutrition.polyunsaturatedFattyAcids} g</td>
           </tr>
           <tr>
             <th scope="row">kolhydrat</th>
