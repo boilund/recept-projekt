@@ -91,6 +91,8 @@
       "kcal": "840",
       "fat": "38.50",
       "saturatedFat": "14",
+      "monounsaturatedFattyAcids": "17",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "87.50",
       "protein": "31.50",
       "salt": "2.4"
@@ -166,6 +168,8 @@
       "kcal": "574",
       "fat": "16.4",
       "saturatedFat": "3.2",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "1",
       "carbohydrates": "52",
       "protein": "12.5",
       "salt": "0.27"
@@ -223,6 +227,8 @@
       "kcal": "395",
       "fat": "22.3",
       "saturatedFat": "4.7",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "43",
       "protein": "5.2",
       "salt": "0.6"
@@ -299,6 +305,8 @@
       "kcal": "160",
       "fat": "19.2",
       "saturatedFat": "9.1",
+      "monounsaturatedFattyAcids": "4",
+      "polyunsaturatedFattyAcids": "1",
       "carbohydrates": "15",
       "protein": "12.3",
       "salt": "0.7"
@@ -402,6 +410,8 @@
       "kcal": "521",
       "fat": "19.7",
       "saturatedFat": "5.3",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "59.7",
       "protein": "35.6",
       "salt": "2"
@@ -478,6 +488,8 @@
       "kcal": "208",
       "fat": "16",
       "saturatedFat": "32.5",
+      "monounsaturatedFattyAcids": "17",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "4",
       "protein": "11",
       "salt": "1.6"
@@ -595,6 +607,8 @@
       "kcal": "334.37",
       "fat": "11.36",
       "saturatedFat": "2.16",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "38.47",
       "protein": "8",
       "salt": "1.07"
@@ -700,6 +714,8 @@
       "kcal": "252",
       "fat": "12",
       "saturatedFat": "0.9",
+      "monounsaturatedFattyAcids": "4",
+      "polyunsaturatedFattyAcids": "1",
       "carbohydrates": "26",
       "protein": "8",
       "salt": "1.3"
@@ -793,12 +809,14 @@
       "Stek dina amerikanska pannkakor gyllenbruna på båda sidor och servera med färska bär och lönnsirap."
     ],
     "nutrition": {
-      "kj": "1220",
-      "kcal": "290",
-      "fat": "10",
-      "saturatedFat": "1.5",
-      "carbohydrates": "42",
-      "protein": "7.5",
+      "kj": "2209",
+      "kcal": "528",
+      "fat": "4",
+      "saturatedFat": "1",
+      "monounsaturatedFattyAcids": "0",
+      "polyunsaturatedFattyAcids": "1",
+      "carbohydrates": "106",
+      "protein": "13",
       "salt": "1"
     },
     "comments": [
@@ -899,13 +917,15 @@
       "Ta ut formen. Lägg ut körsbärstomaterna i formen och toppa med färsk basilika. Servera gratängen direkt med pasta."
     ],
     "nutrition": {
-      "kj": "1807",
-      "kcal": "432",
-      "fat": "24.2",
-      "saturatedFat": "13",
-      "carbohydrates": "15.5",
-      "protein": "37.5",
-      "salt": "2.5"
+      "kj": "3970",
+      "kcal": "949",
+      "fat": "64",
+      "saturatedFat": "24",
+      "monounsaturatedFattyAcids": "24",
+      "polyunsaturatedFattyAcids": "11",
+      "carbohydrates": "42",
+      "protein": "48",
+      "salt": "3"
     },
     "comments": [
       {
@@ -990,13 +1010,15 @@
       "Grädda mitt i ugnen i 10 minuter, ta ut och låt svalna på ett galler."
     ],
     "nutrition": {
-      "kj": "1269",
-      "kcal": "292",
-      "fat": "10.6",
-      "saturatedFat": "5.2",
-      "carbohydrates": "41.5",
-      "protein": "6.6",
-      "salt": "1.4"
+      "kj": "2209",
+      "kcal": "528",
+      "fat": "19",
+      "saturatedFat": "10",
+      "monounsaturatedFattyAcids": "4",
+      "polyunsaturatedFattyAcids": "2",
+      "carbohydrates": "72",
+      "protein": "12",
+      "salt": "1"
     },
     "comments": [
       {
@@ -1081,6 +1103,8 @@
       "kcal": "560",
       "fat": "32",
       "saturatedFat": "16",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "48",
       "protein": "18",
       "salt": "2"
@@ -1189,6 +1213,8 @@
       "kcal": "572",
       "fat": "24.8",
       "saturatedFat": "6.1",
+      "monounsaturatedFattyAcids": "5",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "72.1",
       "protein": "21.9",
       "salt": "2.8"
@@ -1287,6 +1313,8 @@
       "kcal": "458",
       "fat": "19.2",
       "saturatedFat": "5.4",
+      "monounsaturatedFattyAcids": "7",
+      "polyunsaturatedFattyAcids": "3",
       "carbohydrates": "45.8",
       "protein": "19.8",
       "salt": "2.4"
@@ -1401,12 +1429,14 @@
       "Servera grytan garnerad med lite hackad, färsk dragon och med den polentastekta potatisen till."
     ],
     "nutrition": {
-      "kj": "2040",
-      "kcal": "483",
-      "fat": "20.5",
-      "saturatedFat": "6.3",
-      "carbohydrates": "51.5",
-      "protein": "18.5",
+      "kj": "3539",
+      "kcal": "846",
+      "fat": "46",
+      "saturatedFat": "23",
+      "monounsaturatedFattyAcids": "17",
+      "polyunsaturatedFattyAcids": "3",
+      "carbohydrates": "67",
+      "protein": "34",
       "salt": "2"
     },
     "comments": [

@@ -67,6 +67,14 @@ Object.assign(Recipe.prototype, { template2(){ return `
             <td class="text-right">${this.nutrition.saturatedFat} g</td>
           </tr>
           <tr>
+            <th scope="row">enkelomättade fettsyror</th>
+            <td class="text-right">${this.nutrition.monounsaturatedFattyAcids} g</td>
+          </tr>
+          <tr>
+            <th scope="row">fleromättade fettsyror</th>
+            <td class="text-right">${this.nutrition.polyunsaturatedFattyAcids} g</td>
+          </tr>
+          <tr>
             <th scope="row">kolhydrat</th>
             <td class="text-right">${this.nutrition.carbohydrates} g</td>
           </tr>

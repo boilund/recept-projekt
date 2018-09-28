@@ -314,6 +314,8 @@ class CreateRecipe extends Base {
     let kcal = 0;
     let fat = 0;
     let saturatedFat = 0;
+    let monounsaturatedFattyAcids = 0;
+    let polyunsaturatedFattyAcids = 0;
     let carbohydrates = 0;
     let protein = 0;
     let salt = 0;
@@ -322,7 +324,9 @@ class CreateRecipe extends Base {
       kj += item.EnergyKJ;
       kcal += item.EnergyKCAL;
       fat += item.Fat;
-      saturatedFat += item.TotalMonounsaturatedFattyAcids + item.TotalPolyunsaturatedFattyAcids;
+      saturatedFat += item.TotalSaturatedFattyAcids;
+      monounsaturatedFattyAcids += item.TotalMonounsaturatedFattyAcids;
+      polyunsaturatedFattyAcids += item.TotalPolyunsaturatedFattyAcids;
       carbohydrates += item.Carbohydrates;
       protein += item.Protein;
       salt += item.Salt;
@@ -333,6 +337,8 @@ class CreateRecipe extends Base {
       kcal,
       fat,
       saturatedFat,
+      monounsaturatedFattyAcids,
+      polyunsaturatedFattyAcids,
       carbohydrates,
       protein,
       salt
