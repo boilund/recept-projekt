@@ -177,7 +177,6 @@ class Ingredients extends Base {
             let lockInput=e.target;
             let target = $(e.target).next();
             target=target.html("<div class='result> </div>")
-            console.log(target)
             target.removeClass('hidden');
             //target.parent().removeClass('hidden');
             //target.empty();
@@ -203,9 +202,7 @@ class Ingredients extends Base {
                 });
 
                 $("main").click(()=>{
-                    console.log(that.nutrientsList)
                     if(that.nutrientsList.length===0){
-                        console.log("here")
                         $(lockInput).val("");
                         target.addClass("hidden");
                         target.parents(".card").removeClass("mob-card");
@@ -281,13 +278,13 @@ class Ingredients extends Base {
                     that.itemNutrients.Fat = Math.round(value * c * (q / this.parent._portions));
                 }
                 if (nutrient.Namn === "Summa mättade fettsyror") {
-                    that.itemNutrients.TotalSaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions));
+                    that.itemNutrients.TotalSaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Summa enkelomättade fettsyror") {
-                    that.itemNutrients.TotalMonounsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions));
+                    that.itemNutrients.TotalMonounsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Summa fleromättade fettsyror") {
-                    that.itemNutrients.TotalPolyunsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions));
+                    that.itemNutrients.TotalPolyunsaturatedFattyAcids = Math.round(value * c * (q / this.parent._portions) * 10) / 10;
                 }
                 if (nutrient.Namn === "Kolesterol") {
                     that.itemNutrients.Cholesterol = Math.round(value * c * (q / this.parent._portions));
