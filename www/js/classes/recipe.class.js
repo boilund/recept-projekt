@@ -23,20 +23,12 @@ class Recipe extends Base {
   click2(e) {
     $(e.target).hasClass('comments-btn') && $('.comments').toggle();
     $(e.target).hasClass('fa-print') && window.print();
-    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
-      this.pressHearts2();
-    }
+    this.validateUserAndEvent(e, 'pressHearts2');
   }
   // recipe page
   keyup2(e) {
-    if ($(e.target).hasClass('fa-heart') 
-        && e.which === 13
-        && this.author != this.app.user
-      ) {
-      this.pressHearts2();
-    } else if ($(e.target).hasClass('fa-print') && e.which === 13) {
-      window.print();
-    }
+    ($(e.target).hasClass('fa-print') && e.which === 13) && window.print();
+    this.validateUserAndEvent(e, 'pressHearts2');
   }
 
   makeNewIngrediensHtml(newIngrediens, portion) {
@@ -68,7 +60,7 @@ class Recipe extends Base {
   }
 
   hasPortionChanged(portion) {
-    this.changePortion = parseInt(portion) === this.defaultPortion ? false : true;
+    this.changePortion = parseInt(portion) !== this.defaultPortion;
   }
 
   // recipe portions
@@ -87,18 +79,15 @@ class Recipe extends Base {
 
   // start-page cards
   click3(e) {
-    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
-      this.pressHearts3();
-    }
+    this.validateUserAndEvent(e, 'pressHearts3');
   }
   // start page
   keyup3(e) {
-    if ($(e.target).hasClass('fa-heart') && e.which === 13 && this.author != this.app.user) {
-      this.pressHearts3();
-    }
+    this.validateUserAndEvent(e, 'pressHearts3');
   }
+
   // start page
-  pressHearts3() {
+  pressHearts3() { 
     this.varyLikes();
     this.app.recipes.sort((a, b) => b.likes - a.likes);
     this.app.myPage.pickCards();
@@ -113,16 +102,12 @@ class Recipe extends Base {
 
   // mina-favoriter cards
   click4(e) {
-    if ($(e.target).hasClass('fa-heart')) {
-      this.pressHearts4();
-    }
+    this.validateUserAndEvent(e, 'pressHearts4');
   }
 
   // mina favoriter
   keyup4(e) {
-    if ($(e.target).hasClass('fa-heart') && e.which === 13) {
-      this.pressHearts4();
-    }
+    this.validateUserAndEvent(e, 'pressHearts4');
   }
   // mina favoriter
   pressHearts4() {
@@ -130,7 +115,6 @@ class Recipe extends Base {
     this.app.myPage.pickCards();
     $('main').empty();
     this.app.myPage.render('main');
-    /* this.app.popState.myPage(); */
     this.showMore(
       '.recipeCard-fav:hidden',
       this.app.myPage.sliceFav,
@@ -138,38 +122,10 @@ class Recipe extends Base {
     );
   }
 
-  // mina-recept cards
-  click5(e) {
-    if ($(e.target).hasClass('fa-heart') && this.author != this.app.user) {
-      this.pressHearts5();
+  validateUserAndEvent(e, method) {
+    if (this.author === this.app.user || !$(e.target).hasClass('fa-heart')) {
+      return;
     }
+    (e.type === 'click' || e.which === 13) && this[method]();
   }
-
-  // mina recept
-  keyup5(e) {
-    if ($(e.target).hasClass('fa-heart') 
-        && e.which === 13
-        && this.author != this.app.user
-      ) {
-      this.pressHearts5();
-    }
-  }
-  // mina recept
-  pressHearts5() {
-    this.varyLikes();
-    this.app.myPage.pickCards();
-
-    $('.favorite-cards').empty();
-    this.app.myPage.myFavorites.render('.favorite-cards', '4');
-
-    $('.my-cards').empty();
-    this.app.myPage.myRecipes.render('.my-cards', '5');
-
-    this.showMore(
-      '.my-recipeCard:hidden',
-      this.app.myPage.sliceMyRecipe,
-      '.my-more-btn'
-    );
-  }
-
 }
