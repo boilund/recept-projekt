@@ -1,0 +1,13 @@
+Object.assign(StartPage.prototype, { template4(){ return `
+
+  <div class="row">
+    <div class="col-12 text-center p-4">
+      <h2>Populära recept</h2>
+    </div>
+    ${this.filteredCards.length ? this.filteredCards.render('', 3) : this.app.recipes.render('', 3)}
+    <div class="col-12 text-center pt-4">
+      <div tabindex="0" aria-label="visa fler recept" class="btn text-white rounded-0 px-4 py-3 more-btn ${(this.app.recipes.length <= 8) || (this.filteredCards.length <=8 && this.selectedCategory.length> 0) ? 'd-none' : ''}">Visa fler</div>
+    </div>
+  </div>
+
+`;}});

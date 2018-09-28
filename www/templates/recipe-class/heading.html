@@ -1,0 +1,12 @@
+Object.assign(Recipe.prototype, { template(){ return `
+  <section class="row">
+    <div class="col">
+      <div class="heading-text">
+        <h1 class="recipe-title font-weight-bold">${this.title}</h1>
+        <p class="cooking-time d-inline-block mr-3">${this.time}</p>
+        <p class="d-inline-block heart-favorite">${this.likes}</p>
+        <p class="author">av ${this.author}</p>
+      </div>
+    </div>
+  </section>
+`;}});

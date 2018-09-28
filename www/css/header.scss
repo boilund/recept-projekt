@@ -1,69 +1,40 @@
 @import "variables";
 @import "mixins";
 
-.header {
+header {
   border-bottom: 1px solid map-get($colors, light-gray);
-  position: relative;
 }
 
 .navbar {
   height: 68px;
   letter-spacing: 1px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .logo {
-  width: 60px;
+  width: 55px;
 
   @include medium {
-    width: 100px;
+    width: 60px;
   }
+}
+
+.logo-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 a.nav-link:hover {
   color: map-get($colors, accent) !important;
 }
 
-.login-btn {
+.nav-btn {
+  background-color: #fff;
   border: 1px solid #ccc;
   font-size: 13px;
 }
 
-.login-btn:hover {
+.nav-btn:hover {
   background-color: map-get($colors, light-gray);
-}
-
-.index-picture {
-  min-height: 300px;
-  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left;
-  background-size: cover;
-
-  @include medium {
-    min-height: 500px;
-  }
-}
-
-.color-nav {
-  min-height: 68px;
-  background: url("/imgs/cherry-food-fresh.jpg") no-repeat left top;
-  background-size: cover;
-}
-
-form {
-  position: relative;
-}
-
-.search-icon {
-  position: absolute;
-  top: 8px;
-  left: 5px;
-}
-
-.search-row {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  width: 60%;
 }

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' data: fonts.gstatic.com;">  -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smaklig måltid</title>
   <link rel="icon" type="image/png" href="/imgs/logo.png">
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Zilla+Slab:400,500,600,700"
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900%7CZilla+Slab:400,500,600,700"
     rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+    <!-- easy autocomplete -->
+ <link rel="stylesheet" href="/js/EasyAutocomplete/easy-autocomplete.min.css">
   <!-- my CSS -->
   <link rel="stylesheet" href="/css/style.css">
   <!-- Font Awesome -->
@@ -21,269 +24,58 @@
 </head>
 
 <body>
-  <header class="container-fluid header index-picture">
-    <section class="row">
-      <div class="col menu-row bg-transparent">
-        <nav class="navbar navbar-expand-md navbar-light">
-          <a class="navbar-brand text-white font-weight-bold" href="/"><img src="/imgs/logo-white.svg" alt="logo" class="logo px-2">Smaklig
-            måltid</a>
-          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-md-flex justify-content-end" id="navbarSupportedContent">
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Bli medlem</button>
-            <button class="btn mx-1 my-2 my-sm-0 login-btn" type="submit">Logga in</button>
-          </div>
-        </nav>
-      </div>
-    </section>
-    <section class="row search-row sticky-top">
-      <div class="col">
-        <form>
-          <span class="search-icon ml-3"><i class="fas fa-search"></i></span>
-          <input type="text" class="form-control search-input pl-5" id="search-recept" placeholder="Sök recept...">
-        </form>
-      </div>
-    </section>
-  </header>
+  <header class="container-fluid"></header>
+  <section class="container-fluid heading-content"></section>
+  <main class="container"></main>
+  <footer class="container-fluid"></footer>
 
-  <main class="container main py-3">
-    <section class="row">
-      <div class="col-12 text-center p-4">
-        <h2>Populära recept</h2>
-      </div>
-    </section>
-    <section class="row">
-      <aside class="col-md-3 col-lg-2 pb-3">
-        <div class="card border new-recept-btn">
-          <a href="/new-recept.html">
-            <div class="p-3">
-              Skapa ett nytt recept
-            </div>
-          </a>
-        </div>
-        <div class="card my-2 border my-recept-btn">
-          <a href="/my-recept.html">
-            <div class="p-3">
-              Mina recept
-            </div>
-          </a>
-        </div>
-        <div class="list-group">
-          <div id="accordion" role="tablist">
-            <div class="card-header bg-white border p-3 side-card" role="tab" id="headingOne">
-              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">Ingrediens</a>
-              <i class="fas fa-angle-right text-right d-inline-block px-2"></i>
-            </div>
-            <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-              <div class="list-group border">
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Fläskkött</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Färs</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Korv</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Kyckling & Fågel</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nötkött</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Pasta</a>
-                <div id="accordionVege" role="tablist">
-                  <div class="card-header bg-white border-0 p-0 side-card" role="tab" id="headingVege">
-                    <a class="list-group-item list-group-item-action border-0 px-3 py-2" data-toggle="collapse" href="#collapseVege">Vegetarisk</a>
-                    <i class="fas fa-angle-right px-2"></i>
-                  </div>
-                  <div id="collapseVege" class="collapse" role="tabpanel" aria-labelledby="headingVege" data-parent="#accordionVege">
-                    <div class="list-group border-0">
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Veganer</a>
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Lakto-vegetarianer</a>
-                      <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">lakto-ovo-vegetarianer</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-header bg-white border p-3 side-card" role="tab" id="headingTwo">
-              <a class="collapsed text-dark list-group-item border-0 p-0" data-toggle="collapse" href="#collapseTwo"
-                aria-expanded="false" aria-controls="collapseTwo">Speciallkost</a>
-              <i class="fas fa-angle-right px-2"></i>
-            </div>
-            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="list-group border">
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Glutenfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Laktosfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Nöttfritt</a>
-                <a href="#" class="list-group-item list-group-item-action border-0 px-3 py-2">Äggfritt</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="col-md-9 col-lg-10 main-contents">
-        <div class="row">
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/pizza.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Mozzarella pizza</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">5</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/pasta.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Basilikapesto med pasta</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">5</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="/recept.html">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/apple-pie.jpg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Äppelpie</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">3</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/sandwich.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Avokado smörgås</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">4</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/rice-noodle.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Vegitarisk Risnudlar</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">4</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/salad.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Tomatsallad</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">3</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/sushi.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Sushirulle</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">3</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-6 col-md-4 col-lg-3 p-0">
-            <a href="#">
-              <div class="card recept-card">
-                <img class="card-img-top" src="/imgs/soup.jpeg" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-title">Morotssoppa</p>
-                  <i class="far fa-heart mr-2"></i><p class="d-inline-block">3</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-12 text-center pt-4">
-          <div class="btn text-white rounded-0 px-4 py-3 more-btn">Visa fler</div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container-fluid">
-    <section class="row">
-      <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-3 pt-sm-0">
-        <div class="row d-flex justify-content-center">
-          <div class="col-7 col-sm-8 col-md-7">
-            <h6 class="text-white font-weight-bold my-3 my-3 d-flex justify-content-between"><a class="text-white font-weight-bold"
-                href="/">Smaklig måltid</a>
-            </h6>
-            <ul class="mt-3">
-              <li class="text-light">Adress:</li>
-              <li class="text-light">Malmövägen 1</li>
-              <li class="text-light">222 22 Malmö</li>
-              <li class="mt-3">
-                <a href="#" class="text-light">Kontakta oss</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
-        <div class="row d-flex justify-content-center">
-          <div class="col-7 col-sm-8 col-md-7">
-            <h6 class="text-white font-weight-bold my-3 my-3 d-flex justify-content-between">OM OSS</h6>
-            <ul class="text-light mt-3">
-              <li><a href="#" class="text-light">Om Smaklig måltid</a></li>
-              <li><a href="#" class="text-light">Annonsera</a></li>
-              <li><a href="#" class="text-light">Allmänna användarvillkor</a></li>
-              <li><a href="#" class="text-light">Om cookies</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
-        <div class="row d-flex justify-content-center">
-          <div class="col-7 col-sm-8 col-md-7">
-            <h6 class="text-white font-weight-bold my-3 my-3 d-flex justify-content-between">MINA SIDOR</h6>
-            <ul class="text-light mt-3">
-              <li><a href="#" class="text-light">Logga in</a></li>
-              <li><a href="#" class="text-light">Bli medlem</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-sm-6 col-lg-3 py-lg-3 pt-0">
-        <div class="row d-flex justify-content-center">
-          <div class="col-7 col-sm-8 col-md-7">
-            <h6 class="text-white font-weight-bold my-3 my-3 d-flex justify-content-between">FÖLJ OSS</h6>
-            <ul class="text-light mt-3 d-flex justify-content-start">
-              <li><a href="#" class="text-light fa-2x mr-3"><i class="fab fa-facebook-square"></i></a></li>
-              <li><a href="#" class="text-light fa-2x mr-3"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#" class="text-light fa-2x mr-3"><i class="fab fa-pinterest-square"></i></a></li>
-              <li><a href="#" class="text-light fa-2x mr-3"><i class="fab fa-twitter-square"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <!-- JavaScript libraries -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="/js/EasyAutocomplete/jquery.easy-autocomplete.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="/jsonflex.js"></script>
+  <!-- Application specific JavaScript -->
+  <script src="/js/classes/array.methods.js"></script>
+  <script src="/js/classes/base.class.js"></script>
+  <script src="/js/classes/app.class.js"></script>
+  <script src="/js/classes/pop-state-handler.class.js"></script>
+  <script src="/js/classes/navbar.class.js"></script>
+  <script src="/js/classes/footer.class.js"></script>
+  <script src="/js/classes/startPage.class.js"></script>
+  <script src="/js/classes/myPage.class.js"></script>
+  <script src="/js/classes/recipe.class.js"></script>
+  <script src="/js/classes/ingredients.class.js"></script>
+  <script src="/js/classes/createRecipe.class.js"></script>
+  <script src="/js/classes/step.class.js"></script>
+
+  <!-- Templates -->
+  <script src="/templates/navbar-class/navbar.html"></script>
+  <script src="/templates/footer-class/footer.html"></script>
+  <script src="/templates/startPage-class/search-input.html"></script>
+  <script src="/templates/startPage-class/start-page.html"></script>
+  <script src="/templates/startPage-class/side-menu.html"></script>
+  <script src="/templates/startPage-class/main-contents.html"></script>
+  <script src="/templates/myPage-class/my-page.html"></script>
+  <script src="/templates/recipe-class/heading.html"></script>
+  <script src="/templates/recipe-class/recipe.html"></script>
+  <script src="/templates/recipe-class/myPage-myFavorite-card.html"></script>
+  <script src="/templates/recipe-class/myPage-myRecipe-card.html"></script>
+  <script src="/templates/recipe-class/startPage-recipe-card.html"></script>
+  <script src="/templates/step-class/steps.html"></script>
+  <script src="/templates/ingredients-class/ingredients.html"></script>
+  <script src="/templates/createRecipe-class/create-recipe.html"></script>
+
+  <!-- Start Application -->
+  <script src="/js/main.js"></script>
+  <!-- <script src="/js/new-recept-css.js"></script> -->
 </body>
 
 </html>

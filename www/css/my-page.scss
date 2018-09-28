@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+.my-page {
+
+	overflow-x: inherit;
+
+	.fa-utensils {
+		color: #ccc;
+	}
+
+	.author {
+		font-size: 13px;
+	}
+
+	.recept-card {
+		height: 100%;
+		a {
+			height: 100%;
+		}
+	}
+
+	.card-footer {
+		background-color: #fff;
+		border-top: none;
+    font-size: 11px;
+
+    @include small {
+      font-size: 15px;
+    }
+	}
+
+  .fa-heart {
+		color: map-get($colors, accent);
+		cursor: pointer;
+	}
+
+	.more-btn, .my-more-btn, .more-btn-fav {
+    background-color: map-get($colors, accent);
+		font-size: 13px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+	.recipeCard-fav:nth-child(n+9),
+	.my-recipeCard:nth-child(n+9) {
+    display: none;
+  }
+
+  .no-cards-msg {
+    margin: 60px auto;
+  }
+}

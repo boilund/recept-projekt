@@ -1,0 +1,54 @@
+Object.assign(Ingredients.prototype, {
+template(){
+  const ingrId = Date.now();
+return `
+<div class="card ingr">
+    <div class="card-body">
+        <button type="button" class="close ingredient-btn" aria-label="Close">
+            <span class="ingredient-btn" aria-hidden="true">&times;</span>
+          </button>
+
+        <div class="row form-wrap single-ingr">
+            <div class="col-lg-5 col-md-5 col-sm-12 ing">
+              <label class="label ingr-d-none" for=${ingrId}>
+                Ingrediens<span class="req">*</span>
+              </label>
+              <input type="text" class="names ingredient ingr-css" id=${ingrId} value="${this.name}" required />
+              <div  class="list-group hidden"><div class="result"></div></div>
+            </div>
+
+
+            <div class="col-lg-3 col-md-3 col-sm-12 ing ">
+              <label class="label ingr-d-none" for="quantity${ingrId}">
+                Kvantitet<span class="req">*</span>
+              </label>
+              <input type="text" class="text-input unit quantity ingr-css" id="quantity${ingrId}" value="${this._quantity}" required />
+              <p id="quantity-${ingrId}" class="m-0 text-danger quantity-validation validate-msg hidden">Ange ett positivt nummer</p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-12 select-wrap ing">
+                <div class="form-group">
+                  <label class="sr-only" for="unit">Välj enhet</label>
+                  <select class="custom-select unit-select" id="unit">
+                    <option value="unit" id="unit-chosen" >Välj enhet</option>
+                    <option value="st" ${this._unit==="st" ? "selected": ""} >st</option>
+                    <option value="g" ${this._unit==="g" ? "selected": ""}>g</option>
+                    <option value="kg" ${this._unit==="kg" ? "selected": ""}>kg</option>
+                    <option value="ml" ${this._unit==="ml" ? "selected": ""}>ml</option>
+                    <option value="dl" ${this._unit==="dl" ? "selected": ""}>dl</option>
+                    <option value="msk" ${this._unit==="msk" ? "selected": ""}>msk</option>
+                    <option value="tsk" ${this._unit==="tsk" ? "selected": ""}>tsk</option>
+                    <option value="krm" ${this._unit==="krm" ? "selected": ""}>krm</option>
+                  </select>
+                </div>
+              </div>
+
+            <div class="col-lg-2 ">
+              <div class="btn ingredient-btn ingredient-delet"><i class="fas fa-minus-circle ingredient-btn"></i></div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+
+`}
+})

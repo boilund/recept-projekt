@@ -1,0 +1,121 @@
+Object.assign(Recipe.prototype, { template2(){ return `
+  <section class="row recept-main-content px-0">
+    <div class="col">
+      <h2 class="sr-only">Recept foto</h2>
+      <img src="/imgs/${this.img}" class="img-fluid reciep-picture" alt="${this.title}">
+    </div>
+  </section>
+  <section class="row">
+    <div class="col">
+      <h2 class="sr-only">Favorit icon och skriva ut icon</h2>
+      <div class="float-right icons mt-3 mb-4 mr-3">
+        <i aria-label="lägg till favoriter" tabindex="0" title="lägg till favoriter" class="${this.favorite ? 'fas' : 'far'} fa-heart mr-2"></i>
+        <i aria-label="skriv ut" tabindex="0" title="skriv ut" class="fas fa-print"></i>
+      </div>
+    </div>
+  </section>
+  <section class="row">
+    <div class="col-md-8">
+      <h2 class="font-weight-bold mt-3 mb-4 d-inline-block">Ingredienser</h2>
+      <form class="ml-2 mb-0 d-inline-block">
+        <div class="form-group mb-0">
+          <label class="sr-only" for="portions">Välj portion</label>
+          <select class="form-control select-portions" id="portions">
+            <option value='1'>1 portioner</option>
+            <option value='2'>2 portioner</option>
+            <option value='3'>3 portioner</option>
+            <option value='4'>4 portioner</option>
+            <option value='5'>5 portioner</option>
+            <option value='6'>6 portioner</option>
+            <option value='7'>7 portioner</option>
+            <option value='8'>8 portioner</option>
+            <option value='9'>9 portioner</option>
+            <option value='10'>10 portioner</option>
+          </select>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="mt-3 mt-md-0 alert alert-danger ${this.changePortion ? '' : 'd-none'}" role="alert">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="font-weight-bold d-inline">Tillagningstiden kan påverkas när du ändrar antal portioner!</p>
+          </div>
+        </div>
+      </div>
+      <ul class="list-group list-group-flush cooking-ingredients">
+        ${this.newIngrediensHTML.length > 0 ? this.newIngrediensHTML.join('') : this.ingridiensHTML.join('')}
+      </ul>
+      <h2 class="font-weight-bold mt-5">Gör så här:</h2>
+      <ol class="list-group list-group-flush cooking-instructions">
+        ${this.instructions.join('')}
+      </ol>
+    </div>
+    <div class="col-md-4">
+      <h3 class="font-weight-bold mt-3">Näringsvärden (per portion)</h3>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">energi</th>
+            <td class="text-right">${this.nutrition.kj} kJ <br> ${this.nutrition.kcal} kCal</td>
+          </tr>
+          <tr>
+            <th scope="row">fett</th>
+            <td class="text-right">${this.nutrition.fat} g</td>
+          </tr>
+          <tr>
+            <th scope="row">mättad fett</th>
+            <td class="text-right">${this.nutrition.saturatedFat} g</td>
+          </tr>
+          <tr>
+            <th scope="row">enkelomättade fettsyror</th>
+            <td class="text-right">${this.nutrition.monounsaturatedFattyAcids} g</td>
+          </tr>
+          <tr>
+            <th scope="row">fleromättade fettsyror</th>
+            <td class="text-right">${this.nutrition.polyunsaturatedFattyAcids} g</td>
+          </tr>
+          <tr>
+            <th scope="row">kolhydrat</th>
+            <td class="text-right">${this.nutrition.carbohydrates} g</td>
+          </tr>
+          <tr>
+            <th scope="row">protein</th>
+            <td class="text-right">${this.nutrition.protein} g</td>
+          </tr>
+          <tr>
+            <th scope="row">salt</th>
+            <td class="text-right">${this.nutrition.salt} g</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <button type="button" class="btn btn-lg btn-block my-5 comments-btn font-weight-bold text-uppercase">
+    Kommentarer
+    <i class="fas fa-caret-down"></i>
+  </button>
+  <section class="row comments">
+    <div class="col">
+      <h3 class="d-inline-block">2 kommentarer</h3>
+      <form class="my-3">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Vad tyckte du om receptet?</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn send-comment">Kommentera</button>
+      </form>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item border-top-0">
+          <p class="font-weight-bold d-inline-block user-comment">Karl Andersson</p>
+          <p class="d-inline-block float-right date-comment">29 aug 2018</p>
+          <p class="d-block text-comment">Jätte gott!</p>
+        </li>
+        <li class="list-group-item border-bottom">
+          <p class="font-weight-bold d-inline-block user-comment">Milan</p>
+          <p class="d-inline-block float-right date-comment">05 juli 2018</p>
+          <p class="d-block text-comment">Gott och lätt att göra.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+`;}});

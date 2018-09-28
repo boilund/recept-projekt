@@ -1,0 +1,14 @@
+Object.assign(StartPage.prototype, { template2(){ return `
+  <div class="row start-main-content py-3">
+    <h1 class="sr-only">Start sidan</h1>
+
+    <!-- side menu -->
+    ${this.render('', '3')}
+
+    <!-- main contents -->
+    <section class="col-md-8 col-lg-9 main-contents">
+      ${this.render('', '4')}
+    </section>
+
+  </div>
+`;}});

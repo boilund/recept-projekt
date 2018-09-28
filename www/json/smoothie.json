@@ -1,0 +1,65 @@
+{
+  "favorite": true,
+  "title": "Bärsmoothie",
+  "img": "smoothie.jpg",
+  "time": "10",
+  "likes": 111,
+  "category": ["Frukost", "Mellanmål", "Glutenfritt", "Lakto-vegetarianer", "Lakto-ovo-vegetarianer"],
+  "author": "Marie Lindberg",
+  "url": "barsmoothie",
+  "defaultPortion": 2,
+  "ingridiens": [
+    {
+      "name": "banan",
+      "quantity": 1,
+      "unit": "st"
+    },
+    {
+      "name": "hallon och blåbär (eller variera med andra frukter och bär)",
+      "quantity": 2,
+      "unit": "dl"
+    },
+    {
+      "name": "grekisk yoghurt, 10 %",
+      "quantity": 0.5,
+      "unit": "dl"
+    },
+    {
+      "name": "fet mjölk",
+      "quantity": 0.5,
+      "unit": "dl"
+    },
+    {
+      "name": "äkta vaniljpulver",
+      "quantity": 1,
+      "unit": "krm"
+    }
+  ],
+  "instructions": [
+    "Mixa!"
+  ],
+  "nutrition": [
+    {
+      "kj": "",
+      "kcal": "",
+      "fat": "",
+      "saturatedFat": "",
+      "carbohydrates": "",
+      "protein": "",
+      "salt": ""
+    }
+  ],
+  "comments": [
+    {
+      "name": "",
+      "comment": "",
+      "date": ""
+    },
+    {
+      "name": "",
+      "comment": "",
+      "date": ""
+    }
+  ],
+  "⚙": "Recipe"
+}
